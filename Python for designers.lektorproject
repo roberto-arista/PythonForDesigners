@@ -1,0 +1,12 @@
+[project]
+name = Python for designers
+
+[packages]
+lektor-jinja-content = 0.4.2
+lektor-gulp = 0.3.2
+
+[servers.testing]
+name = Testing
+enabled = yes
+default = yes
+target = rsync://robari1@richard-stockton.dreamhost.com/home/robari1/pfd.robertoarista.it
