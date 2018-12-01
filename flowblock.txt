@@ -16,12 +16,12 @@ flowblock
     - csv filename
     - header rows
 
-- snippet
+- code-example
     - script filename
     - image
     - diagram
 
-- section title
+- section-title
     - text
     - 'standard' or 'workbook'
 
@@ -32,6 +32,6 @@ flowblock
 
 
 also we need a model for
-    - svg (for copyright and alt)
-    - tables
-    - python scripts
+    - illustration (for copyright and alt)
+    - csv
+    - snippet
