@@ -1,0 +1,18 @@
+{% extends "baseLayout.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+
+{% block content %}
+
+    <div class="page-container">
+    <div class="alignmentContainer">
+        <h1>{{ this.title }}</h1>
+
+        {% if this.visual_abstract %}<img class='large_image' src="{{ this.visual_abstract }}">{% endif %}
+
+        <div class="chapterContainer" id='sourceTypography' style="display: none">{{ this.body|convertCustomTags }}</div>
+        <div class="chapterContainer" id="resultTypography"></div>
+
+    </div>
+    </div>
+
+{% endblock %}

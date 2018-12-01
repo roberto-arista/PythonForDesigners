@@ -1,0 +1,37 @@
+flowblock
+
+- textblock (<p>)
+    - text, markdown
+    (inline code, em, strong)
+
+- list
+    - items
+    - ordered or unordered
+
+- image
+    - filename
+    - large or small
+
+- table
+    - csv filename
+    - header rows
+
+- snippet
+    - script filename
+    - image
+    - diagram
+
+- section title
+    - text
+    - 'standard' or 'workbook'
+
+- exercise
+    - text
+    - image
+    - solution script filename
+
+
+also we need a model for
+    - svg (for copyright and alt)
+    - tables
+    - python scripts

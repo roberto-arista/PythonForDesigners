@@ -1,0 +1,371 @@
+_model: chapter
+---
+title: Transform Strings
+---
+abstract:Efficiently transforming values into strings is essential for proper typesetting
+---
+visual_abstract: abstract-9.svg
+---
+sort_key: 9
+---
+body:
+
+<section_title>Formatting Strings</section_title>
+
+<p>Python supports multiple ways to format strings. With formatting I mean building new strings out of different kind of values.  The most commons are the old school <inline_code>%</inline_code>-formatting, the <inline_code>.format()</inline_code> method and the Python3 novelty f-strings. In this manual, we will look into the latest way, given its minimal syntax and high flexibility.</p>
+
+<p>Formatting strings with f-string is as easy as defining a standard string literal, look at this example:</p>
+
+<pre_code>myName = 'Roberto'
+f'Hi! My name is {myName}'
+# My name is Roberto
+</pre_code>
+
+<p>Moreover, f-strings allow to include full Python expressions like:</p>
+
+<pre_code>a = 10
+b = 20
+f'The mid value is {a+(b-a)*.5}'
+# The mid value is 15.0
+</pre_code>
+
+<p>Don't forget to prefix the f-string with an <inline_code>'f'</inline_code> or <inline_code>'F'</inline_code> otherwise it would be considered just a regular string, look:</p>
+
+<pre_code>a = 10
+b = 20
+'The mid value is {a+(b-a)*.5}'
+# The mid value is {a+(b-a)*.5}
+</pre_code>
+
+<p>As you may have already noticed, the expression into the 'f-string' should be surrounded by braces:</p>
+
+<pre_code>f'The mid value is a+(b-a)*.5'
+# The mid value is a+(b-a)*.5</pre_code>
+
+<p>Otherwise, the expression is not evaluated.</p>
+<p>f-strings and .format() share the same format specifier mini-language. Which can be synthesized in the following way:</p>
+<pre_code>f'{[field]:[width][type]}'</pre_code>
+
+<p>This mini-language allows us to precisely instruct how to format the data into the string adding some extra information after a colon. For example:</p>
+<pre_code># we import the euler constant from the math module
+from math import e
+# then we print the constant value
+print(f'euler: {e:.2f}')         # euler: 2.71
+</pre_code>
+
+<p>This step is optional, so if we omit any extra instruction, Python will use a standard conversion intent.</p>
+
+<pre_code># we import the euler constant from the math module
+from math import e
+# then we print the constant value
+print(f'euler: {e}') # euler: 2.718281828459045
+# note the different amount of digits after the period
+</pre_code>
+
+<p><inline_code>[width]</inline_code> provides instructions concerning padding, for example allowing the append of extra characters to the right</p>
+
+<pre_code>message = 'hello'
+print(f'{message:<10}')</pre_code>
+
+<p>or to the left</p>
+
+<pre_code>message = 'hello'
+f'{message:>10}'</pre_code>
+
+<p>In the cases above, white spaces will be added until the length of 10 characters is reached.</p>
+<p><inline_code>[width]</inline_code> also allows to center a string within a certain amount of characters:</p>
+
+<pre_code>f"{'a':^10}")
+f"{'bcd':^10}")
+f"{'efghi':^10}")
+f"{'jklmnop':^10}")
+f"{'qrstu':^10}")
+f"{'vwx':^10}")
+f"{'y':^10}")
+
+#    a
+#   bcd
+#  efghi
+# jklmnop
+#  qrstu
+#   vwx
+#    y</pre_code>
+
+<p>You can easily define which character should be used by the interpreter:</p>
+<pre_code>f'{"hello":@<10}')
+# hello@@@@@
+</pre_code>
+
+<pre_code>f'{"hello":_>10}')
+# _____hello
+</pre_code>
+
+<pre_code>f'{"hello":-^10}')
+# --hello---
+</pre_code>
+
+<large_image src="u00c0.svg">
+
+<p>
+If no instruction for <inline_code>[type]</inline_code> is defined, Python will use the basic string representation for the value provided. For example, integers will be represented using 10 base notation, but it is conveniently possible to specify a different base adding <inline_code>[type]</inline_code>. What follows is a list of the possible conversion options for integer values.</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Type</th>
+            <th>Meaning</th>
+            <th>Output</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>'b'</code></td>
+            <td>Binary format</td>
+            <td>Outputs the number in base 2</td>
+        </tr>
+        <tr>
+            <td><code>'c'</code></td>
+            <td>Character</td>
+            <td>Converts the integer to the corresponding unicode character before printing</td>
+        </tr>
+        <tr>
+            <td><code>'d'</code></td>
+            <td>Decimal Integer</td>
+            <td>Outputs the number in base 10</td>
+        </tr>
+        <tr>
+            <td><code>'o'</code></td>
+            <td>Octal format</td>
+            <td>Outputs the number in base 8</td>
+        </tr>
+        <tr>
+            <td><code>'x'</code></td>
+            <td>Hex format</td>
+            <td>Outputs the number in base 16, using lower- case letters for the digits above 9</td>
+        </tr>
+        <tr>
+            <td><code>'X'</code></td>
+            <td>Hex format</td>
+            <td>Outputs the number in base 16, using upper- case letters for the digits above 9</td>
+        </tr>
+        <tr>
+            <td><code>'n'</code></td>
+            <td>Number</td>
+            <td>This is the same as <inline_code>'d'</inline_code>, except that it uses the current locale setting to insert the appropriate number separator characters</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>Consider the following examples:</p>
+
+<pre_code>value = 242
+f'{value:.^12b}'
+# '..11110010..'</pre_code>
+<p><inline_code>242</inline_code> is converted to <inline_code>11110010</inline_code>. The binary representation is then centered in a string of length 12 using <inline_code>'.'</inline_code> as placeholder</p>
+
+<pre_code>value = 65
+f'H{value:c}H'
+# 'HAH'</pre_code>
+<p>65 in the Unicode mapping points to the uppercase A which is then joined to the string literal</p>
+
+<pre_code>value = 200
+f'{value:>+6d}'
+# '  +200'</pre_code>
+
+<p>The plus in front of the string’s width forces the interpreter to put a sign in front of the decimal integer even if positive. Note that the plus can be applied to any numerical data conversion. 200 is displayed in base 10, and some white spaces are put in front of the sign until the string reaches length 6.</p>
+
+<pre_code>value = 379
+f'U+{value:0>4X}'
+# 'U+017B'</pre_code>
+<p>converts <inline_code>3792₁₀</inline_code> to <inline_code>17B₁₆</inline_code>, using uppercase letters. Then it adds an extra 0 character in front of the hexadecimal representation to reach length 4. Finally, it is linked to the string literal <inline_code>'U+'</inline_code>.</p>
+
+<p>Now, let’s look at a selection of options for floating-point numbers</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Type</th>
+            <th>Meaning</th>
+            <th>Output</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>'f'</code></td>
+            <td>Fixed point</td>
+            <td>Displays the number as a fixed-point number. The default precision is 6.</td>
+        </tr>
+        <tr>
+            <td><code>'n'</code></td>
+            <td>Number</td>
+            <td>It uses the current locale setting to insert the appropriate number separator characters. If the number is too large, it switches to scientific notation.</td>
+        </tr>        <tr>
+            <td><code>'%'</code></td>
+            <td>Percentage</td>
+            <td>Multiplies the number by 100 and displays in fixed (<inline_code>'f'</inline_code>) format, followed by a percent sign.</td>
+        </tr>
+    </tbody>
+</table>
+<p>Consider the following examples:</p>
+
+<pre_code>value = 12.2345
+f'{value:.2f}' # 12.23</pre_code>
+<p><inline_code>'f'</inline_code> in combination with <inline_code>'.2'</inline_code> will output a floating point representation which precision is limited to 2 digits after the dot</p>
+
+<pre_code># US standard
+value = 2345.67
+f'{value:n}'
+# 2,345.67
+
+# Italian standard
+import locale
+locale.setlocale(locale.LC_ALL, 'it_IT')
+f'{value:n}'
+# 2345,67</pre_code>
+
+<p>This conversion method could be useful when typesetting languages different from English. Check the Python standard <inline_code>locale</inline_code> module documentation.</p>
+
+<pre_code>value = 45
+f'{value:.0%}' # 45%</pre_code>
+
+<p>The <inline_code>'%'</inline_code> conversion type will convert the floating point to percentage. <inline_code>'.0'</inline_code> will truncate the decimal information of the percentage (<inline_code>45%</inline_code> instead of <inline_code>45.000000%</inline_code>).</p>
+
+<section_title>Useful String Methods</section_title>
+
+<p>Python provides a number of specific methods to transform text data. Remember that strings are immutable, so they are not manipulated “in place”. The following methods generate a brand new string that you have to assign to an identifier if you need to use their output afterwards.</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Method</th>
+            <th>Input</th>
+            <th>Output</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>s.capitalize()</code></td>
+            <td><code>hello</code></td>
+            <td><code>Hello</code></td>
+        </tr>
+        <tr>
+            <td><code>s.lower()</code></td>
+            <td><code>HELLO</code></td>
+            <td><code>hello</code></td>
+        </tr>
+        <tr>
+            <td><code>s.swapcase()</code></td>
+            <td><code>Hello</code></td>
+            <td><code>hELLO</code></td>
+        </tr>
+        <tr>
+            <td><code>s.title()</code></td>
+            <td><code>hello world</code></td>
+            <td><code>Hello World</code></td>
+        </tr>
+        <tr>
+            <td><code>s.upper()</code></td>
+            <td><code>hello</code></td>
+            <td><code>HELLO</code></td>
+        </tr>
+    </tbody>
+</table>
+
+<p>Python provides a number of specific methods to inspect text data. These methods return a boolean value, in fact their identifier describes a string condition</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Method</th>
+            <th>Behaviour</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>s.islower()</code></td>
+            <td>return <code>True</code> if <code>s</code> is lowercase</td>
+        </tr>
+        <tr>
+            <td><code>s.istitle()</code></td>
+            <td>return <code>True</code> if <code>str</code> is title cased <code>(‘Hello World’)</code></td>
+        </tr>
+        <tr>
+            <td><code>s.isupper()</code></td>
+            <td>return <code>True</code> if <code>str</code> is uppercase</td>
+        </tr>
+        <tr>
+            <td><code>s.startswith(s2)</code></td>
+            <td>return <code>True</code> if <code>str</code> starts with <code>s2</code></td>
+        </tr>
+        <tr>
+            <td><code>s.endswith(s2)</code></td>
+            <td>return <code>True</code> if <code>str</code> ends with <code>s2</code></td>
+        </tr>
+        <tr>
+            <td><code>s.isalnum()</code></td>
+            <td>return <code>True</code> if <code>str</code> is alphanumeric (A-Z, a-z, 0-9, no white spaces)</td>
+        </tr>
+        <tr>
+            <td><code>s.isalpha()</code></td>
+            <td>return <code>True</code> if <code>str</code> is alphabetic (A-Z, a-z, no white spaces)</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>You can find correspondences of a substring into a string using the following methods:</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Method</th>
+            <th>Behaviour</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>s.index(s2, i, j)</code></td>
+            <td>Index of first occurrence of <code>s2</code> in <code>s</code> after index <code>i</code> and before index <code>j</code></td>
+        </tr>
+        <tr>
+            <td><code>s.rindex(s2)</code></td>
+            <td>Return highest index of <code>s2</code> in <code>s</code> (raise <code>ValueError</code> if not found)</td>
+        </tr>
+        <tr>
+            <td><code>s.find(s2)</code></td>
+            <td>Find and return lowest index of <code>s2</code> in <code>s</code></td>
+        </tr>
+        <tr>
+            <td><code>s.rfind(s2)</code></td>
+            <td>Return highest index of <code>s2</code> in <code>s</code></td>
+        </tr>
+    </tbody>
+</table>
+
+<p>Or, you can generate new strings (or list of strings) using the following common methods:</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Method</th>
+            <th>Behaviour</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>s.join('123')</code></td>
+            <td>Return <code>s</code> joined by iterable <code>'123'#</code> if <code>s</code> is <code>'hello' => '1hello2hello3'</code></td>
+        </tr>
+        <tr>
+            <td><code>s.split(sep, maxsplit)</code></td>
+            <td>Return list of <code>s</code> split by <code>sep</code> with leftmost <code>maxsplits</code> performed</td>
+        </tr>
+        <tr>
+            <td><code>s.splitlines()</code></td>
+            <td>Return a list of lines in <code>s#</code> if <code>s</code> is <code>'hello\nworld' => ['hello', 'world']</code></td>
+        </tr>
+        <tr>
+            <td><code>s.replace(s2, s3, count)</code></td>
+            <td>Replace <code>s2</code> with <code>s3</code> in <code>s</code> at most count times</td>
+        </tr>
+    </tbody>
+</table>
