@@ -44,7 +44,8 @@ def convertCustomTags(value):
         value = value.replace(source, replacement)
 
     for eachImgTag in IMAGE_TAGS:
-        value = value.replace(eachImgTag[:-1], "<img class='%s'" % eachImgTag[1:-1])
+        value = value.replace(eachImgTag[:-1],
+                              "<img class='%s'" % eachImgTag[1:-1])
 
     return HTML(value)
 
@@ -59,7 +60,7 @@ class HTML(object):
 
 class PfdCustomMarkupFilterPlugin(Plugin):
     name = u'PFD Custom Markup Filter'
-    description = u'This filter will convert the custom pfd markup into proper html'
+    description = u'This filter will convert the custom pfd markup into html'
 
     def on_setup_env(self, **extra):
         self.env.jinja_env.filters['convertCustomTags'] = convertCustomTags
