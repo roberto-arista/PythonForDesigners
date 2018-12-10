@@ -257,6 +257,8 @@ print(eachInt)
 
 <p>How can this be useful in a graphic design application? Consider the following scenario: you would like to create a pdf document of sixteen pages and write on each page a sequential page number. Drawbot can do that of course:</p>
 
+<large_image src="16pages.svg">
+
 <pre_code>pages = 16
 for eachPageNumber in range(1, pages+1):
     newPage(200, 200)
@@ -264,7 +266,7 @@ for eachPageNumber in range(1, pages+1):
 
 <p>A for construct is the perfect companion of an <inline_code>.append() </inline_code>list method. It is very common to create a series of values starting from a pre-existing one. Like making an all-caps version of a word sequence:</p>
 
-<pre_code>myWords = [‘cat’, ‘table’, ‘sword’]
+<pre_code>myWords = ['cat', 'table', 'sword']
 myAllCapsWords = []
 for eachWord in myWords:
     allCapsWord = eachWord.upper()
@@ -278,16 +280,18 @@ print(myAllCapsWords)
 
 <p>Instead of:</p>
 
+<code_image_wrapper><code_image src="4lines.png">
 <pre_code>size(100, 100)
 
 stroke(0)
 line((20, 20), (80, 20))
 line((20, 40), (80, 40))
 line((20, 60), (80, 60))
-line((20, 80), (80, 80))</pre_code>
+line((20, 80), (80, 80))</pre_code></code_image_wrapper><code_image>
 
 <p>go for this structure</p>
 
+<code_image_wrapper><code_image src="4lines.png">
 <pre_code>linesAmount = 4
 size(100, 100)
 
@@ -295,21 +299,23 @@ stroke(0)
 for eachLineIndex in range(linesAmount):
     # the width() function provides the canvas width in pts 
     quota = width()/(linesAmount+1)*(eachLineIndex+1)
-    line((20, quota), (80, quota))</pre_code>
+    line((20, quota), (80, quota))</pre_code></code_image_wrapper>
 
 <p>The advantages of the second versionare enormous, starting for the very basic fact that you can add and subtract elements with almost no changes.</p>
 
-<pre_code>linesAmount = 8
+<code_image_wrapper><code_image src="8lines.png"><pre_code>
+linesAmount = 8
 size(100, 100)
 
 stroke(0)
 for eachLineIndex in range(linesAmount):
     quota = width()/(linesAmount+1)*(eachLineIndex+1)
-    line((20, quota), (80, quota))</pre_code>
+    line((20, quota), (80, quota))</pre_code></code_image_wrapper>
 
 <p>What if you need to add points at the beginning and at the end? Easily done.</p>
 
-<pre_code>linesAmount = 8
+
+<code_image_wrapper><code_image src="linesOvals.png"><pre_code>linesAmount = 8
 radius = 3
 size(100, 100)
 for eachLineIndex in range(linesAmount):
@@ -322,22 +328,22 @@ for eachLineIndex in range(linesAmount):
     fill(0)    
     oval(20-radius, quota-radius, radius*2, radius*2)
     oval(80-radius, quota-radius, radius*2, radius*2)
-</pre_code>
+</pre_code></code_image_wrapper>
 
 <p>Along with drawing, we can perform any kind of calculation. For example, the fill color of a shape could be defined by the identifier provided by the for construct. Here’s an example. </p>
 
-<pre_code>shades = 10
+<code_image_wrapper><code_image src="scaleGrey.png"><pre_code>shades = 10
 size(100, 100)
 
 shadeWidth = width()/shades
 for shadeIndex in range(shades):
     grayscaleValue = 1 - (1/(shades-1)*shadeIndex)
     fill(grayscaleValue)
-    rect(shadeIndex*shadeWidth, 0, shadeWidth, height())</pre_code>
+    rect(shadeIndex*shadeWidth, 0, shadeWidth, height())</pre_code></code_image_wrapper>
 
 <p>Or we can affect the arguments used to draw the shape itself:</p>
 
-<pre_code>linesAmount = 100
+<code_image_wrapper><code_image src="lines.png"><pre_code>linesAmount = 100
 size(100, 100)
 stroke(0)
 
@@ -345,11 +351,11 @@ factor = 1
 for eachLineIndex in range(linesAmount):
     x = width()/(linesAmount+1)*(eachLineIndex+1) * factor
     line((x, 20), (x, 80))
-    factor += .1</pre_code>
+    factor += .1</pre_code></code_image_wrapper>
 
 <p>Remember that <inline_code>if</inline_code> statements can be used into the <inline_code>for</inline_code> body, meaning that we can perform choices within an iterative process:</p>
 
-<pre_code>stripes = 10
+<code_image_wrapper><code_image src="stripes.png"><pre_code>stripes = 10
 size(100, 100)
 
 stripeWidth = width()/stripes
@@ -358,7 +364,7 @@ for stripeIndex in range(stripes):
             fill(0)
     else:
             fill(1)
-    rect(stripeIndex*stripeWidth, 0, stripeWidth, height())</pre_code>
+    rect(stripeIndex*stripeWidth, 0, stripeWidth, height())</pre_code></code_image_wrapper>
 
 <section_title>Drawing Many Times in Two Directions</section_title>
 
@@ -374,7 +380,7 @@ for stripeIndex in range(stripes):
 
 <p>At this point we only need to define a size for the cell and we are able to draw the left column of the matrix</p>
 
-<pre_code>rows = 4
+<code_image_wrapper><code_image src="rows4.png"><pre_code>rows = 4
 size(200, 200)
 
 cellSize = height()/rows
@@ -382,11 +388,11 @@ cellSize = height()/rows
 stroke(0)
 fill(None)
 for rowIndex in range(rows):
-    rect(0*cellSize, rowIndex*cellSize, cellSize, cellSize)</pre_code>
+    rect(0*cellSize, rowIndex*cellSize, cellSize, cellSize)</pre_code></code_image_wrapper>
 
 <p>or the bottom row the matrix</p>
 
-<pre_code>cols = 4
+<code_image_wrapper><code_image src="cols4.png"><pre_code>cols = 4
 size(200, 200)
 
 cellSize = height()/cols
@@ -394,11 +400,11 @@ cellSize = height()/cols
 stroke(0)
 fill(None)
 for colIndex in range(cols):
-    rect(colIndex*cellSize, 0*cellSize, cellSize, cellSize)</pre_code>
+    rect(colIndex*cellSize, 0*cellSize, cellSize, cellSize)</pre_code></code_image_wrapper>
 
 <p>If we combine the two constructs together we can draw the entire matrix <em>calling</em> the <inline_code>rect()</inline_code> function only once</p>
 
-<pre_code>cols = 4
+<code_image_wrapper><code_image src="rowscols4.png"><pre_code>cols = 4
 rows = 4
 size(200, 200)
 
@@ -409,12 +415,12 @@ stroke(0)
 fill(None)
 for rowIndex in range(rows):
     for colIndex in range(cols):
-        rect(colIndex*cellWidth, rowIndex*cellHeight, cellWidth, cellHeight)</pre_code>
+        rect(colIndex*cellWidth, rowIndex*cellHeight, cellWidth, cellHeight)</pre_code></code_image_wrapper>
 
 <p>Matrix indexes can be drawn very easily
 </p>
 
-<pre_code>cols = 4
+<code_image_wrapper><code_image src="gridnumbers.png"><pre_code>cols = 4
 rows = 4
 size(200, 200)
 
@@ -432,11 +438,11 @@ for rowIndex in range(rows):
 
         fill(None)
         stroke(0)
-        rect(x, y, cellWidth, cellHeight)</pre_code>
+        rect(x, y, cellWidth, cellHeight)</pre_code></code_image_wrapper>
 
 <p>As for the single <inline_code>for</inline_code> construct, calculations performed within the body can affect the quality of the drawing. A one-dimensional gradient can easily become bi-dimensional</p>
 
-<pre_code>cols = 4
+<code_image_wrapper><code_image src="matrixRect.png"><pre_code>cols = 4
 rows = 4
 size(200, 200)
 cellWidth = width()/cols
@@ -446,11 +452,11 @@ for rowIndex in range(rows):
         grayscale = (rowIndex+colIndex)/(rows+cols-2)
         fill(grayscale)
         rect(colIndex*cellWidth, rowIndex*cellHeight, cellWidth, cellHeight)
-</pre_code>
+</pre_code></code_image_wrapper>
 
 <p>and an <inline_code>if</inline_code> statement nested into the inner <inline_code>for</inline_code> loop can draw a chess board:</p>
 
-<pre_code>cols = 4
+<code_image_wrapper><code_image src="chess.png"><pre_code>cols = 4
 rows = 4
 size(200, 200)
 cellWidth = width()/cols
@@ -461,11 +467,11 @@ for rowIndex in range(rows):
             fill(0)
         else:
             fill(1)
-        rect(colIndex*cellWidth, rowIndex*cellHeight, cellWidth, cellHeight)</pre_code>
+        rect(colIndex*cellWidth, rowIndex*cellHeight, cellWidth, cellHeight)</pre_code></code_image_wrapper>
 
 <p>Please, note that nested for constructs can also be used to navigate nested data structures as a list of tuples:</p>
 
-<pre_code>myRoute = [(10.2, 22.3, (7, 51, 43)),
+<code_image_wrapper><code_image src="listprinted.png"><pre_code>myRoute = [(10.2, 22.3, (7, 51, 43)),
            (12.6, 19.8, (7, 52, 2)),
            (14.5, 18.2, (7, 52, 54))
            ]
@@ -485,4 +491,4 @@ for indexRow, eachRow in enumerate(myRoute):
         if indexCell == 2:
             text('{:0>2}:{:0>2}:{:0>2}'.format(*cellContent), (x, y))
         else:
-            text('{}'.format(cellContent), (x, y))</pre_code>
+            text('{}'.format(cellContent), (x, y))</pre_code></code_image_wrapper>

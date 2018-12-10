@@ -12,16 +12,16 @@ body:
 
 <section_title>Formatting Strings</section_title>
 
-<p>Python supports multiple ways to format strings. With formatting I mean building new strings out of different kind of values.  The most commons are the old school <inline_code>%</inline_code>-formatting, the <inline_code>.format()</inline_code> method and the Python3 novelty f-strings. In this manual, we will look into the latest way, given its minimal syntax and high flexibility.</p>
+<p>Python supports multiple ways to format strings. With formatting I mean building new strings out of different kind of values.  The most commons are the old school <inline_code>%</inline_code>-formatting, the <inline_code>.format()</inline_code> method and the Python3 novelty <inline_code>f-strings</inline_code>. In this manual, we will look into the latest way, given its minimal syntax and high flexibility.</p>
 
-<p>Formatting strings with f-string is as easy as defining a standard string literal, look at this example:</p>
+<p>Formatting strings with <inline_code>f-string</inline_code> is as easy as defining a standard string literal, look at this example:</p>
 
 <pre_code>myName = 'Roberto'
 f'Hi! My name is {myName}'
 # My name is Roberto
 </pre_code>
 
-<p>Moreover, f-strings allow to include full Python expressions like:</p>
+<p>Moreover, <inline_code>f-strings</inline_code> allow to include full Python expressions like:</p>
 
 <pre_code>a = 10
 b = 20
@@ -43,7 +43,7 @@ b = 20
 # The mid value is a+(b-a)*.5</pre_code>
 
 <p>Otherwise, the expression is not evaluated.</p>
-<p>f-strings and .format() share the same format specifier mini-language. Which can be synthesized in the following way:</p>
+<p><inline_code>f-strings</inline_code> and <inline_code>.format()</inline_code> share the same format specifier mini-language. Which can be synthesized in the following way:</p>
 <pre_code>f'{[field]:[width][type]}'</pre_code>
 
 <p>This mini-language allows us to precisely instruct how to format the data into the string adding some extra information after a colon. For example:</p>
@@ -75,13 +75,13 @@ f'{message:>10}'</pre_code>
 <p>In the cases above, white spaces will be added until the length of 10 characters is reached.</p>
 <p><inline_code>[width]</inline_code> also allows to center a string within a certain amount of characters:</p>
 
-<pre_code>f"{'a':^10}")
-f"{'bcd':^10}")
-f"{'efghi':^10}")
-f"{'jklmnop':^10}")
-f"{'qrstu':^10}")
-f"{'vwx':^10}")
-f"{'y':^10}")
+<pre_code>print(f"{'a':^10}")
+print(f"{'bcd':^10}")
+print(f"{'efghi':^10}")
+print(f"{'jklmnop':^10}")
+print(f"{'qrstu':^10}")
+print(f"{'vwx':^10}")
+print(f"{'y':^10}")
 
 #    a
 #   bcd
@@ -92,15 +92,15 @@ f"{'y':^10}")
 #    y</pre_code>
 
 <p>You can easily define which character should be used by the interpreter:</p>
-<pre_code>f'{"hello":@<10}')
+<pre_code>print(f'{"hello":@<10}')
 # hello@@@@@
 </pre_code>
 
-<pre_code>f'{"hello":_>10}')
+<pre_code>print(f'{"hello":_>10}')
 # _____hello
 </pre_code>
 
-<pre_code>f'{"hello":-^10}')
+<pre_code>print(f'{"hello":-^10}')
 # --hello---
 </pre_code>
 
