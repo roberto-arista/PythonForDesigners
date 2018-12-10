@@ -16,8 +16,6 @@ from bs4 import BeautifulSoup
 ### Functions & Procedures
 def convertLR(path, oldCopy=True):
 
-    # exercise
-    # code-example
     # list
     # section-title
     # table
@@ -27,16 +25,27 @@ def convertLR(path, oldCopy=True):
     if oldCopy is True:
         shutil.copy(path, path.replace('.lr', '.old.lr'))
 
+    # open the file and make the soup
     with codecs.open(path, 'r', 'utf-8') as lrFile:
         lrDoc = lrFile.read()
-
-    soup = BeautifulSoup(lrDoc, 'html.parser')
+    soup = BeautifulSoup(lrDoc, 'lxml')
 
     # images
-    print(soup)
-    for eachTag in soup.find_all('small_image'):
-        print(eachTag)
-    raise Exception
+    # for eachTag in soup.find_all('large_image'):
+        # print(eachTag['src'])
+
+    # for eachTag in soup.find_all('small_image'):
+        # print(eachTag['src'])
+
+    # # code-example
+    for eachTag in soup.find_all('pre_code'):
+        print(eachTag.text)
+        raise Exception
+
+    # raise Exception
+
+    # exercise
+
 
 ### Variables
 
