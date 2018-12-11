@@ -14,15 +14,15 @@ import codecs
 from bs4 import BeautifulSoup
 
 ### Constants
-FIELD_SEPARATOR = '-'*4
+FIELD_SEPARATOR = '-'*3
 TAGS = ['large_image',
         'small_image',
         'pre_code',
-        'p',
         'section_title',
         'workbook',
         'exercise_wrapper',
-        'table']
+        'table',
+        'p']
 
 
 ### Functions & Procedures
@@ -40,40 +40,50 @@ def convertImage(tag, kind):
 def convertCodeExample(tag, chapterFolder, counter):
     block = ['#### code-example ####']
     if tag.previous_sibling == 'code_image':
-        block.append(f"Image: {tag['src']}")
+        block.append(f"image: {tag['src']}")
         block.append(FIELD_SEPARATOR)
     snippetName = f'{counter:0>2d}.py'
-    with open(joinPth(chapterFolder, snippetName), 'w', 'utf-8') as snippetFile:
+    with codecs.open(joinPth(chapterFolder, snippetName), 'w', 'utf-8') as snippetFile:
         snippetFile.write(tag.text)
-        block.append(snippetName)
+        block.append(f'path: {snippetName}')
         block.append(FIELD_SEPARATOR)
     return block
 
 def convertText(tag):
-    block = ['#### text-block ####']
-    block.append(f'Content: {tag.text}')
-    block.append(FIELD_SEPARATOR)
-    return block
+    paragraph = tag.text
+
+    # inline code
+    paragraph = paragraph.replace('<inline_code>', '`')
+    paragraph = paragraph.replace('</inline_code>', '`')
+
+    # em
+    paragraph = paragraph.replace('<em>', '*')
+    paragraph = paragraph.replace('</em>', '*')
+
+    return '#### text-block ####', paragraph
 
 def convertSectionTitle(tag, kind):
     block = ['#### section-title ####']
-    block.append(f'Content: {tag.text}')
-    block.append(FIELD_SEPARATOR)
-    if kind == 'section-title':
-        block.append('Class: default')
+    if kind == 'section_title':
+        block.append(f'content: {tag.text}')
+        block.append(FIELD_SEPARATOR)
+        block.append('class: default')
     else:
-        block.append('Class: workbook')
+        block.append('content: Workbook')
+        block.append(FIELD_SEPARATOR)
+        block.append('class: workbook')
     block.append(FIELD_SEPARATOR)
     return block
 
 def convertExercise(tag):
     block = ['#### exercise ####']
     if tag.exercise_content:
-        block.append(f'Content: {tag.exercise_content.text}')
+        block.append(f'content: {tag.exercise_content.text}')
         block.append(FIELD_SEPARATOR)
     if tag.exercise_image:
-        block.append(f"Image: {tag.exercise_image['src']}")
+        block.append(f"image: {tag.exercise_image['src']}")
         block.append(FIELD_SEPARATOR)
+    return block
 
 def convertTable(tag, chapterFolder, counter):
     table = []
@@ -107,6 +117,7 @@ def convertTable(tag, chapterFolder, counter):
 
     return block
 
+
 def convertLR(lrPath, oldCopy=True):
 
     # list
@@ -123,25 +134,25 @@ def convertLR(lrPath, oldCopy=True):
     result = re.search(pattern, lrDoc)
 
     if result:
-        lrBody = result.group()
+        lrBody = result.group(1)  # first parenthesized match group
 
         tableCounter = 1
         snippetCounter = 1
 
         flow = []
-        soup = BeautifulSoup(lrBody, 'lxml')
+        textBlocks = []
+        block = None
+        header = None
 
-        for eachTag in soup.find_all(True, recursive=False):
-            print(eachTag)
+        soup = BeautifulSoup(lrBody, 'lxml')
+        for eachTag in soup.body.find_all(TAGS, recursive=False):
 
             # images
             if eachTag.name == 'large_image':
                 block = convertImage(eachTag, 'large')
-                flow.append('\n'.join(block))
 
             if eachTag.name == 'small_image':
                 block = convertImage(eachTag, 'small')
-                flow.append('\n'.join(block))
 
             # code-example
             if eachTag.name == 'pre_code':
@@ -149,29 +160,35 @@ def convertLR(lrPath, oldCopy=True):
                                            dirname(lrPath),
                                            snippetCounter)
                 snippetCounter += 1
-                flow.append('\n'.join(block))
 
             # text-block
             if eachTag.name == 'p':
-                block = convertText(eachTag)
-                flow.append('\n'.join(block))
+                header, block = convertText(eachTag)
 
             # section-title
             if eachTag.name in ['section_title', 'workbook']:
                 block = convertSectionTitle(eachTag, eachTag.name)
-                flow.append('\n'.join(block))
 
             # exercise
             if eachTag.name == 'exercise_wrapper':
                 block = convertExercise(eachTag)
-                flow.append('\n'.join(block))
 
             # table
             if eachTag.name == 'table':
                 block = convertTable(eachTag, dirname(lrPath), tableCounter)
                 tableCounter += 1
+
+            if eachTag.name == 'p':
+                textBlocks.append(block)
+            else:
+                if len(textBlocks) > 0:
+                    paragraphs = "\n\n".join(textBlocks)
+                    textBlocks = []
+                    paragraphsBlock = [f'{header}', f'content: {paragraphs}', FIELD_SEPARATOR]
+                    flow.append('\n'.join(paragraphsBlock))
                 flow.append('\n'.join(block))
 
+        # substitution
         newHeader = re.sub(pattern, '', lrDoc)
         newBody = '\n'.join(flow)
 
@@ -249,4 +266,5 @@ if __name__ == '__main__':
                'why-this-manual']
 
     for eachFolder in folders:
-        convertLR(joinPth('../content', eachFolder, 'contents.lr'))
+        lrFileName = joinPth('../content', eachFolder, 'contents.lr')
+        convertLR(lrFileName)
