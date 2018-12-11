@@ -192,7 +192,7 @@ def convertLR(lrPath, oldCopy=True):
         newHeader = re.sub(pattern, '', lrDoc)
         newBody = '\n'.join(flow)
 
-        with codecs.open(lrPath.replace('.lr', '.new.lr'), 'w', 'utf-8') as newDocFile:
+        with codecs.open(lrPath, 'w', 'utf-8') as newDocFile:
             newDocFile.write(newHeader)
             newDocFile.write(f'---\nbody: {newBody}')
 
