@@ -6,53 +6,247 @@
 ##############################
 
 ### Modules
-import os
+import re
+from os.path import join as joinPth
+from os.path import dirname
 import shutil
 import codecs
 from bs4 import BeautifulSoup
 
 ### Constants
+FIELD_SEPARATOR = '-'*4
+TAGS = ['large_image',
+        'small_image',
+        'pre_code',
+        'p',
+        'section_title',
+        'workbook',
+        'exercise_wrapper',
+        'table']
+
 
 ### Functions & Procedures
-def convertLR(path, oldCopy=True):
+def convertImage(tag, kind):
+    block = ['#### image ####']
+    block.append(f"name: {tag['src']}")
+    block.append(FIELD_SEPARATOR)
+    if kind == 'large':
+        block.append('class: large_image')
+    else:
+        block.append('class: small_image')
+    block.append(FIELD_SEPARATOR)
+    return block
+
+def convertCodeExample(tag, chapterFolder, counter):
+    block = ['#### code-example ####']
+    if tag.previous_sibling == 'code_image':
+        block.append(f"Image: {tag['src']}")
+        block.append(FIELD_SEPARATOR)
+    snippetName = f'{counter:0>2d}.py'
+    with open(joinPth(chapterFolder, snippetName), 'w', 'utf-8') as snippetFile:
+        snippetFile.write(tag.text)
+        block.append(snippetName)
+        block.append(FIELD_SEPARATOR)
+    return block
+
+def convertText(tag):
+    block = ['#### text-block ####']
+    block.append(f'Content: {tag.text}')
+    block.append(FIELD_SEPARATOR)
+    return block
+
+def convertSectionTitle(tag, kind):
+    block = ['#### section-title ####']
+    block.append(f'Content: {tag.text}')
+    block.append(FIELD_SEPARATOR)
+    if kind == 'section-title':
+        block.append('Class: default')
+    else:
+        block.append('Class: workbook')
+    block.append(FIELD_SEPARATOR)
+    return block
+
+def convertExercise(tag):
+    block = ['#### exercise ####']
+    if tag.exercise_content:
+        block.append(f'Content: {tag.exercise_content.text}')
+        block.append(FIELD_SEPARATOR)
+    if tag.exercise_image:
+        block.append(f"Image: {tag.exercise_image['src']}")
+        block.append(FIELD_SEPARATOR)
+
+def convertTable(tag, chapterFolder, counter):
+    table = []
+
+    headerRows = 0
+    if tag.thead:
+        for tRow in tag.thead.find_all('tr', recursive=False):
+            eachRow = []
+            for tagCell in tRow.find_all('th', recursive=False):
+                eachRow.append(tagCell.text)
+            table.append('\t'.join(eachRow))
+        headerRows += 1
+
+    if tag.tbody:
+        for tRow in tag.tbody.find_all('tr', recursive=False):
+            eachRow = []
+            for tagCell in tRow.find_all('td', recursive=False):
+                eachRow.append(tagCell.text)
+            table.append('\t'.join(eachRow))
+
+    tableFileName = f'{counter:0>2d}.csv'
+    with codecs.open(joinPth(chapterFolder, tableFileName), 'w', 'utf-8') as tableFile:
+        tableFile.write('\n'.join(table))
+
+    block = ['#### table ####']
+    block.append(f'path: {tableFileName}')
+    block.append(FIELD_SEPARATOR)
+
+    block.append(f'headers: {headerRows}')
+    block.append(FIELD_SEPARATOR)
+
+    return block
+
+def convertLR(lrPath, oldCopy=True):
 
     # list
-    # section-title
-    # table
-    # text-block
 
     # safety copy
     if oldCopy is True:
-        shutil.copy(path, path.replace('.lr', '.old.lr'))
+        shutil.copy(lrPath, lrPath.replace('.lr', '.old.lr'))
 
     # open the file and make the soup
-    with codecs.open(path, 'r', 'utf-8') as lrFile:
+    with codecs.open(lrPath, 'r', 'utf-8') as lrFile:
         lrDoc = lrFile.read()
-    soup = BeautifulSoup(lrDoc, 'lxml')
 
-    # images
-    # for eachTag in soup.find_all('large_image'):
-        # print(eachTag['src'])
+    pattern = re.compile(r'---\nbody:(.*)', re.DOTALL)
+    result = re.search(pattern, lrDoc)
 
-    # for eachTag in soup.find_all('small_image'):
-        # print(eachTag['src'])
+    if result:
+        lrBody = result.group()
 
-    # # code-example
-    for eachTag in soup.find_all('pre_code'):
-        print(eachTag.text)
-        raise Exception
+        tableCounter = 1
+        snippetCounter = 1
 
-    # raise Exception
+        flow = []
+        soup = BeautifulSoup(lrBody, 'lxml')
 
-    # exercise
+        for eachTag in soup.find_all(True, recursive=False):
+            print(eachTag)
+
+            # images
+            if eachTag.name == 'large_image':
+                block = convertImage(eachTag, 'large')
+                flow.append('\n'.join(block))
+
+            if eachTag.name == 'small_image':
+                block = convertImage(eachTag, 'small')
+                flow.append('\n'.join(block))
+
+            # code-example
+            if eachTag.name == 'pre_code':
+                block = convertCodeExample(eachTag,
+                                           dirname(lrPath),
+                                           snippetCounter)
+                snippetCounter += 1
+                flow.append('\n'.join(block))
+
+            # text-block
+            if eachTag.name == 'p':
+                block = convertText(eachTag)
+                flow.append('\n'.join(block))
+
+            # section-title
+            if eachTag.name in ['section_title', 'workbook']:
+                block = convertSectionTitle(eachTag, eachTag.name)
+                flow.append('\n'.join(block))
+
+            # exercise
+            if eachTag.name == 'exercise_wrapper':
+                block = convertExercise(eachTag)
+                flow.append('\n'.join(block))
+
+            # table
+            if eachTag.name == 'table':
+                block = convertTable(eachTag, dirname(lrPath), tableCounter)
+                tableCounter += 1
+                flow.append('\n'.join(block))
+
+        newHeader = re.sub(pattern, '', lrDoc)
+        newBody = '\n'.join(flow)
+
+        with codecs.open(lrPath.replace('.lr', '.new.lr'), 'w', 'utf-8') as newDocFile:
+            newDocFile.write(newHeader)
+            newDocFile.write(f'---\nbody: {newBody}')
 
 
 ### Variables
+tableText = """<table>
+    <thead>
+        <tr>
+            <th>Expression</th>
+            <th>Output</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>not True</code></td>
+            <td><code>False</code></td>
+        </tr>
 
+        <tr>
+            <td><code>not False</code></td>
+            <td><code>True</code></td>
+        </tr>
+
+        <tr>
+            <td><code>True and True</code></td>
+            <td><code>True</code></td>
+        </tr>
+
+        <tr>
+            <td><code>False and True</code></td>
+            <td><code>False</code></td>
+        </tr>
+
+        <tr>
+            <td><code>False and False</code></td>
+            <td><code>False</code></td>
+        </tr>
+
+        <tr>
+            <td><code>True or True</code></td>
+            <td><code>True</code></td>
+        </tr>
+
+        <tr>
+            <td><code>True or False</code></td>
+            <td><code>True</code></td>
+        </tr>
+
+        <tr>
+            <td><code>False or False</code></td>
+            <td><code>False</code></td>
+        </tr>
+
+    </tbody>
+</table>"""
 
 ### Instructions
-for root, folders, fileNames in os.walk('../content'):
+if __name__ == '__main__':
+    folders = ['a-few-words-about',
+               'basic-data-types',
+               'coordinates-and-primitives',
+               'how-to-browse-sequences',
+               'how-to-keep-doing-things-until-you-need-to',
+               'how-to-make-choices',
+               'should-a-designer-code',
+               'strings-encoding-and-unicode',
+               'the-elements-of-a-python-program',
+               'transform-strings',
+               'typesetting-with-drawbot',
+               'using-drawbot',
+               'why-this-manual']
 
-    for eachFileName in fileNames:
-        if eachFileName == 'contents.lr':
-            convertLR(os.path.join(root, eachFileName))
+    for eachFolder in folders:
+        convertLR(joinPth('../content', eachFolder, 'contents.lr'))
