@@ -104,7 +104,7 @@ print(f"{'y':^10}")
 # --hello---
 </pre_code>
 
-<large_image src="u00c0.svg">
+<large_image src="u00c0.svg"></large_image>
 
 <p>
 If no instruction for <inline_code>[type]</inline_code> is defined, Python will use the basic string representation for the value provided. For example, integers will be represented using 10 base notation, but it is conveniently possible to specify a different base adding <inline_code>[type]</inline_code>. What follows is a list of the possible conversion options for integer values.</p>

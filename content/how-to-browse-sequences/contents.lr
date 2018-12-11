@@ -20,12 +20,12 @@ body:
 
 <pre_code>years = [2018, 2017, 2016, 2015]</pre_code>
 
-<large_image src="list.svg">
+<large_image src="list.svg"></large_image>
 
 <p>Now, this is a tuple:</p>
 <pre_code>coordinates = (10.4, 20.2)</pre_code>
 
-<large_image src="tuple.svg">
+<large_image src="tuple.svg"></large_image>
 
 <p>As we said, elements in lists and tuples are of arbitrary nature: they can be any kind of object, None included. They can be empty too.</p>
 
@@ -64,7 +64,7 @@ print(myLowercase)</pre_code>
 
 <p>Once finished, the route of the journey is saved on the smartphone memory. A standard table would suit very well the purpose.</p>
 
-<large_image src="list-table.svg">
+<large_image src="list-table.svg"></large_image>
 
 <section_title>Sequence Properties for Lists and Tuples</section_title>
 
@@ -86,7 +86,7 @@ myList = [1, 'b', 2]
 myList.append('d')
 # result: [1, 'b', 2, 'd']</pre_code>
 
-<large_image src="append.svg">
+<large_image src="append.svg"></large_image>
 
 <p>.extend(iterable)</p>
 
@@ -101,7 +101,7 @@ latinAlphabet.extend(latinUppercase)
 latinAlphabet.extend(latinLowercase)
 # result: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']</pre_code>
 
-<large_image src="extend.svg">
+<large_image src="extend.svg"></large_image>
 
 <p>.insert(index, item)</p>
 
@@ -123,7 +123,7 @@ someCoordinates.insert(200, anotherPoint)
 # insert does not complain if the index is way bigger than the list
 # it will put the element at the end of the list without raising an IndexError</pre_code>
 
-<large_image src="insert.svg">
+<large_image src="insert.svg"></large_image>
 
 <exercise_wrapper><exercise_content><p>transform a right-angled triangle in a square adding a point</p></exercise_content></exercise_wrapper>
 
@@ -144,7 +144,7 @@ if 0 in myRandomNumbers:
 # result: [8, 6, 1, 7, 7, 6, 7, 2, 5, 8, 6, 4, 7]
 </pre_code>
 
-<large_image src="remove.svg">
+<large_image src="remove.svg"></large_image>
 
 <p>.pop(index)</p>
 
@@ -163,7 +163,7 @@ aNumber = myRandomNumbers.pop(24)
 # check the len of the list before using pop
 # with built-in function len()</pre_code>
 
-<large_image src="pop.svg">
+<large_image src="pop.svg"></large_image>
 
 <p>.index(item)</p>
 <pre_code>from string import ascii_lowercase
@@ -171,14 +171,14 @@ myLowercase = list(ascii_lowercase)
 myIndex = myLowercase.index('f')
 # myIndex: 5</pre_code>
 
-<large_image src="index.svg">
+<large_image src="index.svg"></large_image>
 
 <p>.sort()</p>
 <pre_code>percents = [0.362, 0.782, 0.183, 0.045, 0.549]
 percents.sort()
 # result: [0.045, 0.183, 0.362, 0.549, 0.782]</pre_code>
 
-<large_image src="sort.svg">
+<large_image src="sort.svg"></large_image>
 
 <p>.reverse()</p>
 
@@ -187,7 +187,7 @@ flippedLowercase = list(ascii_lowercase)
 flippedLowercase.reverse()
 # result: ['z', 'y', 'x', 'w', 'v', 'u', 't', 's', 'r', 'q', 'p', 'o', 'n', 'm', 'l', 'k', 'j', 'i', 'h', 'g', 'f', 'e', 'd', 'c', 'b', 'a']</pre_code>
 
-<large_image src="reverse.svg">
+<large_image src="reverse.svg"></large_image>
 
 <section_title>For Syntax</section_title>
 <p>Python provides a for-loop syntax which is useful to iterate over a series of elements. Where while comes in handy when we need to keep doing something until a condition is matched,for is preferable when we need to browse a container. for can be used with any kind of <em>iterable</em>, which is a wider notion than sequences. Technically, an iterable can be non-sorted (as sets or dicts).</p>
@@ -200,7 +200,7 @@ flippedLowercase.reverse()
 
 <p>Note that the body is four spaces indented rightwards. <inline_code>for</inline_code> and <inline_code>in</inline_code> are protected keywords. <inline_code>eachElement</inline_code> is an identifier to which the body can refer to. Of course its name is arbitrary, it only needs to respect the standard rules for identifiers.</p>
 
-<large_image src="for.svg">
+<large_image src="for.svg"></large_image>
 
 <p>The iterable can be created either before the <inline_code>for</inline_code> opening statement or created on the spot. Meaning that this example:</p>
 
@@ -257,7 +257,7 @@ print(eachInt)
 
 <p>How can this be useful in a graphic design application? Consider the following scenario: you would like to create a pdf document of sixteen pages and write on each page a sequential page number. Drawbot can do that of course:</p>
 
-<large_image src="16pages.svg">
+<large_image src="16pages.svg"></large_image>
 
 <pre_code>pages = 16
 for eachPageNumber in range(1, pages+1):
@@ -280,7 +280,7 @@ print(myAllCapsWords)
 
 <p>Instead of:</p>
 
-<code_image_wrapper><code_image src="4lines.png">
+<code_image_wrapper><code_image src="4lines.png"></code_image>
 <pre_code>size(100, 100)
 
 stroke(0)
@@ -291,7 +291,7 @@ line((20, 80), (80, 80))</pre_code></code_image_wrapper><code_image>
 
 <p>go for this structure</p>
 
-<code_image_wrapper><code_image src="4lines.png">
+<code_image_wrapper><code_image src="4lines.png"></code_image>
 <pre_code>linesAmount = 4
 size(100, 100)
 
@@ -303,7 +303,7 @@ for eachLineIndex in range(linesAmount):
 
 <p>The advantages of the second versionare enormous, starting for the very basic fact that you can add and subtract elements with almost no changes.</p>
 
-<code_image_wrapper><code_image src="8lines.png"><pre_code>
+<code_image_wrapper><code_image src="8lines.png"></code_image><pre_code>
 linesAmount = 8
 size(100, 100)
 
@@ -315,7 +315,7 @@ for eachLineIndex in range(linesAmount):
 <p>What if you need to add points at the beginning and at the end? Easily done.</p>
 
 
-<code_image_wrapper><code_image src="linesOvals.png"><pre_code>linesAmount = 8
+<code_image_wrapper><code_image src="linesOvals.png"></code_image><pre_code>linesAmount = 8
 radius = 3
 size(100, 100)
 for eachLineIndex in range(linesAmount):
@@ -332,7 +332,7 @@ for eachLineIndex in range(linesAmount):
 
 <p>Along with drawing, we can perform any kind of calculation. For example, the fill color of a shape could be defined by the identifier provided by the for construct. Here’s an example. </p>
 
-<code_image_wrapper><code_image src="scaleGrey.png"><pre_code>shades = 10
+<code_image_wrapper><code_image src="scaleGrey.png"></code_image><pre_code>shades = 10
 size(100, 100)
 
 shadeWidth = width()/shades
@@ -343,7 +343,7 @@ for shadeIndex in range(shades):
 
 <p>Or we can affect the arguments used to draw the shape itself:</p>
 
-<code_image_wrapper><code_image src="lines.png"><pre_code>linesAmount = 100
+<code_image_wrapper><code_image src="lines.png"></code_image><pre_code>linesAmount = 100
 size(100, 100)
 stroke(0)
 
@@ -355,7 +355,7 @@ for eachLineIndex in range(linesAmount):
 
 <p>Remember that <inline_code>if</inline_code> statements can be used into the <inline_code>for</inline_code> body, meaning that we can perform choices within an iterative process:</p>
 
-<code_image_wrapper><code_image src="stripes.png"><pre_code>stripes = 10
+<code_image_wrapper><code_image src="stripes.png"></code_image><pre_code>stripes = 10
 size(100, 100)
 
 stripeWidth = width()/stripes
@@ -372,15 +372,15 @@ for stripeIndex in range(stripes):
 
 <p>If we need to draw a table or 90° based pattern, this technique becomes very handy. Consider the following drawing</p>
 
-<large_image src="matrix.svg">
+<large_image src="matrix.svg"></large_image>
 
 <p>This is a bidimensional matrix, it is a simple table. Each element of the matrix is called cell. Each cell of this matrix can be described by two indexes: the index of the column and the row to which the cell belong. If we explicit write each index to each cell we obtain</p>
 
-<large_image src="matrix-number.svg">
+<large_image src="matrix-number.svg"></large_image>
 
 <p>At this point we only need to define a size for the cell and we are able to draw the left column of the matrix</p>
 
-<code_image_wrapper><code_image src="rows4.png"><pre_code>rows = 4
+<code_image_wrapper><code_image src="rows4.png"></code_image><pre_code>rows = 4
 size(200, 200)
 
 cellSize = height()/rows
@@ -392,7 +392,7 @@ for rowIndex in range(rows):
 
 <p>or the bottom row the matrix</p>
 
-<code_image_wrapper><code_image src="cols4.png"><pre_code>cols = 4
+<code_image_wrapper><code_image src="cols4.png"></code_image><pre_code>cols = 4
 size(200, 200)
 
 cellSize = height()/cols
@@ -404,7 +404,7 @@ for colIndex in range(cols):
 
 <p>If we combine the two constructs together we can draw the entire matrix <em>calling</em> the <inline_code>rect()</inline_code> function only once</p>
 
-<code_image_wrapper><code_image src="rowscols4.png"><pre_code>cols = 4
+<code_image_wrapper><code_image src="rowscols4.png"></code_image><pre_code>cols = 4
 rows = 4
 size(200, 200)
 
@@ -420,7 +420,7 @@ for rowIndex in range(rows):
 <p>Matrix indexes can be drawn very easily
 </p>
 
-<code_image_wrapper><code_image src="gridnumbers.png"><pre_code>cols = 4
+<code_image_wrapper><code_image src="gridnumbers.png"></code_image><pre_code>cols = 4
 rows = 4
 size(200, 200)
 
@@ -442,7 +442,7 @@ for rowIndex in range(rows):
 
 <p>As for the single <inline_code>for</inline_code> construct, calculations performed within the body can affect the quality of the drawing. A one-dimensional gradient can easily become bi-dimensional</p>
 
-<code_image_wrapper><code_image src="matrixRect.png"><pre_code>cols = 4
+<code_image_wrapper><code_image src="matrixRect.png"></code_image><pre_code>cols = 4
 rows = 4
 size(200, 200)
 cellWidth = width()/cols
@@ -456,7 +456,7 @@ for rowIndex in range(rows):
 
 <p>and an <inline_code>if</inline_code> statement nested into the inner <inline_code>for</inline_code> loop can draw a chess board:</p>
 
-<code_image_wrapper><code_image src="chess.png"><pre_code>cols = 4
+<code_image_wrapper><code_image src="chess.png"></code_image><pre_code>cols = 4
 rows = 4
 size(200, 200)
 cellWidth = width()/cols
@@ -471,7 +471,7 @@ for rowIndex in range(rows):
 
 <p>Please, note that nested for constructs can also be used to navigate nested data structures as a list of tuples:</p>
 
-<code_image_wrapper><code_image src="listprinted.png"><pre_code>myRoute = [(10.2, 22.3, (7, 51, 43)),
+<code_image_wrapper><code_image src="listprinted.png"></code_image><pre_code>myRoute = [(10.2, 22.3, (7, 51, 43)),
            (12.6, 19.8, (7, 52, 2)),
            (14.5, 18.2, (7, 52, 54))
            ]
