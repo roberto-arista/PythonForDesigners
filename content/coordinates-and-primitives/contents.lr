@@ -198,7 +198,7 @@ oval(40, 20, 50, 50)
 rect(14, 40, 50, 50)</pre_code></code_image_wrapper>
 
 <exercise_wrapper><exercise_content><p>canvas 100x100
-combine the circles and the squares exercises, draw the four squares below the four ovals<exercise_image </p></exercise_content><exercise_image src="esOvalRect.png"></exercise_image></exercise_wrapper>
+combine the circles and the squares exercises, draw the four squares below the four ovals</p></exercise_content><exercise_image src="esOvalRect.png"></exercise_image></exercise_wrapper>
 
 <p>Take also into account that once a <inline_code>fill()</inline_code> or <inline_code>stroke()</inline_code> is set, it is used until further change. This script:</p>
 
