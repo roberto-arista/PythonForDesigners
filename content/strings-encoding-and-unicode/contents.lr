@@ -10,7 +10,7 @@ visual_abstract: abstract-8.svg
 ---
 body:
 
-<small_image src="textfile.gif">
+<small_image src="textfile.gif"></small_image>
 
 <p>Since the advent of personal computers and desktop publishing, more and more people typeset fonts on a screen. This practice was once confined to a professional category. Nowadays typesetting is ubiquitous. It is so widespread that writing and typesetting are almost considered the same thing. The differences between the two realms are important and a visual designer should be aware of them.</p>
 
@@ -18,11 +18,11 @@ body:
 
 <p>The definition of Typography is narrower. Typography is the arrangement of visual language using elements especially designed for reproduction and reuse: types. These types can be made of lead, film, bytes. It doesn’t matter as long as they are prefabricated. So, Typography is definitely a subset of Writing. Calligraphy or Lettering are other subsets of Writing and they share with Typography the fact that they all deal with letter shapes, but in very different ways.</p>
 
-<large_image src="writing.svg">
+<large_image src="writing.svg"></large_image>
 
 <section_title>Gutenberg and Movable Type</section_title>
 
-<small_image src="vectorVSpixel.svg">
+<small_image src="vectorVSpixel.svg"></small_image>
 
 <p>Think about this: if you ask yourself what actually Gutenberg invented, you will not easily find an “object” to imagine. Presses, paper, ink, metal stamps, the Latin alphabet, books: they were already there. Can we name more precisely his invention? Of course: Gutenberg made the continuous surface of Writing <em>discrete</em>, which means consisting of separated elements.</p>
 
@@ -34,41 +34,41 @@ body:
 
 <p>In different words, Gutenberg reduced the inexhaustible possibilities of Writing to speed up the arrangement and reproduction of lines of text. The loss in composition freedom was substantial, but the gain in speed and ease of production was huge.</p>
 
-<large_image src="medievalVGutenberg.svg">
+<large_image src="medievalVGutenberg.svg"></large_image>
 
-<small_image src="illustrationVStypography.svg">
+<small_image src="illustrationVStypography.svg"></small_image>
 
 <p>In the case of  Gutenberg, this reduction meant that he had to identify and select the most occurring components of Writing – in his context the letters of the Latin alphabet – and make them fit into a box according to a number of restrictions. These restrictions were supposed to make these boxes interchangeable. Everything else outside this selection of elements started to be treated as illustration, carved in wooden blocks and kept separate from “text”.</p>
 
 <p>Ok, but… the letters were already separate things before Gutenberg’s invention, right? A is A, B is B and so on. That’s true, but when one writes, say, by hand the surface is not sliced, it is continuous. If we compare Writing to Music, this is probably easier to understand. Typography, as any visual arrangement, consists in as much white as black. It’s not black on white, it’s black and white. It’s as much ink as paper. As much active pixels as inactive ones. As much fill as void. Now, transpose this to Music. What would be a note without the absence of sound surrounding it? The absence of sound contributes to the construction of the meaning as well as the presence of sound. What would be a typographic composition without the white surrounding the black? Just some messy spots of ink.</p>
 
-<large_image src="hello.svg">
+<large_image src="hello.svg"></large_image>
 
 <p>What Gutenberg did was to break the continuum of Writing into rectangles of regular height. Because of production constraints, Gutenberg also wanted to have the graphism (the black shape) entirely contained into a box. The easiest and more logic way to do so was to cut between each black shape. This means that if the graphism is untouched, the void (white) needs to be sliced in different pieces and distributed across the boxes.</p>
 
-<large_image src="space-glyph.svg">
+<large_image src="space-glyph.svg"></large_image>
 
 <p>This re-organization of the surface of Writing is condensed and represented in a tool that Gutenberg actually invented: the adjustable mould. This tool allowed him to cast many little lead boxes with the same height but different width. Here follows a synthetic scheme of the process:</p>
 
-<large_image src="mould.svg">
+<large_image src="mould.svg"></large_image>
 
 <section_title>Digital Typesetting, from Solid to Virtual Boxes</section_title>
 
 <p>Digital typesetting freed Typography from the physical limits of metal type. Even if it transported  type from a three-dimensional to a two-dimensional one, it shares with its old ancestor the same strain for modularity and some customs.</p>
 
-<large_image src="avatar.svg">
+<large_image src="avatar.svg"></large_image>
 
-<small_image src="body.svg">
+<small_image src="body.svg"></small_image>
 
 <p>For example, given that metal type consisted of physical elements used as bricks forming a wall of prefabricated letters, it made sense to keep track of the height of the box instead of the height of the glyphs represented in the box. This custom is still in use nowadays even if the boxes are completely virtual. Take this aspect into account when comparing two different fonts Often, even if you use the same body size, the resulting letters will not be of the same height.</p>
 
-<large_image src="same-body.svg">
+<large_image src="same-body.svg"></large_image>
 
 <section_title>Characters and Mapping</section_title>
 
 <p>Before exploring the realm of typesetting in Python, we need to learn how Python treats text data. Computers in general need to encode any kind of information down into binary notation. Text is not an exception. The way this encoding issues was originally solved is based on the alphabet and is therefore Western-centric. Each text element such as letters, digits, symbols, punctuation, white spaces and control elements as <em>new line</em> or <em>delete</em> was assigned to a number. The weird thing is that each component of a standard typographer case received a value. For example, <em>A</em> and <em>a</em> got a different value even if they represent the same letter in a different drawing structure. This is not a big deal with Latin, but this approach had serious consequences when mapping Hangul, Arabic and many non-alphabetical scripts.</p>
 
-<large_image src="decimal-binar.svg">
+<large_image src="decimal-binar.svg"></large_image>
 
 <p>The process of mapping a character to a number is called encoding. Morse Code is a very old kind of encoding. One of the oldest and most widespread standard for text encoding for the computer era is the (in)famous ASCII (American Standard Code for Information Interchange). Its origin goes way back to telegraph communication.</p>
 
@@ -172,7 +172,7 @@ body:
 
 <p>If we include the 0, the available indexes sum up to 128 options.</p>
 
-<large_image src="us-ascii.svg">
+<large_image src="us-ascii.svg"></large_image>
 
 
 <p>When 8-bit bytes became the standard in computing, each character started to be represented with an 8-digit binary number (1 byte). This opened up the mapping to 256 options.</p>
@@ -273,7 +273,7 @@ body:
 
 <p>This space of the mapping was often implemented in different ways across different operating systems, such as Apple (MacOS Roman), IBM and Microsoft (ISO 8859). Exchanging information across different computers became more difficult, until the Unicode Consortium managed to create a new wider OS-independent mapping standard. The Unicode Consortium finally began to look beyond English speaking countries.</p>
 
-<large_image src="ISOLATIN1.svg">
+<large_image src="ISOLATIN1.svg"></large_image>
 
 <p>Each character in the Unicode mapping can be represented as two bytes opening the mapping options to 65,536. The mapping can be extended even further the two bytes, in fact emojis are stored in a supplementary multilingual plane which starts just after U+FFFF. We will sometimes refer to the Unicode mapping using the abbreviation UTF-8, which is a clever way to represent Unicode characters saving data according to their position into the mapping.</p>
 
@@ -282,7 +282,7 @@ body:
 <p>After this lengthy preamble, it is time to ask: how do we relate with text data using Python? In the specific scenario of this manual, we will use the standard Python string object to create, store and manipulate text. Then we will use Drawbot to typeset the text onto a PDF canvas.</p>
 <p>The Python string, like tuples and lists, is a sequence: a collection of values where order is significant. Tuples and lists are generic containers: they can store any kind of data. A string is especially designed for representing immutable sequences of text characters. A schematic representation of a string could be</p>
 
-<large_image src="hello-access.svg">
+<large_image src="hello-access.svg"></large_image>
 
 <p>Sequence indexing starts from the 0. Meaning that a string of n elements has the elements indexed from 0 to n-1 inclusive. 
 A string can be created using single (U+0022) or double (U+0027) straight quotes. Two options are convenient in case you need to insert a delimiter character into the string representation:</p>
@@ -374,7 +374,7 @@ str(object())  # '&lt;object at 0x10f976280&gt'
 'hello'[-4]    #'e', 5-2 = 1
 'hello'[-5]    #'h', 5-1 = 0</pre_code>
 
-<large_image src="hello-access-negative.svg">
+<large_image src="hello-access-negative.svg"></large_image>
 
 <p>Take into account that providing an index equal or higher than the sequence length will cause an <inline_code>IndexError</inline_code> during runtime.</p>
 
@@ -388,7 +388,7 @@ str(object())  # '&lt;object at 0x10f976280&gt'
 
 <pre_code>'abcdefghijklmnopqrstuvwxyz'[4:24:2]</pre_code>
 
-<large_image src="startEndStep.svg">
+<large_image src="startEndStep.svg"></large_image>
 
 <p>The arguments can be omitted in order to make them implicit, in the following way:</p>
 
@@ -401,7 +401,7 @@ sequence[::step]</pre_code>
 
 <pre_code>'abcdefghijklmnopqrstuvwxyz'[:-2:2]</pre_code>
 
-<large_image src="endStep.svg">
+<large_image src="endStep.svg"></large_image>
 
 <section_title>Checking inclusion</section_title>
 <pre_code>value in sequence
@@ -446,7 +446,7 @@ value not in sequence</pre_code>
 <pre_code>'habit' # 104  97  98  105  116
 'hat'   # 104  97 116</pre_code>
 
-<large_image src="evaluateHat.svg">
+<large_image src="evaluateHat.svg"></large_image>
 
 <p>The first two character representations are equal, but the third one (<inline_code>b</inline_code> vs. <inline_code>t</inline_code>) is not, meaning that <inline_code>"habit"</inline_code> is inferior to <inline_code>"hat"</inline_code>. In fact the expression evaluates to <inline_code>True</inline_code>. This applies to our common notion of alphabetical order. Then consider the following</p>
 
