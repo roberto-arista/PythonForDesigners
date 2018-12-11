@@ -14,7 +14,7 @@ import codecs
 from bs4 import BeautifulSoup
 
 ### Constants
-FIELD_SEPARATOR = '-'*3
+FIELD_SEPARATOR = '-'*4
 TAGS = ['large_image',
         'small_image',
         'pre_code',
