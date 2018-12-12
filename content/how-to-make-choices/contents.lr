@@ -394,24 +394,6 @@ class: workbook
 ----
 #### exercise ####
 content: 
-
-Draw a flowchart based on the following code:
-
-size(100,100)
-myVar = 10
-if 20 < myVar:
-    fill(0)
-elif 20 >= myVar > 12:
-    fill(.3)
-elif 12 >= myVar > 8:
-    fill(.6)
-else:
-    fill(.9)
-rect(10, 10, 50, 50)
-
-----
-#### exercise ####
-content: 
 Create a 200x200pt canvas. Draw a sequence of squares from top to bottom using a while loop. The square side should be adjustable through a variable. Odd squares should be light gray, even tiles should be dark gray.
 
 ----

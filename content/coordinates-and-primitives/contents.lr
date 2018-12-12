@@ -116,9 +116,7 @@ snippet: 05.py
 image: rect.png
 ----
 #### exercise ####
-content: canvas 100x100
-draw four squares, side 20 units, 
-each one facing a corner of the canvas
+content: canvas 100x100. Draw four squares, side 20 units, each one facing a corner of the canvas
 ----
 image: esRects.png
 ----
@@ -136,10 +134,7 @@ snippet: 07.py
 image: ovals.png
 ----
 #### exercise ####
-content: canvas 100x100
-draw four ovals, 20 units diameter,
-each one having its center point to 
-a canvas corner
+content: canvas 100x100. Draw four ovals, 20 units diameter, each one having its center point to a canvas corner
 ----
 image: esOvals.png
 ----
@@ -248,15 +243,16 @@ class: workbook
 ----
 #### exercise ####
 content: Your goal is to draw a black rectangle positioned in the middle of the canvas. Its height is equal to the height of the canvas. The rectangle's width instead changes according to a variable "factor" between 0 and 1:
-if 0, the rectangle's width is equal to 0
-if 1, the rectangle's width is equal to the canvas width
++ if 0, the rectangle's width is equal to 0
++ if 1, the rectangle's width is equal to the canvas width
 ----
 image: exercise1.png
 ----
 #### exercise ####
 content: Draw two rectangles, one leaning on the left side of the canvas, the other leaning on the right side. Their heights are equal to the canvas. Instead, each rectangle width is controlled by a variable "factor" between 0 and 1. When "factor":
- is 0, you see no rectangle
- is 1, you cannot see the white canvas background
+
++  is 0, you see no rectangle
++  is 1, you cannot see the white canvas background
 ----
 image: exercise2.png
 ----
@@ -272,8 +268,8 @@ image: exercise4.png
 ----
 #### exercise ####
 content: Draw two crosses, a dark gray "plus" shape, and a light gray "multiply" shape. The variable "factor" controls the thickness of the crosses:
- if 0, the thickness is 2pt
- if 1, the thickness is 30pt
++  if 0, the thickness is 2pt
++  if 1, the thickness is 30pt
 ----
 image: exercise5.png
 ----

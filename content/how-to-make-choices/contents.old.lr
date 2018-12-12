@@ -89,7 +89,7 @@ body:
 
 <table>
     <thead>
-            <tr>
+        <tr>
             <th>First step</th>
             <th>Second step</th>
             <th>Third step</th>
@@ -224,28 +224,30 @@ id(myFirstList) == id(myThirdList)
 
 <table>
     <thead>
-        <th>Operators</th>
-        <th>Meaning</th>
+        <tr>
+            <th>Operators</th>
+            <th>Meaning</th>
+        </tr>
     </thead>
 
     <tbody>
         <tr>
-            <td><code><</code></td>
+            <td><code>&lt;</code></td>
             <td>less than</td>
         </tr>
 
         <tr>
-            <td><code><=</code></td>
+            <td><code>&lt;=</code></td>
             <td>less than or equal to</td>
         </tr>
 
         <tr>
-            <td><code>></code></td>
+            <td><code>&gt;</code></td>
             <td>greater than</td>
         </tr>
 
         <tr>
-            <td><code>>=</code></td>
+            <td><code>&gt;=</code></td>
             <td>greater than or equal to</td>
         </tr>
     </tbody>
@@ -580,23 +582,6 @@ rect(10, 10, 50, 50)</pre_code>
 <p>Take note of the use of indentation. <inline_code>if</inline_code>, <inline_code>elif</inline_code> and <inline_code>else</inline_code> are aligned to the left while their bodies are four spaces indented to the right.</p>
 
 <workbook></workbook>
-
-<exercise_wrapper><exercise_content>
-<p>
-Draw a flowchart based on the following code:
-</p>
-<pre_code>size(100,100)
-myVar = 10
-if 20 < myVar:
-    fill(0)
-elif 20 >= myVar > 12:
-    fill(.3)
-elif 12 >= myVar > 8:
-    fill(.6)
-else:
-    fill(.9)
-rect(10, 10, 50, 50)</pre_code>
-</exercise_content></exercise_wrapper>
 
 <exercise_wrapper><exercise_content><p>
 Create a 200x200pt canvas. Draw a sequence of squares from top to bottom using a while loop. The square side should be adjustable through a variable. Odd squares should be light gray, even tiles should be dark gray.

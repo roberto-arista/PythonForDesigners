@@ -85,9 +85,7 @@ rect(120, 10, 20, 20)  # outside the canvas
 rect(40, 10, 10, 30)</pre_code></code_image_wrapper>
 
 
-<exercise_wrapper><exercise_content>canvas 100x100
-draw four squares, side 20 units, 
-each one facing a corner of the canvas</exercise_content><exercise_image src="esRects.png"></exercise_image></exercise_wrapper>
+<exercise_wrapper><exercise_content><p>canvas 100x100. Draw four squares, side 20 units, each one facing a corner of the canvas</p></exercise_content><exercise_image src="esRects.png"></exercise_image></exercise_wrapper>
 
 <code_image_wrapper>
 
@@ -104,10 +102,7 @@ oval(10, 10, 25, 18)
 oval(22, 50, 35, 35) # a circle!
 oval(68, 18, 22, 55)</pre_code></code_image_wrapper>
 
-<exercise_wrapper><exercise_content>canvas 100x100
-draw four ovals, 20 units diameter,
-each one having its center point to 
-a canvas corner</exercise_content><exercise_image src="esOvals.png"></exercise_image></exercise_wrapper>
+<exercise_wrapper><exercise_content><p>canvas 100x100. Draw four ovals, 20 units diameter, each one having its center point to a canvas corner</p></exercise_content><exercise_image src="esOvals.png"></exercise_image></exercise_wrapper>
 
 <code_image_wrapper><code_diagram src="line().svg"></code_diagram>
 
@@ -125,7 +120,7 @@ line((10, 20), (90, 20))
 line((10, 50), (90, 50))
 line((10, 80), (90, 80))</pre_code></code_image_wrapper>
 
-<exercise_wrapper><exercise_content>How could you improve the quality of the code adding two identifiers?</exercise_content></exercise_wrapper>
+<exercise_wrapper><exercise_content><p>How could you improve the quality of the code adding two identifiers?</p></exercise_content></exercise_wrapper>
 
 <code_image_wrapper><code_image src="lines2-01.png"></code_image>
 
@@ -229,9 +224,12 @@ fill(.25)
 oval(40, 10, 50, 50)</pre_code></code_image_wrapper>
 
 <workbook></workbook>
-<exercise_wrapper><exercise_content><p>Your goal is to draw a black rectangle positioned in the middle of the canvas. Its height is equal to the height of the canvas. The rectangle's width instead changes according to a variable "factor" between 0 and 1:</p>
-<ul><li>if 0, the rectangle's width is equal to 0</li>
-<li>if 1, the rectangle's width is equal to the canvas width</li></ul></exercise_content><exercise_image src="exercise1.png"></exercise_image></exercise_wrapper>
+<exercise_wrapper><exercise_content>
+<p>Your goal is to draw a black rectangle positioned in the middle of the canvas. Its height is equal to the height of the canvas. The rectangle's width instead changes according to a variable "factor" between 0 and 1:</p><ul>
+    <li>if 0, the rectangle's width is equal to 0</li>
+    <li>if 1, the rectangle's width is equal to the canvas width</li>
+</ul>
+</exercise_content><exercise_image src="exercise1.png"></exercise_image></exercise_wrapper>
 
 <exercise_wrapper><exercise_content><p>Draw two rectangles, one leaning on the left side of the canvas, the other leaning on the right side. Their heights are equal to the canvas. Instead, each rectangle width is controlled by a variable "factor" between 0 and 1. When "factor":
 <ul><li> is 0, you see no rectangle</li>
