@@ -1,4 +1,1 @@
-potatoes
-groceries
-eggplants
-tomatoes
+5+2*8 # 21

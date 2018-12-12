@@ -16,7 +16,7 @@ class: small_image
 #### text-block ####
 content: A Drawbot program can control the drawing of multiple PDF canvases. Think of the canvas as a sheet of graph paper. Drawbot is a friend who is willing to draw on the graph paper according to your instructions. The most unambiguous way to communicate what you need is to provide numerical data to describe shapes: these are coordinates.
 
-As you launch Drawbot, it shows you an empty gray canvas (left), a text box where you can type code (top right) and a console (bottom right). Drawbot has a default canvas size of 1000 by 1000 points. We can define a different canvas size using the `size()` function. Take into account that the canvas size should be defined before executing any other drawing command, otherwise it will cause no effect. Just like in the physical world, where we pick up a piece of paper and then we start to draw.
+As you launch Drawbot, it shows you an empty gray canvas (left), a text box where you can type code (top right) and a console (bottom right). Drawbot has a default canvas size of 1000 by 1000 points. We can define a different canvas size using the <code class="language-python">size()</code> function. Take into account that the canvas size should be defined before executing any other drawing command, otherwise it will cause no effect. Just like in the physical world, where we pick up a piece of paper and then we start to draw.
 
 Differently, from an interactive interpreter, Drawbot is script based. It means that you can store your programs as text files with a .py extension. If you want to execute your program, you have to invoke the interpreter to “run” using cmd+R explicitly.
 
@@ -38,16 +38,32 @@ name: rounding.svg
 class: large_image
 ----
 #### text-block ####
-content: The `size()` function accepts two kind of parameters:
+content: The <code class="language-python">size()</code> function accepts two kind of parameters:
 ----
 #### text-block ####
 content: + a pair of coordinates
-+ a string with a page format standard from <code>this list</code>.
++ a string with a page format standard from [this list](http://www.drawbot.com/content/canvas/pages.html#size).
 ----
 #### text-block ####
 content: Since we will dive into strings in the next chapters, for now let’s stick to numerical values.
-
-I assume width and height are straightforward notions, but, what do these numbers mean? Apples, meters, yards? Well, each dimension provided to any drawing function in Drawbot is expressed in typographical postscript points. As you maybe know from your graphic design history classes, typographical points have a quite troublesome relation with other unit systems. Since the desktop publishing revolution, the typographic points have been univocally made proportional to another unit measure, the inch. One typographical point is equivalent to the 72nd part of an inch. Assume we are in the realm of pixel images and the density of the image is 72 dpi; then one typographic point is also equivalent to one pixel. We will talk more about image resolutions in the next chapters.
+----
+#### code-example ####
+snippet: 01.py
+----
+diagram: drawbot_canvas_1.svg
+----
+#### code-example ####
+snippet: 02.py
+----
+diagram: drawbot_canvas_2.svg
+----
+#### code-example ####
+snippet: 03.py
+----
+diagram: drawbot_canvas_3.svg
+----
+#### text-block ####
+content: I assume width and height are straightforward notions, but, what do these numbers mean? Apples, meters, yards? Well, each dimension provided to any drawing function in Drawbot is expressed in typographical postscript points. As you maybe know from your graphic design history classes, typographical points have a quite troublesome relation with other unit systems. Since the desktop publishing revolution, the typographic points have been univocally made proportional to another unit measure, the inch. One typographical point is equivalent to the 72nd part of an inch. Assume we are in the realm of pixel images and the density of the image is 72 dpi; then one typographic point is also equivalent to one pixel. We will talk more about image resolutions in the next chapters.
 ----
 #### image ####
 name: thumbmeter.svg
@@ -77,16 +93,27 @@ content: and so on. Think of these figures as percentages of light presence (0 a
 The features of our drawing tool are defined by 3 functions:
 ----
 #### text-block ####
-content: + <code>fill(aColor)</code>
-+ <code>stroke(aColor)</code>
-+ <code>strokeWidth(thickness)</code>
+content: + <code class="language-python">fill(aColor)</code>
++ <code class="language-python">stroke(aColor)</code>
++ <code class="language-python">strokeWidth(thickness)</code>
 ----
 #### text-block ####
 content: They need to be called before the drawing functions: first we choose the tool, then we draw.
 
 Drawbot provides four functions for drawing primitive shapes.
-
-This function draws a rectangle on the canvas using `x` and `y` as lower left corner.
+----
+#### code-example ####
+snippet: 04.py
+----
+diagram: rect().svg
+----
+#### text-block ####
+content: This function draws a rectangle on the canvas using <code class="language-python">x</code> and <code class="language-python">y</code> as lower left corner.
+----
+#### code-example ####
+snippet: 05.py
+----
+image: rect.png
 ----
 #### exercise ####
 content: canvas 100x100
@@ -95,8 +122,18 @@ each one facing a corner of the canvas
 ----
 image: esRects.png
 ----
+#### code-example ####
+snippet: 06.py
+----
+diagram: oval().svg
+----
 #### text-block ####
-content: This function draws an oval on the canvas using `x` and `y` as the lower left point of the rectangle where you could inscribe the oval. The width argument and the height argument correspond to the horizontal and vertical diameter.
+content: This function draws an oval on the canvas using <code class="language-python">x</code> and <code class="language-python">y</code> as the lower left point of the rectangle where you could inscribe the oval. The width argument and the height argument correspond to the horizontal and vertical diameter.
+----
+#### code-example ####
+snippet: 07.py
+----
+image: ovals.png
 ----
 #### exercise ####
 content: canvas 100x100
@@ -106,11 +143,31 @@ a canvas corner
 ----
 image: esOvals.png
 ----
+#### code-example ####
+snippet: 08.py
+----
+diagram: line().svg
+----
 #### text-block ####
 content: This function draws a line between two points. Remember to enclose each pair of coordinates between parenthesis.
 ----
+#### code-example ####
+snippet: 09.py
+----
+image: lines-01.png
+----
 #### exercise ####
 content: How could you improve the quality of the code adding two identifiers?
+----
+#### code-example ####
+snippet: 10.py
+----
+image: lines2-01.png
+----
+#### code-example ####
+snippet: 11.py
+----
+image: lines3-01.png
 ----
 #### exercise ####
 content: canvas 100x100
@@ -118,11 +175,26 @@ draw two lines connecting two non-contiguous canvas corners
 ----
 image: esX.png
 ----
+#### code-example ####
+snippet: 12.py
+----
+image: lines4-01.png
+----
 #### exercise ####
 content: canvas 100x100
 draw a zig zag connected polyline starting from top left corner and ending in bottom right corner of the canvas
 ----
 image: esZigZig.png
+----
+#### code-example ####
+snippet: 13.py
+----
+diagram: polygon().svg
+----
+#### code-example ####
+snippet: 14.py
+----
+image: polygon.png
 ----
 #### exercise ####
 content: canvas 100x100
@@ -133,8 +205,19 @@ image: esBlackWhite.png
 ----
 #### text-block ####
 content: The order of execution of the code, i.e. the arrangement of your statements, reflects the order in which elements will be drawn onto the canvas. For example:
-
-gives a different results from:
+----
+#### code-example ####
+snippet: 15.py
+----
+image: rect_oval.png
+----
+#### text-block ####
+content: gives a different results from:
+----
+#### code-example ####
+snippet: 16.py
+----
+image: oval_rect.png
 ----
 #### exercise ####
 content: canvas 100x100
@@ -143,9 +226,20 @@ combine the circles and the squares exercises, draw the four squares below the f
 image: esOvalRect.png
 ----
 #### text-block ####
-content: Take also into account that once a `fill()` or `stroke()` is set, it is used until further change. This script:
-
-is different than this one:
+content: Take also into account that once a <code class="language-python">fill()</code> or <code class="language-python">stroke()</code> is set, it is used until further change. This script:
+----
+#### code-example ####
+snippet: 17.py
+----
+image: ovalsss.png
+----
+#### text-block ####
+content: is different than this one:
+----
+#### code-example ####
+snippet: 18.py
+----
+image: ovalsss2.png
 ----
 #### section-title ####
 content: Workbook

@@ -22,3 +22,8 @@ content: + In Python, white space is semantic. The language interpreter requires
 + It could be defined as a terminal language on steroids. This manual focuses on your machine. What can you achieve with your computer that cannot be done through a user interface? Believe me, a lot.
 + Computer scientists were not the primary main users of Python’s development team. A democratic, yet beautiful, programming language. It allows anyone to write from simple to complex programs without a deep understanding of memory and hardware (differently from languages as C++).
 ----
+#### text-block ####
+content: Python can help you design and make books, illustrations, data visualizations, maps, animations, handle websites, prototype desktop or web apps, sort stuff, crunch numbers, dive into your hard drive, download data and more. What do you want to do with it?
+
+Disclaimer: if you desire to learn the basic of web design and development, this is not the right manual for you. If that is the case, I advise an introductory manual to HTML and CSS. Then if you want to be able to manipulate HTML and CSS with some scripting, I believe you will need Javascript.
+----

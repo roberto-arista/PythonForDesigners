@@ -31,7 +31,7 @@ name: not.svg
 class: small_image
 ----
 #### text-block ####
-content: `not` (unary negation) is used to change the state of a boolean type, from `False` to `True`, from `True` to `False`. It is like pressing a switch. "Unary" means that the operator only affects the following operand.
+content: <code class="language-python">not</code> (unary negation) is used to change the state of a boolean type, from <code class="language-python">False</code> to <code class="language-python">True</code>, from <code class="language-python">True</code> to <code class="language-python">False</code>. It is like pressing a switch. "Unary" means that the operator only affects the following operand.
 ----
 #### image ####
 name: or.svg
@@ -39,7 +39,7 @@ name: or.svg
 class: small_image
 ----
 #### text-block ####
-content: `or` is used to build a logical expression that will evaluate `True` if any of the operands is `True`. Look at the diagram on the left: the pipe has a fork with a tap on each side. The fork is the "or" operator, and the taps are the operands; if any of the valves are open (`True`), the water will flow on the other side.
+content: <code class="language-python">or</code> is used to build a logical expression that will evaluate <code class="language-python">True</code> if any of the operands is <code class="language-python">True</code>. Look at the diagram on the left: the pipe has a fork with a tap on each side. The fork is the "or" operator, and the taps are the operands; if any of the valves are open (<code class="language-python">True</code>), the water will flow on the other side.
 ----
 #### image ####
 name: and.svg
@@ -47,9 +47,9 @@ name: and.svg
 class: small_image
 ----
 #### text-block ####
-content: `and` (conditional and) is used to build a logical expression that will evaluate `True` if every operand is `True`. Look at the diagram on the left: a straight pipe represents the boolean expression with two taps following each other. The only way to let the water through is to open both valves. Meaning that every operand has to be `True`.
+content: <code class="language-python">and</code> (conditional and) is used to build a logical expression that will evaluate <code class="language-python">True</code> if every operand is <code class="language-python">True</code>. Look at the diagram on the left: a straight pipe represents the boolean expression with two taps following each other. The only way to let the water through is to open both valves. Meaning that every operand has to be <code class="language-python">True</code>.
 
-`and` and `or` are also referred to as "short-circuit" operators, because the interpreter will not evaluate the entire expression if unnecessary.
+<code class="language-python">and</code> and <code class="language-python">or</code> are also referred to as "short-circuit" operators, because the interpreter will not evaluate the entire expression if unnecessary.
 ----
 #### image ####
 name: not_evaluated.svg
@@ -94,19 +94,19 @@ content: It is essential to understand the difference between the two different 
 Equality operators investigate the values of the objects referred; they are usually integers, strings, containers:
 ----
 #### code-example ####
-path: 01.py
+snippet: 01.py
 ----
 #### text-block ####
 content: Identity operators instead, check if two identifiers refer or not to the same object. So, in different words, they check if two identifiers are pointing to the same place in memory. Let’s write a little variation of the code above:
 ----
 #### code-example ####
-path: 02.py
+snippet: 02.py
 ----
 #### text-block ####
-content: So, when should you use what? When comparing numbers, text, containers content is good practice to use `==` and `!=`. Avoid `is` and `is not`, they are ambiguous and often not reliable because of caching. Instead, when comparing identifiers to singletons (`True`, `False`, `None`) you should always use `is` and `is not`. Why? Because there is only one instance of each of these type (therefore their identity is reliable) and makes your code more readable.
+content: So, when should you use what? When comparing numbers, text, containers content is good practice to use <code class="language-python">==</code> and <code class="language-python">!=</code>. Avoid <code class="language-python">is</code> and <code class="language-python">is not</code>, they are ambiguous and often not reliable because of caching. Instead, when comparing identifiers to singletons (<code class="language-python">True</code>, <code class="language-python">False</code>, <code class="language-python">None</code>) you should always use <code class="language-python">is</code> and <code class="language-python">is not</code>. Why? Because there is only one instance of each of these type (therefore their identity is reliable) and makes your code more readable.
 ----
 #### code-example ####
-path: 03.py
+snippet: 03.py
 ----
 #### section-title ####
 content: Comparison Operators (Yield Boolean)
@@ -120,6 +120,14 @@ content: Sorting things is quite a big deal in programming. Python provides a fe
 path: 04.csv
 ----
 headers: 1
+----
+#### code-example ####
+snippet: 04.py
+----
+----
+#### code-example ####
+snippet: 05.py
+----
 ----
 #### text-block ####
 content: When comparing non-integer instances, they are translated in a numerical value and then evaluated. For example, strings are converted to sequences of integers according to the position of each character into the Unicode standard.
@@ -141,13 +149,13 @@ headers: 1
 content: Addition, subtraction and multiplication have a very straightforward behaviour: if both operands are integer, they yield an integer. If one of the operands is a floating point, they will return a floating point value. For example:
 ----
 #### code-example ####
-path: 04.py
+snippet: 06.py
 ----
 #### text-block ####
 content: Division has two different operators which behave slightly differently. The standard division is what you would expect from it:
 ----
 #### code-example ####
-path: 05.py
+snippet: 07.py
 ----
 #### text-block ####
 content: If you are allowed to slice units,
@@ -162,7 +170,7 @@ class: large_image
 content: The integer division instead yields the mathematical floor of the quotient:
 ----
 #### code-example ####
-path: 06.py
+snippet: 08.py
 ----
 #### text-block ####
 content: if you can’t slice units you group 4 units only once from a collection of 6
@@ -176,7 +184,7 @@ class: small_image
 content: The modulo operator yields the remainder of such division:
 ----
 #### code-example ####
-path: 07.py
+snippet: 09.py
 ----
 #### image ####
 name: modulo.svg
@@ -184,10 +192,10 @@ name: modulo.svg
 class: small_image
 ----
 #### text-block ####
-content: In combination with the equivalent (`==`) or not equivalent (`!=`) operator, the modulo can be really helpful in checking whether a number is even or odd, whether a number is decimal or not and so on
+content: In combination with the equivalent (<code class="language-python">==</code>) or not equivalent (<code class="language-python">!=</code>) operator, the modulo can be really helpful in checking whether a number is even or odd, whether a number is decimal or not and so on
 ----
 #### code-example ####
-path: 08.py
+snippet: 10.py
 ----
 #### section-title ####
 content: Compound Expressions
@@ -198,13 +206,13 @@ class: default
 content: Python provides the opportunity to combine more expressions at once. The result of these compound expressions relies on the evaluation of each single expression within it. The order of evaluation affects the final result, so it is very important to get a grip on precedence standard of the interpreter. For example:
 ----
 #### code-example ####
-path: 09.py
+snippet: 11.py
 ----
 #### text-block ####
 content: Because of the higher precedence of multiplication over addition, 2*8 is evaluated first, then 16 is added to 5, giving 21 as result. In order to manipulate the execution order of evaluation, parenthesis can be used. For example:
 ----
 #### code-example ####
-path: 10.py
+snippet: 12.py
 ----
 #### text-block ####
 content: Here is a concise table of the expressions evaluation order sorted by higher precedence
@@ -223,10 +231,10 @@ class: default
 content: As we already mentioned, whitespace is semantic in Python. This means that in order to group lines of code it is necessary to compose the statements which form the block accordingly. Consider the following list of words:
 ----
 #### code-example ####
-path: 11.py
+snippet: 13.py
 ----
 #### text-block ####
-content: Here we are taking no advantage of visual variables in order to make the hierarchy more accessible to readers. We can only rely on the meaning of these words and try to detect a possible structure. So, at first sight, we detect no hierarchy, but after reading, we notice that `groceries` can group all the other items.
+content: Here we are taking no advantage of visual variables in order to make the hierarchy more accessible to readers. We can only rely on the meaning of these words and try to detect a possible structure. So, at first sight, we detect no hierarchy, but after reading, we notice that <code class="language-python">groceries</code> can group all the other items.
 ----
 #### image ####
 name: groceries.svg
@@ -237,19 +245,19 @@ class: small_image
 content: There are a few contrivances we can implement to express this structure at best using only typography. Let’s start to make some order moving groceries to the top:
 ----
 #### code-example ####
-path: 12.py
+snippet: 14.py
 ----
 #### text-block ####
-content: Then we should find a way to associate unequivocally `potatoes`, `eggplants` and `tomatoes` as part of the same group. A very elegant and economic way is to move their alignment rightwards, like this:
+content: Then we should find a way to associate unequivocally <code class="language-python">potatoes</code>, <code class="language-python">eggplants</code> and <code class="language-python">tomatoes</code> as part of the same group. A very elegant and economic way is to move their alignment rightwards, like this:
 ----
 #### code-example ####
-path: 13.py
+snippet: 15.py
 ----
 #### text-block ####
 content: After grouping, hierarchy. A very common and shared way of tag the first line of a list as a title is to use the colon sign, like:
 ----
 #### code-example ####
-path: 14.py
+snippet: 16.py
 ----
 #### text-block ####
 content: If we compare the final outcome with the original one, we will notice a sensible improvement. We do this all day without even noticing. We activate visual variables in order to build images with clear meanings that are easy to access to other people. It is a subtle kind of grammar, but an extremely powerful one.
@@ -258,19 +266,19 @@ The designer of Python, Guido van Rossum, decided to implement such behaviour in
 These statements need a colon as final delimiter:
 ----
 #### code-example ####
-path: 15.py
+snippet: 17.py
 ----
 #### text-block ####
 content: The code related to the statement needs to be indented four space rightwards in order to be considered as the body of the construct. For example:
 ----
 #### code-example ####
-path: 16.py
+snippet: 18.py
 ----
 #### text-block ####
 content: ‘something else’ is not part of the conditional construct because it falls out of the indented body. Consider also that Python allows nested structures like:
 ----
 #### code-example ####
-path: 17.py
+snippet: 19.py
 ----
 #### text-block ####
 content: In order to execute the conditional construct nested into the for-loop, this has to be indented four spaces more than its parent statement, which is already indented four spaces. Meaning, it has to be indented eight spaces rightwards. Just like a matryoshka.
@@ -300,7 +308,7 @@ class: large_image
 content: Python provides a control structure called “conditional construct” which allows to define whether a block of code should be executed or not. The minimal form of a conditional structure is:
 ----
 #### code-example ####
-path: 18.py
+snippet: 20.py
 ----
 #### image ####
 name: condition1.svg
@@ -311,27 +319,27 @@ class: large_image
 content: Here’s a concrete example: 
 ----
 #### code-example ####
-path: 19.py
+snippet: 21.py
 ----
 #### text-block ####
-content: The condition is a Boolean expression. If this expression results in a `True` value, the indented block of code that follows will be executed. The body of the conditional construct can include other nested structures, they only need to be indented accordingly.
+content: The condition is a Boolean expression. If this expression results in a <code class="language-python">True</code> value, the indented block of code that follows will be executed. The body of the conditional construct can include other nested structures, they only need to be indented accordingly.
 ----
 #### code-example ####
-path: 20.py
+snippet: 22.py
 ----
 #### text-block ####
 content: As soon as a statement falls out of the indented body, it is not considered part of the conditional structure anymore. For example:
 ----
 #### code-example ####
-path: 21.py
+snippet: 23.py
 ----
 #### text-block ####
 content: In this case, whether the body is executed or not, a rectangle will be drawn on the canvas.
 
-An `else` statement can be placed at the end of the conditional construct. The instructions grouped into this statement will be executed if any other statement (`if`, `elif`) of the conditional construct is not met. Here’s how it is used:
+An <code class="language-python">else</code> statement can be placed at the end of the conditional construct. The instructions grouped into this statement will be executed if any other statement (<code class="language-python">if</code>, <code class="language-python">elif</code>) of the conditional construct is not met. Here’s how it is used:
 ----
 #### code-example ####
-path: 22.py
+snippet: 24.py
 ----
 #### image ####
 name: else.svg
@@ -342,10 +350,10 @@ class: large_image
 content: Here’s a concrete example:
 ----
 #### code-example ####
-path: 23.py
+snippet: 25.py
 ----
 #### text-block ####
-content: The `else` keyword is not followed by any condition, because it doesn’t need any evaluation. It is an interpreter parachute.
+content: The <code class="language-python">else</code> keyword is not followed by any condition, because it doesn’t need any evaluation. It is an interpreter parachute.
 ----
 #### image ####
 name: parachute.svg
@@ -353,12 +361,12 @@ name: parachute.svg
 class: small_image
 ----
 #### text-block ####
-content: Moreover, Python allows to chain the evaluation of many conditions at once, using an indefinite number of `elif` (which means “else if”) statements between `if` (mandatory) and `else` (optional).
+content: Moreover, Python allows to chain the evaluation of many conditions at once, using an indefinite number of <code class="language-python">elif</code> (which means “else if”) statements between <code class="language-python">if</code> (mandatory) and <code class="language-python">else</code> (optional).
 
 The structure is then:
 ----
 #### code-example ####
-path: 24.py
+snippet: 26.py
 ----
 #### image ####
 name: elif.svg
@@ -369,7 +377,7 @@ class: large_image
 content: for example
 ----
 #### code-example ####
-path: 25.py
+snippet: 27.py
 ----
 #### image ####
 name: myVar.svg
@@ -377,7 +385,7 @@ name: myVar.svg
 class: large_image
 ----
 #### text-block ####
-content: Take note of the use of indentation. `if`, `elif` and `else` are aligned to the left while their bodies are four spaces indented to the right.
+content: Take note of the use of indentation. <code class="language-python">if</code>, <code class="language-python">elif</code> and <code class="language-python">else</code> are aligned to the left while their bodies are four spaces indented to the right.
 ----
 #### section-title ####
 content: Workbook

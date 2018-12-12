@@ -14,15 +14,18 @@ The content on this website is licensed under a [Creative Commons Attribution-No
 The text on this website is rendered using the following fonts:
 ----
 #### text-block ####
-content: + <code>Laica</code> by Alessio D’Ellena
-+ <code>Gig</code> by Franziska Weitgruber
-+ <code>Arnold</code> by Rüdiger
+content: + [Laica](http://alessiodellena.com/) by Alessio D’Ellena
++ [Gig](http://www.futurefonts.xyz/franziska-weitgruber/gig) by Franziska Weitgruber
++ [Arnold](http://www.futurefonts.xyz/rudiger/arnold) by Rüdiger
 ----
 #### text-block ####
 content: The website is developed using [Lektor](https://www.getlektor.com/) by Armin Ronacher. It makes use of the following javascript libraries:
 ----
 #### text-block ####
-content: + <code>anchor.js</code> by Bryan Braun
-+ <code>prism.js</code> by Lea Verou
-+ <code>typogr.js</code> by Eugene Kalinin
+content: + [anchor.js](https://www.bryanbraun.com/anchorjs/) by Bryan Braun
++ [prism.js](https://prismjs.com/) by Lea Verou
++ [typogr.js](https://github.com/ekalinin/typogr.js/) by Eugene Kalinin
+----
+#### text-block ####
+content: Thanks to [Ruggero](https://ruggerocastagnola.com/) and [Emanuele](https://parcodiyellowstone.it/en) for helping me through some nasty web issues 🤖
 ----

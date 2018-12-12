@@ -1,8 +1,4 @@
-if condition1:
+if condition:
     body1
-elif condition2:
-    body2:
-elif condition3:
-    body3:
-else:       # all other possible cases
-    body4
+else:
+    body2

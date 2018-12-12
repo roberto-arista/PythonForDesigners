@@ -1,8 +1,8 @@
 Method	Behaviour
-<code>s.islower()</code>	return True if s is lowercase
-<code>s.istitle()</code>	return True if str is title cased (‘Hello World’)
-<code>s.isupper()</code>	return True if str is uppercase
-<code>s.startswith(s2)</code>	return True if str starts with s2
-<code>s.endswith(s2)</code>	return True if str ends with s2
-<code>s.isalnum()</code>	return True if str is alphanumeric (A-Z, a-z, 0-9, no white spaces)
-<code>s.isalpha()</code>	return True if str is alphabetic (A-Z, a-z, no white spaces)
+<code class="language-python">s.islower()</code>	return True if s is lowercase
+<code class="language-python">s.istitle()</code>	return True if str is title cased (‘Hello World’)
+<code class="language-python">s.isupper()</code>	return True if str is uppercase
+<code class="language-python">s.startswith(s2)</code>	return True if str starts with s2
+<code class="language-python">s.endswith(s2)</code>	return True if str ends with s2
+<code class="language-python">s.isalnum()</code>	return True if str is alphanumeric (A-Z, a-z, 0-9, no white spaces)
+<code class="language-python">s.isalpha()</code>	return True if str is alphabetic (A-Z, a-z, no white spaces)

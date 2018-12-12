@@ -1,3 +1,7 @@
-for eachElem in iterable:
-    if eachElem == target:
-        print 'found!'
+if, elif, else
+for
+while
+with
+def
+try, except, finally
+class

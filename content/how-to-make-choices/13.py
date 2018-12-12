@@ -1,4 +1,4 @@
+potatoes
 groceries
-    potatoes
-    eggplants
-    tomatoes
+eggplants
+tomatoes

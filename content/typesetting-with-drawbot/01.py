@@ -1,2 +1,2 @@
-for eachFontName in installedFonts(supportsCharacters='ЉДЖ'):
-    print(eachFontName)
+size(100, 100)
+text('a quick brown', (20, 20))

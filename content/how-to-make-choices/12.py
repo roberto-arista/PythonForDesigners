@@ -1,4 +1,1 @@
-groceries
-potatoes
-eggplants
-tomatoes
+(5+2)*8 # 56

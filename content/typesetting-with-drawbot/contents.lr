@@ -79,29 +79,59 @@ content: + which characters have to be drawn, the actual content
 + fill and stroke color
 ----
 #### text-block ####
-content: Drawbot has some fallback options if we are too lazy to specify all of them. But content and position are mandatory. They are, in fact, the arguments of the `text()` function:
+content: Drawbot has some fallback options if we are too lazy to specify all of them. But content and position are mandatory. They are, in fact, the arguments of the <code class="language-python">text()</code> function:
+----
+#### code-example ####
+snippet: 01.py
+----
+image: text.png
+----
+#### text-block ####
+content: The origin of the position coordinates is the lower left point of the composition. Take into account that the first glyph might have some left margin, meaning that the black shapes will not touch the coordinate point. You can simply test the behaviour:
+----
+#### code-example ####
+snippet: 02.py
+----
+image: text-rect.png
+----
+#### text-block ####
+content: The other choices have to be set with specific functions and must be defined before the <code class="language-python">text()</code> function is invoked.
 
-The origin of the position coordinates is the lower left point of the composition. Take into account that the first glyph might have some left margin, meaning that the black shapes will not touch the coordinate point. You can simply test the behaviour:
-
-The other choices have to be set with specific functions and must be defined before the `text()` function is invoked.
-
-`font()` defines the font used to draw the characters. It accepts a string argument. It should be the name of a postscript font already installed on your computer.
-
-Drawbot provides a function able to make a list of the postscript fonts installed on your computer. `installedFonts()` accepts an optional string argument with characters which should be supported by the listed fonts. 
+<code class="language-python">font()</code> defines the font used to draw the characters. It accepts a string argument. It should be the name of a postscript font already installed on your computer.
+----
+#### code-example ####
+snippet: 03.py
+----
+image: text-font.png
+----
+#### text-block ####
+content: Drawbot provides a function able to make a list of the postscript fonts installed on your computer. <code class="language-python">installedFonts()</code> accepts an optional string argument with characters which should be supported by the listed fonts. 
 
 For example, you could use it in the following way:
 ----
 #### code-example ####
-path: 01.py
+snippet: 04.py
 ----
 #### text-block ####
-content: The names printed in the console are the fonts that support the `'ЉДЖ'` cyrillic characters.
+content: The names printed in the console are the fonts that support the <code class="language-python">'ЉДЖ'</code> cyrillic characters.
 
-The body size is handled bythe function `fontsize()`. It accepts a numerical value either an integer or float. The function sets the size in postscript points, the default being 10pt.
-
-Color and stroke are defined by `fill()` and `stroke()`.
-
-Once defined, these settings will be applied to all shapes drawn afterwards. To change these options. just call the functions again.
+The body size is handled bythe function <code class="language-python">fontsize()</code>. It accepts a numerical value either an integer or float. The function sets the size in postscript points, the default being 10pt.
+----
+#### code-example ####
+snippet: 05.py
+----
+image: text-fontSize.png
+----
+#### text-block ####
+content: Color and stroke are defined by <code class="language-python">fill()</code> and <code class="language-python">stroke()</code>.
+----
+#### code-example ####
+snippet: 06.py
+----
+image: text-fill.png
+----
+#### text-block ####
+content: Once defined, these settings will be applied to all shapes drawn afterwards. To change these options. just call the functions again.
 ----
 #### section-title ####
 content: Setting Multiple Lines of Text 
@@ -119,15 +149,33 @@ name: textbox.svg
 class: large_image
 ----
 #### text-block ####
-content: First of all, we should use a different function than `text()`. It would be possible to deal with line breaking ourselves, but Drawbot is generous enough to provide a function which will take care of it automatically: `textBox()`. Unlike `text()`, the glyph sequence fits into a rectangle. The function accepts a string as first argument, followed by what’s necessary to define the rectangle `(x, y, width, height)` and, as optional argument, the alignment of the text.
+content: First of all, we should use a different function than <code class="language-python">text()</code>. It would be possible to deal with line breaking ourselves, but Drawbot is generous enough to provide a function which will take care of it automatically: <code class="language-python">textBox()</code>. Unlike <code class="language-python">text()</code>, the glyph sequence fits into a rectangle. The function accepts a string as first argument, followed by what’s necessary to define the rectangle <code class="language-python">(x, y, width, height)</code> and, as optional argument, the alignment of the text.
+----
+#### code-example ####
+snippet: 07.py
+----
+image: someText.png
+----
+#### text-block ####
+content: If you want to see the box which contains the text, just use a <code class="language-python">rect()</code> function with the same arguments:
+----
+#### code-example ####
+snippet: 08.py
+----
+image: text-box-rect.png
+----
+#### text-block ####
+content: If some text does not fit the provided rectangle, textBox() will return it. This feature, combined with a while loop, can be used to add new pages until the text is all set on canvas.
+----
+#### code-example ####
+snippet: 09.py
+----
+diagram: 2pages.svg
+----
+#### text-block ####
+content: Most of the decisions we have to make when setting multiple lines of type have to do with the space surrounding the glyphs. Of course, fonts already provide some standard concerning proportions between glyphs, but a typographer has a few tools to enhance the composition according to a specific context.
 
-If you want to see the box which contains the text, just use a `rect()` function with the same arguments:
-
-If some text does not fit the provided rectangle, textBox() will return it. This feature, combined with a while loop, can be used to add new pages until the text is all set on canvas.
-
-Most of the decisions we have to make when setting multiple lines of type have to do with the space surrounding the glyphs. Of course, fonts already provide some standard concerning proportions between glyphs, but a typographer has a few tools to enhance the composition according to a specific context.
-
-The vertical distribution of space in a paragraph is handled by the `lineHeight()` function. It is commonly called leading, a term which comes from the metal days of type. It refers to the stripes of non-printing metal which would be inserted between lines of type. In a digital environment the leading value defines the distance between one baseline and the next. 
+The vertical distribution of space in a paragraph is handled by the <code class="language-python">lineHeight()</code> function. It is commonly called leading, a term which comes from the metal days of type. It refers to the stripes of non-printing metal which would be inserted between lines of type. In a digital environment the leading value defines the distance between one baseline and the next. 
 ----
 #### image ####
 name: leading.svg
@@ -136,12 +184,18 @@ class: large_image
 ----
 #### text-block ####
 content: Take also into account that the are no physical restrictions on a digital canvas, meaning that the leading value can be inferior to the body size or even negative.
-
-The Drawbot default is 12pt.
+----
+#### code-example ####
+snippet: 10.py
+----
+diagram: 2pagesleading.svg
+----
+#### text-block ####
+content: The Drawbot default is 12pt.
 
 Fonts already contain a lot of information concerning the horizontal distribution of space. As we sawin the previous chapters, white is as important as black. A type designer will provide the font with all the necessary data to compose a good paragraph of text. Think twice about overriding this information. It is a distortion of type as much as a non-proportional scaling. Well, maybe a bit more subtle, but a trained eye will recognize it immediately.
 
-But, there are a few cases where it makes sense to alter the composition with some inner-character extra space. The `tracking()` function is here for this. Tracking –not to be confused with kerning– is the injection or subtraction of a fixed amount of white space between the glyphs. Text composed at small size, like 8pt, could benefit from some extra spacing.
+But, there are a few cases where it makes sense to alter the composition with some inner-character extra space. The <code class="language-python">tracking()</code> function is here for this. Tracking –not to be confused with kerning– is the injection or subtraction of a fixed amount of white space between the glyphs. Text composed at small size, like 8pt, could benefit from some extra spacing.
 ----
 #### image ####
 name: tracking.svg
@@ -154,9 +208,15 @@ There are decisions that influence the quality of the right side of a paragraph 
 
 Hyphenation is a feature which allows the digital composer to break a line using word syllables, not only spaces between words. This option adds many breaking options making the process of breaking a line less harmful for the paragraph of text. Having said that, reading a word split on two lines could be not that comfortable, especially if we are not very used to it or if the word is very short.
 
-Take into account that syllables have different definitions across different languages, so remember to set the right language using the `language()` function. The default is English.
-
-Hyphenation settings resonate enormously with the justified alignment. This method of composition creates an even right edge by injecting extra space between words. Too much extra space makes the paragraph very uncomfortable to read, so the ability to break the line within a word is critical.
+Take into account that syllables have different definitions across different languages, so remember to set the right language using the <code class="language-python">language()</code> function. The default is English.
+----
+#### code-example ####
+snippet: 11.py
+----
+diagram: language.svg
+----
+#### text-block ####
+content: Hyphenation settings resonate enormously with the justified alignment. This method of composition creates an even right edge by injecting extra space between words. Too much extra space makes the paragraph very uncomfortable to read, so the ability to break the line within a word is critical.
 ----
 #### image ####
 name: giustificazione.svg
@@ -172,5 +232,5 @@ name: hyphenation.svg
 class: large_image
 ----
 #### code-example ####
-path: 02.py
+snippet: 12.py
 ----

@@ -45,6 +45,9 @@ class: small_image
 content: Tools. Tools. Tools. Since the discovery of fire, we surrounded ourselves with tools to carry out most of our tasks. Prometheus, the Titan who donated fire to the ancient men making them closer to divinity, was punished by Zeus. Tools are a big deal. As a designer, you probably noticed that tools influence the way you do things. They are prostheses we use to make our arms longer, our eyes sharper, etc. They even change our perspective upon reality, because any tool is an expression of ideology.
 ----
 #### exercise ####
+content: Look at the development of photography as a medium. The way cameras and supports evolved over the years have enormously influenced the status of the "image." Can you point out some of those critical moments? You could start with color films or portable cameras.
+Moreover, can you link an artists' body of work with a specific kind of photographic technology?
+----
 #### image ####
 name: WYGIWYG.svg
 ----
@@ -56,6 +59,8 @@ content: Once you acknowledge this, you can try to mold them in a way they will 
 When designing a new tool, tool makers as well as software houses try to reach the widest user base with the least possible code. In order to generate some profit a tool should be generic enough, easy to use and cheap to maintain. Of course there are different balances between these aspects, given if the tool is made for professionals or not. But, what if that problem you are trying to solve today was not on the priority list of the product design department of your tool provider? You can hire someone to solve it for you or you can do it yourself. The choice is yours.
 ----
 #### exercise ####
+content: Try to list three moments when you wanted to go beyond a user interface to achieve a task less painfully.
+----
 #### image ####
 name: yogi_designer.svg
 ----
@@ -65,3 +70,5 @@ class: small_image
 content: Take also into account that proprietary digital tools often are not made to be interchangeable. The interrelation between software belonging to the same suite (like Illustrator and InDesign) is unusual outside that specific fence. A little bit of code allows you to make two different tools (either open source or proprietary) communicate in a way that their developers did not think about. What I am trying to say is that coding makes you a more flexible designer. You will be able to bend your workflow (and yourself) to reach your goals.
 ----
 #### exercise ####
+content: Try to list three moments when you found difficult to exchange data between different applications (for example Excel vs. Illustrator). What did you want to achieve? What would you have asked your computer?
+----

@@ -1,3 +1,4 @@
-if index != 0:
-    print('something')
-print('something else')
+groceries:
+    potatoes
+    eggplants
+    tomatoes

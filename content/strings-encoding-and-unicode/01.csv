@@ -1,7 +1,7 @@
- 	 	<code>2⁶</code>	<code>2⁵</code>	<code>2⁴</code>	<code>2&sup3</code>	<code>2&sup2</code>	<code>2&sup1</code>	<code>2⁰</code>
-<code>0</code>	 	<code>0</code>	<code>0</code>	<code>0</code>	<code>0</code>	<code>0</code>	<code>0</code>	<code>0</code>
-<code>1</code>	 	<code>0</code>	<code>0</code>	<code>0</code>	<code>0</code>	<code>0</code>	<code>0</code>	<code>1</code>
-<code>2</code>	 	<code>0</code>	<code>0</code>	<code>0</code>	<code>0</code>	<code>0</code>	<code>1</code>	<code>0</code>
-<code>[...]</code>	 	 	 	 	 	 	 	 
-<code>125</code>	 	<code>1</code>	<code>1</code>	<code>1</code>	<code>1</code>	<code>1</code>	<code>0</code>	<code>1</code>
-<code>126</code>	 	<code>1</code>	<code>1</code>	<code>1</code>	<code>1</code>	<code>1</code>	<code>1</code>	<code>0</code>
+ 	 	<code class="language-python">2⁶</code>	<code class="language-python">2⁵</code>	<code class="language-python">2⁴</code>	<code class="language-python">2&sup3</code>	<code class="language-python">2&sup2</code>	<code class="language-python">2&sup1</code>	<code class="language-python">2⁰</code>
+<code class="language-python">0</code>	 	<code class="language-python">0</code>	<code class="language-python">0</code>	<code class="language-python">0</code>	<code class="language-python">0</code>	<code class="language-python">0</code>	<code class="language-python">0</code>	<code class="language-python">0</code>
+<code class="language-python">1</code>	 	<code class="language-python">0</code>	<code class="language-python">0</code>	<code class="language-python">0</code>	<code class="language-python">0</code>	<code class="language-python">0</code>	<code class="language-python">0</code>	<code class="language-python">1</code>
+<code class="language-python">2</code>	 	<code class="language-python">0</code>	<code class="language-python">0</code>	<code class="language-python">0</code>	<code class="language-python">0</code>	<code class="language-python">0</code>	<code class="language-python">1</code>	<code class="language-python">0</code>
+<code class="language-python">[...]</code>	 	 	 	 	 	 	 	 
+<code class="language-python">125</code>	 	<code class="language-python">1</code>	<code class="language-python">1</code>	<code class="language-python">1</code>	<code class="language-python">1</code>	<code class="language-python">1</code>	<code class="language-python">0</code>	<code class="language-python">1</code>
+<code class="language-python">126</code>	 	<code class="language-python">1</code>	<code class="language-python">1</code>	<code class="language-python">1</code>	<code class="language-python">1</code>	<code class="language-python">1</code>	<code class="language-python">1</code>	<code class="language-python">0</code>

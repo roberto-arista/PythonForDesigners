@@ -130,7 +130,7 @@ path: 01.csv
 headers: 1
 ----
 #### code-example ####
-path: 01.py
+snippet: 01.py
 ----
 #### text-block ####
 content: If we include the 0, the available indexes sum up to 128 options.
@@ -179,31 +179,31 @@ content: Sequence indexing starts from the 0. Meaning that a string of n element
 A string can be created using single (U+0022) or double (U+0027) straight quotes. Two options are convenient in case you need to insert a delimiter character into the string representation:
 ----
 #### code-example ####
-path: 02.py
+snippet: 02.py
 ----
 #### text-block ####
 content: Otherwise, an escape backslash character can be used to tell the interpreter that the character following the backslash is not the end of the sequence but part of it:
 ----
 #### code-example ####
-path: 03.py
+snippet: 03.py
 ----
 #### text-block ####
-content: Other commonly escaped characters are the newline (`\n`) and the tab (`\t`). In addition, Python supports triple quotes string declaration for strings which embed newline characters naturally. These are used especially for code documentation purposes.
+content: Other commonly escaped characters are the newline (<code class="language-python">\n</code>) and the tab (<code class="language-python">\t</code>). In addition, Python supports triple quotes string declaration for strings which embed newline characters naturally. These are used especially for code documentation purposes.
 ----
 #### code-example ####
-path: 04.py
+snippet: 04.py
 ----
 #### text-block ####
-content: As said before, each character is mapped to a numerical value according to the Unicode standard. Python provides the built-in function `ord()` to get the position of a character within the standard mapping.
+content: As said before, each character is mapped to a numerical value according to the Unicode standard. Python provides the built-in function <code class="language-python">ord()</code> to get the position of a character within the standard mapping.
 ----
 #### code-example ####
-path: 05.py
+snippet: 05.py
 ----
 #### text-block ####
-content: Conversely, Python gives the possibility to access a mapping position using an integer value through the `chr()` function. Given that each number is assigned to one and only character, using 192 as input value we will obtain:
+content: Conversely, Python gives the possibility to access a mapping position using an integer value through the <code class="language-python">chr()</code> function. Given that each number is assigned to one and only character, using 192 as input value we will obtain:
 ----
 #### code-example ####
-path: 06.py
+snippet: 06.py
 ----
 #### text-block ####
 content: References to unicode characters are rarely made using their base 10 value. As we said, most of the characters have a two bytes representation, which can be represented conveniently with a four digits hexadecimal number, as:
@@ -214,16 +214,16 @@ path: 03.csv
 headers: 1
 ----
 #### text-block ####
-content: These notation can also be included in Python string declaration using the `\u` escape literal:
+content: These notation can also be included in Python string declaration using the <code class="language-python">\u</code> escape literal:
 ----
 #### code-example ####
-path: 07.py
+snippet: 07.py
 ----
 #### text-block ####
-content: Strings, as the other basic data types, have a built-in constructor function named `str()`. This function allows the conversion of a different type of object into a string. It accepts almost any kind of object, but it has a limited range of options.
+content: Strings, as the other basic data types, have a built-in constructor function named <code class="language-python">str()</code>. This function allows the conversion of a different type of object into a string. It accepts almost any kind of object, but it has a limited range of options.
 ----
 #### code-example ####
-path: 08.py
+snippet: 08.py
 ----
 #### text-block ####
 content: Way more detailed conversion methods are explained into [Transform Strings](/transform-strings/).
@@ -239,13 +239,13 @@ class: default
 content: It is possible to access the content of a sequence using an index from 0 to the sequence length minus 1.
 ----
 #### code-example ####
-path: 09.py
+snippet: 09.py
 ----
 #### text-block ####
 content: Python gives also the possibility to use a negative index. This could be read as *sequence length minus index*. It’s like starting from the end. For example:
 ----
 #### code-example ####
-path: 10.py
+snippet: 10.py
 ----
 #### image ####
 name: hello-access-negative.svg
@@ -253,9 +253,9 @@ name: hello-access-negative.svg
 class: large_image
 ----
 #### text-block ####
-content: Take into account that providing an index equal or higher than the sequence length will cause an `IndexError` during runtime.
+content: Take into account that providing an index equal or higher than the sequence length will cause an <code class="language-python">IndexError</code> during runtime.
 
-Take into account that providing an index equal or higher than the sequence length will cause an `IndexError` during runtime.
+Take into account that providing an index equal or higher than the sequence length will cause an <code class="language-python">IndexError</code> during runtime.
 ----
 #### section-title ####
 content: Slicing
@@ -266,13 +266,13 @@ class: default
 content: You can create a sub-sequence deep copy using an extension of the accessing syntax. It works like this:
 ----
 #### code-example ####
-path: 11.py
+snippet: 11.py
 ----
 #### text-block ####
 content: Remember that end is the index of the first value not to be included into the subsequence.
 ----
 #### code-example ####
-path: 12.py
+snippet: 12.py
 ----
 #### image ####
 name: startEndStep.svg
@@ -283,13 +283,13 @@ class: large_image
 content: The arguments can be omitted in order to make them implicit, in the following way:
 ----
 #### code-example ####
-path: 13.py
+snippet: 13.py
 ----
 #### text-block ####
 content: As for the accessing syntax, start and end can have a negative value.
 ----
 #### code-example ####
-path: 14.py
+snippet: 14.py
 ----
 #### image ####
 name: endStep.svg
@@ -302,7 +302,7 @@ content: Checking inclusion
 class: default
 ----
 #### code-example ####
-path: 15.py
+snippet: 15.py
 ----
 #### text-block ####
 content: triggers a boolean expression able to verify whether a sequence contains a value or not.
@@ -310,13 +310,13 @@ content: triggers a boolean expression able to verify whether a sequence contain
 For example:
 ----
 #### code-example ####
-path: 16.py
+snippet: 16.py
 ----
 #### text-block ####
 content: This expression can accept sub-sequences as
 ----
 #### code-example ####
-path: 17.py
+snippet: 17.py
 ----
 #### section-title ####
 content: Test equality
@@ -327,7 +327,7 @@ class: default
 content: If you need to compare the content of two different strings, you should use the equality operators.
 ----
 #### code-example ####
-path: 18.py
+snippet: 18.py
 ----
 #### text-block ####
 content: Beware of identity operators. Short strings are heavily cached; therefore their identity is not reliable.
@@ -341,19 +341,19 @@ class: default
 content: The following operators can be helpful to determine how two strings relate according to a lexicographical order.
 ----
 #### code-example ####
-path: 19.py
+snippet: 19.py
 ----
 #### text-block ####
 content: Why not alphabetical? We could consider “lexicographical” as a wider notion of alphabetical, where the sorting references a set of characters wider than the Latin alphabet. Think for a moment what would happen if you ask the interpreter which one comes first between some Latin and some Cyrillic characters? The reference character set is the Unicode mapping. Let’s consider:
 ----
 #### code-example ####
-path: 20.py
+snippet: 20.py
 ----
 #### text-block ####
 content: In order to solve such expression, Python converts each character into its integer unicode representation, and then evaluates their order starting from left
 ----
 #### code-example ####
-path: 21.py
+snippet: 21.py
 ----
 #### image ####
 name: evaluateHat.svg
@@ -361,22 +361,22 @@ name: evaluateHat.svg
 class: large_image
 ----
 #### text-block ####
-content: The first two character representations are equal, but the third one (`b` vs. `t`) is not, meaning that `"habit"` is inferior to `"hat"`. In fact the expression evaluates to `True`. This applies to our common notion of alphabetical order. Then consider the following
+content: The first two character representations are equal, but the third one (<code class="language-python">b</code> vs. <code class="language-python">t</code>) is not, meaning that <code class="language-python">"habit"</code> is inferior to <code class="language-python">"hat"</code>. In fact the expression evaluates to <code class="language-python">True</code>. This applies to our common notion of alphabetical order. Then consider the following
 ----
 #### code-example ####
-path: 22.py
+snippet: 22.py
 ----
 #### text-block ####
-content: We would also expect this expression evaluates to True, because the `'b'` comes before `'m'` in the Latin alphabet. Well, not really. Because the uppercase `'M'` comes before the lowercase `'b'` in the Unicode mapping. I know it does n’t make sense at first sight, but if capital and lowercase characters occupy two different spots into the encoding, this is somehow a mandatory behaviour. Let’s check the numbers:
+content: We would also expect this expression evaluates to True, because the <code class="language-python">'b'</code> comes before <code class="language-python">'m'</code> in the Latin alphabet. Well, not really. Because the uppercase <code class="language-python">'M'</code> comes before the lowercase <code class="language-python">'b'</code> in the Unicode mapping. I know it does n’t make sense at first sight, but if capital and lowercase characters occupy two different spots into the encoding, this is somehow a mandatory behaviour. Let’s check the numbers:
 ----
 #### code-example ####
-path: 23.py
+snippet: 23.py
 ----
 #### text-block ####
 content: Which means that 
 ----
 #### code-example ####
-path: 24.py
+snippet: 24.py
 ----
 #### section-title ####
 content: Concatenation
@@ -384,8 +384,11 @@ content: Concatenation
 class: default
 ----
 #### text-block ####
-content: Python allows the concatenation of sequences using the `+` and `*` operators. For example
+content: Python allows the concatenation of sequences using the <code class="language-python">+</code> and <code class="language-python">*</code> operators. For example
 ----
 #### code-example ####
-path: 25.py
+snippet: 25.py
+----
+#### text-block ####
+content: Note that a sequence can be multiplied only by an integer value, no floating points allowed. Note that this operation is not memory efficient. If you need to concatenate intensively, consider using the string <code class="language-python">.join()</code> method.
 ----

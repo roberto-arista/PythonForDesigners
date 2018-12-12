@@ -1,11 +1,5 @@
 index = 0
-
-while index <= 20:
+while True:
     index += 1
-
-    if index % 2 == 0:
-        print(‘found even number’)
-        continue
-    print(‘found odd number’)
-
-print(‘outside the while loop’)
+    if index == 20:
+        break

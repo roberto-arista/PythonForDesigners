@@ -1,1 +1,6 @@
-6 / 4  # 1.5
+x = y = 6
+x > y  # False
+x < y  # False
+x == y # True
+x <= y # True
+x >= y # True

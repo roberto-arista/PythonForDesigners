@@ -1,8 +1,8 @@
 Operator	Operation
-<code>+</code>	addition
-<code>-</code>	subtraction
-<code>*</code>	multiplication
-<code>/</code>	division
-<code>//</code>	integer division
-<code>%</code>	modulo operator
-<code>**</code>	power of
+<code class="language-python">+</code>	addition
+<code class="language-python">-</code>	subtraction
+<code class="language-python">*</code>	multiplication
+<code class="language-python">/</code>	division
+<code class="language-python">//</code>	integer division
+<code class="language-python">%</code>	modulo operator
+<code class="language-python">**</code>	power of
