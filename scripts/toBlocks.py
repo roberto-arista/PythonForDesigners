@@ -126,15 +126,41 @@ def convertFigCaption(tag):
 def convertExercise(tag):
     block = ['#### exercise ####']
     if tag.exercise_content:
-        block.append(f'content: {tag.exercise_content.text}')
+
+        tagContent = []
+        for eachElem in tag.exercise_content.contents:
+
+            if isinstance(eachElem, Tag):
+                if eachElem.name == 'p':
+                    header, miniBlock = convertText(eachElem)
+                    tagContent.append(miniBlock)
+
+                elif eachElem.name == 'ul':
+                    miniBlock = convertList(eachElem, noHeader=True)
+                    tagContent.append(miniBlock[0].replace('content: ', '\n'))
+
+                else:
+                    print('-'*20)
+                    print(eachElem)
+                    print(eachElem.name)
+                    print(tag.exercise_content)
+                    print('[ERROR] missing something here')
+                    raise Exception
+
+        block.append(f'content: {"".join(tagContent)}')
         block.append(FIELD_SEPARATOR)
+
     if tag.exercise_image:
         block.append(f"image: {tag.exercise_image['src']}")
         block.append(FIELD_SEPARATOR)
     return block
 
-def convertList(tag):
-    block = ['#### text-block ####']
+def convertList(tag, noHeader=False):
+    if noHeader is True:
+        block = []
+    else:
+        block = ['#### text-block ####']
+
     listContent = []
     for eachCon in tag.contents:
         if eachCon.name == 'li':
@@ -320,7 +346,8 @@ def convertLR(lrPath, oldCopy=True):
 
 ### Instructions
 if __name__ == '__main__':
-    folders = ['a-few-words-about',
+    folders = [
+               'a-few-words-about',
                'basic-data-types',
                'coordinates-and-primitives',
                'how-to-browse-sequences',
@@ -333,7 +360,8 @@ if __name__ == '__main__':
                'transform-strings',
                'typesetting-with-drawbot',
                'using-drawbot',
-               'why-this-manual']
+               'why-this-manual'
+               ]
 
     for eachFolder in folders:
         lrFileName = joinPth('../content', eachFolder, 'contents.lr')
