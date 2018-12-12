@@ -226,6 +226,9 @@ class: large_image
 #### text-block ####
 content: In other words, if a paragraph has a narrow width, justified alignment and no hyphenation, it is very likely that the word space will start to appear across consequent lines emerging from the paragraph texture. These are the so-called rivers.
 ----
+#### exercise ####
+content: Create a paragraph with many "rivers" of white.
+----
 #### image ####
 name: hyphenation.svg
 ----

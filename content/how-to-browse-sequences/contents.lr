@@ -284,3 +284,130 @@ snippet: 24.py
 ----
 image: 4lines.png
 ----
+#### text-block ####
+content: go for this structure
+----
+#### code-example ####
+snippet: 25.py
+----
+image: 4lines.png
+----
+#### text-block ####
+content: The advantages of the second versionare enormous, starting for the very basic fact that you can add and subtract elements with almost no changes.
+----
+#### code-example ####
+snippet: 26.py
+----
+image: 8lines.png
+----
+#### text-block ####
+content: What if you need to add points at the beginning and at the end? Easily done.
+----
+#### code-example ####
+snippet: 27.py
+----
+image: linesOvals.png
+----
+#### text-block ####
+content: Along with drawing, we can perform any kind of calculation. For example, the fill color of a shape could be defined by the identifier provided by the for construct. Here’s an example. 
+----
+#### code-example ####
+snippet: 28.py
+----
+image: scaleGrey.png
+----
+#### text-block ####
+content: Or we can affect the arguments used to draw the shape itself:
+----
+#### code-example ####
+snippet: 29.py
+----
+image: lines.png
+----
+#### text-block ####
+content: Remember that <code class="language-python">if</code> statements can be used into the <code class="language-python">for</code> body, meaning that we can perform choices within an iterative process:
+----
+#### code-example ####
+snippet: 30.py
+----
+image: stripes.png
+----
+#### section-title ####
+content: Drawing Many Times in Two Directions
+----
+class: default
+----
+#### text-block ####
+content: A single <code class="language-python">for</code> construct allows repetition in one dimension. But, as we have seen with the previous example, other constructs can be used inside the for body. Which means that a second for loop can be nested into the first for loop. In this way the repetition becomes two dimensional.
+
+If we need to draw a table or 90° based pattern, this technique becomes very handy. Consider the following drawing
+----
+#### image ####
+name: matrix.svg
+----
+class: large_image
+----
+#### text-block ####
+content: This is a bidimensional matrix, it is a simple table. Each element of the matrix is called cell. Each cell of this matrix can be described by two indexes: the index of the column and the row to which the cell belong. If we explicit write each index to each cell we obtain
+----
+#### image ####
+name: matrix-number.svg
+----
+class: large_image
+----
+#### text-block ####
+content: At this point we only need to define a size for the cell and we are able to draw the left column of the matrix
+----
+#### code-example ####
+snippet: 31.py
+----
+image: rows4.png
+----
+#### text-block ####
+content: or the bottom row the matrix
+----
+#### code-example ####
+snippet: 32.py
+----
+image: cols4.png
+----
+#### text-block ####
+content: If we combine the two constructs together we can draw the entire matrix *calling* the <code class="language-python">rect()</code> function only once
+----
+#### code-example ####
+snippet: 33.py
+----
+image: rowscols4.png
+----
+#### text-block ####
+content: Matrix indexes can be drawn very easily
+----
+#### code-example ####
+snippet: 34.py
+----
+image: gridnumbers.png
+----
+#### text-block ####
+content: As for the single <code class="language-python">for</code> construct, calculations performed within the body can affect the quality of the drawing. A one-dimensional gradient can easily become bi-dimensional
+----
+#### code-example ####
+snippet: 35.py
+----
+image: matrixRect.png
+----
+#### text-block ####
+content: and an <code class="language-python">if</code> statement nested into the inner <code class="language-python">for</code> loop can draw a chess board:
+----
+#### code-example ####
+snippet: 36.py
+----
+image: chess.png
+----
+#### text-block ####
+content: Please, note that nested for constructs can also be used to navigate nested data structures as a list of tuples:
+----
+#### code-example ####
+snippet: 37.py
+----
+image: listprinted.png
+----

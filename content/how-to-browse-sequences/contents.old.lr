@@ -287,7 +287,7 @@ stroke(0)
 line((20, 20), (80, 20))
 line((20, 40), (80, 40))
 line((20, 60), (80, 60))
-line((20, 80), (80, 80))</pre_code></code_image_wrapper><code_image>
+line((20, 80), (80, 80))</pre_code></code_image_wrapper>
 
 <p>go for this structure</p>
 
@@ -314,7 +314,6 @@ for eachLineIndex in range(linesAmount):
 
 <p>What if you need to add points at the beginning and at the end? Easily done.</p>
 
-
 <code_image_wrapper><code_image src="linesOvals.png"></code_image><pre_code>linesAmount = 8
 radius = 3
 size(100, 100)
@@ -323,9 +322,9 @@ for eachLineIndex in range(linesAmount):
     fill(None)
     stroke(0)
     line((20, quota), (80, quota))
-    
+
     stroke(None)
-    fill(0)    
+    fill(0)
     oval(20-radius, quota-radius, radius*2, radius*2)
     oval(80-radius, quota-radius, radius*2, radius*2)
 </pre_code></code_image_wrapper>
@@ -417,8 +416,7 @@ for rowIndex in range(rows):
     for colIndex in range(cols):
         rect(colIndex*cellWidth, rowIndex*cellHeight, cellWidth, cellHeight)</pre_code></code_image_wrapper>
 
-<p>Matrix indexes can be drawn very easily
-</p>
+<p>Matrix indexes can be drawn very easily</p>
 
 <code_image_wrapper><code_image src="gridnumbers.png"></code_image><pre_code>cols = 4
 rows = 4
