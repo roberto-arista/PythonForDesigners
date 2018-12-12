@@ -1,0 +1,611 @@
+_model: chapter
+---
+title: How to Make Choices
+---
+abstract: Unfortunately, this is not the self-help section of the manual. It is all about the conditional construct
+---
+sort_key: 6
+---
+visual_abstract: abstract-6.svg
+---
+body:
+
+<section_title>Operators, Expressions and Statements</section_title>
+
+<p>An expression is a combination of identifiers, values and operators which computes a value. It is quite similar to an arithmetic expression, with the only difference that the scope of programming languages expressions is way bigger since they can compute any kind of data, be they numerical or otherwise. We have already delved into identifiers and values; what we miss to write proper Python expressions are now the operators. They are special symbols and keywords that instruct a computation between two values. The semantics of an operator depends on the type of its operands.
+</p>
+
+<section_title>Logical Operators (Yield Boolean)</section_title>
+
+<p>Logical operators allow to manipulate and chain boolean values. Non-boolean values can also be operands of a logical operator, but they will be implicitly converted to boolean values with the bool() data type constructor before evaluation.</p>
+
+<small_image src="not.svg"></small_image>
+<p><inline_code>not</inline_code> (unary negation) is used to change the state of a boolean type, from <inline_code>False</inline_code> to <inline_code>True</inline_code>, from <inline_code>True</inline_code> to <inline_code>False</inline_code>. It is like pressing a switch. "Unary" means that the operator only affects the following operand.</p>
+
+<small_image src="or.svg"></small_image>
+<p><inline_code>or</inline_code> is used to build a logical expression that will evaluate <inline_code>True</inline_code> if any of the operands is <inline_code>True</inline_code>. Look at the diagram on the left: the pipe has a fork with a tap on each side. The fork is the "or" operator, and the taps are the operands; if any of the valves are open (<inline_code>True</inline_code>), the water will flow on the other side.</p>
+
+<small_image src="and.svg"></small_image>
+<p><inline_code>and</inline_code> (conditional and) is used to build a logical expression that will evaluate <inline_code>True</inline_code> if every operand is <inline_code>True</inline_code>. Look at the diagram on the left: a straight pipe represents the boolean expression with two taps following each other. The only way to let the water through is to open both valves. Meaning that every operand has to be <inline_code>True</inline_code>.</p>
+
+<p><inline_code>and</inline_code> and <inline_code>or</inline_code> are also referred to as "short-circuit" operators, because the interpreter will not evaluate the entire expression if unnecessary.</p>
+
+<large_image src="not_evaluated.svg"></large_image>
+
+<p>Here is a table showing their behaviours:</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Expression</th>
+            <th>Output</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>not True</code></td>
+            <td><code>False</code></td>
+        </tr>
+
+        <tr>
+            <td><code>not False</code></td>
+            <td><code>True</code></td>
+        </tr>
+
+        <tr>
+            <td><code>True and True</code></td>
+            <td><code>True</code></td>
+        </tr>
+
+        <tr>
+            <td><code>False and True</code></td>
+            <td><code>False</code></td>
+        </tr>
+
+        <tr>
+            <td><code>False and False</code></td>
+            <td><code>False</code></td>
+        </tr>
+
+        <tr>
+            <td><code>True or True</code></td>
+            <td><code>True</code></td>
+        </tr>
+
+        <tr>
+            <td><code>True or False</code></td>
+            <td><code>True</code></td>
+        </tr>
+
+        <tr>
+            <td><code>False or False</code></td>
+            <td><code>False</code></td>
+        </tr>
+
+    </tbody>
+</table>
+
+<p>Take into account that logical operators accept any type as operands, not only Boolean. If the operand type is non-boolean, the interpreter will convert the expression to a Boolean value and only after that evaluate the logical expression. For example:</p>
+
+<table>
+    <thead>
+            <tr>
+            <th>First step</th>
+            <th>Second step</th>
+            <th>Third step</th>
+            <th>Result</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td><code>0 and 5</code></td>
+            <td><code>bool(0) and bool(5)</code></td>
+            <td><code>True and True</code></td>
+            <td><code>True</code></td>
+        </tr>
+
+        <tr>
+             <td><code>1.0 or 2.5</code></td>
+            <td><code>bool(1.0) or bool(2.5)</code></td>
+            <td><code>True or True</code></td>
+            <td><code>True</code></td>
+        </tr>
+
+        <tr>
+            <td><code>not 0</code></td>
+            <td><code>not bool(0)</code></td>
+            <td><code>not False</code></td>
+            <td><code>True</code></td>
+        </tr>
+
+        <tr>
+            <td><code>not 2</code></td>
+            <td><code>not bool(2)</code></td>
+            <td><code>not True</code></td>
+            <td><code>False</code></td>
+        </tr>
+
+    </tbody>
+</table>
+
+<p>and so on. Check the Boolean Type section if you have any doubt concerning the way bool() works.</p>
+
+<section_title>Equality Operators (Yield Boolean)</section_title>
+
+<p>To make reasonable choices, evaluating if values are the <em>same</em> is very important. Python can test two different notions of “sameness”, equality and identity:</p>
+
+<table>
+    <thead>
+            <tr>
+                <th>Operators</th>
+                <th>Meaning</th>
+            </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td><code>is</code></td>
+            <td>same identity</td>
+        </tr>
+        <tr>
+            <td><code>is not</code></td>
+            <td>different identity</td>
+        </tr>
+        <tr>
+            <td><code>==</code></td>
+            <td>equivalent</td>
+        </tr>
+        <tr>
+            <td><code>!=</code></td>
+            <td>not equivalent</td>
+        </tr>
+    </tbody>
+
+</table>
+<p>It is essential to understand the difference between the two different notions in order to write reliable and semantic code.</p>
+
+<p>Equality operators investigate the values of the objects referred; they are usually integers, strings, containers:</p>
+
+<pre_code>valueOne = 12
+valueTwo = 25
+valueOne == valueTwo
+# False
+valueOne != valueTwo
+# True
+
+someChars = ‘Lemon’
+moreChars = ‘lemon’
+someChars == moreChars
+# False, Python is case-sensitive
+
+myFirstList = [1, ‘a’, False]
+mySecondList = [1, ‘a’, False]
+myFirstList == mySecondList
+# True
+
+myThirdList =  [2, ‘b’, None]
+myFirstList == myThirdList
+# False</pre_code>
+
+<p>Identity operators instead, check if two identifiers refer or not to the same object. So, in different words, they check if two identifiers are pointing to the same place in memory. Let’s write a little variation of the code above:</p>
+
+<pre_code>myFirstList = [1, ‘a’, False]
+mySecondList = myFirstList
+myThirdList = [1, ‘a’, False]
+
+# two aliases referring to the same object in memory
+myFirstList is mySecondList
+# True
+
+# extra check
+id(myFirstList) == id(mySecondList)
+# True
+
+# two aliases referring to two different objects with the same content
+myFirstList is myThirdList
+# False
+
+# indeed they have the same content
+myFirstList == myThirdList
+# True
+
+# but different identity
+id(myFirstList) == id(myThirdList)
+# False</pre_code>
+
+<p>So, when should you use what? When comparing numbers, text, containers content is good practice to use <inline_code>==</inline_code> and <inline_code>!=</inline_code>. Avoid <inline_code>is</inline_code> and <inline_code>is not</inline_code>, they are ambiguous and often not reliable because of caching. Instead, when comparing identifiers to singletons (<inline_code>True</inline_code>, <inline_code>False</inline_code>, <inline_code>None</inline_code>) you should always use <inline_code>is</inline_code> and <inline_code>is not</inline_code>. Why? Because there is only one instance of each of these type (therefore their identity is reliable) and makes your code more readable.</p>
+
+<pre_code>if isDark is True:
+    turnLight()</pre_code>
+
+<section_title>Comparison Operators (Yield Boolean)</section_title>
+<p>Sorting things is quite a big deal in programming. Python provides a few operators able to detect the size of two expressions:</p>
+
+<table>
+    <thead>
+        <th>Operators</th>
+        <th>Meaning</th>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td><code><</code></td>
+            <td>less than</td>
+        </tr>
+
+        <tr>
+            <td><code><=</code></td>
+            <td>less than or equal to</td>
+        </tr>
+
+        <tr>
+            <td><code>></code></td>
+            <td>greater than</td>
+        </tr>
+
+        <tr>
+            <td><code>>=</code></td>
+            <td>greater than or equal to</td>
+        </tr>
+    </tbody>
+</table>
+
+<code_image_wrapper>
+<pre_code>x = 6
+y = 9
+x <  y  # True
+x <= y  # True
+x == y  # False
+x >= y  # False
+x >  y  # False</pre_code>
+</code_image_wrapper>
+
+<code_image_wrapper>
+<pre_code>x = y = 6
+x > y  # False
+x < y  # False
+x == y # True
+x <= y # True
+x >= y # True</pre_code>
+</code_image_wrapper>
+
+<p>When comparing non-integer instances, they are translated in a numerical value and then evaluated. For example, strings are converted to sequences of integers according to the position of each character into the Unicode standard.</p>
+
+<section_title>Arithmetic Operators (Yield Floating Point or Integer)</section_title>
+<p>Computers have the ability to compute arithmetical expression very quickly. Python, of course, supports the standard arithmetic operators as follows:</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Operator</th>
+            <th>Operation</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>+</code></td>
+            <td>addition</td>
+        </tr>
+
+        <tr>
+        <td><code>-</code></td>
+        <td>subtraction</td>
+        </tr>
+
+        <tr>
+            <td><code>*</code></td>
+            <td>multiplication</td>
+        </tr>
+
+        <tr>
+            <td><code>/</code></td>
+            <td>division</td>
+        </tr>
+
+        <tr>
+            <td><code>//</code></td>
+            <td>integer division</td>
+        </tr>
+
+        <tr>
+            <td><code>%</code></td>
+            <td>modulo operator</td>
+        </tr>
+
+        <tr>
+            <td><code>**</code></td>
+            <td>power of</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>Addition, subtraction and multiplication have a very straightforward behaviour: if both operands are integer, they yield an integer. If one of the operands is a floating point, they will return a floating point value. For example:</p>
+
+<pre_code>2 + 3.5  # 5.5
+2-1      # 1
+10*3     # 30</pre_code>
+
+<p>Division has two different operators which behave slightly differently. The standard division is what you would expect from it:</p>
+
+<pre_code>6 / 4  # 1.5</pre_code>
+
+<p>If you are allowed to slice units,
+you can proceed as follows:</p>
+
+<large_image src="4times.svg"></large_image>
+
+<p>The integer division instead yields the mathematical floor of the quotient:</p>
+<pre_code>6//4 # 1</pre_code>
+
+<p>if you can’t slice units you group 4 units only once from a collection of 6</p>
+
+<small_image src="4.svg"></small_image>
+
+<p>The modulo operator yields the remainder of such division:</p>
+<pre_code>6 % 4 # 2</pre_code>
+
+<small_image src="modulo.svg"></small_image>
+
+<p>In combination with the equivalent (<inline_code>==</inline_code>) or not equivalent (<inline_code>!=</inline_code>) operator, the modulo can be really helpful in checking whether a number is even or odd, whether a number is decimal or not and so on</p>
+<pre_code>3 % 2   != 0 # True # 3 is odd
+2.5 % 1 == 0 # False # 2.5 is not integer</pre_code>
+
+<section_title>Compound Expressions</section_title>
+<p>Python provides the opportunity to combine more expressions at once. The result of these compound expressions relies on the evaluation of each single expression within it. The order of evaluation affects the final result, so it is very important to get a grip on precedence standard of the interpreter. For example:</p>
+
+<pre_code>5+2*8 # 21</pre_code>
+
+<p>Because of the higher precedence of multiplication over addition, 2*8 is evaluated first, then 16 is added to 5, giving 21 as result. In order to manipulate the execution order of evaluation, parenthesis can be used. For example:</p>
+
+<pre_code>(5+2)*8 # 56</pre_code>
+
+<p>Here is a concise table of the expressions evaluation order sorted by higher precedence</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Expressions</th>
+            <th>Operators</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>function call, slicing sequence</td>
+            <td><code>func(), sequence[]</code></td>
+        </tr>
+    
+        <tr>
+            <td>exponentiation</td>
+            <td><code>**</code></td>
+        </tr>
+    
+        <tr>
+            <td>multiplication, division</td>
+            <td><code>*, /, //, %</code></td>
+        </tr>
+    
+        <tr>
+            <td>addition, subtraction</td>
+            <td><code>+, -</code></td>
+        </tr>
+    
+        <tr>
+            <td>comparisons</td>
+            <td><code>is, is not, ==, !=, <, <=, >, >=</code></td>
+        </tr>
+    
+        <tr>
+            <td>logical not</td>
+            <td><code>not</code></td>
+        </tr>
+    
+        <tr>
+            <td>logical and</td>
+            <td><code>and</code></td>
+        </tr>
+    
+        <tr>
+            <td>logical or</td>
+            <td><code>or</code></td>
+        </tr>
+    
+        <tr>
+            <td>assignments</td>
+            <td><code>=, +=, -=, /=, *=</code></td>
+        </tr>
+    </tbody>
+</table>
+
+<section_title>Colon Syntax</section_title>
+<p>As we already mentioned, whitespace is semantic in Python. This means that in order to group lines of code it is necessary to compose the statements which form the block accordingly. Consider the following list of words:</p>
+
+<pre_code>potatoes
+groceries
+eggplants
+tomatoes</pre_code>
+
+<p>Here we are taking no advantage of visual variables in order to make the hierarchy more accessible to readers. We can only rely on the meaning of these words and try to detect a possible structure. So, at first sight, we detect no hierarchy, but after reading, we notice that <inline_code>groceries</inline_code> can group all the other items.</p>
+
+<small_image src="groceries.svg"></small_image>
+
+<p>There are a few contrivances we can implement to express this structure at best using only typography. Let’s start to make some order moving groceries to the top:</p>
+
+<pre_code>groceries
+potatoes
+eggplants
+tomatoes</pre_code>
+
+<p>Then we should find a way to associate unequivocally <inline_code>potatoes</inline_code>, <inline_code>eggplants</inline_code> and <inline_code>tomatoes</inline_code> as part of the same group. A very elegant and economic way is to move their alignment rightwards, like this:</p>
+
+<pre_code>groceries
+    potatoes
+    eggplants
+    tomatoes</pre_code>
+
+<p>After grouping, hierarchy. A very common and shared way of tag the first line of a list as a title is to use the colon sign, like:</p>
+
+<pre_code>groceries:
+    potatoes
+    eggplants
+    tomatoes</pre_code>
+
+<p>If we compare the final outcome with the original one, we will notice a sensible improvement. We do this all day without even noticing. We activate visual variables in order to build images with clear meanings that are easy to access to other people. It is a subtle kind of grammar, but an extremely powerful one.</p>
+
+<p>The designer of Python, Guido van Rossum, decided to implement such behaviour into the Python programming language. This behaviour is mandatory, meaning that the Python interpreter expects the user to indent code semantically in order to organize code blocks.
+These statements need a colon as final delimiter:</p>
+
+<pre_code>if, elif, else
+for
+while
+with
+def
+try, except, finally
+class</pre_code>
+
+<p>The code related to the statement needs to be indented four space rightwards in order to be considered as the body of the construct. For example:</p>
+
+<pre_code>if index != 0:
+    print('something')
+print('something else')</pre_code>
+
+<p>‘something else’ is not part of the conditional construct because it falls out of the indented body. Consider also that Python allows nested structures like:</p>
+
+<pre_code>for eachElem in iterable:
+    if eachElem == target:
+        print 'found!'</pre_code>
+
+<p>In order to execute the conditional construct nested into the for-loop, this has to be indented four spaces more than its parent statement, which is already indented four spaces. Meaning, it has to be indented eight spaces rightwards. Just like a matryoshka.</p>
+
+<small_image src="paper.svg"></small_image>
+
+<section_title>Conditional Execution</section_title>
+
+<p>Now that we have the tools, we need to instruct the interpreter to make reasonable choices. As we already said, it is critical while programming to be able to check whether a condition is true or not and then to be able to reroute the execution flow on different blocks of code.</p>
+
+<p>Here’s a common standard diagram used to describe these patterns is the flowchart:
+</p>
+
+<large_image src="fridge.svg"></large_image>
+
+<p>Python provides a control structure called “conditional construct” which allows to define whether a block of code should be executed or not. The minimal form of a conditional structure is:</p>
+
+<pre_code>if condition:
+    body</pre_code>
+
+<large_image src="condition1.svg"></large_image>
+
+<p>Here’s a concrete example: </p>
+
+<pre_code>size(100, 100)
+myVar = 10
+if myVar < 20:
+    rect(10, 10, 40, 40)</pre_code>
+
+<p>The condition is a Boolean expression. If this expression results in a <inline_code>True</inline_code> value, the indented block of code that follows will be executed. The body of the conditional construct can include other nested structures, they only need to be indented accordingly.</p>
+
+<pre_code>size(100, 100)
+myVar = 8
+if myVar < 20:
+    if myVar < 10:
+        fill(.5)
+    rect(10, 10, 40, 40)</pre_code>
+
+<p>As soon as a statement falls out of the indented body, it is not considered part of the conditional structure anymore. For example:</p>
+
+<pre_code>size(100, 100)
+myVar = 10
+if myVar < 5:
+    fill(1)
+rect(10, 10, 40, 40)</pre_code>
+
+<p>In this case, whether the body is executed or not, a rectangle will be drawn on the canvas.</p>
+
+<p>An <inline_code>else</inline_code> statement can be placed at the end of the conditional construct. The instructions grouped into this statement will be executed if any other statement (<inline_code>if</inline_code>, <inline_code>elif</inline_code>) of the conditional construct is not met. Here’s how it is used:</p>
+
+<pre_code>if condition:
+    body1
+else:
+    body2</pre_code>
+
+<large_image src="else.svg"></large_image>
+
+<p>Here’s a concrete example:</p>
+
+<pre_code>size(100, 100)
+myVar = 22
+if myVar < 20:
+    rect(10, 10, 40, 40)
+else:
+    oval(10, 10, 40, 40)</pre_code>
+
+<p>The <inline_code>else</inline_code> keyword is not followed by any condition, because it doesn’t need any evaluation. It is an interpreter parachute.</p>
+
+<small_image src="parachute.svg"></small_image>
+
+<p>Moreover, Python allows to chain the evaluation of many conditions at once, using an indefinite number of <inline_code>elif</inline_code> (which means “else if”) statements between <inline_code>if</inline_code> (mandatory) and <inline_code>else</inline_code> (optional).</p>
+<p>The structure is then:</p>
+
+<pre_code>if condition1:
+    body1
+elif condition2:
+    body2:
+elif condition3:
+    body3:
+else:       # all other possible cases
+    body4</pre_code>
+
+<large_image src="elif.svg"></large_image>
+
+<p>for example</p>
+
+<pre_code>size(100,100)
+myVar = 10
+if 20 < myVar:
+    fill(0)
+    # chained comparison expressions!
+# it is helpful when looking for
+# a value included between values
+elif 20 >= myVar > 12:
+    fill(.3)
+elif 12 >= myVar > 8:
+    fill(.6)
+else:
+    fill(.9)
+rect(10, 10, 50, 50)</pre_code>
+
+<large_image src="myVar.svg"></large_image>
+
+<p>Take note of the use of indentation. <inline_code>if</inline_code>, <inline_code>elif</inline_code> and <inline_code>else</inline_code> are aligned to the left while their bodies are four spaces indented to the right.</p>
+
+<workbook></workbook>
+
+<exercise_wrapper><exercise_content>
+<p>
+Draw a flowchart based on the following code:
+</p>
+<pre_code>size(100,100)
+myVar = 10
+if 20 < myVar:
+    fill(0)
+elif 20 >= myVar > 12:
+    fill(.3)
+elif 12 >= myVar > 8:
+    fill(.6)
+else:
+    fill(.9)
+rect(10, 10, 50, 50)</pre_code>
+</exercise_content></exercise_wrapper>
+
+<exercise_wrapper><exercise_content><p>
+Create a 200x200pt canvas. Draw a sequence of squares from top to bottom using a while loop. The square side should be adjustable through a variable. Odd squares should be light gray, even tiles should be dark gray.
+</p></exercise_content></exercise_wrapper>
+
+<exercise_wrapper><exercise_content><p>
+Extend the previous exercise. Nest two while statements and draw a pattern made of squares across the entire canvas. Try to get a chessboard effect.
+</p></exercise_content></exercise_wrapper>
+
+<exercise_wrapper><exercise_content><p>
+Write a program able to draw a ruler of a specific measure unit (either postscript points or millimeters) across the entire canvas. The ruler ticks should be of different lengths according to a given rhythm. Use a while loop. Numbers displayed along the ruler are a plus.
+</p></exercise_content></exercise_wrapper>

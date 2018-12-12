@@ -1,0 +1,1 @@
+'abcdefghijklmnopqrstuvwxyz'[:-2:2]

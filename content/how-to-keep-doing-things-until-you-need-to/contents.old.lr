@@ -1,0 +1,172 @@
+_model: chapter
+---
+title: How to Keep Doing Things until You Need To
+---
+abstract: The conditional construct can be easily extended with iteration. Let the computer do the hard work!
+---
+sort_key: 7
+---
+visual_abstract: abstract-7.svg
+---
+body: <p>Computers are fast calculating machines. They manage to accomplish very simple tasks very quickly. A complex task is just a big amount of simple tasks very well organized. Organized how? Through programming. 
+In this chapter we will learn how to instruct Python –and Drawbot– to accomplish repetitive commands without making our instructions themselves repetitive. Follow me!</p>
+
+<p>In chapter 5, we have seen how to draw basic shapes on the Drawbot canvas. As you remember, we can draw a line using:
+</p>
+
+<code_image_wrapper><code_image src="one-line.png"></code_image>
+<pre_code>size(100, 100)
+stroke(0)
+line((0, 20), (100, 20))
+</pre_code></code_image_wrapper>
+
+
+<p>Given that we have to specify numerically the position of each shape on the canvas, drawing a pattern could be very boring. Let’s see what does mean to draw a pattern of crossed lines in this way…</p>
+
+<code_image_wrapper><code_image src="grid_line.png"></code_image>
+<pre_code>size(100, 100)
+stroke(0)
+
+# vertical
+line((10, 0), (10, 100))
+line((20, 0), (20, 100))
+line((30, 0), (30, 100))
+line((40, 0), (40, 100))
+line((50, 0), (50, 100))
+line((60, 0), (60, 100))
+line((70, 0), (70, 100))
+line((80, 0), (80, 100))
+line((90, 0), (90, 100))
+
+# horizontal
+line((0, 10), (100, 10))
+line((0, 20), (100, 20))
+line((0, 30), (100, 30))
+line((0, 40), (100, 40))
+line((0, 50), (100, 50))
+line((0, 60), (100, 60))
+line((0, 70), (100, 70))
+line((0, 80), (100, 80))
+line((0, 90), (100, 90))
+</pre_code></code_image_wrapper>
+
+<p>The code works, but writing it was not fun, right? Using identifiers we could avoid to type many times the same numbers, but this way we still have to invoke too many times the same function.</p>
+<p>Let’s say we now decide to get this pattern a little darker. There are two options: to make the lines thicker or to increase the amount of lines. Now the issue now is: if we want to squeeze a couple of lines extra in our pattern, we have to edit almost every line of the previous code. This is not convenient at all. Luckily Python offers a synthetic and elegant syntax to instruct iterative tasks to the interpreter typing as little as possible. Consider the possible alternative:</p>
+
+
+<code_image_wrapper><code_image src="grid_line.png"></code_image>
+<pre_code>canvasSide = 100
+gap = 10
+
+size(canvasSide, canvasSide)
+stroke(0)
+
+currentPos = gap
+while currentPos < canvasSide:
+    line((0, currentPos), (canvasSide, currentPos))
+    line((currentPos, 0), (currentPos, canvasSide))
+    currentPos += gap
+</pre_code></code_image_wrapper>
+
+
+<p>This solution brings a number of benefits:</p>
+<ul><li>it is compact and therefore elegant</li>
+<li>if we need to change the amount of shapes we only need to edit a little</li>
+<li>it is far more explicit concerning our intentions (drawing a pattern of lines, not just a bunch arbitrary lines)</li>
+<li>it is generally easier to edit, scale and reuse</li></ul>
+
+<p>Python offers two different iteration constructs. We have just seen the <inline_code>while</inline_code> syntax in action, which is similar to the  conditional construct (<inline_code>if</inline_code>, <inline_code>elif</inline_code>, <inline_code>else</inline_code>) we have presented in the last chapter. This construct allows a general repetition based upon the evaluation of a boolean expression. We could define it a “conditional iteration”: <em>keep doing this, until it’s necessary</em>. </p>
+
+<p>The syntax is the following one:
+</p>
+<pre_code>while condition:
+    body</pre_code>
+
+<large_image src="while.svg"></large_image>
+
+<p>According to the colon syntax explored in the previous chapter, the body is considered as such if:</p>
+<ul><li>the condition is followed by a colon</li>
+<li>the lines which form it are indented four spaces rightwards (without exceptions)</li></ul>
+
+<p>The <inline_code>while</inline_code> loop begins with the evaluation of the condition following the <inline_code>while</inline_code> keyword. If the boolean expression evaluates to <inline_code>True</inline_code>, the body of the loop is performed. After the body execution, the condition is tested again. If the result is <inline_code>True</inline_code>, the body is performed, again. As soon as the condition evaluates to <inline_code>False</inline_code>, the body is skipped and the interpreter continues its journey beyond the body of the loop. Take into account that, until some action into the body does not change the state of the condition, the loop will keep going. FOREVA.</p>
+
+<p>Python provides two protected keywords to control the flow of an iteration: <inline_code>break</inline_code> and <inline_code>continue</inline_code>.</p>
+
+<p>The <inline_code>break</inline_code> statement breaks out of the innermost enclosing the while loop (but also the for loop which we will encounter soon). Let’s consider:</p>
+
+<pre_code>index = 0
+while True:
+    index += 1
+    if index == 20:
+        break</pre_code>
+
+<p>As soon as <inline_code>index</inline_code> equals <inline_code>20</inline_code>, the body of the conditional construct (<inline_code>if</inline_code>) is executed. The break statement stops the loop and the interpreter continues just after the <inline_code>while</inline_code> body. Consider this piece of code just as an example, since it’s better to evaluate as much as possible into the <inline_code>while</inline_code> condition.</p>
+
+<pre_code>index = 0
+while index <= 20:
+    index += 1</pre_code>
+
+<large_image src="while-if.svg"></large_image>
+
+<p>Writing a fully functioning while block could be tricky at the beginning of your learning path. In fact, if the <inline_code>while</inline_code> body does not change somehow the <inline_code>while</inline_code> condition, your loop will run endlessly. If this is not your desired output, this is quite bad because you will have to force quit Drawbot. There is no other way from within the application to stop the interpreter before the end of a running script. A good solution for this issue could be to use a parachute technique.</p>
+
+<p>A parachute is a temporary safety measure which stops your interpreter from looping endlessly making use of a break statement. Consider the following example:</p>
+
+<pre_code>safetyLimit = 200    # this value is arbitrary
+parachute = 0
+
+while True:          # this will loop endlessly
+    parachute += 1
+    if parachute == safetyLimit:
+        print("it's time to open the parachute")
+        break</pre_code>
+
+<p>Then, once your <inline_code>while</inline_code> block proves to be working properly, you can get rid of the parachute.</p>
+
+<p>The <inline_code>continue</inline_code> statement is used to skip part of the code into the body for the current iteration only. The loop does not terminate but continues to the next iteration of the loop.</p>
+
+<pre_code>index = 0
+
+while index <= 20:
+    index += 1
+
+    if index % 2 == 0:
+        print(‘found even number’)
+        continue
+    print(‘found odd number’)
+
+print(‘outside the while loop’)</pre_code>
+
+<large_image src="continue.svg"></large_image>
+
+<workbook></workbook>
+
+
+<exercise_wrapper><exercise_content>
+<p>Try to cover the entire canvas with a striped black & white pattern. The user should be able to control the density of the pattern and the direction of lines (horizontal or vertical).</p>
+</exercise_content><exercise_image src="stripes.png"></exercise_image></exercise_wrapper>
+
+<exercise_wrapper><exercise_content>
+<p>Try to cover the entire canvas with a zig-zag line. The line moves horizontally starting at top left canvas vertex. Allow the user to control the density of wave lines.</p>
+</exercise_content><exercise_image src="zigzag.png"></exercise_image></exercise_wrapper>
+
+<exercise_wrapper><exercise_content>
+<p>Draw a leaf white shape using only black lines.</p>
+</exercise_content><exercise_image src="threadCurves.png"></exercise_image></exercise_wrapper>
+
+<exercise_wrapper><exercise_content>
+<p>Extend the previous exercise: draw a white circle using only black straight lines.</p>
+</exercise_content><exercise_image src="theadCicle.png"></exercise_image></exercise_wrapper>
+
+<exercise_wrapper><exercise_content>
+<p>Create a sequence of horizontal gradients. You cannot use any automatic gradient function, try to achieve this visual effect through separate shapes.
+The gradients should have alternate direction.</p>
+</exercise_content><exercise_image src="gradientStripes.png"></exercise_image></exercise_wrapper>
+
+<exercise_wrapper><exercise_content>
+<p>Create a pattern of horizontal lines. The lines should be thicker in the middle as you can see in the example image. Allow the user to control the density of the pattern, the maximum value of the thickness and a canvas margin.</p>
+</exercise_content><exercise_image src="linePattern.png"></exercise_image></exercise_wrapper>
+
+<exercise_wrapper><exercise_content>
+<p>Your goal is to draw a boustrophedonic sequence of ovals. Start from the lower left canvas corner and alternate ovals color (dark gray, light gray). Increase the oval radius according to its position within the drawing sequence of the line (little at the beginning, larger at the end). The vertical and horizontal distance between the ovals is constant. Give the user the option to set a margin value for the canvas and try to use only one while construct.</p>
+</exercise_content><exercise_image src="pattern_oval.png"></exercise_image></exercise_wrapper>

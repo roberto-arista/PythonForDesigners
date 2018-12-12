@@ -1,0 +1,8 @@
+Operator	Operation
+<code>+</code>	addition
+<code>-</code>	subtraction
+<code>*</code>	multiplication
+<code>/</code>	division
+<code>//</code>	integer division
+<code>%</code>	modulo operator
+<code>**</code>	power of

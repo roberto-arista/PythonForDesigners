@@ -1,0 +1,1 @@
+sequence[start:end:step]
