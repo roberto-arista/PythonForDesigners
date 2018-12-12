@@ -1,10 +1,12 @@
 <div class='exercise_wrapper'>
 
     <div class='exercise_content'>
-        <p>{ this.content }</p>
+        <p>{{ this.content }}</p>
     </div>
 
-    <img class='exercise_image' src="{ this.image }">
+    {% if this.image %}
+    <img class='exercise_image' src="{{ this.image }}">
+    {% endif %}
 
     <!-- solution to be added -->
 
