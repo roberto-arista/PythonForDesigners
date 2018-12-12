@@ -25,7 +25,7 @@ def importCsv(fileName, headers):
                 htmlRow.append(u"<{1}>{0}</{1}>".format(eachCell, tagRepr))
             htmlTable.append(u"<tr>{}</tr>".format(''.join(htmlRow)))
 
-    tableTemplate = u"<table><tbody>{}</tbody></table>"
+    tableTemplate = u"<table>{}</table>"
     return HTML(tableTemplate.format('\n'.join(htmlTable)))
 
 
