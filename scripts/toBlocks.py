@@ -21,8 +21,10 @@ TAGS = ['large_image',
         'section_title',
         'workbook',
         'exercise_wrapper',
+        'code_image_wrapper',
         'table',
         'ul',
+        'figcaption',
         'p']
 
 
@@ -38,17 +40,44 @@ def convertImage(tag, kind):
     block.append(FIELD_SEPARATOR)
     return block
 
-def convertCodeExample(tag, chapterFolder, counter):
+def convertCodeExampleWithoutImage(tag, chapterFolder, counter):
     block = ['#### code-example ####']
-    if tag.previous_sibling == 'code_image':
-        block.append(f"image: {tag['src']}")
-        block.append(FIELD_SEPARATOR)
     snippetName = f'{counter:0>2d}.py'
     with codecs.open(joinPth(chapterFolder, snippetName), 'w', 'utf-8') as snippetFile:
         snippetFile.write(tag.text)
-        block.append(f'path: {snippetName}')
+        block.append(f'snippet: {snippetName}')
         block.append(FIELD_SEPARATOR)
     return block
+
+def convertCodeImageWrapper(tag, chapterFolder, counter):
+    block = ['#### code-example ####']
+
+    # snippet
+    snippetName = f'{counter:0>2d}.py'
+    with codecs.open(joinPth(chapterFolder, snippetName), 'w', 'utf-8') as snippetFile:
+        snippetFile.write(tag.pre_code.text)
+        block.append(f'snippet: {snippetName}')
+        block.append(FIELD_SEPARATOR)
+
+    # images
+    if tag.code_diagram:
+        block.append(f'diagram: {tag.code_diagram["src"]}')
+
+    if tag.code_image:
+        block.append(f'image: {tag.code_image["src"]}')
+
+    block.append(FIELD_SEPARATOR)
+
+    return block
+
+def convertLink2Mark(tag):
+    return f'[{tag.string}]({tag["href"]})'
+
+def convertEm2Mark(tag):
+    return f'*{tag.string}*'
+
+def convertInlineCode2Mark(tag):
+    return f'<code class="language-python">{tag.string}</code>'
 
 def convertText(tag):
     paragraph = []
@@ -58,13 +87,13 @@ def convertText(tag):
 
         elif isinstance(eachCon, Tag):    # tag
             if eachCon.name == 'em':
-                paragraph.append(f'*{eachCon.string}*')
+                paragraph.append(convertEm2Mark(eachCon))
 
             elif eachCon.name == 'inline_code':
-                paragraph.append(f'`{eachCon.string}`')
+                paragraph.append(convertInlineCode2Mark(eachCon))
 
             elif eachCon.name == 'a':
-                paragraph.append(f'[{eachCon.string}]({eachCon["href"]})')
+                paragraph.append(convertLink2Mark(eachCon))
 
             else:
                 print('[ERROR] missing a tag conversion!')
@@ -88,6 +117,12 @@ def convertSectionTitle(tag, kind):
     block.append(FIELD_SEPARATOR)
     return block
 
+def convertFigCaption(tag):
+    block = ['#### text-block ####']
+    block.append('content: ' + f'<figcaption>{tag.string}</figcaption>')
+    block.append(FIELD_SEPARATOR)
+    return block
+
 def convertExercise(tag):
     block = ['#### exercise ####']
     if tag.exercise_content:
@@ -105,15 +140,30 @@ def convertList(tag):
         if eachCon.name == 'li':
             singleElement = ['+ ']
             for eachElem in eachCon.contents:
+
                 if isinstance(eachElem, Tag):
-                    singleElement.append(f'<code>{eachElem.text}</code>')
+                    if eachElem.name == 'em':
+                        singleElement.append(convertEm2Mark(eachElem))
+
+                    elif eachElem.name == 'inline_code':
+                        singleElement.append(convertInlineCode2Mark(eachElem))
+
+                    elif eachElem.name == 'a':
+                        singleElement.append(convertLink2Mark(eachElem))
+                    else:
+                        print(eachElem.name)
+                        print('[ERROR] missing a tag')
+                        raise Exception
+
                 elif isinstance(eachElem, NavigableString):
                     singleElement.append(eachElem)
+
                 else:
                     print('[ERROR] missing something here')
                     raise Exception
 
             listContent.append(''.join(singleElement))
+
     block.append('content: ' + '\n'.join(listContent))
     block.append(FIELD_SEPARATOR)
     return block
@@ -130,7 +180,7 @@ def convertTable(tag, chapterFolder, counter):
                 if tagCell.contents:
                     content = tagCell.contents[0]
                     if isinstance(content, Tag) and (content.name == 'code' or content.name == 'inline_code'):
-                        tagText = f'<code>{content.text}</code>'
+                        tagText = convertInlineCode2Mark(content)
                     else:
                         tagText = tagCell.text
                 else:
@@ -147,7 +197,7 @@ def convertTable(tag, chapterFolder, counter):
                 if tagCell.contents:
                     content = tagCell.contents[0]
                     if isinstance(content, Tag) and (content.name == 'code' or content.name == 'inline_code'):
-                        tagText = f'<code>{content.text}</code>'
+                        tagText = convertInlineCode2Mark(content)
                     else:
                         tagText = tagCell.text
                 else:
@@ -171,8 +221,6 @@ def convertTable(tag, chapterFolder, counter):
 
 
 def convertLR(lrPath, oldCopy=True):
-
-    # list
 
     # open the file and make the soup
     with codecs.open(lrPath.replace('.lr', '.old.lr'), 'r', 'utf-8') as lrFile:
@@ -199,36 +247,50 @@ def convertLR(lrPath, oldCopy=True):
             if eachTag.name == 'large_image':
                 block = convertImage(eachTag, 'large')
 
-            if eachTag.name == 'small_image':
+            elif eachTag.name == 'small_image':
                 block = convertImage(eachTag, 'small')
 
             # code-example
-            if eachTag.name == 'pre_code':
-                block = convertCodeExample(eachTag,
-                                           dirname(lrPath),
-                                           snippetCounter)
+            elif eachTag.name == 'pre_code':
+                block = convertCodeExampleWithoutImage(eachTag,
+                                                       dirname(lrPath),
+                                                       snippetCounter)
                 snippetCounter += 1
 
             # text-block
-            if eachTag.name == 'p':
+            elif eachTag.name == 'p':
                 header, block = convertText(eachTag)
 
             # section-title
-            if eachTag.name in ['section_title', 'workbook']:
+            elif eachTag.name in ['section_title', 'workbook']:
                 block = convertSectionTitle(eachTag, eachTag.name)
 
             # exercise
-            if eachTag.name == 'exercise_wrapper':
+            elif eachTag.name == 'exercise_wrapper':
                 block = convertExercise(eachTag)
 
+            elif eachTag.name == 'code_image_wrapper':
+                block = convertCodeImageWrapper(eachTag,
+                                                dirname(lrPath),
+                                                snippetCounter)
+                snippetCounter += 1
+
             # table
-            if eachTag.name == 'table':
+            elif eachTag.name == 'table':
                 block = convertTable(eachTag, dirname(lrPath), tableCounter)
                 tableCounter += 1
 
             # list
-            if eachTag.name == 'ul':
+            elif eachTag.name == 'ul':
                 block = convertList(eachTag)
+
+            # figure caption
+            elif eachTag.name == 'figcaption':
+                block = convertFigCaption(eachTag)
+
+            else:
+                print('[ERROR] missing something here!')
+                raise Exception
 
             if eachTag.name == 'p':
                 textBlocks.append(block)
@@ -240,6 +302,13 @@ def convertLR(lrPath, oldCopy=True):
                     flow.append('\n'.join(paragraphsBlock))
                 flow.append('\n'.join(block))
 
+        # if last tag is 'p'
+        if eachTag.name == 'p':
+            paragraphs = "\n\n".join(textBlocks)
+            textBlocks = []
+            paragraphsBlock = [f'{header}', f'content: {paragraphs}', FIELD_SEPARATOR]
+            flow.append('\n'.join(paragraphsBlock))
+
         # substitution
         newHeader = re.sub(pattern, '', lrDoc)
         newBody = '\n'.join(flow)
@@ -248,58 +317,6 @@ def convertLR(lrPath, oldCopy=True):
             newDocFile.write(newHeader)
             newDocFile.write(f'---\nbody: {newBody}')
 
-
-### Variables
-tableText = """<table>
-    <thead>
-        <tr>
-            <th>Expression</th>
-            <th>Output</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><code>not True</code></td>
-            <td><code>False</code></td>
-        </tr>
-
-        <tr>
-            <td><code>not False</code></td>
-            <td><code>True</code></td>
-        </tr>
-
-        <tr>
-            <td><code>True and True</code></td>
-            <td><code>True</code></td>
-        </tr>
-
-        <tr>
-            <td><code>False and True</code></td>
-            <td><code>False</code></td>
-        </tr>
-
-        <tr>
-            <td><code>False and False</code></td>
-            <td><code>False</code></td>
-        </tr>
-
-        <tr>
-            <td><code>True or True</code></td>
-            <td><code>True</code></td>
-        </tr>
-
-        <tr>
-            <td><code>True or False</code></td>
-            <td><code>True</code></td>
-        </tr>
-
-        <tr>
-            <td><code>False or False</code></td>
-            <td><code>False</code></td>
-        </tr>
-
-    </tbody>
-</table>"""
 
 ### Instructions
 if __name__ == '__main__':
