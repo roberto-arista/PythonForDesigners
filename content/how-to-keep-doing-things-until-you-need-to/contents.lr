@@ -14,14 +14,32 @@ In this chapter we will learn how to instruct Python –and Drawbot– to accomp
 
 In chapter 5, we have seen how to draw basic shapes on the Drawbot canvas. As you remember, we can draw a line using:
 
-
-Given that we have to specify numerically the position of each shape on the canvas, drawing a pattern could be very boring. Let’s see what does mean to draw a pattern of crossed lines in this way…
-
-The code works, but writing it was not fun, right? Using identifiers we could avoid to type many times the same numbers, but this way we still have to invoke too many times the same function.
+----
+#### code-example ####
+snippet: 01.py
+----
+image: one-line.png
+----
+#### text-block ####
+content: Given that we have to specify numerically the position of each shape on the canvas, drawing a pattern could be very boring. Let’s see what does mean to draw a pattern of crossed lines in this way…
+----
+#### code-example ####
+snippet: 02.py
+----
+image: grid_line.png
+----
+#### text-block ####
+content: The code works, but writing it was not fun, right? Using identifiers we could avoid to type many times the same numbers, but this way we still have to invoke too many times the same function.
 
 Let’s say we now decide to get this pattern a little darker. There are two options: to make the lines thicker or to increase the amount of lines. Now the issue now is: if we want to squeeze a couple of lines extra in our pattern, we have to edit almost every line of the previous code. This is not convenient at all. Luckily Python offers a synthetic and elegant syntax to instruct iterative tasks to the interpreter typing as little as possible. Consider the possible alternative:
-
-This solution brings a number of benefits:
+----
+#### code-example ####
+snippet: 03.py
+----
+image: grid_line.png
+----
+#### text-block ####
+content: This solution brings a number of benefits:
 ----
 #### text-block ####
 content: + it is compact and therefore elegant
@@ -30,13 +48,13 @@ content: + it is compact and therefore elegant
 + it is generally easier to edit, scale and reuse
 ----
 #### text-block ####
-content: Python offers two different iteration constructs. We have just seen the `while` syntax in action, which is similar to the  conditional construct (`if`, `elif`, `else`) we have presented in the last chapter. This construct allows a general repetition based upon the evaluation of a boolean expression. We could define it a “conditional iteration”: *keep doing this, until it’s necessary*. 
+content: Python offers two different iteration constructs. We have just seen the <code class="language-python">while</code> syntax in action, which is similar to the  conditional construct (<code class="language-python">if</code>, <code class="language-python">elif</code>, <code class="language-python">else</code>) we have presented in the last chapter. This construct allows a general repetition based upon the evaluation of a boolean expression. We could define it a “conditional iteration”: *keep doing this, until it’s necessary*. 
 
 The syntax is the following one:
 
 ----
 #### code-example ####
-path: 01.py
+snippet: 04.py
 ----
 #### image ####
 name: while.svg
@@ -51,20 +69,20 @@ content: + the condition is followed by a colon
 + the lines which form it are indented four spaces rightwards (without exceptions)
 ----
 #### text-block ####
-content: The `while` loop begins with the evaluation of the condition following the `while` keyword. If the boolean expression evaluates to `True`, the body of the loop is performed. After the body execution, the condition is tested again. If the result is `True`, the body is performed, again. As soon as the condition evaluates to `False`, the body is skipped and the interpreter continues its journey beyond the body of the loop. Take into account that, until some action into the body does not change the state of the condition, the loop will keep going. FOREVA.
+content: The <code class="language-python">while</code> loop begins with the evaluation of the condition following the <code class="language-python">while</code> keyword. If the boolean expression evaluates to <code class="language-python">True</code>, the body of the loop is performed. After the body execution, the condition is tested again. If the result is <code class="language-python">True</code>, the body is performed, again. As soon as the condition evaluates to <code class="language-python">False</code>, the body is skipped and the interpreter continues its journey beyond the body of the loop. Take into account that, until some action into the body does not change the state of the condition, the loop will keep going. FOREVA.
 
-Python provides two protected keywords to control the flow of an iteration: `break` and `continue`.
+Python provides two protected keywords to control the flow of an iteration: <code class="language-python">break</code> and <code class="language-python">continue</code>.
 
-The `break` statement breaks out of the innermost enclosing the while loop (but also the for loop which we will encounter soon). Let’s consider:
+The <code class="language-python">break</code> statement breaks out of the innermost enclosing the while loop (but also the for loop which we will encounter soon). Let’s consider:
 ----
 #### code-example ####
-path: 02.py
+snippet: 05.py
 ----
 #### text-block ####
-content: As soon as `index` equals `20`, the body of the conditional construct (`if`) is executed. The break statement stops the loop and the interpreter continues just after the `while` body. Consider this piece of code just as an example, since it’s better to evaluate as much as possible into the `while` condition.
+content: As soon as <code class="language-python">index</code> equals <code class="language-python">20</code>, the body of the conditional construct (<code class="language-python">if</code>) is executed. The break statement stops the loop and the interpreter continues just after the <code class="language-python">while</code> body. Consider this piece of code just as an example, since it’s better to evaluate as much as possible into the <code class="language-python">while</code> condition.
 ----
 #### code-example ####
-path: 03.py
+snippet: 06.py
 ----
 #### image ####
 name: while-if.svg
@@ -72,20 +90,20 @@ name: while-if.svg
 class: large_image
 ----
 #### text-block ####
-content: Writing a fully functioning while block could be tricky at the beginning of your learning path. In fact, if the `while` body does not change somehow the `while` condition, your loop will run endlessly. If this is not your desired output, this is quite bad because you will have to force quit Drawbot. There is no other way from within the application to stop the interpreter before the end of a running script. A good solution for this issue could be to use a parachute technique.
+content: Writing a fully functioning while block could be tricky at the beginning of your learning path. In fact, if the <code class="language-python">while</code> body does not change somehow the <code class="language-python">while</code> condition, your loop will run endlessly. If this is not your desired output, this is quite bad because you will have to force quit Drawbot. There is no other way from within the application to stop the interpreter before the end of a running script. A good solution for this issue could be to use a parachute technique.
 
 A parachute is a temporary safety measure which stops your interpreter from looping endlessly making use of a break statement. Consider the following example:
 ----
 #### code-example ####
-path: 04.py
+snippet: 07.py
 ----
 #### text-block ####
-content: Then, once your `while` block proves to be working properly, you can get rid of the parachute.
+content: Then, once your <code class="language-python">while</code> block proves to be working properly, you can get rid of the parachute.
 
-The `continue` statement is used to skip part of the code into the body for the current iteration only. The loop does not terminate but continues to the next iteration of the loop.
+The <code class="language-python">continue</code> statement is used to skip part of the code into the body for the current iteration only. The loop does not terminate but continues to the next iteration of the loop.
 ----
 #### code-example ####
-path: 05.py
+snippet: 08.py
 ----
 #### image ####
 name: continue.svg

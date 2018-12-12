@@ -1,0 +1,6 @@
+size(100, 100)
+fill(1)
+stroke(0)
+strokeWidth(2)
+oval(40, 20, 50, 50)
+rect(14, 40, 50, 50)

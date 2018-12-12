@@ -1,5 +1,5 @@
 Method	Behaviour
-<code>s.join('123')</code>	Return s joined by iterable '123'# if s is 'hello' => '1hello2hello3'
-<code>s.split(sep, maxsplit)</code>	Return list of s split by sep with leftmost maxsplits performed
-<code>s.splitlines()</code>	Return a list of lines in s# if s is 'hello\nworld' => ['hello', 'world']
-<code>s.replace(s2, s3, count)</code>	Replace s2 with s3 in s at most count times
+<code class="language-python">s.join('123')</code>	Return s joined by iterable '123'# if s is 'hello' => '1hello2hello3'
+<code class="language-python">s.split(sep, maxsplit)</code>	Return list of s split by sep with leftmost maxsplits performed
+<code class="language-python">s.splitlines()</code>	Return a list of lines in s# if s is 'hello\nworld' => ['hello', 'world']
+<code class="language-python">s.replace(s2, s3, count)</code>	Replace s2 with s3 in s at most count times

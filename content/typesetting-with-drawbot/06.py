@@ -1,0 +1,7 @@
+size(200, 200)
+fill(0)
+text('a quick brown', (30, 60))
+fill(.4)
+text('fox jumps over', (30, 40))
+fill(.6)
+text('the lazy dog', (30, 20))
