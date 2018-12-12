@@ -155,6 +155,7 @@ body:
             <td><code>1</code></td>
             <td><code>0</code></td>
         </tr>
+        <tr>
             <td><code>127</code></td>
             <td> </td>
             <td><code>1</code></td>
@@ -258,6 +259,7 @@ body:
             <td><code>1</code></td>
             <td><code>0</code></td>
         </tr>
+        <tr>
             <td><code>255</code></td>
             <td><code>1</code></td>
             <td><code>1</code></td>
