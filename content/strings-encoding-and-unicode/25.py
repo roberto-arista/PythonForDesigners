@@ -1,2 +1,2 @@
-'abcdef' + 'ghijkl'  # abcdefghijkl
-'abcdef' * 3         # abcdefabcdefabcdef
+'abcdef' + 'ghijkl' # 'abcdefghijkl'
+'abcdef' * 3        # 'abcdefabcdefabcdef'

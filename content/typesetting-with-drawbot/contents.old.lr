@@ -217,9 +217,9 @@ textBox(someText, (20, 30, 150, 150), align='left')</pre_code>
 
 <p>In other words, if a paragraph has a narrow width, justified alignment and no hyphenation, it is very likely that the word space will start to appear across consequent lines emerging from the paragraph texture. These are the so-called rivers.</p>
 
-<exercise_content>
+<exercise_wrapper><exercise_content>
 <p>Create a paragraph with many "rivers" of white.</p>
-</exercise_content>
+</exercise_content></exercise_wrapper>
 
 <large_image src="hyphenation.svg"></large_image>
 <pre_code>someText = """Considerare l’esistenza di un insieme di strumenti convenzionali di organizzazione e interpretazione dello spazio concatenati, il quale in qualche modo interagisca con la lingua parlata, è utile perché conviene dal punto di vista progettuale: porre il testo in contrapposizione all’immagine è utile solamente a replicare un modello di editoria libraria affermatosi alla fine del XV secolo, vincolato dalle tecniche produttive esistenti all’epoca (stampa a caratteri mobili e xilografia) e applicabile in buona sostanza principalmente all’editoria libraria legata alla narrativa, che è solo una piccola parte della produzione scritta."""
