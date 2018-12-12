@@ -1,9 +1,13 @@
 <div class='code_image_wrapper'>
 
     {% if this.image %}
-    <img src="{{ this.image }}">
+        <img class="code_image" src="{{ this.image }}">
     {% endif %}
 
-    <pre>{{ this.path|importPy }}</pre>
+    {% if this.diagram %}
+        <img class="code_diagram" src="{{ this.diagram }}">
+    {% endif %}
+
+    <pre>{{ this.snippet|importPy }}</pre>
 
 </div>
