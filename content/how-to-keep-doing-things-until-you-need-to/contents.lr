@@ -14,7 +14,7 @@ In this chapter we will learn how to instruct Python –and Drawbot– to accomp
 <p>In chapter 5, we have seen how to draw basic shapes on the Drawbot canvas. As you remember, we can draw a line using:
 </p>
 
-<code_image_wrapper><code_image src="one-line.png">
+<code_image_wrapper><code_image src="one-line.png"></code_image>
 <pre_code>size(100, 100)
 stroke(0)
 line((0, 20), (100, 20))
@@ -23,7 +23,7 @@ line((0, 20), (100, 20))
 
 <p>Given that we have to specify numerically the position of each shape on the canvas, drawing a pattern could be very boring. Let’s see what does mean to draw a pattern of crossed lines in this way…</p>
 
-<code_image_wrapper><code_image src="grid_line.png">
+<code_image_wrapper><code_image src="grid_line.png"></code_image>
 <pre_code>size(100, 100)
 stroke(0)
 
@@ -54,7 +54,7 @@ line((0, 90), (100, 90))
 <p>Let’s say we now decide to get this pattern a little darker. There are two options: to make the lines thicker or to increase the amount of lines. Now the issue now is: if we want to squeeze a couple of lines extra in our pattern, we have to edit almost every line of the previous code. This is not convenient at all. Luckily Python offers a synthetic and elegant syntax to instruct iterative tasks to the interpreter typing as little as possible. Consider the possible alternative:</p>
 
 
-<code_image_wrapper><code_image src="grid_line.png">
+<code_image_wrapper><code_image src="grid_line.png"></code_image>
 <pre_code>canvasSide = 100
 gap = 10
 
@@ -82,7 +82,7 @@ while currentPos < canvasSide:
 <pre_code>while condition:
     body</pre_code>
 
-<large_image src="while.svg">
+<large_image src="while.svg"></large_image>
 
 <p>According to the colon syntax explored in the previous chapter, the body is considered as such if:</p>
 <ul><li>the condition is followed by a colon</li>
@@ -106,7 +106,7 @@ while True:
 while index <= 20:
     index += 1</pre_code>
 
-<large_image src="while-if.svg">
+<large_image src="while-if.svg"></large_image>
 
 <p>Writing a fully functioning while block could be tricky at the beginning of your learning path. In fact, if the <inline_code>while</inline_code> body does not change somehow the <inline_code>while</inline_code> condition, your loop will run endlessly. If this is not your desired output, this is quite bad because you will have to force quit Drawbot. There is no other way from within the application to stop the interpreter before the end of a running script. A good solution for this issue could be to use a parachute technique.</p>
 
@@ -137,36 +137,36 @@ while index <= 20:
 
 print(‘outside the while loop’)</pre_code>
 
-<large_image src="continue.svg">
+<large_image src="continue.svg"></large_image>
 
-<workbook>
+<workbook></workbook>
 
 
 <exercise_wrapper><exercise_content>
 <p>Try to cover the entire canvas with a striped black & white pattern. The user should be able to control the density of the pattern and the direction of lines (horizontal or vertical).</p>
-</exercise_content><exercise_image src="stripes.png"></exercise_wrapper>
+</exercise_content><exercise_image src="stripes.png"></exercise_image></exercise_wrapper>
 
 <exercise_wrapper><exercise_content>
 <p>Try to cover the entire canvas with a zig-zag line. The line moves horizontally starting at top left canvas vertex. Allow the user to control the density of wave lines.</p>
-</exercise_content><exercise_image src="zigzag.png"></exercise_wrapper>
+</exercise_content><exercise_image src="zigzag.png"></exercise_image></exercise_wrapper>
 
 <exercise_wrapper><exercise_content>
 <p>Draw a leaf white shape using only black lines.</p>
-</exercise_content><exercise_image src="threadCurves.png"></exercise_wrapper>
+</exercise_content><exercise_image src="threadCurves.png"></exercise_image></exercise_wrapper>
 
 <exercise_wrapper><exercise_content>
 <p>Extend the previous exercise: draw a white circle using only black straight lines.</p>
-</exercise_content><exercise_image src="theadCicle.png"></exercise_wrapper>
+</exercise_content><exercise_image src="theadCicle.png"></exercise_image></exercise_wrapper>
 
 <exercise_wrapper><exercise_content>
 <p>Create a sequence of horizontal gradients. You cannot use any automatic gradient function, try to achieve this visual effect through separate shapes.
 The gradients should have alternate direction.</p>
-</exercise_content><exercise_image src="gradientStripes.png"></exercise_wrapper>
+</exercise_content><exercise_image src="gradientStripes.png"></exercise_image></exercise_wrapper>
 
 <exercise_wrapper><exercise_content>
 <p>Create a pattern of horizontal lines. The lines should be thicker in the middle as you can see in the example image. Allow the user to control the density of the pattern, the maximum value of the thickness and a canvas margin.</p>
-</exercise_content><exercise_image src="linePattern.png"></exercise_wrapper>
+</exercise_content><exercise_image src="linePattern.png"></exercise_image></exercise_wrapper>
 
 <exercise_wrapper><exercise_content>
 <p>Your goal is to draw a boustrophedonic sequence of ovals. Start from the lower left canvas corner and alternate ovals color (dark gray, light gray). Increase the oval radius according to its position within the drawing sequence of the line (little at the beginning, larger at the end). The vertical and horizontal distance between the ovals is constant. Give the user the option to set a margin value for the canvas and try to use only one while construct.</p>
-</exercise_content><exercise_image src="pattern_oval.png"></exercise_wrapper>
+</exercise_content><exercise_image src="pattern_oval.png"></exercise_image></exercise_wrapper>

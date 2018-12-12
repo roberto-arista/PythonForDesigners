@@ -19,18 +19,18 @@ body:
 
 <p>Logical operators allow to manipulate and chain boolean values. Non-boolean values can also be operands of a logical operator, but they will be implicitly converted to boolean values with the bool() data type constructor before evaluation.</p>
 
-<small_image src="not.svg">
+<small_image src="not.svg"></small_image>
 <p><inline_code>not</inline_code> (unary negation) is used to change the state of a boolean type, from <inline_code>False</inline_code> to <inline_code>True</inline_code>, from <inline_code>True</inline_code> to <inline_code>False</inline_code>. It is like pressing a switch. "Unary" means that the operator only affects the following operand.</p>
 
-<small_image src="or.svg">
+<small_image src="or.svg"></small_image>
 <p><inline_code>or</inline_code> is used to build a logical expression that will evaluate <inline_code>True</inline_code> if any of the operands is <inline_code>True</inline_code>. Look at the diagram on the left: the pipe has a fork with a tap on each side. The fork is the "or" operator, and the taps are the operands; if any of the valves are open (<inline_code>True</inline_code>), the water will flow on the other side.</p>
 
-<small_image src="and.svg">
+<small_image src="and.svg"></small_image>
 <p><inline_code>and</inline_code> (conditional and) is used to build a logical expression that will evaluate <inline_code>True</inline_code> if every operand is <inline_code>True</inline_code>. Look at the diagram on the left: a straight pipe represents the boolean expression with two taps following each other. The only way to let the water through is to open both valves. Meaning that every operand has to be <inline_code>True</inline_code>.</p>
 
 <p><inline_code>and</inline_code> and <inline_code>or</inline_code> are also referred to as "short-circuit" operators, because the interpreter will not evaluate the entire expression if unnecessary.</p>
 
-<large_image src="not_evaluated.svg">
+<large_image src="not_evaluated.svg"></large_image>
 
 <p>Here is a table showing their behaviours:</p>
 
@@ -333,19 +333,19 @@ x >= y # True</pre_code>
 <p>If you are allowed to slice units,
 you can proceed as follows:</p>
 
-<large_image src="4times.svg">
+<large_image src="4times.svg"></large_image>
 
 <p>The integer division instead yields the mathematical floor of the quotient:</p>
 <pre_code>6//4 # 1</pre_code>
 
 <p>if you can’t slice units you group 4 units only once from a collection of 6</p>
 
-<small_image src="4.svg">
+<small_image src="4.svg"></small_image>
 
 <p>The modulo operator yields the remainder of such division:</p>
 <pre_code>6 % 4 # 2</pre_code>
 
-<small_image src="modulo.svg">
+<small_image src="modulo.svg"></small_image>
 
 <p>In combination with the equivalent (<inline_code>==</inline_code>) or not equivalent (<inline_code>!=</inline_code>) operator, the modulo can be really helpful in checking whether a number is even or odd, whether a number is decimal or not and so on</p>
 <pre_code>3 % 2   != 0 # True # 3 is odd
@@ -428,7 +428,7 @@ tomatoes</pre_code>
 
 <p>Here we are taking no advantage of visual variables in order to make the hierarchy more accessible to readers. We can only rely on the meaning of these words and try to detect a possible structure. So, at first sight, we detect no hierarchy, but after reading, we notice that <inline_code>groceries</inline_code> can group all the other items.</p>
 
-<small_image src="groceries.svg">
+<small_image src="groceries.svg"></small_image>
 
 <p>There are a few contrivances we can implement to express this structure at best using only typography. Let’s start to make some order moving groceries to the top:</p>
 
@@ -478,7 +478,7 @@ print('something else')</pre_code>
 
 <p>In order to execute the conditional construct nested into the for-loop, this has to be indented four spaces more than its parent statement, which is already indented four spaces. Meaning, it has to be indented eight spaces rightwards. Just like a matryoshka.</p>
 
-<small_image src="paper.svg">
+<small_image src="paper.svg"></small_image>
 
 <section_title>Conditional Execution</section_title>
 
@@ -487,14 +487,14 @@ print('something else')</pre_code>
 <p>Here’s a common standard diagram used to describe these patterns is the flowchart:
 </p>
 
-<large_image src="fridge.svg">
+<large_image src="fridge.svg"></large_image>
 
 <p>Python provides a control structure called “conditional construct” which allows to define whether a block of code should be executed or not. The minimal form of a conditional structure is:</p>
 
 <pre_code>if condition:
     body</pre_code>
 
-<large_image src="condition1.svg">
+<large_image src="condition1.svg"></large_image>
 
 <p>Here’s a concrete example: </p>
 
@@ -529,7 +529,7 @@ rect(10, 10, 40, 40)</pre_code>
 else:
     body2</pre_code>
 
-<large_image src="else.svg">
+<large_image src="else.svg"></large_image>
 
 <p>Here’s a concrete example:</p>
 
@@ -542,7 +542,7 @@ else:
 
 <p>The <inline_code>else</inline_code> keyword is not followed by any condition, because it doesn’t need any evaluation. It is an interpreter parachute.</p>
 
-<small_image src="parachute.svg">
+<small_image src="parachute.svg"></small_image>
 
 <p>Moreover, Python allows to chain the evaluation of many conditions at once, using an indefinite number of <inline_code>elif</inline_code> (which means “else if”) statements between <inline_code>if</inline_code> (mandatory) and <inline_code>else</inline_code> (optional).</p>
 <p>The structure is then:</p>
@@ -556,7 +556,7 @@ elif condition3:
 else:       # all other possible cases
     body4</pre_code>
 
-<large_image src="elif.svg">
+<large_image src="elif.svg"></large_image>
 
 <p>for example</p>
 
@@ -575,11 +575,11 @@ else:
     fill(.9)
 rect(10, 10, 50, 50)</pre_code>
 
-<large_image src="myVar.svg">
+<large_image src="myVar.svg"></large_image>
 
 <p>Take note of the use of indentation. <inline_code>if</inline_code>, <inline_code>elif</inline_code> and <inline_code>else</inline_code> are aligned to the left while their bodies are four spaces indented to the right.</p>
 
-<workbook>
+<workbook></workbook>
 
 <exercise_wrapper><exercise_content>
 <p>
