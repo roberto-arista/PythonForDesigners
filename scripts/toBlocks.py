@@ -9,9 +9,9 @@
 import re
 from os.path import join as joinPth
 from os.path import dirname
-import shutil
 import codecs
 from bs4 import BeautifulSoup
+from bs4.element import NavigableString, Tag
 
 ### Constants
 FIELD_SEPARATOR = '-'*4
@@ -22,6 +22,7 @@ TAGS = ['large_image',
         'workbook',
         'exercise_wrapper',
         'table',
+        'ul',
         'p']
 
 
@@ -50,17 +51,29 @@ def convertCodeExample(tag, chapterFolder, counter):
     return block
 
 def convertText(tag):
-    paragraph = tag.text
+    paragraph = []
+    for eachCon in tag.contents:
+        if isinstance(eachCon, NavigableString):
+            paragraph.append(eachCon)
 
-    # inline code
-    paragraph = paragraph.replace('<inline_code>', '`')
-    paragraph = paragraph.replace('</inline_code>', '`')
+        elif isinstance(eachCon, Tag):    # tag
+            if eachCon.name == 'em':
+                paragraph.append(f'*{eachCon.string}*')
 
-    # em
-    paragraph = paragraph.replace('<em>', '*')
-    paragraph = paragraph.replace('</em>', '*')
+            elif eachCon.name == 'inline_code':
+                paragraph.append(f'`{eachCon.string}`')
 
-    return '#### text-block ####', paragraph
+            elif eachCon.name == 'a':
+                paragraph.append(f'[{eachCon.string}]({eachCon["href"]})')
+
+            else:
+                print('[ERROR] missing a tag conversion!')
+                raise Exception
+        else:
+            print('[ERROR] missing an element conversion!')
+            raise Exception
+
+    return '#### text-block ####', ''.join(paragraph)
 
 def convertSectionTitle(tag, kind):
     block = ['#### section-title ####']
@@ -85,6 +98,26 @@ def convertExercise(tag):
         block.append(FIELD_SEPARATOR)
     return block
 
+def convertList(tag):
+    block = ['#### text-block ####']
+    listContent = []
+    for eachCon in tag.contents:
+        if eachCon.name == 'li':
+            singleElement = ['+ ']
+            for eachElem in eachCon.contents:
+                if isinstance(eachElem, Tag):
+                    singleElement.append(f'<code>{eachElem.text}</code>')
+                elif isinstance(eachElem, NavigableString):
+                    singleElement.append(eachElem)
+                else:
+                    print('[ERROR] missing something here')
+                    raise Exception
+
+            listContent.append(''.join(singleElement))
+    block.append('content: ' + '\n'.join(listContent))
+    block.append(FIELD_SEPARATOR)
+    return block
+
 def convertTable(tag, chapterFolder, counter):
     table = []
 
@@ -93,7 +126,17 @@ def convertTable(tag, chapterFolder, counter):
         for tRow in tag.thead.find_all('tr', recursive=False):
             eachRow = []
             for tagCell in tRow.find_all('th', recursive=False):
-                eachRow.append(tagCell.text)
+
+                if tagCell.contents:
+                    content = tagCell.contents[0]
+                    if isinstance(content, Tag) and (content.name == 'code' or content.name == 'inline_code'):
+                        tagText = f'<code>{content.text}</code>'
+                    else:
+                        tagText = tagCell.text
+                else:
+                    tagText = tagCell.text
+
+                eachRow.append(tagText)
             table.append('\t'.join(eachRow))
         headerRows += 1
 
@@ -101,7 +144,16 @@ def convertTable(tag, chapterFolder, counter):
         for tRow in tag.tbody.find_all('tr', recursive=False):
             eachRow = []
             for tagCell in tRow.find_all('td', recursive=False):
-                eachRow.append(tagCell.text)
+                if tagCell.contents:
+                    content = tagCell.contents[0]
+                    if isinstance(content, Tag) and (content.name == 'code' or content.name == 'inline_code'):
+                        tagText = f'<code>{content.text}</code>'
+                    else:
+                        tagText = tagCell.text
+                else:
+                    tagText = tagCell.text
+
+                eachRow.append(tagText)
             table.append('\t'.join(eachRow))
 
     tableFileName = f'{counter:0>2d}.csv'
@@ -122,12 +174,8 @@ def convertLR(lrPath, oldCopy=True):
 
     # list
 
-    # safety copy
-    if oldCopy is True:
-        shutil.copy(lrPath, lrPath.replace('.lr', '.old.lr'))
-
     # open the file and make the soup
-    with codecs.open(lrPath, 'r', 'utf-8') as lrFile:
+    with codecs.open(lrPath.replace('.lr', '.old.lr'), 'r', 'utf-8') as lrFile:
         lrDoc = lrFile.read()
 
     pattern = re.compile(r'---\nbody:(.*)', re.DOTALL)
@@ -177,6 +225,10 @@ def convertLR(lrPath, oldCopy=True):
             if eachTag.name == 'table':
                 block = convertTable(eachTag, dirname(lrPath), tableCounter)
                 tableCounter += 1
+
+            # list
+            if eachTag.name == 'ul':
+                block = convertList(eachTag)
 
             if eachTag.name == 'p':
                 textBlocks.append(block)
@@ -259,6 +311,7 @@ if __name__ == '__main__':
                'how-to-make-choices',
                'should-a-designer-code',
                'strings-encoding-and-unicode',
+               'impressum',
                'the-elements-of-a-python-program',
                'transform-strings',
                'typesetting-with-drawbot',
