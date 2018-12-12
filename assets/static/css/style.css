@@ -553,7 +553,7 @@ ul.tocBar-extraPages > li::before {
   top: 0;
   width: 100%;
   z-index: 3;
-  border-bottom: 1px solid #fff; }
+  border-bottom: 1px solid #FFEDED; }
   @media only screen and (min-width: 1281px) {
     .header {
       border-bottom: none;
