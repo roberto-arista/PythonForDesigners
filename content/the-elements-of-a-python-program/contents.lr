@@ -162,9 +162,7 @@ snippet: 04.py
 content: The list includes <code class="language-python">'global'</code>, doesn't it? You just executed your first import and print statements. Well done. We will go more into these later on.
 ----
 #### exercise ####
-content: 
-Open up your terminal, define a variable and print it to the console
-
+content: Open up your terminal, define a variable and print it to the console
 ----
 #### image ####
 name: cookies.svg
