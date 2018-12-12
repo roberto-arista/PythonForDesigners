@@ -7,16 +7,22 @@ from lektor.context import get_ctx
 from lektor.pluginsystem import Plugin
 
 ### Functions & Procedures
-def importCsv(fileName):
+def importCsv(fileName, headers):
     ctx = get_ctx()
     filePath = os.getcwd() + '/content' + ctx.source.path + '/' + fileName  # 🤷‍♂️
 
     htmlTable = []
     with codecs.open(filePath, 'r', 'utf-8') as csvFile:
-        for eachRow in csvFile.read().split('\n'):
+        for indexRow, eachRow in enumerate(csvFile.read().split('\n')):
+
+            if indexRow < headers:
+                tagRepr = 'th'
+            else:
+                tagRepr = 'td'
+
             htmlRow = []
             for eachCell in eachRow.split('\t'):
-                htmlRow.append(u"<td>{}</td>".format(eachCell))
+                htmlRow.append(u"<{1}>{0}</{1}>".format(eachCell, tagRepr))
             htmlTable.append(u"<tr>{}</tr>".format(''.join(htmlRow)))
 
     tableTemplate = u"<table><tbody>{}</tbody></table>"
