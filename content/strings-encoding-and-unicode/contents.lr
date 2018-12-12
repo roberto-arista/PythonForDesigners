@@ -8,464 +8,384 @@ sort_key: 8
 ---
 visual_abstract: abstract-8.svg
 ---
-body:
-
-<small_image src="textfile.gif"></small_image>
-
-<p>Since the advent of personal computers and desktop publishing, more and more people typeset fonts on a screen. This practice was once confined to a professional category. Nowadays typesetting is ubiquitous. It is so widespread that writing and typesetting are almost considered the same thing. The differences between the two realms are important and a visual designer should be aware of them.</p>
-
-<p>A broad notion of Writing (do not mistake Calligraphy for Writing) could be considered the visual arrangement of language on a support to convey meaning. It is indeed a very broad definition. Somehow, even performative arts fit it. Writing implies the use of any tool on any kind of surface, as long as it arranges visual language. What about Braille notation? That is Writing too, but it is a bit out of the scope of this manual.</p>
-
-<p>The definition of Typography is narrower. Typography is the arrangement of visual language using elements especially designed for reproduction and reuse: types. These types can be made of lead, film, bytes. It doesn’t matter as long as they are prefabricated. So, Typography is definitely a subset of Writing. Calligraphy or Lettering are other subsets of Writing and they share with Typography the fact that they all deal with letter shapes, but in very different ways.</p>
-
-<large_image src="writing.svg"></large_image>
-
-<section_title>Gutenberg and Movable Type</section_title>
-
-<small_image src="vectorVSpixel.svg"></small_image>
-
-<p>Think about this: if you ask yourself what actually Gutenberg invented, you will not easily find an “object” to imagine. Presses, paper, ink, metal stamps, the Latin alphabet, books: they were already there. Can we name more precisely his invention? Of course: Gutenberg made the continuous surface of Writing <em>discrete</em>, which means consisting of separated elements.</p>
-
-
-<p>We could state that making something discrete is defining an atom or a set of rules which will reduce substantially the possibilities allowed by the system: from the widest infinite set of options to a narrower infinite set of options. It means setting one or more thresholds which will define unambiguously which information will be discarded or not. Take for example the scale plans in architecture: the 1 to <em>something</em> value defines the threshold in representation which sets the amount of information and detail conveyed by the image.</p>
-
-
-<p>How could a loss of detail and options be a good thing? Well, the idea is to discard what we don’t need to achieve a certain goal, in order to make our process more efficient. Less options means quicker transformations, less data to transfer, quicker testing and so on.</p>
-
-<p>In different words, Gutenberg reduced the inexhaustible possibilities of Writing to speed up the arrangement and reproduction of lines of text. The loss in composition freedom was substantial, but the gain in speed and ease of production was huge.</p>
-
-<large_image src="medievalVGutenberg.svg"></large_image>
-
-<small_image src="illustrationVStypography.svg"></small_image>
-
-<p>In the case of  Gutenberg, this reduction meant that he had to identify and select the most occurring components of Writing – in his context the letters of the Latin alphabet – and make them fit into a box according to a number of restrictions. These restrictions were supposed to make these boxes interchangeable. Everything else outside this selection of elements started to be treated as illustration, carved in wooden blocks and kept separate from “text”.</p>
-
-<p>Ok, but… the letters were already separate things before Gutenberg’s invention, right? A is A, B is B and so on. That’s true, but when one writes, say, by hand the surface is not sliced, it is continuous. If we compare Writing to Music, this is probably easier to understand. Typography, as any visual arrangement, consists in as much white as black. It’s not black on white, it’s black and white. It’s as much ink as paper. As much active pixels as inactive ones. As much fill as void. Now, transpose this to Music. What would be a note without the absence of sound surrounding it? The absence of sound contributes to the construction of the meaning as well as the presence of sound. What would be a typographic composition without the white surrounding the black? Just some messy spots of ink.</p>
-
-<large_image src="hello.svg"></large_image>
-
-<p>What Gutenberg did was to break the continuum of Writing into rectangles of regular height. Because of production constraints, Gutenberg also wanted to have the graphism (the black shape) entirely contained into a box. The easiest and more logic way to do so was to cut between each black shape. This means that if the graphism is untouched, the void (white) needs to be sliced in different pieces and distributed across the boxes.</p>
-
-<large_image src="space-glyph.svg"></large_image>
-
-<p>This re-organization of the surface of Writing is condensed and represented in a tool that Gutenberg actually invented: the adjustable mould. This tool allowed him to cast many little lead boxes with the same height but different width. Here follows a synthetic scheme of the process:</p>
-
-<large_image src="mould.svg"></large_image>
-
-<section_title>Digital Typesetting, from Solid to Virtual Boxes</section_title>
-
-<p>Digital typesetting freed Typography from the physical limits of metal type. Even if it transported  type from a three-dimensional to a two-dimensional one, it shares with its old ancestor the same strain for modularity and some customs.</p>
-
-<large_image src="avatar.svg"></large_image>
-
-<small_image src="body.svg"></small_image>
-
-<p>For example, given that metal type consisted of physical elements used as bricks forming a wall of prefabricated letters, it made sense to keep track of the height of the box instead of the height of the glyphs represented in the box. This custom is still in use nowadays even if the boxes are completely virtual. Take this aspect into account when comparing two different fonts Often, even if you use the same body size, the resulting letters will not be of the same height.</p>
-
-<large_image src="same-body.svg"></large_image>
-
-<section_title>Characters and Mapping</section_title>
-
-<p>Before exploring the realm of typesetting in Python, we need to learn how Python treats text data. Computers in general need to encode any kind of information down into binary notation. Text is not an exception. The way this encoding issues was originally solved is based on the alphabet and is therefore Western-centric. Each text element such as letters, digits, symbols, punctuation, white spaces and control elements as <em>new line</em> or <em>delete</em> was assigned to a number. The weird thing is that each component of a standard typographer case received a value. For example, <em>A</em> and <em>a</em> got a different value even if they represent the same letter in a different drawing structure. This is not a big deal with Latin, but this approach had serious consequences when mapping Hangul, Arabic and many non-alphabetical scripts.</p>
-
-<large_image src="decimal-binar.svg"></large_image>
-
-<p>The process of mapping a character to a number is called encoding. Morse Code is a very old kind of encoding. One of the oldest and most widespread standard for text encoding for the computer era is the (in)famous ASCII (American Standard Code for Information Interchange). Its origin goes way back to telegraph communication.</p>
-
-<p>Because of its heritage and its special relation with the English language, ASCII characters are represented using a 7 bit integer value, meaning that the maximum index available in the mapping can be described with a binary number made of 7 digits.</p>
-
-<table>
-    <thead>
-        <tr>
-            <th></th>
-            <th></th>
-            <th><code>2&#8310</code></th>
-            <th><code>2&#8309</code></th>
-            <th><code>2&#8308</code></th>
-            <th><code>2&sup3</code></th>
-            <th><code>2&sup2</code></th>
-            <th><code>2&sup1</code></th>
-            <th><code>2&#8304</code></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><code>0</code></td>
-            <td></td>
-            <td><code>0</code></td>
-            <td><code>0</code></td>
-            <td><code>0</code></td>
-            <td><code>0</code></td>
-            <td><code>0</code></td>
-            <td><code>0</code></td>
-            <td><code>0</code></td>
-        </tr>
-        <tr>
-            <td><code>1</code></td>
-            <td></td>
-            <td><code>0</code></td>
-            <td><code>0</code></td>
-            <td><code>0</code></td>
-            <td><code>0</code></td>
-            <td><code>0</code></td>
-            <td><code>0</code></td>
-            <td><code>1</code></td>
-        </tr>
-        <tr>
-            <td><code>2</code></td>
-            <td></td>
-            <td><code>0</code></td>
-            <td><code>0</code></td>
-            <td><code>0</code></td>
-            <td><code>0</code></td>
-            <td><code>0</code></td>
-            <td><code>1</code></td>
-            <td><code>0</code></td>
-        </tr>
-        <tr>
-            <td><code>[...]</code></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><code>125</code></td>
-            <td></td>
-            <td><code>1</code></td>
-            <td><code>1</code></td>
-            <td><code>1</code></td>
-            <td><code>1</code></td>
-            <td><code>1</code></td>
-            <td><code>0</code></td>
-            <td><code>1</code></td>
-        </tr>
-        <tr>
-            <td><code>126</code></td>
-            <td></td>
-            <td><code>1</code></td>
-            <td><code>1</code></td>
-            <td><code>1</code></td>
-            <td><code>1</code></td>
-            <td><code>1</code></td>
-            <td><code>1</code></td>
-            <td><code>0</code></td>
-        </tr>
-            <td><code>127</code></td>
-            <td></td>
-            <td><code>1</code></td>
-            <td><code>1</code></td>
-            <td><code>1</code></td>
-            <td><code>1</code></td>
-            <td><code>1</code></td>
-            <td><code>1</code></td>
-            <td><code>1</code></td>
-        </tr>
-    </tbody>
-</table>
-
-<pre_code>2&#8310+2&#8309+2&#8308+2&sup3+2&sup2+2&sup1+2&#8304 = 127</pre_code>
-
-<p>If we include the 0, the available indexes sum up to 128 options.</p>
-
-<large_image src="us-ascii.svg"></large_image>
-
-
-<p>When 8-bit bytes became the standard in computing, each character started to be represented with an 8-digit binary number (1 byte). This opened up the mapping to 256 options.</p>
-
-<table>
-    <thead>
-        <tr>
-            <th></th>
-            <th><code>2&#8311</code></th>
-            <th><code>2&#8310</code></th>
-            <th><code>2&#8309</code></th>
-            <th><code>2&#8308</code></th>
-            <th><code>2&sup3</code></th>
-            <th><code>2&sup2</code></th>
-            <th><code>2&sup1</code></th>
-            <th><code>2&#8304</code></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><code>0</code></td>
-            <td><code>0</code></td>
-            <td><code>0</code></td>
-            <td><code>0</code></td>
-            <td><code>0</code></td>
-            <td><code>0</code></td>
-            <td><code>0</code></td>
-            <td><code>0</code></td>
-            <td><code>0</code></td>
-        </tr>
-        <tr>
-            <td><code>1</code></td>
-            <td><code>0</code></td>
-            <td><code>0</code></td>
-            <td><code>0</code></td>
-            <td><code>0</code></td>
-            <td><code>0</code></td>
-            <td><code>0</code></td>
-            <td><code>0</code></td>
-            <td><code>1</code></td>
-        </tr>
-        <tr>
-            <td><code>2</code></td>
-            <td><code>0</code></td>
-            <td><code>0</code></td>
-            <td><code>0</code></td>
-            <td><code>0</code></td>
-            <td><code>0</code></td>
-            <td><code>0</code></td>
-            <td><code>1</code></td>
-            <td><code>0</code></td>
-        </tr>
-        <tr>
-            <td><code>[...]</code></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><code>253</code></td>
-            <td><code>1</code></td>
-            <td><code>1</code></td>
-            <td><code>1</code></td>
-            <td><code>1</code></td>
-            <td><code>1</code></td>
-            <td><code>1</code></td>
-            <td><code>0</code></td>
-            <td><code>1</code></td>
-        </tr>
-        <tr>
-            <td><code>254</code></td>
-            <td><code>1</code></td>
-            <td><code>1</code></td>
-            <td><code>1</code></td>
-            <td><code>1</code></td>
-            <td><code>1</code></td>
-            <td><code>1</code></td>
-            <td><code>1</code></td>
-            <td><code>0</code></td>
-        </tr>
-            <td><code>255</code></td>
-            <td><code>1</code></td>
-            <td><code>1</code></td>
-            <td><code>1</code></td>
-            <td><code>1</code></td>
-            <td><code>1</code></td>
-            <td><code>1</code></td>
-            <td><code>1</code></td>
-            <td><code>1</code></td>
-        </tr>
-    </tbody>
-</table>
-
-<p>This space of the mapping was often implemented in different ways across different operating systems, such as Apple (MacOS Roman), IBM and Microsoft (ISO 8859). Exchanging information across different computers became more difficult, until the Unicode Consortium managed to create a new wider OS-independent mapping standard. The Unicode Consortium finally began to look beyond English speaking countries.</p>
-
-<large_image src="ISOLATIN1.svg"></large_image>
-
-<p>Each character in the Unicode mapping can be represented as two bytes opening the mapping options to 65,536. The mapping can be extended even further the two bytes, in fact emojis are stored in a supplementary multilingual plane which starts just after U+FFFF. We will sometimes refer to the Unicode mapping using the abbreviation UTF-8, which is a clever way to represent Unicode characters saving data according to their position into the mapping.</p>
-
-<section_title>Text Data in Python</section_title>
-
-<p>After this lengthy preamble, it is time to ask: how do we relate with text data using Python? In the specific scenario of this manual, we will use the standard Python string object to create, store and manipulate text. Then we will use Drawbot to typeset the text onto a PDF canvas.</p>
-<p>The Python string, like tuples and lists, is a sequence: a collection of values where order is significant. Tuples and lists are generic containers: they can store any kind of data. A string is especially designed for representing immutable sequences of text characters. A schematic representation of a string could be</p>
-
-<large_image src="hello-access.svg"></large_image>
-
-<p>Sequence indexing starts from the 0. Meaning that a string of n elements has the elements indexed from 0 to n-1 inclusive. 
-A string can be created using single (U+0022) or double (U+0027) straight quotes. Two options are convenient in case you need to insert a delimiter character into the string representation:</p>
-
-<pre_code>"don't look at me!"
-'he said "how dare you?" with an angry tone!'</pre_code>
-
-<p>Otherwise, an escape backslash character can be used to tell the interpreter that the character following the backslash is not the end of the sequence but part of it:</p>
-
-<pre_code>'don\'t look at me!'</pre_code>
-
-<p>Other commonly escaped characters are the newline (<inline_code>\n</inline_code>) and the tab (<inline_code>\t</inline_code>). In addition, Python supports triple quotes string declaration for strings which embed newline characters naturally. These are used especially for code documentation purposes.</p>
-
-<pre_code>aMultiLineString = """this
-is
-an ugly
-multiline
-string"""</pre_code>
-
-<p>As said before, each character is mapped to a numerical value according to the Unicode standard. Python provides the built-in function <inline_code>ord()</inline_code> to get the position of a character within the standard mapping.</p>
-
-<pre_code>ord('À') # 192</pre_code>
-
-<p>Conversely, Python gives the possibility to access a mapping position using an integer value through the <inline_code>chr()</inline_code> function. Given that each number is assigned to one and only character, using 192 as input value we will obtain:</p>
-
-<pre_code>chr(192) # 'À'</pre_code>
-
-<p>References to unicode characters are rarely made using their base 10 value. As we said, most of the characters have a two bytes representation, which can be represented conveniently with a four digits hexadecimal number, as:</p>
-
-<table>
-    <thead>
-        <tr>
-            <th>utf-8 hex</th>
-            <th>character</th>
-            <th>decimal</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><code>U+002A</code></td>
-            <td><code>*</code></td>
-            <td><code>42</code></td>
-        </tr>
-        <tr>
-            <td><code>U+0036</code></td>
-            <td><code>6</code></td>
-            <td><code>54</code></td>
-        </tr>
-        <tr>
-            <td><code>U+2030</code></td>
-            <td><code>‰</code></td>
-            <td><code>8240</code></td>
-        </tr>
-    </tbody>
-</table>
-
-
-<p>These notation can also be included in Python string declaration using the <inline_code>\u</inline_code> escape literal:</p>
-
-<pre_code>'\u002A' # *</pre_code>
-
-<p>Strings, as the other basic data types, have a built-in constructor function named <inline_code>str()</inline_code>. This function allows the conversion of a different type of object into a string. It accepts almost any kind of object, but it has a limited range of options.</p>
-
-<pre_code>str(2018)      # '2018'
-str(3.14)      # '3.14'
-str(False)     # 'False'
-str(None)      # 'None'
-str(object())  # '&lt;object at 0x10f976280&gt'
-</pre_code>
-
-<p>Way more detailed conversion methods are explained into <a href="/transform-strings/">Transform Strings</a>.</p>
-
-<p>As mentioned before, strings are sequences. Python provides a specific syntax to perform some basic sequence operations like accessing, slicing, checking inclusion, test for equivalence and concatenation.</p>
-
-<section_title>Accessing</section_title>
-<p>It is possible to access the content of a sequence using an index from 0 to the sequence length minus 1.</p>
-
-<pre_code>'hello'[0]    #'h'
-'hello'[1]    #'e'
-'hello'[2]    #'l'
-'hello'[3]    #'l'
-'hello'[4]    #'o'</pre_code>
-
-<p>Python gives also the possibility to use a negative index. This could be read as <em>sequence length minus index</em>. It’s like starting from the end. For example:</p>
-
-<pre_code>'hello'[-1]    #'o', 5-1 = 4
-'hello'[-2]    #'l', 5-2 = 3
-'hello'[-3]    #'l', 5-3 = 2
-'hello'[-4]    #'e', 5-2 = 1
-'hello'[-5]    #'h', 5-1 = 0</pre_code>
-
-<large_image src="hello-access-negative.svg"></large_image>
-
-<p>Take into account that providing an index equal or higher than the sequence length will cause an <inline_code>IndexError</inline_code> during runtime.</p>
-
-<p>Take into account that providing an index equal or higher than the sequence length will cause an <inline_code>IndexError</inline_code> during runtime.</p>
-
-<section_title>Slicing</section_title>
-<p>You can create a sub-sequence deep copy using an extension of the accessing syntax. It works like this:</p>
-<pre_code>sequence[start:end:step]</pre_code>
-
-<p>Remember that end is the index of the first value not to be included into the subsequence.</p>
-
-<pre_code>'abcdefghijklmnopqrstuvwxyz'[4:24:2]</pre_code>
-
-<large_image src="startEndStep.svg"></large_image>
-
-<p>The arguments can be omitted in order to make them implicit, in the following way:</p>
-
-<pre_code>sequence[start:end:]  #or sequence[start:end]
-sequence[start::]     #or sequence[start:]
-sequence[:end:]       #or sequence[:end]
-sequence[::step]</pre_code>
-
-<p>As for the accessing syntax, start and end can have a negative value.</p>
-
-<pre_code>'abcdefghijklmnopqrstuvwxyz'[:-2:2]</pre_code>
-
-<large_image src="endStep.svg"></large_image>
-
-<section_title>Checking inclusion</section_title>
-<pre_code>value in sequence
-value not in sequence</pre_code>
-
-<p>triggers a boolean expression able to verify whether a sequence contains a value or not.</p>
-<p>For example:</p>
-
-<pre_code>'l' in 'hello'     # True
-'m' in 'hello'     # False
-'l' not in 'hello' # False
-'m' not in 'hello' # True</pre_code>
-
-<p>This expression can accept sub-sequences as</p>
-
-<pre_code>'ll' in 'hello'    # True
-'hl' in 'hello'    # False, even though both letters are in the second string, they don’t follow the same order</pre_code>
-
-<section_title>Test equality</section_title>
-
-<p>If you need to compare the content of two different strings, you should use the equality operators.</p>
-
-<pre_code>"hello" == "hello"
-# True
-
-"world" != "World"
-# False</pre_code>
-
-<p>Beware of identity operators. Short strings are heavily cached; therefore their identity is not reliable.</p>
-
-<section_title>Natural order</section_title>
-<p>The following operators can be helpful to determine how two strings relate according to a lexicographical order.</p>
-
-<pre_code><, =>, <, =<</pre_code>
-
-<p>Why not alphabetical? We could consider “lexicographical” as a wider notion of alphabetical, where the sorting references a set of characters wider than the Latin alphabet. Think for a moment what would happen if you ask the interpreter which one comes first between some Latin and some Cyrillic characters? The reference character set is the Unicode mapping. Let’s consider:</p>
-
-<pre_code>'habit' < 'hat'</pre_code>
-
-<p>In order to solve such expression, Python converts each character into its integer unicode representation, and then evaluates their order starting from left</p>
-
-<pre_code>'habit' # 104  97  98  105  116
-'hat'   # 104  97 116</pre_code>
-
-<large_image src="evaluateHat.svg"></large_image>
-
-<p>The first two character representations are equal, but the third one (<inline_code>b</inline_code> vs. <inline_code>t</inline_code>) is not, meaning that <inline_code>"habit"</inline_code> is inferior to <inline_code>"hat"</inline_code>. In fact the expression evaluates to <inline_code>True</inline_code>. This applies to our common notion of alphabetical order. Then consider the following</p>
-
-<pre_code>'Mango' > 'blueberry'</pre_code>
-
-<p>We would also expect this expression evaluates to True, because the <inline_code>'b'</inline_code> comes before <inline_code>'m'</inline_code> in the Latin alphabet. Well, not really. Because the uppercase <inline_code>'M'</inline_code> comes before the lowercase <inline_code>'b'</inline_code> in the Unicode mapping. I know it does n’t make sense at first sight, but if capital and lowercase characters occupy two different spots into the encoding, this is somehow a mandatory behaviour. Let’s check the numbers:</p>
-
-<pre_code>'Mango'     # 77 97 110 103 111
-'blueberry' # 98 108 117 101 98 101 114 114 121</pre_code>
-
-<p>Which means that </p>
-<pre_code>'Mango' > 'blueberry' # False</pre_code>
-
-<section_title>Concatenation</section_title>
-
-<p>Python allows the concatenation of sequences using the <inline_code>+</inline_code> and <inline_code>*</inline_code> operators. For example</p>
-
-<pre_code>'abcdef' + 'ghijkl' # 'abcdefghijkl'
-'abcdef' * 3        # 'abcdefabcdefabcdef'</pre_code>
-
-<p>Note that a sequence can be multiplied only by an integer value, no floating points allowed. Note that this operation is not memory efficient. If you need to concatenate intensively, consider using the string <inline_code>.join()</inline_code> method.</p>
-
+body: #### image ####
+name: textfile.gif
+----
+class: small_image
+----
+#### text-block ####
+content: Since the advent of personal computers and desktop publishing, more and more people typeset fonts on a screen. This practice was once confined to a professional category. Nowadays typesetting is ubiquitous. It is so widespread that writing and typesetting are almost considered the same thing. The differences between the two realms are important and a visual designer should be aware of them.
+
+A broad notion of Writing (do not mistake Calligraphy for Writing) could be considered the visual arrangement of language on a support to convey meaning. It is indeed a very broad definition. Somehow, even performative arts fit it. Writing implies the use of any tool on any kind of surface, as long as it arranges visual language. What about Braille notation? That is Writing too, but it is a bit out of the scope of this manual.
+
+The definition of Typography is narrower. Typography is the arrangement of visual language using elements especially designed for reproduction and reuse: types. These types can be made of lead, film, bytes. It doesn’t matter as long as they are prefabricated. So, Typography is definitely a subset of Writing. Calligraphy or Lettering are other subsets of Writing and they share with Typography the fact that they all deal with letter shapes, but in very different ways.
+----
+#### image ####
+name: writing.svg
+----
+class: large_image
+----
+#### section-title ####
+content: Gutenberg and Movable Type
+----
+class: default
+----
+#### image ####
+name: vectorVSpixel.svg
+----
+class: small_image
+----
+#### text-block ####
+content: Think about this: if you ask yourself what actually Gutenberg invented, you will not easily find an “object” to imagine. Presses, paper, ink, metal stamps, the Latin alphabet, books: they were already there. Can we name more precisely his invention? Of course: Gutenberg made the continuous surface of Writing *discrete*, which means consisting of separated elements.
+
+We could state that making something discrete is defining an atom or a set of rules which will reduce substantially the possibilities allowed by the system: from the widest infinite set of options to a narrower infinite set of options. It means setting one or more thresholds which will define unambiguously which information will be discarded or not. Take for example the scale plans in architecture: the 1 to *something* value defines the threshold in representation which sets the amount of information and detail conveyed by the image.
+
+How could a loss of detail and options be a good thing? Well, the idea is to discard what we don’t need to achieve a certain goal, in order to make our process more efficient. Less options means quicker transformations, less data to transfer, quicker testing and so on.
+
+In different words, Gutenberg reduced the inexhaustible possibilities of Writing to speed up the arrangement and reproduction of lines of text. The loss in composition freedom was substantial, but the gain in speed and ease of production was huge.
+----
+#### image ####
+name: medievalVGutenberg.svg
+----
+class: large_image
+----
+#### image ####
+name: illustrationVStypography.svg
+----
+class: small_image
+----
+#### text-block ####
+content: In the case of  Gutenberg, this reduction meant that he had to identify and select the most occurring components of Writing – in his context the letters of the Latin alphabet – and make them fit into a box according to a number of restrictions. These restrictions were supposed to make these boxes interchangeable. Everything else outside this selection of elements started to be treated as illustration, carved in wooden blocks and kept separate from “text”.
+
+Ok, but… the letters were already separate things before Gutenberg’s invention, right? A is A, B is B and so on. That’s true, but when one writes, say, by hand the surface is not sliced, it is continuous. If we compare Writing to Music, this is probably easier to understand. Typography, as any visual arrangement, consists in as much white as black. It’s not black on white, it’s black and white. It’s as much ink as paper. As much active pixels as inactive ones. As much fill as void. Now, transpose this to Music. What would be a note without the absence of sound surrounding it? The absence of sound contributes to the construction of the meaning as well as the presence of sound. What would be a typographic composition without the white surrounding the black? Just some messy spots of ink.
+----
+#### image ####
+name: hello.svg
+----
+class: large_image
+----
+#### text-block ####
+content: What Gutenberg did was to break the continuum of Writing into rectangles of regular height. Because of production constraints, Gutenberg also wanted to have the graphism (the black shape) entirely contained into a box. The easiest and more logic way to do so was to cut between each black shape. This means that if the graphism is untouched, the void (white) needs to be sliced in different pieces and distributed across the boxes.
+----
+#### image ####
+name: space-glyph.svg
+----
+class: large_image
+----
+#### text-block ####
+content: This re-organization of the surface of Writing is condensed and represented in a tool that Gutenberg actually invented: the adjustable mould. This tool allowed him to cast many little lead boxes with the same height but different width. Here follows a synthetic scheme of the process:
+----
+#### image ####
+name: mould.svg
+----
+class: large_image
+----
+#### section-title ####
+content: Digital Typesetting, from Solid to Virtual Boxes
+----
+class: default
+----
+#### text-block ####
+content: Digital typesetting freed Typography from the physical limits of metal type. Even if it transported  type from a three-dimensional to a two-dimensional one, it shares with its old ancestor the same strain for modularity and some customs.
+----
+#### image ####
+name: avatar.svg
+----
+class: large_image
+----
+#### image ####
+name: body.svg
+----
+class: small_image
+----
+#### text-block ####
+content: For example, given that metal type consisted of physical elements used as bricks forming a wall of prefabricated letters, it made sense to keep track of the height of the box instead of the height of the glyphs represented in the box. This custom is still in use nowadays even if the boxes are completely virtual. Take this aspect into account when comparing two different fonts Often, even if you use the same body size, the resulting letters will not be of the same height.
+----
+#### image ####
+name: same-body.svg
+----
+class: large_image
+----
+#### section-title ####
+content: Characters and Mapping
+----
+class: default
+----
+#### text-block ####
+content: Before exploring the realm of typesetting in Python, we need to learn how Python treats text data. Computers in general need to encode any kind of information down into binary notation. Text is not an exception. The way this encoding issues was originally solved is based on the alphabet and is therefore Western-centric. Each text element such as letters, digits, symbols, punctuation, white spaces and control elements as *new line* or *delete* was assigned to a number. The weird thing is that each component of a standard typographer case received a value. For example, *A* and *a* got a different value even if they represent the same letter in a different drawing structure. This is not a big deal with Latin, but this approach had serious consequences when mapping Hangul, Arabic and many non-alphabetical scripts.
+----
+#### image ####
+name: decimal-binar.svg
+----
+class: large_image
+----
+#### text-block ####
+content: The process of mapping a character to a number is called encoding. Morse Code is a very old kind of encoding. One of the oldest and most widespread standard for text encoding for the computer era is the (in)famous ASCII (American Standard Code for Information Interchange). Its origin goes way back to telegraph communication.
+
+Because of its heritage and its special relation with the English language, ASCII characters are represented using a 7 bit integer value, meaning that the maximum index available in the mapping can be described with a binary number made of 7 digits.
+----
+#### table ####
+path: 01.csv
+----
+headers: 1
+----
+#### code-example ####
+path: 01.py
+----
+#### text-block ####
+content: If we include the 0, the available indexes sum up to 128 options.
+----
+#### image ####
+name: us-ascii.svg
+----
+class: large_image
+----
+#### text-block ####
+content: When 8-bit bytes became the standard in computing, each character started to be represented with an 8-digit binary number (1 byte). This opened up the mapping to 256 options.
+----
+#### table ####
+path: 02.csv
+----
+headers: 1
+----
+#### text-block ####
+content: This space of the mapping was often implemented in different ways across different operating systems, such as Apple (MacOS Roman), IBM and Microsoft (ISO 8859). Exchanging information across different computers became more difficult, until the Unicode Consortium managed to create a new wider OS-independent mapping standard. The Unicode Consortium finally began to look beyond English speaking countries.
+----
+#### image ####
+name: ISOLATIN1.svg
+----
+class: large_image
+----
+#### text-block ####
+content: Each character in the Unicode mapping can be represented as two bytes opening the mapping options to 65,536. The mapping can be extended even further the two bytes, in fact emojis are stored in a supplementary multilingual plane which starts just after U+FFFF. We will sometimes refer to the Unicode mapping using the abbreviation UTF-8, which is a clever way to represent Unicode characters saving data according to their position into the mapping.
+----
+#### section-title ####
+content: Text Data in Python
+----
+class: default
+----
+#### text-block ####
+content: After this lengthy preamble, it is time to ask: how do we relate with text data using Python? In the specific scenario of this manual, we will use the standard Python string object to create, store and manipulate text. Then we will use Drawbot to typeset the text onto a PDF canvas.
+
+The Python string, like tuples and lists, is a sequence: a collection of values where order is significant. Tuples and lists are generic containers: they can store any kind of data. A string is especially designed for representing immutable sequences of text characters. A schematic representation of a string could be
+----
+#### image ####
+name: hello-access.svg
+----
+class: large_image
+----
+#### text-block ####
+content: Sequence indexing starts from the 0. Meaning that a string of n elements has the elements indexed from 0 to n-1 inclusive. 
+A string can be created using single (U+0022) or double (U+0027) straight quotes. Two options are convenient in case you need to insert a delimiter character into the string representation:
+----
+#### code-example ####
+path: 02.py
+----
+#### text-block ####
+content: Otherwise, an escape backslash character can be used to tell the interpreter that the character following the backslash is not the end of the sequence but part of it:
+----
+#### code-example ####
+path: 03.py
+----
+#### text-block ####
+content: Other commonly escaped characters are the newline (`\n`) and the tab (`\t`). In addition, Python supports triple quotes string declaration for strings which embed newline characters naturally. These are used especially for code documentation purposes.
+----
+#### code-example ####
+path: 04.py
+----
+#### text-block ####
+content: As said before, each character is mapped to a numerical value according to the Unicode standard. Python provides the built-in function `ord()` to get the position of a character within the standard mapping.
+----
+#### code-example ####
+path: 05.py
+----
+#### text-block ####
+content: Conversely, Python gives the possibility to access a mapping position using an integer value through the `chr()` function. Given that each number is assigned to one and only character, using 192 as input value we will obtain:
+----
+#### code-example ####
+path: 06.py
+----
+#### text-block ####
+content: References to unicode characters are rarely made using their base 10 value. As we said, most of the characters have a two bytes representation, which can be represented conveniently with a four digits hexadecimal number, as:
+----
+#### table ####
+path: 03.csv
+----
+headers: 1
+----
+#### text-block ####
+content: These notation can also be included in Python string declaration using the `\u` escape literal:
+----
+#### code-example ####
+path: 07.py
+----
+#### text-block ####
+content: Strings, as the other basic data types, have a built-in constructor function named `str()`. This function allows the conversion of a different type of object into a string. It accepts almost any kind of object, but it has a limited range of options.
+----
+#### code-example ####
+path: 08.py
+----
+#### text-block ####
+content: Way more detailed conversion methods are explained into [Transform Strings](/transform-strings/).
+
+As mentioned before, strings are sequences. Python provides a specific syntax to perform some basic sequence operations like accessing, slicing, checking inclusion, test for equivalence and concatenation.
+----
+#### section-title ####
+content: Accessing
+----
+class: default
+----
+#### text-block ####
+content: It is possible to access the content of a sequence using an index from 0 to the sequence length minus 1.
+----
+#### code-example ####
+path: 09.py
+----
+#### text-block ####
+content: Python gives also the possibility to use a negative index. This could be read as *sequence length minus index*. It’s like starting from the end. For example:
+----
+#### code-example ####
+path: 10.py
+----
+#### image ####
+name: hello-access-negative.svg
+----
+class: large_image
+----
+#### text-block ####
+content: Take into account that providing an index equal or higher than the sequence length will cause an `IndexError` during runtime.
+
+Take into account that providing an index equal or higher than the sequence length will cause an `IndexError` during runtime.
+----
+#### section-title ####
+content: Slicing
+----
+class: default
+----
+#### text-block ####
+content: You can create a sub-sequence deep copy using an extension of the accessing syntax. It works like this:
+----
+#### code-example ####
+path: 11.py
+----
+#### text-block ####
+content: Remember that end is the index of the first value not to be included into the subsequence.
+----
+#### code-example ####
+path: 12.py
+----
+#### image ####
+name: startEndStep.svg
+----
+class: large_image
+----
+#### text-block ####
+content: The arguments can be omitted in order to make them implicit, in the following way:
+----
+#### code-example ####
+path: 13.py
+----
+#### text-block ####
+content: As for the accessing syntax, start and end can have a negative value.
+----
+#### code-example ####
+path: 14.py
+----
+#### image ####
+name: endStep.svg
+----
+class: large_image
+----
+#### section-title ####
+content: Checking inclusion
+----
+class: default
+----
+#### code-example ####
+path: 15.py
+----
+#### text-block ####
+content: triggers a boolean expression able to verify whether a sequence contains a value or not.
+
+For example:
+----
+#### code-example ####
+path: 16.py
+----
+#### text-block ####
+content: This expression can accept sub-sequences as
+----
+#### code-example ####
+path: 17.py
+----
+#### section-title ####
+content: Test equality
+----
+class: default
+----
+#### text-block ####
+content: If you need to compare the content of two different strings, you should use the equality operators.
+----
+#### code-example ####
+path: 18.py
+----
+#### text-block ####
+content: Beware of identity operators. Short strings are heavily cached; therefore their identity is not reliable.
+----
+#### section-title ####
+content: Natural order
+----
+class: default
+----
+#### text-block ####
+content: The following operators can be helpful to determine how two strings relate according to a lexicographical order.
+----
+#### code-example ####
+path: 19.py
+----
+#### text-block ####
+content: Why not alphabetical? We could consider “lexicographical” as a wider notion of alphabetical, where the sorting references a set of characters wider than the Latin alphabet. Think for a moment what would happen if you ask the interpreter which one comes first between some Latin and some Cyrillic characters? The reference character set is the Unicode mapping. Let’s consider:
+----
+#### code-example ####
+path: 20.py
+----
+#### text-block ####
+content: In order to solve such expression, Python converts each character into its integer unicode representation, and then evaluates their order starting from left
+----
+#### code-example ####
+path: 21.py
+----
+#### image ####
+name: evaluateHat.svg
+----
+class: large_image
+----
+#### text-block ####
+content: The first two character representations are equal, but the third one (`b` vs. `t`) is not, meaning that `"habit"` is inferior to `"hat"`. In fact the expression evaluates to `True`. This applies to our common notion of alphabetical order. Then consider the following
+----
+#### code-example ####
+path: 22.py
+----
+#### text-block ####
+content: We would also expect this expression evaluates to True, because the `'b'` comes before `'m'` in the Latin alphabet. Well, not really. Because the uppercase `'M'` comes before the lowercase `'b'` in the Unicode mapping. I know it does n’t make sense at first sight, but if capital and lowercase characters occupy two different spots into the encoding, this is somehow a mandatory behaviour. Let’s check the numbers:
+----
+#### code-example ####
+path: 23.py
+----
+#### text-block ####
+content: Which means that 
+----
+#### code-example ####
+path: 24.py
+----
+#### section-title ####
+content: Concatenation
+----
+class: default
+----
+#### text-block ####
+content: Python allows the concatenation of sequences using the `+` and `*` operators. For example
+----
+#### code-example ####
+path: 25.py
+----

@@ -1,0 +1,6 @@
+Method	Input	Output
+<code>s.capitalize()</code>	<code>hello</code>	<code>Hello</code>
+<code>s.lower()</code>	<code>HELLO</code>	<code>hello</code>
+<code>s.swapcase()</code>	<code>Hello</code>	<code>hELLO</code>
+<code>s.title()</code>	<code>hello world</code>	<code>Hello World</code>
+<code>s.upper()</code>	<code>hello</code>	<code>HELLO</code>

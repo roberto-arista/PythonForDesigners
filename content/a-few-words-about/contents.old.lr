@@ -1,0 +1,27 @@
+_model: chapter
+---
+title: A Few Words About
+---
+abstract: Disclaimers, acknowledgments, and various notes concerning audience and sources
+---
+sort_key: 0
+---
+body: <section_title>… Who this Book Is For</section_title>
+
+<p>While working on this manual, I had a hypothetical reader in mind: my students. They are enrolled in an undergraduate graphic design course, and they often come with no prior coding experience. Thus, the knowledge required to understand this book is usually offered by any high-school curriculum: a decent amount of logic, textual analysis, some elementary algebra, and the Cartesian coordinate system. For this reason, I think you will not find it too difficult to follow.</p>
+
+<large_image src="students.svg"></large_image>
+
+<section_title>… How to Use This Manual</section_title>
+
+<small_image src="hopscotch.svg"></small_image>
+
+<p>Browse, jump, skim, from the end to the beginning or vice-versa. You are in charge, the manual is yours. But take into account that I conceived it in a specific order. In my experience this order matters. I advise you to type the examples you will find in the book manually. I know it can be tedious at the beginning, but it will help you memorize the syntax. I also recommend to engage with other educational material concerning Python; I am not jealous. The Web is full of excellent resources, such as the language documentation you will find in the official Python website. A detailed list can be found in this manual’s bibliography.</p>
+
+<section_title>… Authorship and Sources</section_title>
+
+<small_image src="head+books.svg"></small_image>
+
+<p>I struggle to consider myself the author of this manual. Of course, I am entirely responsible for its content, but I gathered, reorganized and rephrased content coming from different sources.I am not a developer of any of the tools I mention, and I can only wish to make them more accessible to a broader public. However, there are a few books that I used more than others and I believe they deserve more than just a mention in the bibliography: <em>Think Python</em> by Allen B. Downey and <em>Design by Numbers</em> by John Maeda.</p>
+
+<p>As a self-taught programmer, I can peacefully admit that I solved many issues and bugs using a search engine and reading discussions on Stack Overflow. My background is not sound and formal, but that is what happens when you are self-taught. If I had to highlight one book over the others, that would be <em>Think Python</em> by Allen B. Downey. I love the fact that a university professor originally wrote it for a Java course, and then – thanks to its open source license – the book was translated by an high-school teacher for a Python course. The original author decided to use the Python version instead, because of the results he observed with his students: it was more fun to study, the learning curve was less steep, the students were able to develop more exciting projects.. Before writing this manual, I offered <em>Think Python</em> as the primary coding reference to my students at ISIA Urbino. I also suggested the aforementioned <em>Design by Numbers</em> by John Maeda and the <em>Processing Manual</em> by Ben Fry and Casey Reas. These works were crucial in formalizing ways to teach coding into visual art environments. This manual inherits a lot from them regarding of structure, organization and tone. To conclude, I would like to mention the documentations I have been browsing almost daily for a few years: <a href="http://www.drawbot.com/"target="_blank">Drawbot</a>, <a href="http://www.robodocs.info/"target="_blank">Robofab</a> & <a href="http://robofont.com/"target="_blank">Robofont</a>, <a href="http://www.robodocs.info/vanilla_index.html"target="_blank">vanilla</a>, <a href="https://pillow.readthedocs.io"target="_blank">Pillow</a>, <a href="https://www.crummy.com/software/BeautifulSoup/"target="_blank"target="_blank">Beautiful Soup</a>.</p>
