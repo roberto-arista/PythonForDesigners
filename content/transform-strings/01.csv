@@ -1,8 +1,8 @@
 Type	Meaning	Output
-<code">'b'</code>	Binary format	Outputs the number in base 2
-<code">'c'</code>	Character	Converts the integer to the corresponding unicode character before printing
-<code">'d'</code>	Decimal Integer	Outputs the number in base 10
-<code">'o'</code>	Octal format	Outputs the number in base 8
-<code">'x'</code>	Hex format	Outputs the number in base 16, using lower- case letters for the digits above 9
-<code">'X'</code>	Hex format	Outputs the number in base 16, using upper- case letters for the digits above 9
-<code">'n'</code>	Number	This is the same as <code>'d'</code>, except that it uses the current locale setting to insert the appropriate number separator characters
+<code>'b'</code>	Binary format	Outputs the number in base 2
+<code>'c'</code>	Character	Converts the integer to the corresponding unicode character before printing
+<code>'d'</code>	Decimal Integer	Outputs the number in base 10
+<code>'o'</code>	Octal format	Outputs the number in base 8
+<code>'x'</code>	Hex format	Outputs the number in base 16, using lower- case letters for the digits above 9
+<code>'X'</code>	Hex format	Outputs the number in base 16, using upper- case letters for the digits above 9
+<code>'n'</code>	Number	This is the same as <code>'d'</code>, except that it uses the current locale setting to insert the appropriate number separator characters

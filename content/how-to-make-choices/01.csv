@@ -1,9 +1,9 @@
 Expression	Output
-<code">not True</code>	<code">False</code>
-<code">not False</code>	<code">True</code>
-<code">True and True</code>	<code">True</code>
-<code">False and True</code>	<code">False</code>
-<code">False and False</code>	<code">False</code>
-<code">True or True</code>	<code">True</code>
-<code">True or False</code>	<code">True</code>
-<code">False or False</code>	<code">False</code>
+<code>not True</code>	<code>False</code>
+<code>not False</code>	<code>True</code>
+<code>True and True</code>	<code>True</code>
+<code>False and True</code>	<code>False</code>
+<code>False and False</code>	<code>False</code>
+<code>True or True</code>	<code>True</code>
+<code>True or False</code>	<code>True</code>
+<code>False or False</code>	<code>False</code>

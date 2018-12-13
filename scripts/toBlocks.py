@@ -77,7 +77,7 @@ def convertEm2Mark(tag):
     return f'*{tag.string}*'
 
 def convertInlineCode2Mark(tag):
-    return f'<code">{tag.string}</code>'
+    return f'<code>{tag.string}</code>'
 
 def convertText(tag):
     paragraph = []
