@@ -31,7 +31,7 @@ name: not.svg
 class: small_image
 ----
 #### text-block ####
-content: <code class="language-python">not</code> (unary negation) is used to change the state of a boolean type, from <code class="language-python">False</code> to <code class="language-python">True</code>, from <code class="language-python">True</code> to <code class="language-python">False</code>. It is like pressing a switch. "Unary" means that the operator only affects the following operand.
+content: <code">not</code> (unary negation) is used to change the state of a boolean type, from <code">False</code> to <code">True</code>, from <code">True</code> to <code">False</code>. It is like pressing a switch. "Unary" means that the operator only affects the following operand.
 ----
 #### image ####
 name: or.svg
@@ -39,7 +39,7 @@ name: or.svg
 class: small_image
 ----
 #### text-block ####
-content: <code class="language-python">or</code> is used to build a logical expression that will evaluate <code class="language-python">True</code> if any of the operands is <code class="language-python">True</code>. Look at the diagram on the left: the pipe has a fork with a tap on each side. The fork is the "or" operator, and the taps are the operands; if any of the valves are open (<code class="language-python">True</code>), the water will flow on the other side.
+content: <code">or</code> is used to build a logical expression that will evaluate <code">True</code> if any of the operands is <code">True</code>. Look at the diagram on the left: the pipe has a fork with a tap on each side. The fork is the "or" operator, and the taps are the operands; if any of the valves are open (<code">True</code>), the water will flow on the other side.
 ----
 #### image ####
 name: and.svg
@@ -47,9 +47,9 @@ name: and.svg
 class: small_image
 ----
 #### text-block ####
-content: <code class="language-python">and</code> (conditional and) is used to build a logical expression that will evaluate <code class="language-python">True</code> if every operand is <code class="language-python">True</code>. Look at the diagram on the left: a straight pipe represents the boolean expression with two taps following each other. The only way to let the water through is to open both valves. Meaning that every operand has to be <code class="language-python">True</code>.
+content: <code">and</code> (conditional and) is used to build a logical expression that will evaluate <code">True</code> if every operand is <code">True</code>. Look at the diagram on the left: a straight pipe represents the boolean expression with two taps following each other. The only way to let the water through is to open both valves. Meaning that every operand has to be <code">True</code>.
 
-<code class="language-python">and</code> and <code class="language-python">or</code> are also referred to as "short-circuit" operators, because the interpreter will not evaluate the entire expression if unnecessary.
+<code">and</code> and <code">or</code> are also referred to as "short-circuit" operators, because the interpreter will not evaluate the entire expression if unnecessary.
 ----
 #### image ####
 name: not_evaluated.svg
@@ -103,7 +103,7 @@ content: Identity operators instead, check if two identifiers refer or not to th
 snippet: 02.py
 ----
 #### text-block ####
-content: So, when should you use what? When comparing numbers, text, containers content is good practice to use <code class="language-python">==</code> and <code class="language-python">!=</code>. Avoid <code class="language-python">is</code> and <code class="language-python">is not</code>, they are ambiguous and often not reliable because of caching. Instead, when comparing identifiers to singletons (<code class="language-python">True</code>, <code class="language-python">False</code>, <code class="language-python">None</code>) you should always use <code class="language-python">is</code> and <code class="language-python">is not</code>. Why? Because there is only one instance of each of these type (therefore their identity is reliable) and makes your code more readable.
+content: So, when should you use what? When comparing numbers, text, containers content is good practice to use <code">==</code> and <code">!=</code>. Avoid <code">is</code> and <code">is not</code>, they are ambiguous and often not reliable because of caching. Instead, when comparing identifiers to singletons (<code">True</code>, <code">False</code>, <code">None</code>) you should always use <code">is</code> and <code">is not</code>. Why? Because there is only one instance of each of these type (therefore their identity is reliable) and makes your code more readable.
 ----
 #### code-example ####
 snippet: 03.py
@@ -192,7 +192,7 @@ name: modulo.svg
 class: small_image
 ----
 #### text-block ####
-content: In combination with the equivalent (<code class="language-python">==</code>) or not equivalent (<code class="language-python">!=</code>) operator, the modulo can be really helpful in checking whether a number is even or odd, whether a number is decimal or not and so on
+content: In combination with the equivalent (<code">==</code>) or not equivalent (<code">!=</code>) operator, the modulo can be really helpful in checking whether a number is even or odd, whether a number is decimal or not and so on
 ----
 #### code-example ####
 snippet: 10.py
@@ -234,7 +234,7 @@ content: As we already mentioned, whitespace is semantic in Python. This means t
 snippet: 13.py
 ----
 #### text-block ####
-content: Here we are taking no advantage of visual variables in order to make the hierarchy more accessible to readers. We can only rely on the meaning of these words and try to detect a possible structure. So, at first sight, we detect no hierarchy, but after reading, we notice that <code class="language-python">groceries</code> can group all the other items.
+content: Here we are taking no advantage of visual variables in order to make the hierarchy more accessible to readers. We can only rely on the meaning of these words and try to detect a possible structure. So, at first sight, we detect no hierarchy, but after reading, we notice that <code">groceries</code> can group all the other items.
 ----
 #### image ####
 name: groceries.svg
@@ -248,7 +248,7 @@ content: There are a few contrivances we can implement to express this structure
 snippet: 14.py
 ----
 #### text-block ####
-content: Then we should find a way to associate unequivocally <code class="language-python">potatoes</code>, <code class="language-python">eggplants</code> and <code class="language-python">tomatoes</code> as part of the same group. A very elegant and economic way is to move their alignment rightwards, like this:
+content: Then we should find a way to associate unequivocally <code">potatoes</code>, <code">eggplants</code> and <code">tomatoes</code> as part of the same group. A very elegant and economic way is to move their alignment rightwards, like this:
 ----
 #### code-example ####
 snippet: 15.py
@@ -322,7 +322,7 @@ content: Here’s a concrete example:
 snippet: 21.py
 ----
 #### text-block ####
-content: The condition is a Boolean expression. If this expression results in a <code class="language-python">True</code> value, the indented block of code that follows will be executed. The body of the conditional construct can include other nested structures, they only need to be indented accordingly.
+content: The condition is a Boolean expression. If this expression results in a <code">True</code> value, the indented block of code that follows will be executed. The body of the conditional construct can include other nested structures, they only need to be indented accordingly.
 ----
 #### code-example ####
 snippet: 22.py
@@ -336,7 +336,7 @@ snippet: 23.py
 #### text-block ####
 content: In this case, whether the body is executed or not, a rectangle will be drawn on the canvas.
 
-An <code class="language-python">else</code> statement can be placed at the end of the conditional construct. The instructions grouped into this statement will be executed if any other statement (<code class="language-python">if</code>, <code class="language-python">elif</code>) of the conditional construct is not met. Here’s how it is used:
+An <code">else</code> statement can be placed at the end of the conditional construct. The instructions grouped into this statement will be executed if any other statement (<code">if</code>, <code">elif</code>) of the conditional construct is not met. Here’s how it is used:
 ----
 #### code-example ####
 snippet: 24.py
@@ -353,7 +353,7 @@ content: Here’s a concrete example:
 snippet: 25.py
 ----
 #### text-block ####
-content: The <code class="language-python">else</code> keyword is not followed by any condition, because it doesn’t need any evaluation. It is an interpreter parachute.
+content: The <code">else</code> keyword is not followed by any condition, because it doesn’t need any evaluation. It is an interpreter parachute.
 ----
 #### image ####
 name: parachute.svg
@@ -361,7 +361,7 @@ name: parachute.svg
 class: small_image
 ----
 #### text-block ####
-content: Moreover, Python allows to chain the evaluation of many conditions at once, using an indefinite number of <code class="language-python">elif</code> (which means “else if”) statements between <code class="language-python">if</code> (mandatory) and <code class="language-python">else</code> (optional).
+content: Moreover, Python allows to chain the evaluation of many conditions at once, using an indefinite number of <code">elif</code> (which means “else if”) statements between <code">if</code> (mandatory) and <code">else</code> (optional).
 
 The structure is then:
 ----
@@ -385,7 +385,7 @@ name: myVar.svg
 class: large_image
 ----
 #### text-block ####
-content: Take note of the use of indentation. <code class="language-python">if</code>, <code class="language-python">elif</code> and <code class="language-python">else</code> are aligned to the left while their bodies are four spaces indented to the right.
+content: Take note of the use of indentation. <code">if</code>, <code">elif</code> and <code">else</code> are aligned to the left while their bodies are four spaces indented to the right.
 ----
 #### section-title ####
 content: Workbook

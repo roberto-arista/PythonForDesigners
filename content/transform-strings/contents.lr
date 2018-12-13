@@ -14,21 +14,21 @@ content: Formatting Strings
 class: default
 ----
 #### text-block ####
-content: Python supports multiple ways to format strings. With formatting I mean building new strings out of different kind of values.  The most commons are the old school <code class="language-python">%</code>-formatting, the <code class="language-python">.format()</code> method and the Python3 novelty <code class="language-python">f-strings</code>. In this manual, we will look into the latest way, given its minimal syntax and high flexibility.
+content: Python supports multiple ways to format strings. With formatting I mean building new strings out of different kind of values.  The most commons are the old school <code">%</code>-formatting, the <code">.format()</code> method and the Python3 novelty <code">f-strings</code>. In this manual, we will look into the latest way, given its minimal syntax and high flexibility.
 
-Formatting strings with <code class="language-python">f-string</code> is as easy as defining a standard string literal, look at this example:
+Formatting strings with <code">f-string</code> is as easy as defining a standard string literal, look at this example:
 ----
 #### code-example ####
 snippet: 01.py
 ----
 #### text-block ####
-content: Moreover, <code class="language-python">f-strings</code> allow to include full Python expressions like:
+content: Moreover, <code">f-strings</code> allow to include full Python expressions like:
 ----
 #### code-example ####
 snippet: 02.py
 ----
 #### text-block ####
-content: Don't forget to prefix the f-string with an <code class="language-python">'f'</code> or <code class="language-python">'F'</code> otherwise it would be considered just a regular string, look:
+content: Don't forget to prefix the f-string with an <code">'f'</code> or <code">'F'</code> otherwise it would be considered just a regular string, look:
 ----
 #### code-example ####
 snippet: 03.py
@@ -42,7 +42,7 @@ snippet: 04.py
 #### text-block ####
 content: Otherwise, the expression is not evaluated.
 
-<code class="language-python">f-strings</code> and <code class="language-python">.format()</code> share the same format specifier mini-language. Which can be synthesized in the following way:
+<code">f-strings</code> and <code">.format()</code> share the same format specifier mini-language. Which can be synthesized in the following way:
 ----
 #### code-example ####
 snippet: 05.py
@@ -60,7 +60,7 @@ content: This step is optional, so if we omit any extra instruction, Python will
 snippet: 07.py
 ----
 #### text-block ####
-content: <code class="language-python">[width]</code> provides instructions concerning padding, for example allowing the append of extra characters to the right
+content: <code">[width]</code> provides instructions concerning padding, for example allowing the append of extra characters to the right
 ----
 #### code-example ####
 snippet: 08.py
@@ -74,7 +74,7 @@ snippet: 09.py
 #### text-block ####
 content: In the cases above, white spaces will be added until the length of 10 characters is reached.
 
-<code class="language-python">[width]</code> also allows to center a string within a certain amount of characters:
+<code">[width]</code> also allows to center a string within a certain amount of characters:
 ----
 #### code-example ####
 snippet: 10.py
@@ -98,7 +98,7 @@ class: large_image
 ----
 #### text-block ####
 content: 
-If no instruction for <code class="language-python">[type]</code> is defined, Python will use the basic string representation for the value provided. For example, integers will be represented using 10 base notation, but it is conveniently possible to specify a different base adding <code class="language-python">[type]</code>. What follows is a list of the possible conversion options for integer values.
+If no instruction for <code">[type]</code> is defined, Python will use the basic string representation for the value provided. For example, integers will be represented using 10 base notation, but it is conveniently possible to specify a different base adding <code">[type]</code>. What follows is a list of the possible conversion options for integer values.
 ----
 #### table ####
 path: 01.csv
@@ -112,7 +112,7 @@ content: Consider the following examples:
 snippet: 14.py
 ----
 #### text-block ####
-content: <code class="language-python">242</code> is converted to <code class="language-python">11110010</code>. The binary representation is then centered in a string of length 12 using <code class="language-python">'.'</code> as placeholder
+content: <code">242</code> is converted to <code">11110010</code>. The binary representation is then centered in a string of length 12 using <code">'.'</code> as placeholder
 ----
 #### code-example ####
 snippet: 15.py
@@ -130,7 +130,7 @@ content: The plus in front of the string’s width forces the interpreter to put
 snippet: 17.py
 ----
 #### text-block ####
-content: converts <code class="language-python">3792₁₀</code> to <code class="language-python">17B₁₆</code>, using uppercase letters. Then it adds an extra 0 character in front of the hexadecimal representation to reach length 4. Finally, it is linked to the string literal <code class="language-python">'U+'</code>.
+content: converts <code">3792₁₀</code> to <code">17B₁₆</code>, using uppercase letters. Then it adds an extra 0 character in front of the hexadecimal representation to reach length 4. Finally, it is linked to the string literal <code">'U+'</code>.
 
 Now, let’s look at a selection of options for floating-point numbers
 ----
@@ -146,19 +146,19 @@ content: Consider the following examples:
 snippet: 18.py
 ----
 #### text-block ####
-content: <code class="language-python">'f'</code> in combination with <code class="language-python">'.2'</code> will output a floating point representation which precision is limited to 2 digits after the dot
+content: <code">'f'</code> in combination with <code">'.2'</code> will output a floating point representation which precision is limited to 2 digits after the dot
 ----
 #### code-example ####
 snippet: 19.py
 ----
 #### text-block ####
-content: This conversion method could be useful when typesetting languages different from English. Check the Python standard <code class="language-python">locale</code> module documentation.
+content: This conversion method could be useful when typesetting languages different from English. Check the Python standard <code">locale</code> module documentation.
 ----
 #### code-example ####
 snippet: 20.py
 ----
 #### text-block ####
-content: The <code class="language-python">'%'</code> conversion type will convert the floating point to percentage. <code class="language-python">'.0'</code> will truncate the decimal information of the percentage (<code class="language-python">45%</code> instead of <code class="language-python">45.000000%</code>).
+content: The <code">'%'</code> conversion type will convert the floating point to percentage. <code">'.0'</code> will truncate the decimal information of the percentage (<code">45%</code> instead of <code">45.000000%</code>).
 ----
 #### section-title ####
 content: Useful String Methods
