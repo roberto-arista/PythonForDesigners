@@ -1,6 +1,6 @@
 Method	Input	Output
-<code class="language-python">s.capitalize()</code>	<code class="language-python">hello</code>	<code class="language-python">Hello</code>
-<code class="language-python">s.lower()</code>	<code class="language-python">HELLO</code>	<code class="language-python">hello</code>
-<code class="language-python">s.swapcase()</code>	<code class="language-python">Hello</code>	<code class="language-python">hELLO</code>
-<code class="language-python">s.title()</code>	<code class="language-python">hello world</code>	<code class="language-python">Hello World</code>
-<code class="language-python">s.upper()</code>	<code class="language-python">hello</code>	<code class="language-python">HELLO</code>
+<code">s.capitalize()</code>	<code">hello</code>	<code">Hello</code>
+<code">s.lower()</code>	<code">HELLO</code>	<code">hello</code>
+<code">s.swapcase()</code>	<code">Hello</code>	<code">hELLO</code>
+<code">s.title()</code>	<code">hello world</code>	<code">Hello World</code>
+<code">s.upper()</code>	<code">hello</code>	<code">HELLO</code>

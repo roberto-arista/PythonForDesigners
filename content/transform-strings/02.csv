@@ -1,4 +1,4 @@
 Type	Meaning	Output
-<code class="language-python">'f'</code>	Fixed point	Displays the number as a fixed-point number. The default precision is 6.
-<code class="language-python">'n'</code>	Number	It uses the current locale setting to insert the appropriate number separator characters. If the number is too large, it switches to scientific notation.
-<code class="language-python">'%'</code>	Percentage	Multiplies the number by 100 and displays in fixed ('f') format, followed by a percent sign.
+<code">'f'</code>	Fixed point	Displays the number as a fixed-point number. The default precision is 6.
+<code">'n'</code>	Number	It uses the current locale setting to insert the appropriate number separator characters. If the number is too large, it switches to scientific notation.
+<code">'%'</code>	Percentage	Multiplies the number by 100 and displays in fixed ('f') format, followed by a percent sign.

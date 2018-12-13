@@ -1,9 +1,9 @@
 Expression	Output
-<code class="language-python">not True</code>	<code class="language-python">False</code>
-<code class="language-python">not False</code>	<code class="language-python">True</code>
-<code class="language-python">True and True</code>	<code class="language-python">True</code>
-<code class="language-python">False and True</code>	<code class="language-python">False</code>
-<code class="language-python">False and False</code>	<code class="language-python">False</code>
-<code class="language-python">True or True</code>	<code class="language-python">True</code>
-<code class="language-python">True or False</code>	<code class="language-python">True</code>
-<code class="language-python">False or False</code>	<code class="language-python">False</code>
+<code">not True</code>	<code">False</code>
+<code">not False</code>	<code">True</code>
+<code">True and True</code>	<code">True</code>
+<code">False and True</code>	<code">False</code>
+<code">False and False</code>	<code">False</code>
+<code">True or True</code>	<code">True</code>
+<code">True or False</code>	<code">True</code>
+<code">False or False</code>	<code">False</code>

@@ -25,7 +25,7 @@ name: script_CLI.svg
 class: small_image
 ----
 #### text-block ####
-content: Python is an *interpreted* language. It means that the instructions contained in a script are read line by line and immediately executed. The program devoted to the interpretation and execution of commands is the Python Interpreter. This interpreter can be used interactively (just open terminal, write <code class="language-python">'python'</code> and hit enter) or called to read a text file with .py extension. 
+content: Python is an *interpreted* language. It means that the instructions contained in a script are read line by line and immediately executed. The program devoted to the interpretation and execution of commands is the Python Interpreter. This interpreter can be used interactively (just open terminal, write <code">'python'</code> and hit enter) or called to read a text file with .py extension. 
 
 On the contrary, languages as C++ or Java are *compiled*, meaning that the source code is first transformed into object code and only then is executed. The advantage of this process is that the translation from high-level to low-level code is done only once; therefore the object code execution will probably be faster. This is how the applications installed on your machine generally work. Their source code is stored on the developer’s computer, and only the object code is then distributed to the users, who sometimes buy it. 
 ----
@@ -49,8 +49,8 @@ content: <figcaption>Stefan Themerson, poetic semantic translation of Drinking u
 content: This feature has two important positive consequences:
 ----
 #### text-block ####
-content: + if you have a background in visual art, you are probably aware that fill has meaning as much as void. Similarly musicians are aware of the value of silence. Employing <code class="language-python">monospaced fonts</code> the code editor becomes a typographical matrix where, like in poetry, the vertical axis of the composition is activated
-+ If you give a look into a piece of Java or C++, you will immediately spot a lot more punctuation. These two languages do not rely on whitespace to organize code blocks, instead they use semicolons <code class="language-python">;</code> and brackets <code class="language-python">{}</code>
+content: + if you have a background in visual art, you are probably aware that fill has meaning as much as void. Similarly musicians are aware of the value of silence. Employing <code">monospaced fonts</code> the code editor becomes a typographical matrix where, like in poetry, the vertical axis of the composition is activated
++ If you give a look into a piece of Java or C++, you will immediately spot a lot more punctuation. These two languages do not rely on whitespace to organize code blocks, instead they use semicolons <code">;</code> and brackets <code">{}</code>
 
 ----
 #### image ####
@@ -78,15 +78,15 @@ content: Can you point to a sentence in your natural language which was once con
 content: These errors can concern two different aspects. For example, token errors like:
 ----
 #### text-block ####
-content: + <code class="language-python">w£rd</code>
-+ <code class="language-python">3width</code>
+content: + <code">w£rd</code>
++ <code">3width</code>
 ----
 #### text-block ####
 content: or structure errors, like:
 ----
 #### text-block ####
-content: + <code class="language-python">3 $ 4</code>
-+ <code class="language-python">+ rectWidth %</code>
+content: + <code">3 $ 4</code>
++ <code">+ rectWidth %</code>
 ----
 #### text-block ####
 content: Let’s make some examples using a simple English sentence:
@@ -102,14 +102,14 @@ content: Even if there are mistakes, the meaning is still easy to understand.
 Similarly, in Python we would have (I am going to explain later why):
 ----
 #### text-block ####
-content: + <code class="language-python">rectWidth = 86</code>	(correct)
-+ <code class="language-python">3rectWidth = 86</code>	(*wrong token*)
-+ <code class="language-python">= rectWidth 86</code>	(*wrong structure*)
+content: + <code">rectWidth = 86</code>	(correct)
++ <code">3rectWidth = 86</code>	(*wrong token*)
++ <code">= rectWidth 86</code>	(*wrong structure*)
 ----
 #### text-block ####
 content: But, here the Python interpreter will stop its routines, because, without proper instructions, it is not able to handle these exceptions.
 
-A program is a collection of statements. When these are combined they describe a choreography performed by a machine. Formal language can be very dense and hard to read for a human. This is why programming languages allows you to write human-friendly annotations which are ignored by the compiler/interpreter. The Python syntax for comments is the number sign character: <code class="language-python">#</code>. Each character following the number sign in the same line will be ignored by the Python interpreter.
+A program is a collection of statements. When these are combined they describe a choreography performed by a machine. Formal language can be very dense and hard to read for a human. This is why programming languages allows you to write human-friendly annotations which are ignored by the compiler/interpreter. The Python syntax for comments is the number sign character: <code">#</code>. Each character following the number sign in the same line will be ignored by the Python interpreter.
 
 You should avoid using comments to state the obvious, instead you should explain your intentions when writing a specific statement or code block, maybe keeping in mind that someone else might read them. The following is obvious:
 ----
@@ -136,7 +136,7 @@ Going back to our first statement, here we are using a very important operator: 
 snippet: 03.py
 ----
 #### text-block ####
-content: establishes <code class="language-python">rectWidth</code> as an identifier (also known as a name) and associates it to an integer value of <code class="language-python">86</code>. The assignment operator works in a left-to-right direction, linking the identifier of the left to the value on the right. If the assignment operator is followed by any kind of expression, this will be solved first, then the assignment itself. We can translate this statement in a stack diagram.
+content: establishes <code">rectWidth</code> as an identifier (also known as a name) and associates it to an integer value of <code">86</code>. The assignment operator works in a left-to-right direction, linking the identifier of the left to the value on the right. If the assignment operator is followed by any kind of expression, this will be solved first, then the assignment itself. We can translate this statement in a stack diagram.
 ----
 #### image ####
 name: alias.svg
@@ -147,19 +147,19 @@ class: large_image
 content: Identifiers are a very important kind of token in Python. They have some specific, yet very simple rules:
 ----
 #### text-block ####
-content: + they are case sensitive (<code class="language-python">rectWidth</code> is different from <code class="language-python">rectwidth</code> or <code class="language-python">RectWidth</code>)
-+ they can include letters (<code class="language-python">A-Z</code>, <code class="language-python">a-z</code>), digits (<code class="language-python">0-9</code>) and underscore characters (_)
-+ they cannot start with a digit (ok: <code class="language-python">my3sidePolygon</code>, not ok: <code class="language-python">3sidePolygon</code>)
+content: + they are case sensitive (<code">rectWidth</code> is different from <code">rectwidth</code> or <code">RectWidth</code>)
++ they can include letters (<code">A-Z</code>, <code">a-z</code>), digits (<code">0-9</code>) and underscore characters (_)
++ they cannot start with a digit (ok: <code">my3sidePolygon</code>, not ok: <code">3sidePolygon</code>)
 + there is a restricted number of keywords that cannot be used as identifiers
 ----
 #### text-block ####
-content: Let’s directly ask Python for these reserved keywords. It’s a good opportunity to use Python’s interactive interpreter. Open the terminal (Terminal.app on Mac), write <code class="language-python">python</code> and hit <code class="language-python">return</code>. The character before your cursor should have changed from <code class="language-python">$</code> to <code class="language-python">>>></code> (also called chevron). Now you are using the Python interactive interpreter. These are the statements you need to type in the interpreter’s console to get the keywords we are looking for:
+content: Let’s directly ask Python for these reserved keywords. It’s a good opportunity to use Python’s interactive interpreter. Open the terminal (Terminal.app on Mac), write <code">python</code> and hit <code">return</code>. The character before your cursor should have changed from <code">$</code> to <code">>>></code> (also called chevron). Now you are using the Python interactive interpreter. These are the statements you need to type in the interpreter’s console to get the keywords we are looking for:
 ----
 #### code-example ####
 snippet: 04.py
 ----
 #### text-block ####
-content: The list includes <code class="language-python">'global'</code>, doesn't it? You just executed your first import and print statements. Well done. We will go more into these later on.
+content: The list includes <code">'global'</code>, doesn't it? You just executed your first import and print statements. Well done. We will go more into these later on.
 ----
 #### exercise ####
 content: Open up your terminal, define a variable and print it to the console
@@ -198,7 +198,7 @@ content: Let’s go back to our previous working example. Once the definition is
 snippet: 07.py
 ----
 #### text-block ####
-content: As we could expect, the value linked to the <code class="language-python">myValue</code> identifier is <code class="language-python">15</code>.
+content: As we could expect, the value linked to the <code">myValue</code> identifier is <code">15</code>.
 
 Let’s observe the anatomy of the calling statement:
 ----
