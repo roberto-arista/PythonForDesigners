@@ -79,7 +79,7 @@ content: + which characters have to be drawn, the actual content
 + fill and stroke color
 ----
 #### text-block ####
-content: Drawbot has some fallback options if we are too lazy to specify all of them. But content and position are mandatory. They are, in fact, the arguments of the <code">text()</code> function:
+content: Drawbot has some fallback options if we are too lazy to specify all of them. But content and position are mandatory. They are, in fact, the arguments of the <code>text()</code> function:
 ----
 #### code-example ####
 snippet: 01.py
@@ -95,9 +95,9 @@ snippet: 02.py
 image: text-rect.png
 ----
 #### text-block ####
-content: The other choices have to be set with specific functions and must be defined before the <code">text()</code> function is invoked.
+content: The other choices have to be set with specific functions and must be defined before the <code>text()</code> function is invoked.
 
-<code">font()</code> defines the font used to draw the characters. It accepts a string argument. It should be the name of a postscript font already installed on your computer.
+<code>font()</code> defines the font used to draw the characters. It accepts a string argument. It should be the name of a postscript font already installed on your computer.
 ----
 #### code-example ####
 snippet: 03.py
@@ -105,7 +105,7 @@ snippet: 03.py
 image: text-font.png
 ----
 #### text-block ####
-content: Drawbot provides a function able to make a list of the postscript fonts installed on your computer. <code">installedFonts()</code> accepts an optional string argument with characters which should be supported by the listed fonts. 
+content: Drawbot provides a function able to make a list of the postscript fonts installed on your computer. <code>installedFonts()</code> accepts an optional string argument with characters which should be supported by the listed fonts. 
 
 For example, you could use it in the following way:
 ----
@@ -113,9 +113,9 @@ For example, you could use it in the following way:
 snippet: 04.py
 ----
 #### text-block ####
-content: The names printed in the console are the fonts that support the <code">'ЉДЖ'</code> cyrillic characters.
+content: The names printed in the console are the fonts that support the <code>'ЉДЖ'</code> cyrillic characters.
 
-The body size is handled bythe function <code">fontsize()</code>. It accepts a numerical value either an integer or float. The function sets the size in postscript points, the default being 10pt.
+The body size is handled bythe function <code>fontsize()</code>. It accepts a numerical value either an integer or float. The function sets the size in postscript points, the default being 10pt.
 ----
 #### code-example ####
 snippet: 05.py
@@ -123,7 +123,7 @@ snippet: 05.py
 image: text-fontSize.png
 ----
 #### text-block ####
-content: Color and stroke are defined by <code">fill()</code> and <code">stroke()</code>.
+content: Color and stroke are defined by <code>fill()</code> and <code>stroke()</code>.
 ----
 #### code-example ####
 snippet: 06.py
@@ -149,7 +149,7 @@ name: textbox.svg
 class: large_image
 ----
 #### text-block ####
-content: First of all, we should use a different function than <code">text()</code>. It would be possible to deal with line breaking ourselves, but Drawbot is generous enough to provide a function which will take care of it automatically: <code">textBox()</code>. Unlike <code">text()</code>, the glyph sequence fits into a rectangle. The function accepts a string as first argument, followed by what’s necessary to define the rectangle <code">(x, y, width, height)</code> and, as optional argument, the alignment of the text.
+content: First of all, we should use a different function than <code>text()</code>. It would be possible to deal with line breaking ourselves, but Drawbot is generous enough to provide a function which will take care of it automatically: <code>textBox()</code>. Unlike <code>text()</code>, the glyph sequence fits into a rectangle. The function accepts a string as first argument, followed by what’s necessary to define the rectangle <code>(x, y, width, height)</code> and, as optional argument, the alignment of the text.
 ----
 #### code-example ####
 snippet: 07.py
@@ -157,7 +157,7 @@ snippet: 07.py
 image: someText.png
 ----
 #### text-block ####
-content: If you want to see the box which contains the text, just use a <code">rect()</code> function with the same arguments:
+content: If you want to see the box which contains the text, just use a <code>rect()</code> function with the same arguments:
 ----
 #### code-example ####
 snippet: 08.py
@@ -175,7 +175,7 @@ diagram: 2pages.svg
 #### text-block ####
 content: Most of the decisions we have to make when setting multiple lines of type have to do with the space surrounding the glyphs. Of course, fonts already provide some standard concerning proportions between glyphs, but a typographer has a few tools to enhance the composition according to a specific context.
 
-The vertical distribution of space in a paragraph is handled by the <code">lineHeight()</code> function. It is commonly called leading, a term which comes from the metal days of type. It refers to the stripes of non-printing metal which would be inserted between lines of type. In a digital environment the leading value defines the distance between one baseline and the next. 
+The vertical distribution of space in a paragraph is handled by the <code>lineHeight()</code> function. It is commonly called leading, a term which comes from the metal days of type. It refers to the stripes of non-printing metal which would be inserted between lines of type. In a digital environment the leading value defines the distance between one baseline and the next. 
 ----
 #### image ####
 name: leading.svg
@@ -195,7 +195,7 @@ content: The Drawbot default is 12pt.
 
 Fonts already contain a lot of information concerning the horizontal distribution of space. As we sawin the previous chapters, white is as important as black. A type designer will provide the font with all the necessary data to compose a good paragraph of text. Think twice about overriding this information. It is a distortion of type as much as a non-proportional scaling. Well, maybe a bit more subtle, but a trained eye will recognize it immediately.
 
-But, there are a few cases where it makes sense to alter the composition with some inner-character extra space. The <code">tracking()</code> function is here for this. Tracking –not to be confused with kerning– is the injection or subtraction of a fixed amount of white space between the glyphs. Text composed at small size, like 8pt, could benefit from some extra spacing.
+But, there are a few cases where it makes sense to alter the composition with some inner-character extra space. The <code>tracking()</code> function is here for this. Tracking –not to be confused with kerning– is the injection or subtraction of a fixed amount of white space between the glyphs. Text composed at small size, like 8pt, could benefit from some extra spacing.
 ----
 #### image ####
 name: tracking.svg
@@ -208,7 +208,7 @@ There are decisions that influence the quality of the right side of a paragraph 
 
 Hyphenation is a feature which allows the digital composer to break a line using word syllables, not only spaces between words. This option adds many breaking options making the process of breaking a line less harmful for the paragraph of text. Having said that, reading a word split on two lines could be not that comfortable, especially if we are not very used to it or if the word is very short.
 
-Take into account that syllables have different definitions across different languages, so remember to set the right language using the <code">language()</code> function. The default is English.
+Take into account that syllables have different definitions across different languages, so remember to set the right language using the <code>language()</code> function. The default is English.
 ----
 #### code-example ####
 snippet: 11.py
