@@ -1,5 +1,5 @@
 Method	Behaviour
-<code>s.join('123')</code>	Return <code>s</code> joined by iterable <code>'123'</code># if <code>s</code> is <code>'hello'</code> => <code>'1hello2hello3'</code>
+<code>s.join('123')</code>	Return <code>s</code> joined by iterable <code>'123'</code> if <code>s</code> is <code>'hello'</code> → <code>'1hello2hello3'</code>
 <code>s.split(sep, maxsplit)</code>	Return list of s split by sep with leftmost maxsplits performed
-<code>s.splitlines()</code>	Return a list of lines in s# if <code>s</code> is <code>'hello\nworld'</code> => <code>['hello', 'world']</code>
+<code>s.splitlines()</code>	Return a list of lines in s if <code>s</code> is <code>'hello\nworld'</code> → <code>['hello', 'world']</code>
 <code>s.replace(s2, s3, count)</code>	Replace <code>s2</code> with s3 in <code>s</code> at most count times
