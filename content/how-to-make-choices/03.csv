@@ -1,5 +1,5 @@
 Operators	Meaning
-<code class="language-python">is</code>	same identity
-<code class="language-python">is not</code>	different identity
-<code class="language-python">==</code>	equivalent
-<code class="language-python">!=</code>	not equivalent
+<code>is</code>	same identity
+<code>is not</code>	different identity
+<code>==</code>	equivalent
+<code>!=</code>	not equivalent

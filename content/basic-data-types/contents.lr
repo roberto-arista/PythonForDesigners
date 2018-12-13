@@ -9,7 +9,7 @@ sort_key: 5
 visual_abstract: abstract-5.svg
 ---
 body: #### text-block ####
-content: What is data? Data is a Latin word currently used in English. It is the plural of datum. We can consider a datum as an atom of a bigger pool of information. The smallest piece, the minimum value we can use to build a bigger collection of quantities and relations. Data are our bricks in the act of coding. The size of a rectangle, the amount of people in a country, an email address, the position of the mouse pointer on the screen, the location of a file on a server. Since there are different kinds of data, Python provides a series of data types. Types that indicate quantities (<code class="language-python">int</code>, <code class="language-python">float</code>), if a condition is true or not (<code class="language-python">bool</code>), pieces of text (<code class="language-python">str</code>), ordered collections of other data (<code class="language-python">list</code>), data for the absence of data (<code class="language-python">None</code>), unsorted collections (<code class="language-python">set</code>, <code class="language-python">dict</code>) and so on.
+content: What is data? Data is a Latin word currently used in English. It is the plural of datum. We can consider a datum as an atom of a bigger pool of information. The smallest piece, the minimum value we can use to build a bigger collection of quantities and relations. Data are our bricks in the act of coding. The size of a rectangle, the amount of people in a country, an email address, the position of the mouse pointer on the screen, the location of a file on a server. Since there are different kinds of data, Python provides a series of data types. Types that indicate quantities (<code>int</code>, <code>float</code>), if a condition is true or not (<code>bool</code>), pieces of text (<code>str</code>), ordered collections of other data (<code>list</code>), data for the absence of data (<code>None</code>), unsorted collections (<code>set</code>, <code>dict</code>) and so on.
 ----
 #### image ####
 name: datum.svg
@@ -63,7 +63,7 @@ name: int2030.svg
 class: large_image
 ----
 #### text-block ####
-content: Let’s observe line 6. The execution of this command begins with the evaluation of the expression on the right side of the assignment operator <code class="language-python">=</code>. This expression is evaluated on the basis of the existing association of the name rectHeight. Since <code class="language-python">rectHeight</code> is <code class="language-python">20</code>, <code class="language-python">rectHeight + 10</code> is <code class="language-python">30</code>. Integer values are immutable, so a new value (<code class="language-python">30</code>) is created and associated, according to the assignment operator to the name <code class="language-python">rectHeight</code>. We will see an aliases example of a mutable object in a few paragraphs. We are now ready to dive into Python data types.
+content: Let’s observe line 6. The execution of this command begins with the evaluation of the expression on the right side of the assignment operator <code>=</code>. This expression is evaluated on the basis of the existing association of the name rectHeight. Since <code>rectHeight</code> is <code>20</code>, <code>rectHeight + 10</code> is <code>30</code>. Integer values are immutable, so a new value (<code>30</code>) is created and associated, according to the assignment operator to the name <code>rectHeight</code>. We will see an aliases example of a mutable object in a few paragraphs. We are now ready to dive into Python data types.
 ----
 #### section-title ####
 content: Boolean Type
@@ -76,10 +76,10 @@ name: boolean.svg
 class: large_image
 ----
 #### text-block ####
-content: Boolean data types are used to manipulate logical values and the only two possible instances they can refer to are <code class="language-python">True</code> and <code class="language-python">False</code>. These are literal, not strings! In fact, they are part of the reserved keywords list. Python provides a built-in function to create boolean value starting from non boolean ones, it is <code class="language-python">bool()</code>.
+content: Boolean data types are used to manipulate logical values and the only two possible instances they can refer to are <code>True</code> and <code>False</code>. These are literal, not strings! In fact, they are part of the reserved keywords list. Python provides a built-in function to create boolean value starting from non boolean ones, it is <code>bool()</code>.
 
-A number is converted to <code class="language-python">False</code> if it’s equal to zero, <code class="language-python">True</code> if it’s different from zero.
-Sequences or other containers are translated to <code class="language-python">False</code> if empty, to <code class="language-python">True</code> if they have objects inside. Boolean type is mostly used to describe a condition: is it black? is it a digit? did I reach the door? do I have still space on the page? and so on. This condition is then used in combination with control structures as <code class="language-python">if</code> or <code class="language-python">while</code>.
+A number is converted to <code>False</code> if it’s equal to zero, <code>True</code> if it’s different from zero.
+Sequences or other containers are translated to <code>False</code> if empty, to <code>True</code> if they have objects inside. Boolean type is mostly used to describe a condition: is it black? is it a digit? did I reach the door? do I have still space on the page? and so on. This condition is then used in combination with control structures as <code>if</code> or <code>while</code>.
 ----
 #### section-title ####
 content: Numbers (Integers and Floating-point)
@@ -95,8 +95,8 @@ name: int_float.svg
 class: large_image
 ----
 #### text-block ####
-content: In Python, an integer object is designated to represent whole numbers. The literal declaration of such value is a digit with an optional polarity sign: <code class="language-python">2</code>, <code class="language-python">+45</code>, <code class="language-python">-12</code>.
-Sometimes it can be handy to describe an integer using a different base, such as binary, octal or hexadecimal. This can be done using <code class="language-python">0</code> as a prefix and a character representing the base
+content: In Python, an integer object is designated to represent whole numbers. The literal declaration of such value is a digit with an optional polarity sign: <code>2</code>, <code>+45</code>, <code>-12</code>.
+Sometimes it can be handy to describe an integer using a different base, such as binary, octal or hexadecimal. This can be done using <code>0</code> as a prefix and a character representing the base
 ----
 #### table ####
 path: 01.csv
@@ -126,29 +126,29 @@ class: large_image
 #### text-block ####
 content: These expressions represent the same quantity with different notational systems.
 
-Python provides a function to convert a value into an integer: <code class="language-python">int()</code>.
+Python provides a function to convert a value into an integer: <code>int()</code>.
 
 These are the behaviours you should expect:
 
 ----
 #### text-block ####
-content: + if a floating-point is provided as argument, the interpreter will truncate the point and any following digit. For instance, <code class="language-python">3.99</code> and <code class="language-python">3.1</code> will both become <code class="language-python">3</code>.
-+ if a string is provided as argument, the interpreter will try to parse it and transform it to an integer value. The output of <code class="language-python">int('-3')</code> will be <code class="language-python">3</code>. Something like <code class="language-python">int('hello')</code> will raise a <code class="language-python">ValueError</code>.
+content: + if a floating-point is provided as argument, the interpreter will truncate the point and any following digit. For instance, <code>3.99</code> and <code>3.1</code> will both become <code>3</code>.
++ if a string is provided as argument, the interpreter will try to parse it and transform it to an integer value. The output of <code>int('-3')</code> will be <code>3</code>. Something like <code>int('hello')</code> will raise a <code>ValueError</code>.
 ----
 #### text-block ####
-content: By default <code class="language-python">int()</code> uses a 10 base for the conversion. If you need a different base you can indicate a second optional argument, like
+content: By default <code>int()</code> uses a 10 base for the conversion. If you need a different base you can indicate a second optional argument, like
 ----
 #### code-example ####
 snippet: 03.py
 ----
 #### text-block ####
-content: The <code class="language-python">float</code> object in Python is used to represent a positive or negative decimal number. Its literal declaration is made of a polarity sign (optional), digits, and a trailing point optionally followed by other digits. So, both <code class="language-python">-3.14</code> and <code class="language-python">3</code>. can be floating-point numbers.
+content: The <code>float</code> object in Python is used to represent a positive or negative decimal number. Its literal declaration is made of a polarity sign (optional), digits, and a trailing point optionally followed by other digits. So, both <code>-3.14</code> and <code>3</code>. can be floating-point numbers.
 
-Another way to declare a floating point number is to use a scientific notation. The Python equivalent for <code class="language-python">6.02x10²³</code> is <code class="language-python">6.02e23</code>.
+Another way to declare a floating point number is to use a scientific notation. The Python equivalent for <code>6.02x10²³</code> is <code>6.02e23</code>.
 
-Python provides a function to obtain a floating-point value from an existing object: <code class="language-python">float()</code>. These are the behaviours you should expect:
+Python provides a function to obtain a floating-point value from an existing object: <code>float()</code>. These are the behaviours you should expect:
 if the argument is an integer it will be converted to floating-point
-if the argument is a string the interpreter will try to parse it and transform it to a floating-point value. You can expect <code class="language-python">float('-3.14')</code> to be transformed to <code class="language-python">-3.14</code>. Otherwise, if the interpreter encounters <code class="language-python">float('-3,14')</code> or <code class="language-python">float('world')</code>, it will raise a <code class="language-python">ValueError</code>.
+if the argument is a string the interpreter will try to parse it and transform it to a floating-point value. You can expect <code>float('-3.14')</code> to be transformed to <code>-3.14</code>. Otherwise, if the interpreter encounters <code>float('-3,14')</code> or <code>float('world')</code>, it will raise a <code>ValueError</code>.
 ----
 #### section-title ####
 content: None Type
@@ -156,13 +156,13 @@ content: None Type
 class: default
 ----
 #### text-block ####
-content: In Python the reserved keyword <code class="language-python">None</code> allows to express the absence of data. It can be used in various situations:
+content: In Python the reserved keyword <code>None</code> allows to express the absence of data. It can be used in various situations:
 
 ----
 #### text-block ####
 content: + creating an identifier without assigning any specific data to it. Something like saying “I am going to use this, I just do not know how yet”
 + untying an identifier from a value without assigning it to anything else
-+ using <code class="language-python">None</code> into a conditional statement to check whether an identifier is tied to a value or not.
++ using <code>None</code> into a conditional statement to check whether an identifier is tied to a value or not.
 ----
 #### image ####
 name: none.svg
@@ -170,11 +170,11 @@ name: none.svg
 class: large_image
 ----
 #### text-block ####
-content: Note that if the call of a non-fruitful function (meaning that it doesn’t include neither <code class="language-python">return</code> nor <code class="language-python">yield</code> statements in its body) is assigned to an identifier, the Python interpreter will not raise any error, instead it will assign <code class="language-python">None</code> value to the identifier. For example:
+content: Note that if the call of a non-fruitful function (meaning that it doesn’t include neither <code>return</code> nor <code>yield</code> statements in its body) is assigned to an identifier, the Python interpreter will not raise any error, instead it will assign <code>None</code> value to the identifier. For example:
 ----
 #### code-example ####
 snippet: 04.py
 ----
 #### text-block ####
-content: The value associated with <code class="language-python">myValue</code> will be <code class="language-python">None</code> because <code class="language-python">interpolateValue</code> has no return statement.
+content: The value associated with <code>myValue</code> will be <code>None</code> because <code>interpolateValue</code> has no return statement.
 ----
