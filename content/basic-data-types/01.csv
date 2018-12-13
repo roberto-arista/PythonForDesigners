@@ -1,4 +1,4 @@
-<code class="language-python">24</code>	# standard base 10 integer
-<code class="language-python">0b11000</code>	# binary
-<code class="language-python">0o30</code>	# octal
-<code class="language-python">0x18</code>	# hexadecimal
+<code>24</code>	# standard base 10 integer
+<code>0b11000</code>	# binary
+<code>0o30</code>	# octal
+<code>0x18</code>	# hexadecimal

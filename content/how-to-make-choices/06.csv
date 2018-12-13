@@ -1,10 +1,10 @@
 Expressions	Operators
-function call, slicing sequence	<code class="language-python">func(), sequence[]</code>
-exponentiation	<code class="language-python">**</code>
-multiplication, division	<code class="language-python">*, /, //, %</code>
-addition, subtraction	<code class="language-python">+, -</code>
-comparisons	<code class="language-python">is, is not, ==, !=, , >=</code>
-logical not	<code class="language-python">not</code>
-logical and	<code class="language-python">and</code>
-logical or	<code class="language-python">or</code>
-assignments	<code class="language-python">=, +=, -=, /=, *=</code>
+function call, slicing sequence	<code>func(), sequence[]</code>
+exponentiation	<code>**</code>
+multiplication, division	<code>*, /, //, %</code>
+addition, subtraction	<code>+, -</code>
+comparisons	<code>is, is not, ==, !=, , >=</code>
+logical not	<code>not</code>
+logical and	<code>and</code>
+logical or	<code>or</code>
+assignments	<code>=, +=, -=, /=, *=</code>
