@@ -148,8 +148,11 @@ path: 02.csv
 ----
 headers: 1
 ----
+#### code-example ####
+snippet: 01_01.py
+----
 #### text-block ####
-content: This space of the mapping was often implemented in different ways across different operating systems, such as Apple (MacOS Roman), IBM and Microsoft (ISO 8859). Exchanging information across different computers became more difficult, until the Unicode Consortium managed to create a new wider OS-independent mapping standard. The Unicode Consortium finally began to look beyond English speaking countries.
+content: This space of the mapping was often implemented in different ways across different operating systems, such as Apple (MacOS Roman), IBM and Microsoft (ISO 8859) and countries. Exchanging information across different computers became more difficult, until the Unicode Consortium managed to create a new wider OS-independent mapping standard. The Unicode Consortium finally began to look beyond English speaking countries. The last bit of the first byte was then fixed to ISO LATIN 1 as you see in the following diagram.
 ----
 #### image ####
 name: ISOLATIN1.svg
@@ -176,13 +179,13 @@ class: large_image
 ----
 #### text-block ####
 content: Sequence indexing starts from the 0. Meaning that a string of n elements has the elements indexed from 0 to n-1 inclusive. 
-A string can be created using single (U+0022) or double (U+0027) straight quotes. Two options are convenient in case you need to insert a delimiter character into the string representation:
+A string can be created using single <code>'</code> (U+0022) or double <code>"</code> (U+0027) straight quotes. Two options are convenient in case you need to insert a delimiter character into the string representation:
 ----
 #### code-example ####
 snippet: 02.py
 ----
 #### text-block ####
-content: Otherwise, an escape backslash character can be used to tell the interpreter that the character following the backslash is not the end of the sequence but part of it:
+content: Otherwise, an escape backslash character can be used to inform the interpreter that the character following the backslash is not the end of the sequence but part of it:
 ----
 #### code-example ####
 snippet: 03.py
@@ -254,8 +257,6 @@ class: large_image
 ----
 #### text-block ####
 content: Take into account that providing an index equal or higher than the sequence length will cause an <code>IndexError</code> during runtime.
-
-Take into account that providing an index equal or higher than the sequence length will cause an <code>IndexError</code> during runtime.
 ----
 #### section-title ####
 content: Slicing
@@ -305,9 +306,7 @@ class: default
 snippet: 15.py
 ----
 #### text-block ####
-content: triggers a boolean expression able to verify whether a sequence contains a value or not.
-
-For example:
+content: It triggers a boolean expression able to verify whether a sequence contains a value or not. For example:
 ----
 #### code-example ####
 snippet: 16.py
@@ -373,7 +372,7 @@ content: We would also expect this expression evaluates to True, because the <co
 snippet: 23.py
 ----
 #### text-block ####
-content: Which means that 
+content: Which means that
 ----
 #### code-example ####
 snippet: 24.py

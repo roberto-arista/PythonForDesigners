@@ -1,1 +1,1 @@
-'abcdefghijklmnopqrstuvwxyz'[4:24:2]
+'abcdefghijklmnopqrstuvwxyz'[4:24:2]  # egikmoqsuw
