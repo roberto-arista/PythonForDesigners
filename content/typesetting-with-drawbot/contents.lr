@@ -72,10 +72,10 @@ class: default
 content: The minimum setting action in Drawbot related to type is the composition of single lines of glyphs. In order to do so we have to make a number of decisions upfront:
 ----
 #### text-block ####
-content: + which characters have to be drawn, the actual content 
+content: + which characters have to be drawn, the content
 + the position of the text line on the canvas
-+ the font from which font the glyphs should be picked up
-+ the body size
++ the font from which the glyphs should be picked up
++ body size
 + fill and stroke color
 ----
 #### text-block ####
