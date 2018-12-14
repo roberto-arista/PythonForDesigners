@@ -118,7 +118,7 @@ content: <code>242</code> is converted to <code>11110010</code>. The binary repr
 snippet: 15.py
 ----
 #### text-block ####
-content: 65 in the Unicode mapping points to the uppercase A which is then joined to the string literal
+content: 65 in the Unicode mapping points to the uppercase 'A' which is then joined to the string literal
 ----
 #### code-example ####
 snippet: 16.py
@@ -130,7 +130,7 @@ content: The plus in front of the string’s width forces the interpreter to put
 snippet: 17.py
 ----
 #### text-block ####
-content: converts <code>3792₁₀</code> to <code>17B₁₆</code>, using uppercase letters. Then it adds an extra 0 character in front of the hexadecimal representation to reach length 4. Finally, it is linked to the string literal <code>'U+'</code>.
+content: converts <code>3792₁₀</code> to <code>17B₁₆</code>, using uppercase letters. Then it adds an extra <code>0</code> character in front of the hexadecimal representation to reach length 4. Finally, it is linked to the string literal <code>'U+'</code>.
 
 Now, let’s look at a selection of options for floating-point numbers
 ----
