@@ -366,7 +366,7 @@ content: The first two character representations are equal, but the third one (<
 snippet: 22.py
 ----
 #### text-block ####
-content: We would also expect this expression evaluates to True, because the <code>'b'</code> comes before <code>'m'</code> in the Latin alphabet. Well, not really. Because the uppercase <code>'M'</code> comes before the lowercase <code>'b'</code> in the Unicode mapping. I know it does n’t make sense at first sight, but if capital and lowercase characters occupy two different spots into the encoding, this is somehow a mandatory behaviour. Let’s check the numbers:
+content: We would also expect this expression evaluates to True, because the <code>'b'</code> comes before <code>'m'</code> in the Latin alphabet. Well, not really. Because the uppercase <code>'M'</code> comes before the lowercase <code>'b'</code> in the Unicode mapping. I know it doesn’t make sense at first sight, but if capital and lowercase characters occupy two different spots into the encoding, this is somehow a mandatory behaviour. Let’s check the numbers:
 ----
 #### code-example ####
 snippet: 23.py
