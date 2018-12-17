@@ -1,6 +1,6 @@
-myFirstList = [1, ‘a’, False]
+myFirstList = [1, 'a', False]
 mySecondList = myFirstList
-myThirdList = [1, ‘a’, False]
+myThirdList = [1, 'a', False]
 
 # two aliases referring to the same object in memory
 myFirstList is mySecondList

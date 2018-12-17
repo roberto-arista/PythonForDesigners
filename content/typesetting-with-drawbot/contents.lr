@@ -191,9 +191,9 @@ snippet: 10.py
 diagram: 2pagesleading.svg
 ----
 #### text-block ####
-content: The Drawbot default is 12pt.
+content: The Drawbot default is pointSize * 1.2.
 
-Fonts already contain a lot of information concerning the horizontal distribution of space. As we sawin the previous chapters, white is as important as black. A type designer will provide the font with all the necessary data to compose a good paragraph of text. Think twice about overriding this information. It is a distortion of type as much as a non-proportional scaling. Well, maybe a bit more subtle, but a trained eye will recognize it immediately.
+Fonts already contain a lot of information concerning the horizontal distribution of space. As we saw in the previous chapters, white is as important as black. A type designer will provide the font with all the necessary data to compose a good paragraph of text. Think twice about overriding this information. It is a distortion of type as much as a non-proportional scaling. Well, maybe a bit more subtle, but a trained eye will recognize it immediately.
 
 But, there are a few cases where it makes sense to alter the composition with some inner-character extra space. The <code>tracking()</code> function is here for this. Tracking –not to be confused with kerning– is the injection or subtraction of a fixed amount of white space between the glyphs. Text composed at small size, like 8pt, could benefit from some extra spacing.
 ----

@@ -293,7 +293,7 @@ snippet: 25.py
 image: 4lines.png
 ----
 #### text-block ####
-content: The advantages of the second versionare enormous, starting for the very basic fact that you can add and subtract elements with almost no changes.
+content: The advantages of the second version are enormous, starting for the very basic fact that you can add and subtract elements with almost no changes.
 ----
 #### code-example ####
 snippet: 26.py
@@ -325,7 +325,7 @@ snippet: 29.py
 image: lines.png
 ----
 #### text-block ####
-content: Remember that <code>if</code> statements can be used into the <code>for</code> body, meaning that we can perform choices within an iterative process:
+content: Remember that <code>if</code> statements can be used in the <code>for</code> body, meaning that we can perform choices within an iterative process:
 ----
 #### code-example ####
 snippet: 30.py
