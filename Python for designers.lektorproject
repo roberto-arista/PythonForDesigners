@@ -1,5 +1,6 @@
 [project]
 name = Python for designers
+url_style = absolute
 
 [packages]
 lektor-jinja-content = 0.4.2

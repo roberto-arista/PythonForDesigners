@@ -4,44 +4,8 @@
 {% block content %}
 <div class="chapterContainer" id='sourceTypography' style="display: none">
 
-  <!-- start left column -->
   <div class="left-column">
-
-
-
-    <!-- tocBar -->
-
-    <!-- home button! -->
-    <ol class='tocBar'>
-      <li>
-        <div class="tocBar-sortKey">&#8199;</div>
-        <div class="tocBar-title"><a href="/">Home!</a></div>
-      </li>
-
-      {% set startingIndex = -1 %}
-      {% set chapters = site.get('/').children.filter(F._model == 'chapter').order_by('sort_key') %}
-      {% set lenChapters = chapters.all()|length %}
-      {% for chapter in chapters %}
-        <li><div class="tocBar-sortKey {% if this._path == chapter._path %}tocBar-active{% endif %}">{% if chapter.sort_key > 0 %}{{ chapter.sort_key }})&#8199;{% endif %}</div>
-            <div class="tocBar-title"><a href="{{ chapter|url }}">{{ chapter.title }}</a></div></li>
-      {% endfor %}
-
-      <!-- empty line -->
-      <li>
-        <div class="tocBar-sortKey">&#8199;</div>
-      </li>
-
-      <!-- impressum -->
-      <li>
-        <div class="tocBar-sortKey">&#8199;</div>
-        <div class="tocBar-title"><a href="/impressum">Impressum</a></div>
-      </li>
-
-    </ol>
-
-
-
-  <!-- end left column -->
+    {% include "leftMenu.html" %}
   </div>
 
   <!-- start right column -->
@@ -53,6 +17,9 @@
 
     <div class="prevNext-wrapper">
 
+      {% set startingIndex = -1 %}
+      {% set chapters = site.get('/').children.filter(F._model == 'chapter').order_by('sort_key') %}
+      {% set lenChapters = chapters.all()|length %}
       {% if this.sort_key > startingIndex %}
         {% set prevIndex = this.sort_key-1 -startingIndex %}
           <div class='prevButton'><p><a href="{{ chapters.all()[prevIndex].path }}">>>> prev()</a></p></div>

@@ -1,0 +1,18 @@
+{% extends "baseLayout.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+
+{% block content %}
+
+<div class="chapterContainer">
+
+    <div class="left-column">
+        {% include "leftMenu.html" %}
+    </div>
+
+    <div class='right-column'>
+        <h1>{{ this.title }}</h1>
+        <img class='large_image' src="{{ 'static/imgs/404.svg' | asseturl }}">
+    </div>
+
+</div>
+{% endblock %}
