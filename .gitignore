@@ -1,5 +1,8 @@
 node_modules/
 
+# font files
+assets/static/fonts
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
