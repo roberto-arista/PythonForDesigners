@@ -7,7 +7,9 @@
     <div class="alignmentContainer">
         <h1>{{ this.title }}</h1>
 
-        {% if this.visual_abstract %}<img class='large_image' src="{{ this.visual_abstract }}">{% endif %}
+        {% if this.visual_abstract %}
+            <img class='large_image' src="{{ this.visual_abstract }}">
+        {% endif %}
 
         <div class="chapterContainer" id='sourceTypography' style="display: none">{{ this.body }}</div>
         <div class="chapterContainer" id="resultTypography"></div>
