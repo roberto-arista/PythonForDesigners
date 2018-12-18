@@ -20,33 +20,15 @@ $back-color: #fff5f8;
 $exercise-background: #e2f4ff;
 
 // mobile (to be structured)
-// $caption-phone: 12px;
 $bodySize-phone: 1em;
 $lineHeight-phone: 1.25em;
-
-// $code-phone: 14px;
-// $containerWidth-phone: 320px;
-// $navigationBodySize-phone: 20px;
-// $navigationLineHeight-phone: 24px;
-
-// $headerBody-phone: 16px;
 
 $break-small: 600px;  // below phone, above tablet
 $break-small-plusOne: $break-small +1;
 
 // tablet (to be structured)
-// $caption-tablet: 14px;
-
 $bodySize-tablet: 1.2em;
 $lineHeight-tablet: 1.4em;
-
-// $code-tablet: 18px;
-// $containerWidth-tablet: 600px;
-// $navigationBodySize-tablet: 16px;
-// $navigationLineHeight-tablet: 24px;
-
-// $headerBody-tablet: 20px;
-
 $colWidth-tablet: 100px;
 $gutter-tablet: 12px;
 
@@ -54,15 +36,8 @@ $break-medium: 1280px;  // below tablet, above desktop
 $break-medium-plusOne: $break-medium +1;
 
 // desktop
-// $caption-desktop: 12px;
-
 $bodySize-desktop: 1.2em;
 $lineHeight-desktop: 1.4em;
-
-// $headerBody-desktop: 17px;
-
-// $code-desktop: 17px;
-
 $colWidth-desktop: 132px;
 $gutter-desktop: 32px;
 
@@ -81,6 +56,20 @@ $standardShadow: 0px 3px 6px $medium-gray;
   }
 }
 
-// @include breakpoint(smartphone) {}
-// @include breakpoint(tablet) {}
-// @include breakpoint(desktop) {}
+// prefixes flexbox
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;
+  -moz-box-ordinal-group: $val;
+  -ms-flex-order: $val;
+  -webkit-order: $val;
+  order: $val;
+}
+

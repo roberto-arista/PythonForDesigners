@@ -31,14 +31,13 @@ html {height: 100%}
 
 .chapterContainer {
   @include breakpoint(desktop) {
-    height: 100%;
-    display: flex;
+    @include flexbox();
     flex-wrap: wrap;
   }
 }
 
 .left-column {
-  order: 0;
+  @include order(0);
   background-color: $light-gray;
 
   @include breakpoint(smartphone) {
@@ -51,12 +50,14 @@ html {height: 100%}
 
   @include breakpoint(desktop) {
     display: block;
+    min-height: 85vh;
     width: $colWidth-desktop*2+$gutter-desktop*1;
+
   }
 }
 
 .right-column {
-  order: 1;
+  @include order(1);
 
   @include breakpoint(smartphone) {
     margin: 0 auto;
@@ -88,7 +89,7 @@ body {
   box-sizing: border-box;
 
   height: 100%;
-  display: flex;
+  @include flexbox();
   flex-direction: column;
 
   font-family: 'Laica Regular', Georgia, serif;
@@ -287,7 +288,7 @@ div.opening {
 }
 
 .tocCover {
-  display: flex;
+  @include flexbox();
   flex-wrap: wrap;
   justify-content: space-between;
   box-sizing: border-box;
@@ -308,8 +309,7 @@ div.opening {
 }
 
 .tocCover-item {
-
-  display: flex;
+  @include flexbox();
   flex-wrap: wrap;
   justify-content: space-between;
 
@@ -429,7 +429,7 @@ div.opening {
   padding: 1em 0;
 
   @include breakpoint(desktop) {
-    display: flex;
+    @include flexbox();
     justify-content: space-between;
   }
 }
@@ -455,7 +455,10 @@ div.opening {
 
 // boxes
 .content {
-  flex: 1 0 auto;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
+  // flex: 1 0 auto;
 }
 
 // images
@@ -513,14 +516,14 @@ img.large_image {
   margin: 1em 0;
 
   @include breakpoint(desktop) {
-    display: flex;
+    @include flexbox();
     justify-content: space-between;
   }
 
 }
 
 .code_diagram, .code_image {
-  order: 0;
+  @include order(0);
   margin: 0;
   padding: 0;
 
@@ -567,7 +570,7 @@ img.exercise_image {
 
 // exercises
 div.exercise_wrapper {
-  display: flex;
+  @include flexbox();
   flex-wrap: wrap;
   justify-content: flex-start;
   margin: .5em 0 1em 0;
@@ -628,7 +631,7 @@ ol.tocBar {
 }
 
 .tocBar > li {
-  display: flex;
+  @include flexbox();
   box-sizing: border-box;
   width: 100%;
 
@@ -640,7 +643,7 @@ ol.tocBar {
 .tocBar-sortKey {
   box-sizing: border-box;
   text-align: right;
-  order: 0;
+  @include order(0);
 
   @include breakpoint(desktop) {width: 64px;}
 
@@ -648,7 +651,7 @@ ol.tocBar {
 
 .tocBar-title {
   width: 100%;
-  order: 1;
+  @include order(1);
   margin: 0;
   padding: 0;
 
@@ -707,7 +710,7 @@ ul.tocBar-extraPages > li::before {
 
   @include breakpoint(desktop) {
     border-bottom: none;
-    display: flex;
+    @include flexbox();
     justify-content: flex-start;
   }
 }
@@ -993,7 +996,7 @@ footer .alignmentContainer {
 
   @include breakpoint(desktop) {
     margin-left: $colWidth-desktop*2+$gutter-desktop*2;
-    display: flex;
+    @include flexbox();
     flex-direction: row;
     justify-content: space-between;
     }
@@ -1007,7 +1010,7 @@ footer .alignmentContainerIndex {
 
   @include breakpoint(desktop) {
     margin: 0 auto;
-    display: flex;
+    @include flexbox();
     flex-direction: row;
     justify-content: space-between;
     }
@@ -1101,20 +1104,20 @@ footer a:hover, footer a:visited:hover {
 .footer-left {
   @extend .genericFooterDiv;
   @include breakpoint(desktop) {
-    order: 0;
+    @include order(0);
   }
 }
 
 .footer-middle {
   @extend .genericFooterDiv;
   @include breakpoint(desktop) {
-    order: 1;
+    @include order(1);
   }
 }
 
 .footer-right {
   @extend .genericFooterDiv;
   @include breakpoint(desktop) {
-    order: 2;
+    @include order(2);
   }
 }
