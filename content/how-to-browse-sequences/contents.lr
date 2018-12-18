@@ -11,9 +11,9 @@ visual_abstract: abstract-11.svg
 body: #### text-block ####
 content: We already had a taste of what sequences are thanks to strings. But strings only include  text. What if we need to store a bunch of numerical values? Or some strings together with numerical values?
 
-Python provides two standard data types for generic content: a mutable one, <code class="language-python">list()</code>, and an immutable one, <code class="language-python">tuple()</code>. They store an ordered sequence of *value references*. This means that if a list contains another list – of course this is possible – the inner one will not be copied inside the container, but a reference to it will be stored.
+Python provides two standard data types for generic content: a mutable one, <code>list()</code>, and an immutable one, <code>tuple()</code>. They store an ordered sequence of *value references*. This means that if a list contains another list – of course this is possible – the inner one will not be copied inside the container, but a reference to it will be stored.
 
-In Python a list is delimited by the characters <code class="language-python">[]</code>, while a tuple is delimited by characters <code class="language-python">()</code>.
+In Python a list is delimited by the characters <code>[]</code>, while a tuple is delimited by characters <code>()</code>.
 
 Here’s a list:
 ----
@@ -45,7 +45,7 @@ Emptiness usually does not make much sense for tuples, given they cannot be modi
 snippet: 03.py
 ----
 #### text-block ####
-content: The constructor <code class="language-python">list()</code> and <code class="language-python">tuple()</code> accept any kind of iterable as argument like strings or lists or tuples. They “listify” or “tuplefy” their arguments. For example, if a string is passed as argument to a <code class="language-python">list()</code> function, the result will be a container where each character is stored separately:
+content: The constructor <code>list()</code> and <code>tuple()</code> accept any kind of iterable as argument like strings or lists or tuples. They “listify” or “tuplefy” their arguments. For example, if a string is passed as argument to a <code>list()</code> function, the result will be a container where each character is stored separately:
 ----
 #### code-example ####
 snippet: 04.py
@@ -207,7 +207,7 @@ Here’s the general for construct:
 snippet: 15.py
 ----
 #### text-block ####
-content: Note that the body is four spaces indented rightwards. <code class="language-python">for</code> and <code class="language-python">in</code> are protected keywords. <code class="language-python">eachElement</code> is an identifier to which the body can refer to. Of course its name is arbitrary, it only needs to respect the standard rules for identifiers.
+content: Note that the body is four spaces indented rightwards. <code>for</code> and <code>in</code> are protected keywords. <code>eachElement</code> is an identifier to which the body can refer to. Of course its name is arbitrary, it only needs to respect the standard rules for identifiers.
 ----
 #### image ####
 name: for.svg
@@ -215,7 +215,7 @@ name: for.svg
 class: large_image
 ----
 #### text-block ####
-content: The iterable can be created either before the <code class="language-python">for</code> opening statement or created on the spot. Meaning that this example:
+content: The iterable can be created either before the <code>for</code> opening statement or created on the spot. Meaning that this example:
 ----
 #### code-example ####
 snippet: 16.py
@@ -233,13 +233,13 @@ content: This also means that we could invoke a function which is able to genera
 snippet: 18.py
 ----
 #### text-block ####
-content: Python provides a function that you will use very often in your coding routine: <code class="language-python">range()</code>. This function returns an iterator –not a real list– which will provide a sequence of integers according to the following arguments
+content: Python provides a function that you will use very often in your coding routine: <code>range()</code>. This function returns an iterator –not a real list– which will provide a sequence of integers according to the following arguments
 ----
 #### code-example ####
 snippet: 19.py
 ----
 #### text-block ####
-content: <code class="language-python">stop</code> and <code class="language-python">step</code> are optional. <code class="language-python">stop</code> has to be addressed if <code class="language-python">step</code> is defined. Take into account that, as for the slicing notation, the <code class="language-python">stop</code> value is not included into the range created.
+content: <code>stop</code> and <code>step</code> are optional. <code>stop</code> has to be addressed if <code>step</code> is defined. Take into account that, as for the slicing notation, the <code>stop</code> value is not included into the range created.
 
 This function will make the iteration over a sequence of integer number easy and compact:
 ----
@@ -264,7 +264,7 @@ class: large_image
 snippet: 22.py
 ----
 #### text-block ####
-content: A for construct is the perfect companion of an <code class="language-python">.append() </code>list method. It is very common to create a series of values starting from a pre-existing one. Like making an all-caps version of a word sequence:
+content: A for construct is the perfect companion of an <code>.append() </code>list method. It is very common to create a series of values starting from a pre-existing one. Like making an all-caps version of a word sequence:
 ----
 #### code-example ####
 snippet: 23.py
@@ -275,7 +275,7 @@ content: Drawing Many Times in One Direction
 class: default
 ----
 #### text-block ####
-content: Just like the <code class="language-python">while</code> construct, <code class="language-python">for</code> can be very helpful to draw shapes repetitively. In this way your code will look compact and it will be easy to edit.
+content: Just like the <code>while</code> construct, <code>for</code> can be very helpful to draw shapes repetitively. In this way your code will look compact and it will be easy to edit.
 
 Instead of:
 ----
@@ -293,7 +293,7 @@ snippet: 25.py
 image: 4lines.png
 ----
 #### text-block ####
-content: The advantages of the second versionare enormous, starting for the very basic fact that you can add and subtract elements with almost no changes.
+content: The advantages of the second version are enormous, starting for the very basic fact that you can add and subtract elements with almost no changes.
 ----
 #### code-example ####
 snippet: 26.py
@@ -325,7 +325,7 @@ snippet: 29.py
 image: lines.png
 ----
 #### text-block ####
-content: Remember that <code class="language-python">if</code> statements can be used into the <code class="language-python">for</code> body, meaning that we can perform choices within an iterative process:
+content: Remember that <code>if</code> statements can be used in the <code>for</code> body, meaning that we can perform choices within an iterative process:
 ----
 #### code-example ####
 snippet: 30.py
@@ -338,7 +338,7 @@ content: Drawing Many Times in Two Directions
 class: default
 ----
 #### text-block ####
-content: A single <code class="language-python">for</code> construct allows repetition in one dimension. But, as we have seen with the previous example, other constructs can be used inside the for body. Which means that a second for loop can be nested into the first for loop. In this way the repetition becomes two dimensional.
+content: A single <code>for</code> construct allows repetition in one dimension. But, as we have seen with the previous example, other constructs can be used inside the for body. Which means that a second for loop can be nested into the first for loop. In this way the repetition becomes two dimensional.
 
 If we need to draw a table or 90° based pattern, this technique becomes very handy. Consider the following drawing
 ----
@@ -372,7 +372,7 @@ snippet: 32.py
 image: cols4.png
 ----
 #### text-block ####
-content: If we combine the two constructs together we can draw the entire matrix *calling* the <code class="language-python">rect()</code> function only once
+content: If we combine the two constructs together we can draw the entire matrix *calling* the <code>rect()</code> function only once
 ----
 #### code-example ####
 snippet: 33.py
@@ -388,7 +388,7 @@ snippet: 34.py
 image: gridnumbers.png
 ----
 #### text-block ####
-content: As for the single <code class="language-python">for</code> construct, calculations performed within the body can affect the quality of the drawing. A one-dimensional gradient can easily become bi-dimensional
+content: As for the single <code>for</code> construct, calculations performed within the body can affect the quality of the drawing. A one-dimensional gradient can easily become bi-dimensional
 ----
 #### code-example ####
 snippet: 35.py
@@ -396,7 +396,7 @@ snippet: 35.py
 image: matrixRect.png
 ----
 #### text-block ####
-content: and an <code class="language-python">if</code> statement nested into the inner <code class="language-python">for</code> loop can draw a chess board:
+content: and an <code>if</code> statement nested into the inner <code>for</code> loop can draw a chess board:
 ----
 #### code-example ####
 snippet: 36.py

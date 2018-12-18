@@ -16,7 +16,7 @@ class: small_image
 #### text-block ####
 content: A Drawbot program can control the drawing of multiple PDF canvases. Think of the canvas as a sheet of graph paper. Drawbot is a friend who is willing to draw on the graph paper according to your instructions. The most unambiguous way to communicate what you need is to provide numerical data to describe shapes: these are coordinates.
 
-As you launch Drawbot, it shows you an empty gray canvas (left), a text box where you can type code (top right) and a console (bottom right). Drawbot has a default canvas size of 1000 by 1000 points. We can define a different canvas size using the <code class="language-python">size()</code> function. Take into account that the canvas size should be defined before executing any other drawing command, otherwise it will cause no effect. Just like in the physical world, where we pick up a piece of paper and then we start to draw.
+As you launch Drawbot, it shows you an empty gray canvas (left), a text box where you can type code (top right) and a console (bottom right). Drawbot has a default canvas size of 1000 by 1000 points. We can define a different canvas size using the <code>size()</code> function. Take into account that the canvas size should be defined before executing any other drawing command, otherwise it will cause no effect. Just like in the physical world, where we pick up a piece of paper and then we start to draw.
 
 Differently, from an interactive interpreter, Drawbot is script based. It means that you can store your programs as text files with a .py extension. If you want to execute your program, you have to invoke the interpreter to “run” using cmd+R explicitly.
 
@@ -38,7 +38,7 @@ name: rounding.svg
 class: large_image
 ----
 #### text-block ####
-content: The <code class="language-python">size()</code> function accepts two kind of parameters:
+content: The <code>size()</code> function accepts two kind of parameters:
 ----
 #### text-block ####
 content: + a pair of coordinates
@@ -93,9 +93,9 @@ content: and so on. Think of these figures as percentages of light presence (0 a
 The features of our drawing tool are defined by 3 functions:
 ----
 #### text-block ####
-content: + <code class="language-python">fill(aColor)</code>
-+ <code class="language-python">stroke(aColor)</code>
-+ <code class="language-python">strokeWidth(thickness)</code>
+content: + <code>fill(aColor)</code>
++ <code>stroke(aColor)</code>
++ <code>strokeWidth(thickness)</code>
 ----
 #### text-block ####
 content: They need to be called before the drawing functions: first we choose the tool, then we draw.
@@ -108,7 +108,7 @@ snippet: 04.py
 diagram: rect().svg
 ----
 #### text-block ####
-content: This function draws a rectangle on the canvas using <code class="language-python">x</code> and <code class="language-python">y</code> as lower left corner.
+content: This function draws a rectangle on the canvas using <code>x</code> and <code>y</code> as lower left corner.
 ----
 #### code-example ####
 snippet: 05.py
@@ -126,7 +126,7 @@ snippet: 06.py
 diagram: oval().svg
 ----
 #### text-block ####
-content: This function draws an oval on the canvas using <code class="language-python">x</code> and <code class="language-python">y</code> as the lower left point of the rectangle where you could inscribe the oval. The width argument and the height argument correspond to the horizontal and vertical diameter.
+content: This function draws an oval on the canvas using <code>x</code> and <code>y</code> as the lower left point of the rectangle where you could inscribe the oval. The width argument and the height argument correspond to the horizontal and vertical diameter.
 ----
 #### code-example ####
 snippet: 07.py
@@ -221,7 +221,7 @@ combine the circles and the squares exercises, draw the four squares below the f
 image: esOvalRect.png
 ----
 #### text-block ####
-content: Take also into account that once a <code class="language-python">fill()</code> or <code class="language-python">stroke()</code> is set, it is used until further change. This script:
+content: Take also into account that once a <code>fill()</code> or <code>stroke()</code> is set, it is used until further change. This script:
 ----
 #### code-example ####
 snippet: 17.py

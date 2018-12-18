@@ -148,8 +148,11 @@ path: 02.csv
 ----
 headers: 1
 ----
+#### code-example ####
+snippet: 01_01.py
+----
 #### text-block ####
-content: This space of the mapping was often implemented in different ways across different operating systems, such as Apple (MacOS Roman), IBM and Microsoft (ISO 8859). Exchanging information across different computers became more difficult, until the Unicode Consortium managed to create a new wider OS-independent mapping standard. The Unicode Consortium finally began to look beyond English speaking countries.
+content: This space of the mapping was often implemented in different ways across different operating systems, such as Apple (MacOS Roman), IBM and Microsoft (ISO 8859) and countries. Exchanging information across different computers became more difficult, until the Unicode Consortium managed to create a new wider OS-independent mapping standard. The Unicode Consortium finally began to look beyond English speaking countries. The last bit of the first byte was then fixed to ISO LATIN 1 as you see in the following diagram.
 ----
 #### image ####
 name: ISOLATIN1.svg
@@ -176,31 +179,31 @@ class: large_image
 ----
 #### text-block ####
 content: Sequence indexing starts from the 0. Meaning that a string of n elements has the elements indexed from 0 to n-1 inclusive. 
-A string can be created using single (U+0022) or double (U+0027) straight quotes. Two options are convenient in case you need to insert a delimiter character into the string representation:
+A string can be created using single <code>'</code> (U+0022) or double <code>"</code> (U+0027) straight quotes. Two options are convenient in case you need to insert a delimiter character into the string representation:
 ----
 #### code-example ####
 snippet: 02.py
 ----
 #### text-block ####
-content: Otherwise, an escape backslash character can be used to tell the interpreter that the character following the backslash is not the end of the sequence but part of it:
+content: Otherwise, an escape backslash character can be used to inform the interpreter that the character following the backslash is not the end of the sequence but part of it:
 ----
 #### code-example ####
 snippet: 03.py
 ----
 #### text-block ####
-content: Other commonly escaped characters are the newline (<code class="language-python">\n</code>) and the tab (<code class="language-python">\t</code>). In addition, Python supports triple quotes string declaration for strings which embed newline characters naturally. These are used especially for code documentation purposes.
+content: Other commonly escaped characters are the newline (<code>\n</code>) and the tab (<code>\t</code>). In addition, Python supports triple quotes string declaration for strings which embed newline characters naturally. These are used especially for code documentation purposes.
 ----
 #### code-example ####
 snippet: 04.py
 ----
 #### text-block ####
-content: As said before, each character is mapped to a numerical value according to the Unicode standard. Python provides the built-in function <code class="language-python">ord()</code> to get the position of a character within the standard mapping.
+content: As said before, each character is mapped to a numerical value according to the Unicode standard. Python provides the built-in function <code>ord()</code> to get the position of a character within the standard mapping.
 ----
 #### code-example ####
 snippet: 05.py
 ----
 #### text-block ####
-content: Conversely, Python gives the possibility to access a mapping position using an integer value through the <code class="language-python">chr()</code> function. Given that each number is assigned to one and only character, using 192 as input value we will obtain:
+content: Conversely, Python gives the possibility to access a mapping position using an integer value through the <code>chr()</code> function. Given that each number is assigned to one and only character, using 192 as input value we will obtain:
 ----
 #### code-example ####
 snippet: 06.py
@@ -214,13 +217,13 @@ path: 03.csv
 headers: 1
 ----
 #### text-block ####
-content: These notation can also be included in Python string declaration using the <code class="language-python">\u</code> escape literal:
+content: These notation can also be included in Python string declaration using the <code>\u</code> escape literal:
 ----
 #### code-example ####
 snippet: 07.py
 ----
 #### text-block ####
-content: Strings, as the other basic data types, have a built-in constructor function named <code class="language-python">str()</code>. This function allows the conversion of a different type of object into a string. It accepts almost any kind of object, but it has a limited range of options.
+content: Strings, as the other basic data types, have a built-in constructor function named <code>str()</code>. This function allows the conversion of a different type of object into a string. It accepts almost any kind of object, but it has a limited range of options.
 ----
 #### code-example ####
 snippet: 08.py
@@ -253,9 +256,7 @@ name: hello-access-negative.svg
 class: large_image
 ----
 #### text-block ####
-content: Take into account that providing an index equal or higher than the sequence length will cause an <code class="language-python">IndexError</code> during runtime.
-
-Take into account that providing an index equal or higher than the sequence length will cause an <code class="language-python">IndexError</code> during runtime.
+content: Take into account that providing an index equal or higher than the sequence length will cause an <code>IndexError</code> during runtime.
 ----
 #### section-title ####
 content: Slicing
@@ -305,9 +306,7 @@ class: default
 snippet: 15.py
 ----
 #### text-block ####
-content: triggers a boolean expression able to verify whether a sequence contains a value or not.
-
-For example:
+content: It triggers a boolean expression able to verify whether a sequence contains a value or not. For example:
 ----
 #### code-example ####
 snippet: 16.py
@@ -361,19 +360,19 @@ name: evaluateHat.svg
 class: large_image
 ----
 #### text-block ####
-content: The first two character representations are equal, but the third one (<code class="language-python">b</code> vs. <code class="language-python">t</code>) is not, meaning that <code class="language-python">"habit"</code> is inferior to <code class="language-python">"hat"</code>. In fact the expression evaluates to <code class="language-python">True</code>. This applies to our common notion of alphabetical order. Then consider the following
+content: The first two character representations are equal, but the third one (<code>b</code> vs. <code>t</code>) is not, meaning that <code>"habit"</code> is inferior to <code>"hat"</code>. In fact the expression evaluates to <code>True</code>. This applies to our common notion of alphabetical order. Then consider the following
 ----
 #### code-example ####
 snippet: 22.py
 ----
 #### text-block ####
-content: We would also expect this expression evaluates to True, because the <code class="language-python">'b'</code> comes before <code class="language-python">'m'</code> in the Latin alphabet. Well, not really. Because the uppercase <code class="language-python">'M'</code> comes before the lowercase <code class="language-python">'b'</code> in the Unicode mapping. I know it does n’t make sense at first sight, but if capital and lowercase characters occupy two different spots into the encoding, this is somehow a mandatory behaviour. Let’s check the numbers:
+content: We would also expect this expression evaluates to True, because the <code>'b'</code> comes before <code>'m'</code> in the Latin alphabet. Well, not really. Because the uppercase <code>'M'</code> comes before the lowercase <code>'b'</code> in the Unicode mapping. I know it doesn’t make sense at first sight, but if capital and lowercase characters occupy two different spots into the encoding, this is somehow a mandatory behaviour. Let’s check the numbers:
 ----
 #### code-example ####
 snippet: 23.py
 ----
 #### text-block ####
-content: Which means that 
+content: Which means that
 ----
 #### code-example ####
 snippet: 24.py
@@ -384,11 +383,11 @@ content: Concatenation
 class: default
 ----
 #### text-block ####
-content: Python allows the concatenation of sequences using the <code class="language-python">+</code> and <code class="language-python">*</code> operators. For example
+content: Python allows the concatenation of sequences using the <code>+</code> and <code>*</code> operators. For example
 ----
 #### code-example ####
 snippet: 25.py
 ----
 #### text-block ####
-content: Note that a sequence can be multiplied only by an integer value, no floating points allowed. Note that this operation is not memory efficient. If you need to concatenate intensively, consider using the string <code class="language-python">.join()</code> method.
+content: Note that a sequence can be multiplied only by an integer value, no floating points allowed. Note that this operation is not memory efficient. If you need to concatenate intensively, consider using the string <code>.join()</code> method.
 ----

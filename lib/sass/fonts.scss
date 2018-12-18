@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'Laica Regular';
+  src: url('/static/fonts/Laica-Regular.woff2') format('woff2'),
+  url('/static/fonts/Laica-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Laica Italic';
+  src: url('/static/fonts/Laica-Regular_Italic.woff2') format('woff2'),
+  url('/static/fonts/Laica-Regular_Italic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Laica Bold';
+  src:  url('/static/fonts/Laica-Bold.woff') format('woff'),
+        url('/static/fonts/Laica-Bold.woff2') format('woff2');
+  }
+
+@font-face {
+  font-family: 'Arnold Regular';
+  src:  url('/static/fonts/Arnold_v0.3-Regular.woff2') format('woff2'),
+        url('/static/fonts/Arnold_v0.3-Regular.woff') format('woff');
+  }
+
+@font-face {
+  font-family: 'Arnold Italic';
+  src:  url('/static/fonts/Arnold_v0.3-Italic.woff2') format('woff2'),
+        url('/static/fonts/Arnold_v0.3-Italic.woff') format('woff');
+  }
+
+@font-face {
+  font-family: 'Gig Regular';
+  src:  url('/static/fonts/GigV0.2-Regular.woff') format('woff'),
+  }

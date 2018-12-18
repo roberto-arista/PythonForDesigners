@@ -1,15 +1,15 @@
 @charset "UTF-8";
 @font-face {
   font-family: 'Laica Regular';
-  src: url("/static/fonts/LAICA-03-Regular.woff2") format("woff2"), url("/static/fonts/LAICA-03-Regular.woff") format("woff"); }
+  src: url("/static/fonts/Laica-Regular.woff2") format("woff2"), url("/static/fonts/Laica-Regular.woff") format("woff"); }
 
 @font-face {
   font-family: 'Laica Italic';
-  src: url("/static/fonts/LAICA-ITALIC-03-Regular.woff2") format("woff2"), url("/static/fonts/LAICA-ITALIC-03-Regular.woff") format("woff"); }
+  src: url("/static/fonts/Laica-Regular_Italic.woff2") format("woff2"), url("/static/fonts/Laica-Regular_Italic.woff") format("woff"); }
 
 @font-face {
   font-family: 'Laica Bold';
-  src: url("/static/fonts/LAICA-03-Bold.woff") format("woff"), url("/static/fonts/LAICA-03-Bold.woff2") format("woff2"); }
+  src: url("/static/fonts/Laica-Bold.woff") format("woff"), url("/static/fonts/Laica-Bold.woff2") format("woff2"); }
 
 @font-face {
   font-family: 'Arnold Regular';
@@ -34,20 +34,21 @@ html {
   background: #FFEDED;
   /* Gecko Browsers */ }
 
-.alignmentContainer, .homePageCallouts, .index-header-wrapper {
+.alignmentContainer, .homePageCallouts, .index-header-wrapper, .alignmentContainerIndex {
   margin: 0 auto; }
   @media only screen and (max-width: 600px) {
-    .alignmentContainer, .homePageCallouts, .index-header-wrapper {
+    .alignmentContainer, .homePageCallouts, .index-header-wrapper, .alignmentContainerIndex {
       width: 100%; } }
   @media only screen and (min-width: 601px) and (max-width: 1280px) {
-    .alignmentContainer, .homePageCallouts, .index-header-wrapper {
+    .alignmentContainer, .homePageCallouts, .index-header-wrapper, .alignmentContainerIndex {
       width: 436px; } }
   @media only screen and (min-width: 1281px) {
-    .alignmentContainer, .homePageCallouts, .index-header-wrapper {
+    .alignmentContainer, .homePageCallouts, .index-header-wrapper, .alignmentContainerIndex {
       width: 952px; } }
 
 @media only screen and (min-width: 1281px) {
   .chapterContainer {
+    height: 100%;
     display: flex;
     flex-wrap: wrap; } }
 
@@ -62,8 +63,8 @@ html {
       display: none; } }
   @media only screen and (min-width: 1281px) {
     .left-column {
-      width: 296px;
-      display: block; } }
+      display: block;
+      width: 296px; } }
 
 .right-column {
   order: 1; }
@@ -771,7 +772,15 @@ footer {
       line-height: 1.25em; } }
 
 @media only screen and (min-width: 1281px) {
-  footer .alignmentContainer, footer .homePageCallouts, footer .index-header-wrapper {
+  footer .alignmentContainer, footer .homePageCallouts, footer .index-header-wrapper, footer .alignmentContainerIndex {
+    margin-left: 328px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; } }
+
+@media only screen and (min-width: 1281px) {
+  footer .alignmentContainerIndex {
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between; } }

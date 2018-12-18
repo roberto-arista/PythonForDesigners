@@ -1,2 +1,3 @@
 message = 'hello'
-print(f'{message:<10}')
+f'{message:<10}'
+# hello     

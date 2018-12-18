@@ -1,5 +1,5 @@
 Method	Behaviour
-<code class="language-python">s.index(s2, i, j)</code>	Index of first occurrence of s2 in s after index i and before index j
-<code class="language-python">s.rindex(s2)</code>	Return highest index of s2 in s (raise ValueError if not found)
-<code class="language-python">s.find(s2)</code>	Find and return lowest index of s2 in s
-<code class="language-python">s.rfind(s2)</code>	Return highest index of s2 in s
+<code>s.index(s2, i, j)</code>	Index of first occurrence of <code>s2</code> in <code>s</code> after index i and before index j
+<code>s.rindex(s2)</code>	Return highest index of <code>s2</code> in s (raise <code>ValueError</code> if not found)
+<code>s.find(s2)</code>	Find and return lowest index of <code>s2</code> in <code>s</code>
+<code>s.rfind(s2)</code>	Return highest index of <code>s2</code> in <code>s</code>
