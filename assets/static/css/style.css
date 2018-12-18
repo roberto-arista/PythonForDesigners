@@ -34,16 +34,16 @@ html {
   background: #FFEDED;
   /* Gecko Browsers */ }
 
-.alignmentContainer, .homePageCallouts, .index-header-wrapper {
+.alignmentContainer, .homePageCallouts, .index-header-wrapper, .alignmentContainerIndex {
   margin: 0 auto; }
   @media only screen and (max-width: 600px) {
-    .alignmentContainer, .homePageCallouts, .index-header-wrapper {
+    .alignmentContainer, .homePageCallouts, .index-header-wrapper, .alignmentContainerIndex {
       width: 100%; } }
   @media only screen and (min-width: 601px) and (max-width: 1280px) {
-    .alignmentContainer, .homePageCallouts, .index-header-wrapper {
+    .alignmentContainer, .homePageCallouts, .index-header-wrapper, .alignmentContainerIndex {
       width: 436px; } }
   @media only screen and (min-width: 1281px) {
-    .alignmentContainer, .homePageCallouts, .index-header-wrapper {
+    .alignmentContainer, .homePageCallouts, .index-header-wrapper, .alignmentContainerIndex {
       width: 952px; } }
 
 @media only screen and (min-width: 1281px) {
@@ -771,7 +771,15 @@ footer {
       line-height: 1.25em; } }
 
 @media only screen and (min-width: 1281px) {
-  footer .alignmentContainer, footer .homePageCallouts, footer .index-header-wrapper {
+  footer .alignmentContainer, footer .homePageCallouts, footer .index-header-wrapper, footer .alignmentContainerIndex {
+    margin-left: 328px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; } }
+
+@media only screen and (min-width: 1281px) {
+  footer .alignmentContainerIndex {
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between; } }
