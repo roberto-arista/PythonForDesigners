@@ -48,6 +48,7 @@ html {
 
 @media only screen and (min-width: 1281px) {
   .chapterContainer {
+    height: 100%;
     display: flex;
     flex-wrap: wrap; } }
 
@@ -62,8 +63,8 @@ html {
       display: none; } }
   @media only screen and (min-width: 1281px) {
     .left-column {
-      width: 296px;
-      display: block; } }
+      display: block;
+      width: 296px; } }
 
 .right-column {
   order: 1; }
