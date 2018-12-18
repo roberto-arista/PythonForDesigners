@@ -31,6 +31,7 @@ html {height: 100%}
 
 .chapterContainer {
   @include breakpoint(desktop) {
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
   }
@@ -49,8 +50,8 @@ html {height: 100%}
   }
 
   @include breakpoint(desktop) {
-    width: $colWidth-desktop*2+$gutter-desktop*1;
     display: block;
+    width: $colWidth-desktop*2+$gutter-desktop*1;
   }
 }
 
