@@ -16,6 +16,7 @@ for indexRow, eachRow in enumerate(myRoute):
         y = height() - (indexRow+1)*leading
 
         if indexCell == 2:
-            text('{:0>2}:{:0>2}:{:0>2}'.format(*cellContent), (x, y))
+            hour, minute, second = cellContent
+            text(f'{hour:0>2}:{minute:0>2}:{second:0>2}', (x, y))
         else:
-            text('{}'.format(cellContent), (x, y))
+            text(f'{cellContent}', (x, y))

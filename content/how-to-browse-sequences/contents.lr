@@ -37,15 +37,15 @@ name: tuple.svg
 class: large_image
 ----
 #### text-block ####
-content: As we said, elements in lists and tuples are of arbitrary nature: they can be any kind of object, None included. They can be empty too.
+content: As we said, elements in lists and tuples are of arbitrary nature: they can be any kind of object, <code>None</code> included. They can be empty too.
 
-Emptiness usually does not make much sense for tuples, given they cannot be modified once created. Instead it is very common to initiate an empty list which will be populated during an iterative process triggered by a while or for construct. Consider the following example:
+Emptiness usually does not make much sense for tuples, given they cannot be modified once created. Instead it is very common to initiate an empty list which will be populated during an iterative process triggered by a <code>while</code> or <code>for</code> construct. Consider the following example:
 ----
 #### code-example ####
 snippet: 03.py
 ----
 #### text-block ####
-content: The constructor <code>list()</code> and <code>tuple()</code> accept any kind of iterable as argument like strings or lists or tuples. They “listify” or “tuplefy” their arguments. For example, if a string is passed as argument to a <code>list()</code> function, the result will be a container where each character is stored separately:
+content: The constructors <code>list()</code> and <code>tuple()</code> accept any kind of iterable as argument like strings or lists or tuples. They “listify” or “tuplefy” their arguments. For example, if a string is passed as argument to a <code>list()</code> function, the result will be a container where each character is stored separately:
 ----
 #### code-example ####
 snippet: 04.py
@@ -198,9 +198,9 @@ content: For Syntax
 class: default
 ----
 #### text-block ####
-content: Python provides a for-loop syntax which is useful to iterate over a series of elements. Where while comes in handy when we need to keep doing something until a condition is matched,for is preferable when we need to browse a container. for can be used with any kind of *iterable*, which is a wider notion than sequences. Technically, an iterable can be non-sorted (as sets or dicts).
+content: Python provides a for-loop syntax which is useful to iterate over a series of elements. Where <code>while</code> comes in handy when we need to keep doing something until a condition is matched, <code>for</code> is preferable when we need to browse a container. <code>for</code> can be used with any kind of *iterable*, which is a wider notion than sequences. Technically, an iterable can be non-sorted (as sets or dicts).
 
-Here’s the general for construct:
+Here’s the general <code>for</code> construct:
 
 ----
 #### code-example ####
@@ -264,7 +264,7 @@ class: large_image
 snippet: 22.py
 ----
 #### text-block ####
-content: A for construct is the perfect companion of an <code>.append() </code>list method. It is very common to create a series of values starting from a pre-existing one. Like making an all-caps version of a word sequence:
+content: A for construct is the perfect companion of an <code>.append()</code>list method. It is very common to create a series of values starting from a pre-existing one. Like making an all-caps version of a word sequence:
 ----
 #### code-example ####
 snippet: 23.py
@@ -285,7 +285,7 @@ snippet: 24.py
 image: 4lines.png
 ----
 #### text-block ####
-content: go for this structure
+content: go for this kind of structure
 ----
 #### code-example ####
 snippet: 25.py
@@ -338,7 +338,7 @@ content: Drawing Many Times in Two Directions
 class: default
 ----
 #### text-block ####
-content: A single <code>for</code> construct allows repetition in one dimension. But, as we have seen with the previous example, other constructs can be used inside the for body. Which means that a second for loop can be nested into the first for loop. In this way the repetition becomes two dimensional.
+content: A single <code>for</code> construct allows repetition in one dimension. But, as we have seen with the previous example, other constructs can be used inside the <code>for</code> body. Which means that a second <code>for</code> loop can be nested into the first <code>for</code> loop. In this way the repetition becomes two dimensional.
 
 If we need to draw a table or 90° based pattern, this technique becomes very handy. Consider the following drawing
 ----

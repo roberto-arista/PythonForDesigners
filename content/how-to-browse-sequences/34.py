@@ -12,7 +12,7 @@ for rowIndex in range(rows):
 
         stroke(None)
         fill(0)
-        text('{}, {}'.format(colIndex, rowIndex), (x+5, y+5))
+        text(f'{colIndex}, {rowIndex}', (x+5, y+5))
 
         fill(None)
         stroke(0)
