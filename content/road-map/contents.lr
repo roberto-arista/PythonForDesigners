@@ -2,4 +2,28 @@ _model: page
 ---
 title: Road Map
 ---
-body: - search function
+body:
+
+#### text-block ####
+content:
+*Writing a book is an adventure. To begin with, it is a toy and an amusement;
+then it becomes a mistress, and then it becomes a master, and then a tyrant. The
+last phase is that just as you are about to be reconciled to your servitude, you
+kill the monster, and fling him out to the public.* — Sir Winston Churchill
+
+I would have never thought that a quote from a Tory Prime Minister would make his appearance on these premises. I found it in the preface of *Essential Math for Games and Interactive Applications*; I immediately felt sympathy for the authors.
+
+Writing any manual is quite an undertaking, especially if done during free time. And this is a bit of an unusual publication. I didn't want to wait for years before finish it and therefore share it with my students, so I decided instead to publish a "work in progress" manual. For this reason, I chose not to print the content into a book and to keep it adjustable for the time being. Moreover, I also preferred to release the content myself instead of going through a publisher to keep control over it.
+
+There are many subjects that I would like to address in the future. Here is a short list; feel free to propose something in this GitHub issue.
+
++ Colors
++ Matrix Transformations
++ Dealing with time and dates
++ BezierPath()
++ FormattedString()
++ Mechanical Curves
++ Linear and 2d Interpolation
++ Interpolation in multiple dimensions
+---
+visual_abstract: roadmap.svg
