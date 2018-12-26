@@ -1,0 +1,16 @@
+_model: page
+---
+title: Acknowledgements
+---
+visual_abstract: thanksgiving.svg
+---
+body:
+
+#### text-block ####
+content: This manual would not be the same without the contribution of a few people. This is the place to thank them one by one. Let's get started!
++ First of all, a huge thanks to Just van Rossum and Frederik Berlaen for all the work they have been done –and still do– on the Drawbot project. If you want to know more about the story of the tool, check the "Using Drawbot" chapter.
++ Even if he does not write a line of code, Luciano Perondi is the one who got me into programming. How did he manage? Through Parametric Typography. Luciano himself got into the topic thanks to another Professor, Giovanni Lussu. The impact of Lussu's work on my education is substantial, even the connection between Typography and Programming. I am proud to consider both of them friends
++ Beatrice did a remarkable job with the illustrations. It started as an internship project and then stepped forward. I am glad she is on board
++ Silvio helped me to move out from the swamp of the first draft. Good comments, some rewrites, and frank discussions kept me on the line
++ Ruggero and Emanuele helped me to sort out a lot of small issues on this website. From media queries strategy to CSS classes, even if many mysteries of web development are still inaccessible to me, they got me through a lot of nasty problems. Thanks!
++ I sent a draft of this website a bit before the publication to Frank Grießhammer. In two weeks he sent me a pile of handful notes. It was completely unexpected and therefore very welcomed. Thanks!
