@@ -93,10 +93,12 @@ html {
       width: 952px;
       margin-left: 32px; } }
 
-@media only screen and (max-width: 600px) {
-  .page-container {
-    margin: 0 auto;
-    padding: 0 1em; } }
+.page-container {
+  padding-bottom: 1em; }
+  @media only screen and (max-width: 600px) {
+    .page-container {
+      margin: 0 auto;
+      padding: 0 1em; } }
 
 body {
   position: relative;
@@ -156,7 +158,7 @@ h2 {
   font-family: 'Gig Regular';
   color: #FF3366;
   font-size: 1.5em;
-  line-height: 1.5em; }
+  line-height: 1.2em; }
   @media only screen and (min-width: 1281px) {
     h2 {
       margin-left: 164px; } }

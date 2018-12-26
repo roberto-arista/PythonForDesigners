@@ -77,6 +77,8 @@ html {height: 100%}
 
 .page-container {
 
+  padding-bottom: 1em;
+
   @include breakpoint(smartphone) {
     margin: 0 auto;
     padding: 0 1em;
@@ -157,7 +159,7 @@ h2 {
   color: $pink;
 
   font-size: 1.5em;
-  line-height: 1.5em;
+  line-height: 1.2em;
 
   @include breakpoint(desktop) {
       margin-left: $colWidth-desktop+$gutter-desktop;
