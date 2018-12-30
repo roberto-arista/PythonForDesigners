@@ -1,8 +1,8 @@
 _model: chapter
 ---
-title: Typesetting with Drawbot
+title: Typesetting with DrawBot
 ---
-abstract:Finally drawing text into Drawbot, single or multiple lines
+abstract:Finally drawing text into DrawBot, single or multiple lines
 ---
 sort_key: 10
 ---
@@ -33,7 +33,7 @@ name: different_a.svg
 class: small_image
 ----
 #### text-block ####
-content: The drawing of the character appearing on the screen does not come from the Unicode encoding itself. It is stored in a different container: a font. The Unicode encoding is only an intermediate dictionary used to pick the right drawing from the font. In fact the Unicode encoding contains only characters descriptions and their organization. A font file is the translation of the typographer’s case to digital data. The term commonly used for a character prefabricated representation is ‘glyph’. Think of the character as an abstract idea, a collection of common features that make a sign recognizable as such. For example, let’s describe the notion of a capital A we mutually share: two diagonal lines connecting on top and diverging at the bottom plus a horizontal bar intersecting with both diagonal lines, usually placed halfway between top and bottom.
+content: The drawing of the character appearing on the screen does not come from the Unicode encoding itself. It is stored in a different container: a font. The Unicode encoding is only an intermediate dictionary used to pick the right drawing from the font. In fact the Unicode encoding contains only characters descriptions and their organization. A font file is the translation of the typographer’s case to digital data. The term commonly used for the prefabricated representation of a character is ‘glyph’. Think of the character as an abstract idea, a collection of common features that make a sign recognizable as such. For example, let’s describe the notion of a capital A we mutually share: two diagonal lines connecting on top and diverging at the bottom plus a horizontal bar intersecting with both diagonal lines, usually placed halfway between top and bottom.
 It is a rather generic description. Many different drawings can fall into that. They can have serifs or not, they could be stenciled, they could be fat or thin, wide or narrow, and so on. Take also into account that many representations could be recognized as capital A and fall outside that description. It’s hard, or maybe impossible, to put together the right description.
 ----
 #### image ####
@@ -50,7 +50,7 @@ name: lower-upper-case.svg
 class: large_image
 ----
 #### text-block ####
-content: These drawers were then stored into cabinets. Usually, a cabinet would contain different related sizes or styles. Related how? Well, they would share some formal features that would make them look related, as the different faces of people part of the same family.
+content: These drawers were then stored into cabinets. Usually, a cabinet would contain different related sizes or styles. Related how? Well, they would share some formal features that would make them look related, as the different faces of people who are part of the same family.
 
 In fact, this kind of collection forms a font family.
 Note that the term *typeface* is instead used to refer to the common features shared across a collection; it is a way more abstract terminology.
@@ -61,7 +61,7 @@ name: cabinet.svg
 class: small_image
 ----
 #### text-block ####
-content: As you may have inferred, at that time, each font (think about the cabinet’s drawer filled with metal type) was size-specific. Things changed after the introduction of postscript and truetype outlines, when a font was not tied anymore to a specific size. Nevertheless, reading distance and body size are still crucial aspects in the reading experience. Our eyes did not change with the digital transformation of typography. So, when using a font, check if the designer made it with a specific range of sizes in mind; even if you are allowed to scale it to any size without losing detail.
+content: As you may have inferred, at that time, each font (think about the cabinet’s drawer filled with metal type) was size-specific. Things changed after the introduction of cubic and quadratic outlines, when a font was not tied anymore to a specific size. Nevertheless, reading distance and body size are still crucial aspects in the reading experience. Our eyes did not change with the digital transformation of typography. So, when using a font, check if the designer made it with a specific range of sizes in mind; even if you are allowed to scale it to any size without losing detail.
 ----
 #### section-title ####
 content: Setting One Line of Text
@@ -69,7 +69,7 @@ content: Setting One Line of Text
 class: default
 ----
 #### text-block ####
-content: The minimum setting action in Drawbot related to type is the composition of single lines of glyphs. In order to do so we have to make a number of decisions upfront:
+content: The minimum setting action in DrawBot related to type is the composition of single lines of glyphs. In order to do so we have to make a number of decisions upfront:
 ----
 #### text-block ####
 content: + which characters have to be drawn, the content
@@ -79,7 +79,7 @@ content: + which characters have to be drawn, the content
 + fill and stroke color
 ----
 #### text-block ####
-content: Drawbot has some fallback options if we are too lazy to specify all of them. But content and position are mandatory. They are, in fact, the arguments of the <code>text()</code> function:
+content: DrawBot has some fallback options if we are too lazy to specify all of them. But content and position are mandatory. They are, in fact, the arguments of the <code>text()</code> function:
 ----
 #### code-example ####
 snippet: 01.py
@@ -97,7 +97,7 @@ image: text-rect.png
 #### text-block ####
 content: The other choices have to be set with specific functions and must be defined before the <code>text()</code> function is invoked.
 
-<code>font()</code> defines the font used to draw the characters. It accepts a string argument. It should be the name of a postscript font already installed on your computer.
+<code>font()</code> defines the font used to draw the characters. It accepts a string argument. It should be the name of a PostScript font already installed on your computer.
 ----
 #### code-example ####
 snippet: 03.py
@@ -105,7 +105,7 @@ snippet: 03.py
 image: text-font.png
 ----
 #### text-block ####
-content: Drawbot provides a function able to make a list of the postscript fonts installed on your computer. <code>installedFonts()</code> accepts an optional string argument with characters which should be supported by the listed fonts. 
+content: DrawBot provides a function able to make a list of the PostScript fonts installed on your computer. <code>installedFonts()</code> accepts an optional string argument with characters which should be supported by the listed fonts. 
 
 For example, you could use it in the following way:
 ----
@@ -115,7 +115,7 @@ snippet: 04.py
 #### text-block ####
 content: The names printed in the console are the fonts that support the <code>'ЉДЖ'</code> cyrillic characters.
 
-The body size is handled bythe function <code>fontsize()</code>. It accepts a numerical value either an integer or float. The function sets the size in postscript points, the default being 10pt.
+The body size is handled by the function <code>fontSize()</code>. It accepts a numerical value either an integer or float. The function sets the size in PostScript points, the default being 10pt.
 ----
 #### code-example ####
 snippet: 05.py
@@ -134,7 +134,7 @@ image: text-fill.png
 content: Once defined, these settings will be applied to all shapes drawn afterwards. To change these options. just call the functions again.
 ----
 #### section-title ####
-content: Setting Multiple Lines of Text 
+content: Setting Multiple Lines of Text
 ----
 class: default
 ----
@@ -149,7 +149,7 @@ name: textbox.svg
 class: large_image
 ----
 #### text-block ####
-content: First of all, we should use a different function than <code>text()</code>. It would be possible to deal with line breaking ourselves, but Drawbot is generous enough to provide a function which will take care of it automatically: <code>textBox()</code>. Unlike <code>text()</code>, the glyph sequence fits into a rectangle. The function accepts a string as first argument, followed by what’s necessary to define the rectangle <code>(x, y, width, height)</code> and, as optional argument, the alignment of the text.
+content: First of all, we should use a different function than <code>text()</code>. It would be possible to deal with line breaking ourselves, but DrawBot is generous enough to provide a function which will take care of it automatically: <code>textBox()</code>. Unlike <code>text()</code>, the glyph sequence fits into a rectangle. The function accepts a string as first argument, followed by what’s necessary to define the rectangle <code>(x, y, width, height)</code> and, as optional argument, the alignment of the text.
 ----
 #### code-example ####
 snippet: 07.py
@@ -191,7 +191,7 @@ snippet: 10.py
 diagram: 2pagesleading.svg
 ----
 #### text-block ####
-content: The Drawbot default is pointSize * 1.2.
+content: The DrawBot default is pointSize * 1.2.
 
 Fonts already contain a lot of information concerning the horizontal distribution of space. As we saw in the previous chapters, white is as important as black. A type designer will provide the font with all the necessary data to compose a good paragraph of text. Think twice about overriding this information. It is a distortion of type as much as a non-proportional scaling. Well, maybe a bit more subtle, but a trained eye will recognize it immediately.
 

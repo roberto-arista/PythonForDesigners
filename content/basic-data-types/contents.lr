@@ -133,7 +133,7 @@ These are the behaviours you should expect:
 ----
 #### text-block ####
 content: + if a floating-point is provided as argument, the interpreter will truncate the point and any following digit. For instance, <code>3.99</code> and <code>3.1</code> will both become <code>3</code>.
-+ if a string is provided as argument, the interpreter will try to parse it and transform it to an integer value. The output of <code>int('-3')</code> will be <code>3</code>. Something like <code>int('hello')</code> will raise a <code>ValueError</code>.
++ if a string is provided as argument, the interpreter will try to parse it and transform it to an integer value. The output of <code>int('-3')</code> will be <code>-3</code>. Something like <code>int('hello')</code> will raise a <code>ValueError</code>.
 ----
 #### text-block ####
 content: By default <code>int()</code> uses a 10 base for the conversion. If you need a different base you can indicate a second optional argument, like
@@ -142,13 +142,13 @@ content: By default <code>int()</code> uses a 10 base for the conversion. If you
 snippet: 03.py
 ----
 #### text-block ####
-content: The <code>float</code> object in Python is used to represent a positive or negative decimal number. Its literal declaration is made of a polarity sign (optional), digits, and a trailing point optionally followed by other digits. So, both <code>-3.14</code> and <code>3</code>. can be floating-point numbers.
+content: The <code>float</code> object in Python is used to represent a positive or negative decimal number. Its literal declaration is made of a polarity sign (optional), digits, and a trailing point optionally followed by other digits. So, both <code>-3.14</code> and <code>3.</code> can be floating-point numbers.
 
 Another way to declare a floating point number is to use a scientific notation. The Python equivalent for <code>6.02x10²³</code> is <code>6.02e23</code>.
 
 Python provides a function to obtain a floating-point value from an existing object: <code>float()</code>. These are the behaviours you should expect:
-if the argument is an integer it will be converted to floating-point
-if the argument is a string the interpreter will try to parse it and transform it to a floating-point value. You can expect <code>float('-3.14')</code> to be transformed to <code>-3.14</code>. Otherwise, if the interpreter encounters <code>float('-3,14')</code> or <code>float('world')</code>, it will raise a <code>ValueError</code>.
++ if the argument is an integer it will be converted to floating-point
++ if the argument is a string the interpreter will try to parse it and transform it to a floating-point value. You can expect <code>float('-3.14')</code> to be transformed to <code>-3.14</code>. Otherwise, if the interpreter encounters <code>float('-3,14')</code> or <code>float('world')</code>, it will raise a <code>ValueError</code>.
 ----
 #### section-title ####
 content: None Type
