@@ -6,6 +6,7 @@ body:
 
 #### text-block ####
 content:
+
 *Writing a book is an adventure. To begin with, it is a toy and an amusement;
 then it becomes a mistress, and then it becomes a master, and then a tyrant. The
 last phase is that just as you are about to be reconciled to your servitude, you
@@ -20,10 +21,14 @@ There are many subjects that I would like to address in the future. Here is a sh
 + Colors
 + Matrix Transformations
 + Dealing with time and dates
-+ BezierPath()
-+ FormattedString()
++ <code>BezierPath()</code>
++ <code>FormattedString()</code>
 + Mechanical Curves
 + Linear and 2d Interpolation
-+ Interpolation in multiple dimensions
++ Interpolation with mutatorMath
+
+The website could also make use of a few improvements:
+
++ search function
 ---
 visual_abstract: roadmap.svg
