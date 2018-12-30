@@ -35,7 +35,7 @@ name: interpreted_vs_compiled.svg
 class: large_image
 ----
 #### text-block ####
-content: Python syntax relies heavily on whitespace. Which means that the both the vertical and the horizontal axis of the writing field are meaningful to the interpreter.
+content: Python syntax relies heavily on whitespace. Which means that both the vertical and the horizontal axis of the writing field are meaningful to the interpreter.
 ----
 #### image ####
 name: themerson.svg
@@ -208,5 +208,5 @@ name: commented_invoke.svg
 class: large_image
 ----
 #### text-block ####
-content: Great, now it’s time to dive into Drawbot.
+content: Great, now it’s time to dive into DrawBot.
 ----

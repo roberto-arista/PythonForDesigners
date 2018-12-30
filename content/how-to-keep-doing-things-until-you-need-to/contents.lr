@@ -10,9 +10,9 @@ visual_abstract: abstract-7.svg
 ---
 body: #### text-block ####
 content: Computers are fast calculating machines. They manage to accomplish very simple tasks very quickly. A complex task is just a big amount of simple tasks very well organized. Organized how? Through programming. 
-In this chapter we will learn how to instruct Python –and Drawbot– to accomplish repetitive commands without making our instructions themselves repetitive. Follow me!
+In this chapter we will learn how to instruct Python –and DrawBot– to accomplish repetitive commands without making our instructions themselves repetitive. Follow me!
 
-In chapter 5, we have seen how to draw basic shapes on the Drawbot canvas. As you remember, we can draw a line using:
+In chapter 5, we have seen how to draw basic shapes on the DrawBot canvas. As you remember, we can draw a line using:
 
 ----
 #### code-example ####
@@ -90,7 +90,7 @@ name: while-if.svg
 class: large_image
 ----
 #### text-block ####
-content: Writing a fully functioning while block could be tricky at the beginning of your learning path. In fact, if the <code>while</code> body does not change somehow the <code>while</code> condition, your loop will run endlessly. If this is not your desired output, this is quite bad because you will have to force quit Drawbot. There is no other way from within the application to stop the interpreter before the end of a running script. A good solution for this issue could be to use a parachute technique.
+content: Writing a fully functioning while block could be tricky at the beginning of your learning path. In fact, if the <code>while</code> body does not change somehow the <code>while</code> condition, your loop will run endlessly. If this is not your desired output, this is quite bad because you will have to force quit DrawBot. There is no other way from within the application to stop the interpreter before the end of a running script. A good solution for this issue could be to use a parachute technique.
 
 A parachute is a temporary safety measure which stops your interpreter from looping endlessly making use of a break statement. Consider the following example:
 ----

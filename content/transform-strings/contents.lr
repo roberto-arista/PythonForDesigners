@@ -60,7 +60,7 @@ content: This step is optional, so if we omit any extra instruction, Python will
 snippet: 07.py
 ----
 #### text-block ####
-content: <code>[width]</code> provides instructions concerning padding, for example allowing the append of extra characters to the right
+content: <code>[width]</code> provides instructions concerning padding, for example allowing the appending of extra characters to the right
 ----
 #### code-example ####
 snippet: 08.py
