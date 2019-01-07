@@ -147,7 +147,7 @@ content: Create a pattern of horizontal lines. The lines should be thicker in th
 image: linePattern.png
 ----
 #### exercise ####
-content: Your goal is to draw a boustrophedonic sequence of ovals. Start from the lower left canvas corner and alternate ovals color (dark gray, light gray). Increase the oval radius according to its position within the drawing sequence of the line (little at the beginning, larger at the end). The vertical and horizontal distance between the ovals is constant. Give the user the option to set a margin value for the canvas and try to use only one while construct.
+content: Your goal is to draw a boustrophedonic (from left to right and from right to left in alternate lines) sequence of ovals. Start from the lower left canvas corner and alternate ovals color (dark gray, light gray). Increase the oval radius according to its position within the drawing sequence of the line (little at the beginning, larger at the end). The vertical and horizontal distance between the ovals is constant. Give the user the option to set a margin value for the canvas and try to use only one while construct.
 ----
 image: pattern_oval.png
 ----
