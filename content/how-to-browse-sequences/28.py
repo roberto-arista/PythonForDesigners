@@ -1,5 +1,5 @@
 shades = 10
-size(100, 100)
+newPage(100, 100)
 
 shadeWidth = width()/shades
 for shadeIndex in range(shades):

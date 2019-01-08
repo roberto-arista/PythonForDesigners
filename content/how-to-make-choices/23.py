@@ -1,4 +1,4 @@
-size(100, 100)
+newPage(100, 100)
 myVar = 10
 if myVar < 5:
     fill(1)

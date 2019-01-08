@@ -1,4 +1,4 @@
-size(100, 100)
+newPage(100, 100)
 myVar = 8
 if myVar < 20:
     if myVar < 10:

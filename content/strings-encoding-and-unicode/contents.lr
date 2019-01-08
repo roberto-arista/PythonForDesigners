@@ -329,7 +329,7 @@ content: If you need to compare the content of two different strings, you should
 snippet: 18.py
 ----
 #### text-block ####
-content: Beware of identity operators. Short strings are heavily cached; therefore their identity is not reliable.
+content: Beware of identity operators. Short strings are heavily cached; therefore their identity is not reliable. So, always prefer <code>'Meooow' != 'meooow'</code> to <code>'Meooow' is not 'meooow'</code>.
 ----
 #### section-title ####
 content: Natural order
