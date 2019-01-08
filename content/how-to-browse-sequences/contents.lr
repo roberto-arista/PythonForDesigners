@@ -239,7 +239,7 @@ content: Python provides a function that you will use very often in your coding 
 snippet: 19.py
 ----
 #### text-block ####
-content: <code>stop</code> and <code>step</code> are optional. <code>stop</code> has to be addressed if <code>step</code> is defined. Take into account that, as for the slicing notation, the <code>stop</code> value is not included into the range created.
+content: <code>start</code> and <code>step</code> are optional. <code>start</code> has to be addressed if <code>step</code> is defined. Take into account that, as for the slicing notation, the <code>stop</code> value is not included into the range created.
 
 This function will make the iteration over a sequence of integer number easy and compact:
 ----

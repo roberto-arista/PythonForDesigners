@@ -16,7 +16,7 @@ class: small_image
 #### text-block ####
 content: A DrawBot program can control the drawing of multiple PDF canvases. Think of the canvas as a sheet of graph paper. DrawBot is a friend who is willing to draw on the graph paper according to your instructions. The most unambiguous way to communicate what you need is to provide numerical data to describe shapes: these are coordinates.
 
-As you launch DrawBot, it shows you an empty gray canvas (left), a text box where you can type code (top right) and a console (bottom right). DrawBot has a default canvas size of 1000 by 1000 points. We can define a different canvas size using the <code>size()</code> function. Take into account that the canvas size should be defined before executing any other drawing command, otherwise it will cause no effect. Just like in the physical world, where we pick up a piece of paper and then we start to draw.
+As you launch DrawBot, it shows you an empty gray canvas (left), a text box where you can type code (top right) and a console (bottom right). DrawBot has a default canvas size of 1000 by 1000 points. We can define a different canvas size using the <code>newPage()</code> function. If you want to work with a specific canvas size, you should define it before invoking any other drawing command; otherwise, DrawBot will provide a standard one. Just like in the physical world, where we pick up a piece of paper and then we start to draw.
 
 Differently, from an interactive interpreter, DrawBot is script based. It means that you can store your programs as text files with a .py extension. If you want to execute your program, you have to invoke the interpreter to “run” using cmd+R explicitly.
 
@@ -38,7 +38,7 @@ name: rounding.svg
 class: large_image
 ----
 #### text-block ####
-content: The <code>size()</code> function accepts two kind of parameters:
+content: The <code>newPage()</code> function accepts two kind of parameters:
 ----
 #### text-block ####
 content: + a pair of coordinates
