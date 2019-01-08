@@ -1,7 +1,7 @@
 canvasSide = 100
 gap = 10
 
-size(canvasSide, canvasSide)
+newPage(canvasSide, canvasSide)
 stroke(0)
 
 currentPos = gap

@@ -1,5 +1,5 @@
 linesAmount = 4
-size(100, 100)
+newPage(100, 100)
 
 stroke(0)
 for eachLineIndex in range(linesAmount):

@@ -1,4 +1,4 @@
-size(100, 100)
+newPage(100, 100)
 rectWidth = 20
 rectWidth = rectHeight
 rect(10, 10, rectWidth, rectHeight)

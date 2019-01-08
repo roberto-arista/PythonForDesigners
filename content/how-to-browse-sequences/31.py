@@ -1,5 +1,5 @@
 rows = 4
-size(200, 200)
+newPage(200, 200)
 
 cellSize = height()/rows
 

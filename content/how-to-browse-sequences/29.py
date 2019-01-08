@@ -1,5 +1,5 @@
 linesAmount = 100
-size(100, 100)
+newPage(100, 100)
 stroke(0)
 
 factor = 1
