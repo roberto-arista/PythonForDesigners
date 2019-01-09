@@ -99,7 +99,7 @@ name: body.svg
 class: small_image
 ----
 #### text-block ####
-content: For example, given that metal type consisted of physical elements used as bricks forming a wall of prefabricated letters, it made sense to keep track of the height of the box instead of the height of the glyphs represented in the box. This custom is still in use nowadays even if the boxes are completely virtual. Take this aspect into account when comparing two different fonts Often, even if you use the same body size, the resulting letters will not be of the same height.
+content: For example, given that metal type consisted of physical elements used as bricks forming a wall of prefabricated letters, it made sense to keep track of the height of the box instead of the height of the glyphs represented in the box. This custom is still in use nowadays even if the boxes are completely virtual. Take this aspect into account when comparing two different fonts. Often, even if you use the same body size, the resulting letters will not be of the same height.
 ----
 #### image ####
 name: same-body.svg
