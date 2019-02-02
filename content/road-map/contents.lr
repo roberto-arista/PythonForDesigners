@@ -30,5 +30,6 @@ There are many subjects that I would like to address in the future. Here is a sh
 The website could also make use of a few improvements:
 
 + search function
++ the lektor plugins I made for csv tables and Python scripts are barely working
 ---
 visual_abstract: roadmap.svg

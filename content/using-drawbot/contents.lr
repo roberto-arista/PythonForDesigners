@@ -23,24 +23,20 @@ class: small_image
 #### text-block ####
 content:
 
-DrawBot has two significant sources of influence: on one side the teaching of Gerrit Noordzij, a very important Dutch calligrapher and type designer who set the bases for the teaching of type design at KABK in The Hague and author of a very influential (and still debated) book, The Stroke. On the other side, you can find John Maeda's Design by Numbers (followed up by Reas, Fry and many others) which flowed into Processing. 
+DrawBot has two significant sources of influence: on one side the teaching of Gerrit Noordzij, a very important Dutch typographer and type designer who set the bases for the teaching of type design at KABK in The Hague and author of a very influential (and still debated) book, [The Stroke](https://hyphenpress.co.uk/products/books/978-0-907259-30-5). On the other side, you can find John Maeda's Design by Numbers (followed up by Reas, Fry and many others) which flowed into Processing. 
 
 Both sources stress the influence that tools have on art and design practices, therefore the need to control your tools instead of suffering them. DIY, not for the sake of it, but because designers with a clear perspective cannot suffer mainstream tools.
 
-This approach pushed Petr van Blokland, Erik van Blokland and Just van Rossum to develop their font editor, Robofog, back in 2002 (?). It was a spin-off starting from the core of another application called Fontographer, distributed by Altsys.
+This approach pushed Petr van Blokland, Erik van Blokland and Just van Rossum to develop their font editor, Robofog, back in 1994. It was a spin-off starting from the core of another application called Fontographer, distributed by Altsys.
 
-As soon as you move out from the sketching phase of the design of a typeface, repetitive tasks grow exponentially. Placing accents, interpolating masters, and every project has its peculiarities. For this reason, designing an interface or a workflow which could facilitate every XX soon appeared as a useless effort: it is better to make anyone able to get it their way. The team decided to open the door to the core functionalities of the application which anyone could access through a scripting language. After the first attempt with AWK, Just proposed to give a chance to Python, an open source language invented by his elder brother Guido a few years before. It was a happy union, destined to influence the type industry radically.
+As soon as you move out from the sketching phase of the design of a typeface, repetitive tasks grow exponentially. Placing accents, interpolating masters, and every project has its peculiarities. For this reason, designing an interface or a workflow which could facilitate every need soon appeared as a useless effort: it is better to make anyone able to get it their way. The team decided to open the door to the core functionalities of the application which anyone could access through a scripting language. After the first attempt with AWK, Just proposed to give a chance to Python, an open source language invented by his elder brother Guido a few years before. It was a happy union, destined to influence the type industry radically.
 
-Even if Robofog did not survive the OSX revolution, their work continued over the years on a bunch of other tools and, with the contribution of developers and designers like Tal Leming, Frederik Berlaen and many others, originated what I like to call the UFO Galaxy.
+Even if RoboFog did not survive the OSX revolution, their work continued over the years on a bunch of other tools and, with the contribution of developers and designers like Tal Leming, Frederik Berlaen and many others, originated what I like to call the UFO Galaxy.
 
 Just was quite soon active as a teacher at KABK academy in The Hague, and he wanted to find a way to allow students to have a taste of that kind of approach. For this reason, he decided to make an application able to generate graphics through the code in a similar way to Processing but using Python instead of Java.
-With the first version of DrawBot, Just allowed his students to get their hands directly into the graphics core of macOS without the obtrusion of a user interface.
-This edition was released in 2002 and kept going for about ten years without substantial changes.
+With the first version of DrawBot, Just allowed his students to get their hands directly into the graphics core of macOS without the obtrusion of a user interface. This edition was released in 2003 and kept going for about ten years without substantial changes.
 
-After his studies at t]m in 2012, Frederik Berlaen tried to mimic the DrawBot application structure, but instead of creating a wrapper around Cocoa (macOS graphics library), he bridged a coding interface in Python with the HTML canvas. The project is not alive anymore, but this experience pushed Frederik to ask Just to revive the DrawBot project and to transform the application in a stack of action which could dialog with different kinds of interfaces.
-
-The focus also moved a bit from the initial teaching purpose, towards a set of refined and powerful tools to set typography and proof type design.
-Nowadays DrawBot is a large and robust application/module regularly used by many companies and designer in their workflow.
+A few years later, Frederik Berlaen tried to mimic the DrawBot application structure, but instead of creating a wrapper around Cocoa (macOS graphics library), he bridged a coding interface in Python with the HTML canvas. The project was called [TinyDrawBot](https://github.com/typemytype/tinyDrawBotRoboFontExtension). It is not alive anymore, but this experience pushed Frederik to ask Just to revive the DrawBot project and to transform the application in a stack of action which could dialog with different kinds of interfaces. In 2013, DrawBot 3.0 was released. The focus moved a bit from the initial teaching purpose, towards a set of refined and powerful tools to set typography and proof type design. Nowadays DrawBot is a large and robust application/module regularly used by many companies and designer in their workflow.
 
 You can download the application binary package from the [DrawBot website](http://www.drawbot.com/). The binary is self-contained: it comes with a version of Python inside. This means you do not need to install anything else at the moment.
 
@@ -52,4 +48,7 @@ name: GUI.svg
 ----
 class: large_image
 #### text-block ####
-content: Write some Python into the coding area, hit cmd+R, and you will see some output into the canvas.
+content: Paste the following Python code into the coding area, hit cmd+R, and you will see some output into the canvas.
+
+#### code-example ####
+snippet: 01.py
