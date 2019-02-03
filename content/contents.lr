@@ -12,7 +12,7 @@ leftBox: This manual is open-source, free to read and free from ads. There are a
 ---
 middleBoxTitle: Contribute
 ---
-middleBox: This resource is far from being complete, if you want to know where the development is headed, check the [Road Map](/road-map). If you spot any mistake, or you think something could be explained better, open an issue at the project GitHub page. I also accept to review *pull requests*.
+middleBox: This resource is far from being complete, if you want to know where the development is headed, check the [Road Map](/road-map). If you spot any mistake, or you think something could be explained better, open an issue at the [project repository](https://github.com/roberto-arista/PythonForDesigners). I also accept to review *pull requests*.
 ---
 rightBoxTitle: Who's
 ---
