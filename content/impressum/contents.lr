@@ -4,25 +4,30 @@ title: Impressum
 ---
 visual_abstract: abstract-snake.svg
 ---
-body: #### text-block ####
-content: [Python for Designers](/) is an initiative by [Roberto Arista](http://projects.robertoarista.it/). [Beatrice Bianchet](https://www.instagram.com/beatrice.bianchet/) drew the illustrations, [Silvio Lorusso](http://silviolorusso.com/) provided editing and feedback.
+body:
 
+#### text-block ####
+content:
+
+[Python for Designers](/) is an initiative by [Roberto Arista](http://projects.robertoarista.it/). 
+
+[Beatrice Bianchet](https://www.instagram.com/beatrice.bianchet/) drew the illustrations, [Silvio Lorusso](http://silviolorusso.com/) provided editing and feedback.
 [Python](https://www.python.org/) is copyright by [Python Software Foundation](https://www.python.org/about/legal/). [DrawBot](http://www.drawbot.com/) is copyright by [Erik van Blokland](http://letterror.com/), [Just van Rossum](https://twitter.com/justvanrossum), [Frederik Berlaen](http://typemytype.com/).
 
 The content on this website is licensed under a [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](http://creativecommons.org/licenses/by-nc-nd/4.0/). What does it mean? You can share the content on any medium you like. You should give the appropriate credit and provide a link to the creative commons license. You cannot profit from this content, and you cannot remix and redistribute the content of this website. Also, the code provided within the website comes without warranty.
 
 The text on this website is rendered using the following fonts:
-----
 #### text-block ####
-content: + [Laica](http://alessiodellena.com/) by Alessio D’Ellena
+content:
++ [Laica](http://alessiodellena.com/) by Alessio D’Ellena
 + [Gig](http://www.futurefonts.xyz/franziska-weitgruber/gig) by Franziska Weitgruber
 + [Arnold](http://www.futurefonts.xyz/rudiger/arnold) by Rüdiger
-----
+
 #### text-block ####
 content: The website is developed using [Lektor](https://www.getlektor.com/) by Armin Ronacher. It makes use of the following javascript libraries:
-----
 #### text-block ####
-content: + [anchor.js](https://www.bryanbraun.com/anchorjs/) by Bryan Braun
+content:
+
++ [anchor.js](https://www.bryanbraun.com/anchorjs/) by Bryan Braun
 + [prism.js](https://prismjs.com/) by Lea Verou
 + [typogr.js](https://github.com/ekalinin/typogr.js/) by Eugene Kalinin
-----
