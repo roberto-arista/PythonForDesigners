@@ -9,5 +9,11 @@ lektor-gulp = 0.3.2
 [servers.testing]
 name = Testing
 enabled = yes
-default = yes
+default = no
 target = rsync://robari1@richard-stockton.dreamhost.com/home/robari1/pfd.robertoarista.it
+
+[servers.production]
+name = Production
+enabled = yes
+default = yes
+target = rsync://robari1@richard-stockton.dreamhost.com/home/robari1/pythonfordesigners.com
