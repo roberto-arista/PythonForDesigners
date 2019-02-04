@@ -1,2 +1,0 @@
-user: guest
-password: pfd2018
