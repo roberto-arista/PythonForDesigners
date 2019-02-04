@@ -77,6 +77,8 @@ html {height: 100%}
 
 .page-container {
 
+  padding-bottom: 1em;
+
   @include breakpoint(smartphone) {
     margin: 0 auto;
     padding: 0 1em;
@@ -156,8 +158,9 @@ h2 {
   font-family: 'Gig Regular';
   color: $pink;
 
+  margin-top: 1em;
   font-size: 1.5em;
-  line-height: 1.5em;
+  line-height: 1.2em;
 
   @include breakpoint(desktop) {
       margin-left: $colWidth-desktop+$gutter-desktop;
@@ -265,27 +268,130 @@ div.opening {
 
 }
 
-.opening h1, .opening p {
-  @include breakpoint(desktop) {
-    margin-left: $colWidth-desktop+$gutter-desktop;
-    width: $colWidth-desktop*4+$gutter-desktop*3;
-  }
-
 .opening h1 {
-  @include breakpoint(tablet) {padding-top: .5em;}
-  @include breakpoint(desktop) {padding-top: .5em;}
+  width: $colWidth-desktop*3+$gutter-desktop*2;
 }
 
-.opening p {
-  padding-bottom: 1.5em;
+// newsletter signup
+#newsletter {
+  background: $pink;
+}
 
-  @include breakpoint(desktop) {
-    font-size: 1.25em;
-    line-height: 1.25em;
+#mc_embed_signup form {
+  text-align: center;
+  padding: 10px 0 10px 0;
+  }
+
+/* positions input field horizontally */
+.mc-field-group {
+  display: inline-block;
+  }
+
+#mc_embed_signup input.email {
+  font-family:"Arnold Regular", monospace;
+  font-size: 15px;
+  border: 1px solid #ABB0B2;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: #343434;
+  background-color: #fff;
+  box-sizing:border-box;
+  height: 32px;
+  padding: 0px 0.4em;
+  display: inline-block;
+  margin: 0;
+  width: 350px;
+  vertical-align:top;
+}
+
+#mc_embed_signup label {
+  margin-top: .25em;
+  display:block;
+  font-family: 'Gig Regular';
+  color: $light-pink;
+  font-size: 1.5em;
+  padding-bottom: .5em;
+}
+
+/* positions button horizontally in line with input */
+#mc_embed_signup .clear {
+  display: inline-block;
+}
+
+#mc_embed_signup .button {
+  font-size: 12px;
+  font-family: "Arnold Regular", monospace;
+  border: none;
+  text-transform: uppercase;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: $pink;
+  background-color: $light-pink;
+  box-sizing: border-box;
+  height: 32px;
+  line-height: 32px;
+  padding:0 18px;
+  display: inline-block;
+  margin: 0;
+  transition: all 0.23s ease-in-out 0s;
+}
+
+#mc_embed_signup .button:hover {
+  background-color: $blue;
+  color: $light-pink;
+  cursor:pointer;
+}
+
+#mc_embed_signup div#mce-responses {
+  float:left;
+  top:-1.4em;
+  padding:0em .5em 0em .5em;
+  overflow:hidden;
+  width:90%;margin: 0 5%;
+  clear: both;
+}
+
+#mc_embed_signup div.response {
+  margin:1em 0;
+  padding:1em .5em .5em 0;
+  font-weight:bold;
+  float:left;
+  top:-1.5em;
+  z-index:1;
+  width:80%;
+}
+
+#mc_embed_signup #mce-error-response {display:none;}
+#mc_embed_signup #mce-success-response {color:#529214; display:none;}
+
+#mc_embed_signup label.error {
+  display:block;
+  float:none;
+  width:auto;
+  margin-left:1.05em;
+  text-align:left;
+  padding:.5em 0;
+}
+
+@media (max-width: 768px) {
+    #mc_embed_signup input.email {
+      width:100%;
+      margin-bottom:5px;
+    }
+
+    #mc_embed_signup .clear {
+      display: block;
+      width: 100%;
+    }
+
+    #mc_embed_signup .button {
+      width: 100%;
+      margin:0;
   }
 }
-
-}
+// end newsletter signup
 
 .tocCover {
   @include flexbox();

@@ -39,7 +39,7 @@ name: or.svg
 class: small_image
 ----
 #### text-block ####
-content: <code>or</code> is used to build a logical expression that will evaluate <code>True</code> if any of the operands is <code>True</code>. Look at the diagram on the left: the pipe has a fork with a tap on each side. The fork is the "or" operator, and the taps are the operands; if any of the valves are open (<code>True</code>), the water will flow on the other side.
+content: <code>or</code> is used to build a logical expression that will evaluate <code>True</code> if any of the operands is <code>True</code>. Look at the diagram: the pipe has a fork with a tap on each side. The fork is the "or" operator, and the taps are the operands; if any of the valves are open (<code>True</code>), the water will flow on the other side.
 ----
 #### image ####
 name: and.svg
@@ -47,7 +47,7 @@ name: and.svg
 class: small_image
 ----
 #### text-block ####
-content: <code>and</code> (conditional and) is used to build a logical expression that will evaluate <code>True</code> if every operand is <code>True</code>. Look at the diagram on the left: a straight pipe represents the boolean expression with two taps following each other. The only way to let the water through is to open both valves. Meaning that every operand has to be <code>True</code>.
+content: <code>and</code> (conditional and) is used to build a logical expression that will evaluate <code>True</code> if every operand is <code>True</code>. Look at the diagram: a straight pipe represents the boolean expression with two taps following each other. The only way to let the water through is to open both valves. Meaning that every operand has to be <code>True</code>.
 
 <code>and</code> and <code>or</code> are also referred to as "short-circuit" operators, because the interpreter will not evaluate the entire expression if unnecessary.
 ----
@@ -73,7 +73,7 @@ path: 02.csv
 headers: 1
 ----
 #### text-block ####
-content: and so on. Check the Boolean Type section if you have any doubt concerning the way bool() works.
+content: and so on. Check the Boolean Type section if you have any doubt concerning the way <code>bool()</code> works.
 ----
 #### section-title ####
 content: Equality Operators (Yield Boolean)
@@ -209,7 +209,7 @@ content: Python provides the opportunity to combine more expressions at once. Th
 snippet: 11.py
 ----
 #### text-block ####
-content: Because of the higher precedence of multiplication over addition, 2*8 is evaluated first, then 16 is added to 5, giving 21 as result. In order to manipulate the execution order of evaluation, parenthesis can be used. For example:
+content: Because of the higher precedence of multiplication over addition, <code>2*8</code> is evaluated first, then <code>16</code> is added to <code>5</code>, giving <code>21</code> as result. In order to manipulate the execution order of evaluation, parenthesis can be used. For example:
 ----
 #### code-example ####
 snippet: 12.py
@@ -269,7 +269,7 @@ These statements need a colon as final delimiter:
 snippet: 17.py
 ----
 #### text-block ####
-content: The code related to the statement needs to be indented four space rightwards in order to be considered as the body of the construct. For example:
+content: The code related to the statement needs to be indented four spaces rightwards – tab is also accepted by the interpreter but not recommended – in order to be considered as the body of the construct. For example:
 ----
 #### code-example ####
 snippet: 18.py
@@ -316,7 +316,7 @@ name: condition1.svg
 class: large_image
 ----
 #### text-block ####
-content: Here’s a concrete example: 
+content: Here’s a concrete example:
 ----
 #### code-example ####
 snippet: 21.py
@@ -393,17 +393,14 @@ content: Workbook
 class: workbook
 ----
 #### exercise ####
-content: 
-Create a 200x200pt canvas. Draw a sequence of squares from top to bottom using a while loop. The square side should be adjustable through a variable. Odd squares should be light gray, even tiles should be dark gray.
+content: Create a 200x200pt canvas. Draw a sequence of squares from top to bottom using a while loop. The square side should be adjustable through a variable. Odd squares should be light gray, even tiles should be dark gray.
 
 ----
 #### exercise ####
-content: 
-Extend the previous exercise. Nest two while statements and draw a pattern made of squares across the entire canvas. Try to get a chessboard effect.
+content: Extend the previous exercise. Nest two while statements and draw a pattern made of squares across the entire canvas. Try to get a chessboard effect.
 
 ----
 #### exercise ####
-content: 
-Write a program able to draw a ruler of a specific measure unit (either postscript points or millimeters) across the entire canvas. The ruler ticks should be of different lengths according to a given rhythm. Use a while loop. Numbers displayed along the ruler are a plus.
+content: Write a program able to draw a ruler of a specific measure unit (either PostScript points or millimeters) across the entire canvas. The ruler ticks should be of different lengths according to a given rhythm. Use a while loop. Numbers displayed along the ruler are a plus.
 
 ----

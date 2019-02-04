@@ -11,7 +11,7 @@ visual_abstract: abstract-11.svg
 body: #### text-block ####
 content: We already had a taste of what sequences are thanks to strings. But strings only include  text. What if we need to store a bunch of numerical values? Or some strings together with numerical values?
 
-Python provides two standard data types for generic content: a mutable one, <code>list()</code>, and an immutable one, <code>tuple()</code>. They store an ordered sequence of *value references*. This means that if a list contains another list – of course this is possible – the inner one will not be copied inside the container, but a reference to it will be stored.
+Python provides two standard data types for containers where order matters: a mutable one, <code>list()</code>, and an immutable one, <code>tuple()</code>. They store an ordered sequence of *value references*. This means that if a list contains another list – of course this is possible – the inner one will not be copied inside the container, but a reference to it will be stored.
 
 In Python a list is delimited by the characters <code>[]</code>, while a tuple is delimited by characters <code>()</code>.
 
@@ -239,7 +239,7 @@ content: Python provides a function that you will use very often in your coding 
 snippet: 19.py
 ----
 #### text-block ####
-content: <code>stop</code> and <code>step</code> are optional. <code>stop</code> has to be addressed if <code>step</code> is defined. Take into account that, as for the slicing notation, the <code>stop</code> value is not included into the range created.
+content: <code>start</code> and <code>step</code> are optional. <code>start</code> has to be addressed if <code>step</code> is defined. Take into account that, as for the slicing notation, the <code>stop</code> value is not included into the range created.
 
 This function will make the iteration over a sequence of integer number easy and compact:
 ----
@@ -253,7 +253,7 @@ content: After the end of the loop the identifier will be still available in the
 snippet: 21.py
 ----
 #### text-block ####
-content: How can this be useful in a graphic design application? Consider the following scenario: you would like to create a pdf document of sixteen pages and write on each page a sequential page number. Drawbot can do that of course:
+content: How can this be useful in a graphic design application? Consider the following scenario: you would like to create a pdf document of sixteen pages and write on each page a sequential page number. DrawBot can do that of course:
 ----
 #### image ####
 name: 16pages.svg

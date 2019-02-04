@@ -35,7 +35,7 @@ name: interpreted_vs_compiled.svg
 class: large_image
 ----
 #### text-block ####
-content: Python syntax relies heavily on whitespace. Which means that the both the vertical and the horizontal axis of the writing field are meaningful to the interpreter.
+content: Python syntax relies heavily on whitespace. Which means that both the vertical and the horizontal axis of the writing field are meaningful to the interpreter.
 ----
 #### image ####
 name: themerson.svg
@@ -136,7 +136,7 @@ Going back to our first statement, here we are using a very important operator: 
 snippet: 03.py
 ----
 #### text-block ####
-content: establishes <code>rectWidth</code> as an identifier (also known as a name) and associates it to an integer value of <code>86</code>. The assignment operator works in a left-to-right direction, linking the identifier of the left to the value on the right. If the assignment operator is followed by any kind of expression, this will be solved first, then the assignment itself. We can translate this statement in a stack diagram.
+content: establishes <code>rectWidth</code> as an identifier (also known as a name) and associates it to an integer (whole number) value of <code>86</code>. The assignment operator works in a left-to-right direction, linking the identifier of the left to the value on the right. If the assignment operator is followed by any kind of expression, this will be solved first, then the assignment itself. We can translate this statement in a stack diagram.
 ----
 #### image ####
 name: alias.svg
@@ -208,5 +208,5 @@ name: commented_invoke.svg
 class: large_image
 ----
 #### text-block ####
-content: Great, now it’s time to dive into Drawbot.
+content: Great, now it’s time to dive into DrawBot.
 ----

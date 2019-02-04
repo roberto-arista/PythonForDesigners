@@ -1,6 +1,6 @@
 linesAmount = 8
 radius = 3
-size(100, 100)
+newPage(100, 100)
 for eachLineIndex in range(linesAmount):
     quota = width()/(linesAmount+1)*(eachLineIndex+1)
     fill(None)

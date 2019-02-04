@@ -1,29 +1,19 @@
 _model: index
 ---
-
 title: Home Page
 ---
-
 welcome: Welcome to Python for Designers
 ---
-
-intro: This manual is an introduction to [Python3](https://www.python.org/) and [Drawbot](http://www.drawbot.com/). It covers some language and programming basics as well as a good share of the Drawbot API. If you are looking for a gentle introduction to programming and you are often busy with drawing stuff on a screen, this is maybe the right place for you!
+intro: This manual is an introduction to [Python3](https://www.python.org/) and [DrawBot](http://www.drawbot.com/). It covers some language and programming basics as well as a good share of the DrawBot API. If you are looking for a gentle introduction to programming and you are often busy with drawing stuff on a screen, this is maybe the right place for you!
 ---
-
 leftBoxTitle: Support
 ---
-
-leftBox: This manual is open-source, free to read and free from ads. There are a couple of ways to support my work other than money. First of all, you can spread the word on social media and help me reach a broader audience. Or, you can help me to organize a Python+Drawbot workshop in your city.
+leftBox: This manual is open-source, free to read and free from ads. There are a couple of ways to support my work other than money. First of all, you can spread the word on social media and help me reach a broader audience. Or, you can help me to organize a Python+DrawBot workshop in your city.
 ---
-
 middleBoxTitle: Contribute
 ---
-
-middleBox: If you spot any mistake, maybe something is not entirely clear, or you think something could be explained better, please, open an issue at the project GitHub page. If you are accustomed to git wizardry in general, I also accept to review “pull requests”.
+middleBox: This resource is far from being complete, if you want to know where the development is headed, check the [Road Map](/road-map). If you spot any mistake, or you think something could be explained better, open an issue at the [project repository](https://github.com/roberto-arista/PythonForDesigners). I also accept to review *pull requests*.
 ---
-
 rightBoxTitle: Who's
 ---
-
-rightBox: _Python for Designers_ is an initiative by [Roberto Arista](http://projects.robertoarista.it/). [Beatrice Bianchet](https://www.instagram.com/beatrice.bianchet/) drew the illustrations, [Silvio Lorusso](http://silviolorusso.com/) provided editing and feedback. If you want to check a complete list of the technology & people involved in making this website, you can consult the [Impressum](/impressum) page.
----
+rightBox: _Python for Designers_ is an initiative by [Roberto Arista](http://projects.robertoarista.it/). [Beatrice Bianchet](http://www.instagram.com/beatrice.bianchet/) and [Silvio Lorusso](http://silviolorusso.com/) provided substantial help. If you want to check a complete list of the technology & people involved in making this website, you can consult the [Acknowledgements](/acknowledgements) and [Impressum](/impressum) pages.

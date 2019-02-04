@@ -1,5 +1,5 @@
 stripes = 10
-size(100, 100)
+newPage(100, 100)
 
 stripeWidth = width()/stripes
 for stripeIndex in range(stripes):

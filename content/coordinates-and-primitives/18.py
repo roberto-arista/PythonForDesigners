@@ -1,4 +1,4 @@
-size(100, 100)
+newPage(100, 100)
 stroke(0)
 strokeWidth(2)
 fill(1)

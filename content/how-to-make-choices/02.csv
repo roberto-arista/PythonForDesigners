@@ -1,5 +1,5 @@
 First step	Second step	Third step	Result
-<code>0 and 5</code>	<code>bool(0) and bool(5)</code>	<code>True and True</code>	<code>True</code>
+<code>0 and 5</code>	<code>bool(0) and bool(5)</code>	<code>False and True</code>	<code>False</code>
 <code>1.0 or 2.5</code>	<code>bool(1.0) or bool(2.5)</code>	<code>True or True</code>	<code>True</code>
 <code>not 0</code>	<code>not bool(0)</code>	<code>not False</code>	<code>True</code>
 <code>not 2</code>	<code>not bool(2)</code>	<code>not True</code>	<code>False</code>

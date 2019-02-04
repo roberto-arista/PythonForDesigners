@@ -14,11 +14,11 @@ name: graphPaper.svg
 class: small_image
 ----
 #### text-block ####
-content: A Drawbot program can control the drawing of multiple PDF canvases. Think of the canvas as a sheet of graph paper. Drawbot is a friend who is willing to draw on the graph paper according to your instructions. The most unambiguous way to communicate what you need is to provide numerical data to describe shapes: these are coordinates.
+content: A DrawBot program can control the drawing of multiple PDF canvases. Think of the canvas as a sheet of graph paper. DrawBot is a friend who is willing to draw on the graph paper according to your instructions. The most unambiguous way to communicate what you need is to provide numerical data to describe shapes: these are coordinates.
 
-As you launch Drawbot, it shows you an empty gray canvas (left), a text box where you can type code (top right) and a console (bottom right). Drawbot has a default canvas size of 1000 by 1000 points. We can define a different canvas size using the <code>size()</code> function. Take into account that the canvas size should be defined before executing any other drawing command, otherwise it will cause no effect. Just like in the physical world, where we pick up a piece of paper and then we start to draw.
+As you launch DrawBot, it shows you an empty gray canvas (left), a text box where you can type code (top right) and a console (bottom right). DrawBot has a default canvas size of 1000 by 1000 points. We can define a different canvas size using the <code>newPage()</code> function. If you want to work with a specific canvas size, you should define it before invoking any other drawing command; otherwise, DrawBot will provide a standard one. Just like in the physical world, where we pick up a piece of paper and then we start to draw.
 
-Differently, from an interactive interpreter, Drawbot is script based. It means that you can store your programs as text files with a .py extension. If you want to execute your program, you have to invoke the interpreter to “run” using cmd+R explicitly.
+Differently, from an interactive interpreter, DrawBot is script based. It means that you can store your programs as text files with a .py extension. If you want to execute your program, you have to invoke the interpreter to “run” using cmd+R explicitly.
 
 Given the two-dimensional nature of the PDF canvas you have to provide a pair of coordinates: x and y. The origin of the coordinate system is located in the lower left corner of the canvas.
 ----
@@ -38,7 +38,7 @@ name: rounding.svg
 class: large_image
 ----
 #### text-block ####
-content: The <code>size()</code> function accepts two kind of parameters:
+content: The <code>newPage()</code> function accepts two kind of parameters:
 ----
 #### text-block ####
 content: + a pair of coordinates
@@ -63,7 +63,7 @@ snippet: 03.py
 diagram: drawbot_canvas_3.svg
 ----
 #### text-block ####
-content: I assume width and height are straightforward notions, but, what do these numbers mean? Apples, meters, yards? Well, each dimension provided to any drawing function in Drawbot is expressed in typographical postscript points. As you maybe know from your graphic design history classes, typographical points have a quite troublesome relation with other unit systems. Since the desktop publishing revolution, the typographic points have been univocally made proportional to another unit measure, the inch. One typographical point is equivalent to the 72nd part of an inch. Assume we are in the realm of pixel images and the density of the image is 72 dpi; then one typographic point is also equivalent to one pixel. We will talk more about image resolutions in the next chapters.
+content: I assume width and height are straightforward notions, but, what do these numbers mean? Apples, meters, yards? Well, each dimension provided to any drawing function in DrawBot is expressed in typographical PostScript points. As you maybe know from your graphic design history classes, typographical points have a quite troublesome relation with other unit systems. Since the desktop publishing revolution, the typographic points have been univocally made proportional to another unit measure, the inch. One typographical point is equivalent to the 72nd part of an inch. Assume we are in the realm of pixel images and the density of the image is 72 dpi; then one typographic point is also equivalent to one pixel. We will talk more about image resolutions in the next chapters.
 ----
 #### image ####
 name: thumbmeter.svg
@@ -71,7 +71,7 @@ name: thumbmeter.svg
 class: large_image
 ----
 #### text-block ####
-content: You should see Drawbot as a skilled and quick draughtsman executing the instructions you gave in the code editor. As any drawing activity, you should think of colors and tools before actually using them. You first decide which color, then you start to spread ink on paper, right?
+content: You should see DrawBot as a skilled and quick draughtsman executing the instructions you gave in the code editor. As any drawing activity, you should think of colors and tools before actually using them. You first decide which color, then you start to spread ink on paper, right?
 ----
 #### image ####
 name: glasses.svg
@@ -79,7 +79,7 @@ name: glasses.svg
 class: small_image
 ----
 #### text-block ####
-content: Drawbot sets some standard values as soon as you start the application: white background for the canvas, RGB black for the fill color, transparent stroke of width 1pt.
+content: DrawBot sets some standard values as soon as you start the application: white background for the canvas, RGB black for the fill color, transparent stroke of width 1pt.
 We will dive into colors more in detail in the upcoming chapters. For the following demos we will use shades of gray, which are expressed in values between 0 and 1:
 ----
 #### text-block ####
@@ -100,7 +100,7 @@ content: + <code>fill(aColor)</code>
 #### text-block ####
 content: They need to be called before the drawing functions: first we choose the tool, then we draw.
 
-Drawbot provides four functions for drawing primitive shapes.
+DrawBot provides four functions for drawing primitive shapes.
 ----
 #### code-example ####
 snippet: 04.py
@@ -207,7 +207,7 @@ snippet: 15.py
 image: rect_oval.png
 ----
 #### text-block ####
-content: gives a different results from:
+content: gives a different result from:
 ----
 #### code-example ####
 snippet: 16.py

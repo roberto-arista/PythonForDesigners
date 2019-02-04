@@ -1,4 +1,4 @@
-size(200, 200)
+newPage(200, 200)
 fill(0)
 text('a quick brown', (30, 60))
 fill(.4)

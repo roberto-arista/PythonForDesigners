@@ -6,7 +6,7 @@ myRoute = [(10.2, 22.3, (7, 51, 43)),
 leading = 18
 cellWidth = 50
 
-size(200, 200)
+newPage(200, 200)
 font('InputMono-Regular')
 fontSize(14)
 

@@ -99,7 +99,7 @@ name: body.svg
 class: small_image
 ----
 #### text-block ####
-content: For example, given that metal type consisted of physical elements used as bricks forming a wall of prefabricated letters, it made sense to keep track of the height of the box instead of the height of the glyphs represented in the box. This custom is still in use nowadays even if the boxes are completely virtual. Take this aspect into account when comparing two different fonts Often, even if you use the same body size, the resulting letters will not be of the same height.
+content: For example, given that metal type consisted of physical elements used as bricks forming a wall of prefabricated letters, it made sense to keep track of the height of the box instead of the height of the glyphs represented in the box. This custom is still in use nowadays even if the boxes are completely virtual. Take this aspect into account when comparing two different fonts. Often, even if you use the same body size, the resulting letters will not be of the same height.
 ----
 #### image ####
 name: same-body.svg
@@ -112,7 +112,7 @@ content: Characters and Mapping
 class: default
 ----
 #### text-block ####
-content: Before exploring the realm of typesetting in Python, we need to learn how Python treats text data. Computers in general need to encode any kind of information down into binary notation. Text is not an exception. The way this encoding issues was originally solved is based on the alphabet and is therefore Western-centric. Each text element such as letters, digits, symbols, punctuation, white spaces and control elements as *new line* or *delete* was assigned to a number. The weird thing is that each component of a standard typographer case received a value. For example, *A* and *a* got a different value even if they represent the same letter in a different drawing structure. This is not a big deal with Latin, but this approach had serious consequences when mapping Hangul, Arabic and many non-alphabetical scripts.
+content: Before exploring the realm of typesetting in Python, we need to learn how Python treats text data. Computers in general need to encode any kind of information down into binary notation. Text is not an exception. The way this encoding issue was originally solved is based on the alphabet and is therefore Western-centric. Each text element such as letters, digits, symbols, punctuation, white spaces and control elements as *new line* or *delete* was assigned to a number. The weird thing is that each component of a standard typographer case received a value. For example, *A* and *a* got a different value even if they represent the same letter in a different drawing structure. This is not a big deal with Latin, but this approach had serious consequences when mapping Hangul, Arabic and many non-alphabetical scripts.
 ----
 #### image ####
 name: decimal-binar.svg
@@ -152,7 +152,7 @@ headers: 1
 snippet: 01_01.py
 ----
 #### text-block ####
-content: This space of the mapping was often implemented in different ways across different operating systems, such as Apple (MacOS Roman), IBM and Microsoft (ISO 8859) and countries. Exchanging information across different computers became more difficult, until the Unicode Consortium managed to create a new wider OS-independent mapping standard. The Unicode Consortium finally began to look beyond English speaking countries. The last bit of the first byte was then fixed to ISO LATIN 1 as you see in the following diagram.
+content: This space of the mapping was often implemented in different ways across different operating systems, such as Apple (macOS Roman), IBM and Microsoft (ISO 8859) and countries. Exchanging information across different computers became more difficult, until the Unicode Consortium managed to create a new wider OS-independent mapping standard. The Unicode Consortium finally began to look beyond English speaking countries. The last bit of the first byte was then fixed to ISO LATIN 1 as you see in the following diagram.
 ----
 #### image ####
 name: ISOLATIN1.svg
@@ -160,7 +160,7 @@ name: ISOLATIN1.svg
 class: large_image
 ----
 #### text-block ####
-content: Each character in the Unicode mapping can be represented as two bytes opening the mapping options to 65,536. The mapping can be extended even further the two bytes, in fact emojis are stored in a supplementary multilingual plane which starts just after U+FFFF. We will sometimes refer to the Unicode mapping using the abbreviation UTF-8, which is a clever way to represent Unicode characters saving data according to their position into the mapping.
+content: Each character in the Unicode mapping can be represented as two bytes opening the mapping options to 65,536. The mapping can be extended beyond the two bytes, in fact emojis are stored in a supplementary multilingual plane which starts just after U+FFFF. We will sometimes refer to the Unicode mapping using the abbreviation UTF-8, which is a clever way to represent Unicode characters saving data according to their position into the mapping.
 ----
 #### section-title ####
 content: Text Data in Python
@@ -168,7 +168,7 @@ content: Text Data in Python
 class: default
 ----
 #### text-block ####
-content: After this lengthy preamble, it is time to ask: how do we relate with text data using Python? In the specific scenario of this manual, we will use the standard Python string object to create, store and manipulate text. Then we will use Drawbot to typeset the text onto a PDF canvas.
+content: After this lengthy preamble, it is time to ask: how do we relate with text data using Python? In the specific scenario of this manual, we will use the standard Python string object to create, store and manipulate text. Then we will use DrawBot to typeset the text onto a PDF canvas.
 
 The Python string, like tuples and lists, is a sequence: a collection of values where order is significant. Tuples and lists are generic containers: they can store any kind of data. A string is especially designed for representing immutable sequences of text characters. A schematic representation of a string could be
 ----
@@ -329,7 +329,7 @@ content: If you need to compare the content of two different strings, you should
 snippet: 18.py
 ----
 #### text-block ####
-content: Beware of identity operators. Short strings are heavily cached; therefore their identity is not reliable.
+content: Beware of identity operators. Short strings are heavily cached; therefore their identity is not reliable. So, always prefer <code>'Meooow' != 'meooow'</code> to <code>'Meooow' is not 'meooow'</code>.
 ----
 #### section-title ####
 content: Natural order
