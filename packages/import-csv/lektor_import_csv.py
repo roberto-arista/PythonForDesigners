@@ -9,7 +9,7 @@ from lektor.pluginsystem import Plugin
 ### Functions & Procedures
 def importCsv(fileName, headers):
     ctx = get_ctx()
-    filePath = os.getcwd() + ctx.source.path + '/' + fileName  # 🤷‍♂️
+    filePath = os.getcwd() + '/content' + ctx.source.path + '/' + fileName  # 🤷‍♂️
 
     htmlTable = []
     with codecs.open(filePath, 'r', 'utf-8') as csvFile:
