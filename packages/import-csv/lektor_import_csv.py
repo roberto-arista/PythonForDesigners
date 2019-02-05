@@ -15,10 +15,6 @@ def importCsv(fileName, headers):
     with codecs.open(filePath, 'r', 'utf-8') as csvFile:
         for indexRow, eachRow in enumerate(csvFile.read().split('\n')):
 
-            if os.path.basename(filePath) == '02.csv':
-                print(eachRow)
-
-            print(eachRow)
             if indexRow < headers:
                 tagRepr = 'th'
             else:
