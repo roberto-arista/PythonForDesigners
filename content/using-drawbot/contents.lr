@@ -25,8 +25,6 @@ content:
 
 DrawBot has two significant sources of influence: on one side the teaching of Gerrit Noordzij, a very important Dutch typographer and type designer who set the bases for the teaching of type design at KABK in The Hague and author of a very influential (and still debated) book, [The Stroke](https://hyphenpress.co.uk/products/books/978-0-907259-30-5). On the other side, you can find John Maeda's Design by Numbers (followed up by Reas, Fry and many others) which flowed into Processing. 
 
-Both sources stress the influence that tools have on art and design practices, therefore the need to control your tools instead of suffering them. DIY, not for the sake of it, but because designers with a clear perspective cannot suffer mainstream tools.
-
 Both sources stress the influence that tools have on art and design practices, therefore the need to control your means instead of submit yourself to them. DIY, not for the sake of it, but because designers with a clear perspective cannot suffer mainstream workflows.
 
 As soon as you move out from the sketching phase of the design of a typeface, repetitive tasks grow exponentially. Placing accents, interpolating masters, and every project has its peculiarities. For this reason, designing an interface or a workflow which could facilitate every need soon appeared as a useless effort: it is better to make anyone able to get it their way. The team decided to open the door to the core functionalities of the application which anyone could access through a scripting language. After the first attempt with AWK, Just proposed to give a chance to Python, an open source language invented by his elder brother Guido a few years before. It was a happy union, destined to influence the type industry radically.
