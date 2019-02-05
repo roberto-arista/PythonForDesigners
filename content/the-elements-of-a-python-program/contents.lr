@@ -72,7 +72,7 @@ class: small_image
 content: Programming languages are formal languages. It means they are specifically designed with a purpose in mind, instructing machines. On the contrary, natural languages evolve autonomously: they have multiple rules that often clash. The interpretation skills of the receiver is a key factor in solving these kind of conflicts. Instead formal languages have strict syntax rules because they aim at having the smallest amount of exceptions. Given that the Python interpreter is not able to handle conflicts and ambiguity, syntax errors in the code are just not admitted.
 ----
 #### exercise ####
-content: Can you point to a sentence in your natural language which was once considered a mistake instead it is now accepted as correct?
+content: Can you point to a sentence in your natural language which was once considered a mistake but is now accepted as correct?
 ----
 #### text-block ####
 content: These errors can concern two different aspects. For example, token errors like:
