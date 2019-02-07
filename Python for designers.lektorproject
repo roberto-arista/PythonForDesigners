@@ -6,14 +6,14 @@ url_style = absolute
 lektor-jinja-content = 0.4.2
 lektor-gulp = 0.3.2
 
-[servers.testing]
-name = Testing
-enabled = yes
-default = no
-target = rsync://robari1@richard-stockton.dreamhost.com/home/robari1/pfd.robertoarista.it
-
-[servers.production]
-name = Production
+[servers.dev]
+name = dev
 enabled = yes
 default = yes
+target = rsync://robari1@richard-stockton.dreamhost.com/home/robari1/dev.pythonfordesigners.com
+
+[servers.production]
+name = production
+enabled = yes
+default = no
 target = rsync://robari1@richard-stockton.dreamhost.com/home/robari1/pythonfordesigners.com
