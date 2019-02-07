@@ -33,3 +33,5 @@ The website could also make use of a few improvements:
 + the lektor plugins I made for csv tables and Python scripts are barely working
 ---
 visual_abstract: roadmap.svg
+---
+og_image: roadmap.png
