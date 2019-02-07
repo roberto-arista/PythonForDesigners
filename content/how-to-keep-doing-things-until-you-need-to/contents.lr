@@ -8,6 +8,8 @@ sort_key: 7
 ---
 visual_abstract: abstract-7.svg
 ---
+og_image: abstract-7.png
+---
 body: #### text-block ####
 content: Computers are fast calculating machines. They manage to accomplish very simple tasks very quickly. A complex task is just a big amount of simple tasks very well organized. Organized how? Through programming. 
 In this chapter we will learn how to instruct Python –and DrawBot– to accomplish repetitive commands without making our instructions themselves repetitive. Follow me!

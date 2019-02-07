@@ -1,5 +1,19 @@
 {% extends "baseLayout.html" %}
+
 {% block title %}{{ this.title }}{% endblock %}
+
+{% block openGraph %}
+    <meta property="og:title" content="Python for Designers">
+    <meta property="og:image" content="{{ this.OG_image }}">
+    <meta property="og:type" content="text">
+    <meta property="og:url" content="{{ this.url }}">
+    <meta property="og:description" content="An introductory manual to Python3 and DrawBot">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:type" content="article">
+    <meta property="og:author" content="Roberto Arista">
+    <meta property="og:section" content="Python for Designers">
+    <meta property="og:tag" content="Python Graphic Design">
+{% endblock %}
 
 {% block content %}
 

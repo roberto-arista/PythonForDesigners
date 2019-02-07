@@ -8,6 +8,8 @@ sort_key: 6
 ---
 visual_abstract: abstract-6.svg
 ---
+og_image: abstract-6.png
+---
 body: #### section-title ####
 content: Operators, Expressions and Statements
 ----

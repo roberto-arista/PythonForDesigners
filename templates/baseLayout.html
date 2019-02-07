@@ -1,16 +1,20 @@
 <!doctype html>
 <html>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" href="{{ '/static/css/reset.css'|asseturl }}">
-<link rel="stylesheet" href="{{ '/static/css/style.css'|asseturl }}">
-<link href="{{ 'static/css/prism.css'|asseturl }}" rel="stylesheet" />
-<link rel="shortcut icon" type="image/ico" href="{{ 'static/favicon.ico'|asseturl }}">
+    <link rel="stylesheet" href="{{ '/static/css/reset.css'|asseturl }}">
+    <link rel="stylesheet" href="{{ '/static/css/style.css'|asseturl }}">
+    <link href="{{ 'static/css/prism.css'|asseturl }}" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/ico" href="{{ 'static/favicon.ico'|asseturl }}">
 
-<title>{% block title %}{% endblock %} — Python for designers</title>
+    <title>{% block title %}{% endblock %} — Python for designers</title>
+    {% block openGraph %}{% endblock %}
 
-<body class="language-python">
+  </head>
+
+  <body class="language-python">
 
     {% include "header.html" %}
 
@@ -30,6 +34,6 @@
       })
     </script>
 
-</body>
+  </body>
 
 </html>
