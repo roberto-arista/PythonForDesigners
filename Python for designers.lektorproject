@@ -1,6 +1,7 @@
 [project]
 name = Python for designers
 url_style = absolute
+url = http://dev.pythonfordesigners.com/
 
 [packages]
 lektor-jinja-content = 0.4.2
