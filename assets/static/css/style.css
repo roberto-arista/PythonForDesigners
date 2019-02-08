@@ -138,6 +138,16 @@ html {
   }
 }
 
+.mobileOnly {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .mobileOnly {
+    display: block;
+  }
+}
+
 body {
   position: relative;
   box-sizing: border-box;
@@ -921,6 +931,18 @@ ul.tocBar-extraPages > li::before {
     border-bottom: none;
     display: flex;
     justify-content: flex-start;
+  }
+}
+
+.ribbon {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .ribbon {
+    display: none;
   }
 }
 
