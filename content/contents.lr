@@ -2,6 +2,8 @@ _model: index
 ---
 title: Home Page
 ---
+og_image: welcome.png
+---
 welcome: Welcome to Python for Designers
 ---
 intro: This manual is an introduction to [Python3](https://www.python.org/) and [DrawBot](http://www.drawbot.com/). It covers some language and programming basics as well as a good share of the DrawBot API. If you are looking for a gentle introduction to programming and you are often busy with drawing stuff on a screen, this is maybe the right place for you!

@@ -85,6 +85,11 @@ html {height: 100%}
   }
 }
 
+.mobileOnly {
+  display: none;
+  @include breakpoint(smartphone) {display: block;}
+}
+
 body {
 
   position: relative;
@@ -133,8 +138,8 @@ h1 {
   margin-bottom: .5em;
 
   @include breakpoint(smartphone) {
-    margin-top: 1.5em;
-      font-size: 2.4em;
+      margin-top: 1.8em;
+      font-size: 2.2em;
       line-height: 1.25em;
     }
 
@@ -269,7 +274,15 @@ div.opening {
 }
 
 .opening h1 {
-  width: $colWidth-desktop*3+$gutter-desktop*2;
+
+  @include breakpoint(tablet) {
+    width: $colWidth-desktop*3+$gutter-desktop*2;
+  }
+
+  @include breakpoint(desktop) {
+    width: $colWidth-desktop*3+$gutter-desktop*2;
+  }
+
 }
 
 // newsletter signup
@@ -819,6 +832,17 @@ ul.tocBar-extraPages > li::before {
     @include flexbox();
     justify-content: flex-start;
   }
+}
+
+.ribbon {
+  @include breakpoint(smartphone) {
+    display: none;
+  }
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
 }
 
 .header ul {

@@ -8,6 +8,8 @@ sort_key: 5
 ---
 visual_abstract: abstract-5.svg
 ---
+og_image: abstract-5.png
+---
 body: #### text-block ####
 content: What is data? Data is a Latin word currently used in English. It is the plural of datum. We can consider a datum as an atom of a bigger pool of information. The smallest piece, the minimum value we can use to build a bigger collection of quantities and relations. Data are our bricks in the act of coding. The size of a rectangle, the amount of people in a country, an email address, the position of the mouse pointer on the screen, the location of a file on a server. Since there are different kinds of data, Python provides a series of data types. Types that indicate quantities (<code>int</code>, <code>float</code>), if a condition is true or not (<code>bool</code>), pieces of text (<code>str</code>), ordered collections of other data (<code>list</code>), data for the absence of data (<code>None</code>), unsorted collections (<code>set</code>, <code>dict</code>) and so on.
 ----

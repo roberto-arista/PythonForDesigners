@@ -8,6 +8,8 @@ sort_key: 11
 ---
 visual_abstract: abstract-11.svg
 ---
+og_image: abstract-11.png
+---
 body: #### text-block ####
 content: We already had a taste of what sequences are thanks to strings. But strings only include  text. What if we need to store a bunch of numerical values? Or some strings together with numerical values?
 

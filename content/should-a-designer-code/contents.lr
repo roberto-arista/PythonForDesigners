@@ -8,6 +8,8 @@ sort_key: 1
 ---
 visual_abstract: abstract-1.svg
 ---
+og_image: abstract-1.png
+---
 body: #### text-block ####
 content: People have been debating this since the advent of computer graphics. My opinion is easy to imagine, given the goal of this manual. But, dear designer, don’t get me wrong. Coding will not save the world. It will not guarantee you a brilliant career: you will still have to study and practice many other things, but sure it will be a important skill among others. Coding can help you lighten the burden of production – automating simple tasks– leaving you with more time to think, sketch and design.
 ----
