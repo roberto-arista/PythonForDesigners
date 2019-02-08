@@ -3,8 +3,9 @@
 
 {% block openGraph %}
     <meta property="og:title" content="{{ this.title }} | Python for Designers">
-    <meta property="og:image" content="{{ this.og_image }}">
+    <meta property="og:image" content="{{ this | url(external=True)}}{{ this.og_image }}">
     <meta property="og:type" content="text">
+    <meta property="og:url" content="{{ this | url(external=True)}}">
     <meta property="og:description" content="An introductory manual to Python3 and DrawBot">
     <meta property="og:locale" content="it_IT">
     <meta property="og:type" content="article">
