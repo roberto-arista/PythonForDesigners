@@ -406,3 +406,12 @@ content: Extend the previous exercise. Nest two while statements and draw a patt
 content: Write a program able to draw a ruler of a specific measure unit (either PostScript points or millimeters) across the entire canvas. The ruler ticks should be of different lengths according to a given rhythm. Use a while loop. Numbers displayed along the ruler are a plus.
 
 ----
+#### exercise ####
+content: Write a program able to draw a circle positioned at the center of the canvas. Its size should react to a parameter "factor" between 0 and 1:
+- if 0, the diameter should be a quarter of the canvas height
+- if 1, the diameter should be three-quarters of the canvas height
+- anything in between should smoothly interpolate
+Define also a variable "switch" pointing to a boolean value. A True value should create a black circle on a white background, otherwise the opposite.
+----
+image: exercisepy29.png
+----

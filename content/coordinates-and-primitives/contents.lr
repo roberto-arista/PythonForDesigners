@@ -264,6 +264,13 @@ content: Draw four triangles. Fill each triangle with a different shade of gray.
 image: exercise3.png
 ----
 #### exercise ####
+content: Extend the previous exercise: how could you make the height of each triangle react to a variable called "factor"?
+- when "factor" is 0, you see no triangle (they have no height!)
+- when "factor" is 1, the vertices touch in the middle of the canvas
+----
+image: exercise3b.png
+----
+#### exercise ####
 content: Draw four circles vertically aligned in the middle of a canvas. The shapes should be equally spread out. A variable "radius" controls the size of each circle. The color of each shape should be calculated according to its horizontal position in the canvas: left darker, right lighter.
 ----
 image: exercise4.png
@@ -280,3 +287,4 @@ content: Draw a grid with three columns and three rows. The program should allow
 ----
 image: exercise6.png
 ----
+
