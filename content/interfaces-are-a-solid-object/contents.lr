@@ -9,11 +9,11 @@ sort_key: 2
 visual_abstract: hand.svg
 ---
 body: #### text-block ####
-
-content: *Progetto grafico 33, Traslation by Isobel Butters*
+content: *This article originally appeared on Progetto Grafico #33. Differently from the rest of the content, I wrote it in Italian. Isobel Butters took care of translating it in English, [Silvio Lorusso](https://silviolorusso.com/) was my editor. Given that the issue is now out of print, I decided to add it here. I believe it is a useful addition to the manual; it adds a few answers to the question "Should a designer code?". Enjoy the reading!*
 ----
+#### text-block ####
+content:
 Progetto Grafico asked me for a contribution on the value of programming in teaching graphic design. On various occasions member of the editorial board Silvio Lorusso and I have discussed the merits and limits of programming and the close relationship with the tools that ensues. Two years ago I was appointed teacher of the basic IT course at ISIA in Urbino and at the request of the then director Luciano Perondi I moved the syllabus from the usual desktop publishing software to programming. I also embarked a few months ago on the task of writing a programming manual in Python language for my students. “I’ll have no trouble writing this article,” I told myself. Instead, it has proven tricky. Finally, I realized why it was causing so much difficulty – it was not the technicalities or the abstract nature of some of the concepts, but the fact that learning to program for me turned out to be an emancipation process. And the process of emancipation is by nature personal.
-
 ----
 #### text-block ####
 content:
@@ -120,6 +120,14 @@ underlying processes. For every interface accepted uncritically, a degree of und
 Fitted tightly into the monopoly of tools that impose a highly standardized workflow, image designing is thus forced to be part of an assembly line of creativity where the designer will sooner or later become obsolete.
 Digital graphics workshops need to be brought back through the world of teaching. Hopefully, there will be a reaction to the marginalization of the job of the graphic designer, who will be given skills that restore their independence in this technological model.
 Let’s make one thing clear – computers themselves are not the cause of this impoverishment, but the surrender to the changes they have imposed. The potential is enormous, the problem is that the language skills are lacking to harness it. It wouldn’t take much to understand each other better; to peel a few layers off the computer and take a look inside.
+----
+#### section-title ####
+content: Highlights
+----
+class: workbook
+----
+#### text-block ####
+content: *The article was originally conceived with a few extra independent highlights. They are part of a broader collection of facts and tools I encountered while writing this article. Somehow I thought they could add something to the rest even without a complete integration in the main topic.*
 ----
 #### section-title ####
 content: Recurring motifs in the strings
