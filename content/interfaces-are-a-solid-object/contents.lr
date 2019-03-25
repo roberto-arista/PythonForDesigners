@@ -19,17 +19,18 @@ Progetto Grafico asked me for a contribution on the value of programming in teac
 content:
 The designer’s work is based largely on a dialogue with monoliths of metal, glass and ceramic that we understand less every day and delegate more and more substantial slices of our work to. They have already taken over the places where images were produced – places once populated by printing machines and photo enlargers. The price we are paying to lighten the weight of our labor is a loss of contact with the materials that characterize it. The relationship between designer and the execution of his or her ideas is mediated by that often impenetrable panel now a part of everyday speech: interface. We abdicate a degree of control to this smooth surface in exchange for comforting simplification. The aura of competence afforded by the manual and technical skills of professionals has vanished, and with it the collective perception of a trade: “It’ll only take you five minutes, right?”.
 ----
-#### section-title ####
-content: An Impenetrable Desk
-----
-class: default
-----
 #### image ####
 name: wall.svg
 ----
 class: large_image
 ----
+#### section-title ####
+content: An Impenetrable Desk
+----
+class: default
+----
 #### text-block ####
+content:
 The economic model on which production of digital work tools is based is a devotee of the scalability mantra. Since distribution of the software takes place in the liquid realm of the Web, the latter is not forced into the logistic confines that characterize any other material goods. The result is a rapid contraction and expansion of exchanges. The production costs of multiples are almost non-existent, as is the difficulty to duplicate fraudulently. The aim of developers is to sell enough licenses to cover promotion and development costs, while all the rest is profit. From the design point of view this encourages tool designers to aim to satisfy the needs of a very large number of customers, while seeking the complex balance between userfriendliness and specialism. In the political jargon of a few decades ago, this approach would have been defined as a desire for an absolute majority. Its maximum aspiration is, after burning piles and piles of banknotes, to dominate a sector through monopoly. And behind every desire for an absolute majority there is a desire for a plebiscite.
 In the compromise between large numbers and complexity of access, not all possible scenarios will be taken into account during the tool’s development. Some problems will require a sequence of very inconvenient operations in order to be linked, especially repeatedly, resulting in that strange feeling where you find yourself clicking for hours yet producing very little. In computer jargon these settings are coded in user stories, informal descriptions of typical scenarios. Let’s imagine the user story of Indesign’s “print booklet” function: “As a graphic designer for a small agency, I want to develop a 16-page booklet in order to print a prototype to discuss with my art director.”
 Most of our daily digital activities have found space on some IT development company’s post-its. This is one of the various methods by which product designers keep track of software development. It is logical at this point to ask whether the user stories are made to fit our profession or do we progressively adapt our work to what the available tools are capable of doing?By definition designing means producing solutions that do not exist yet. If a solution we think up has never been produced before, it is reasonable to assume that it might never have been codified within a user story. Therefore, the most suitable digital tool to implement this solution might be missing. The question that arises at this point is: if the tool is missing, do we change the solution or create the tool? The budget and skills available for
@@ -57,15 +58,15 @@ Desktop publishing software - like personal computers in general - have condense
 #### text-block ####
 content: Programming then can become a way to escape this confinement, connecting different regions and patiently rebuilding the workshop within the tools that effectively destroyed these regions. It is a way of starting to produce radical tools again, useful for doing one thing perfectly rather general purpose: exactly what design and the designer need.
 ----
-#### section-title ####
-content: How the education system betrays us
-----
-class: default
-----
 #### image ####
 name: map-isle.svg
 ----
 class: large_image
+----
+#### section-title ####
+content: How the education system betrays us
+----
+class: default
 ----
 #### text-block ####
 content:
