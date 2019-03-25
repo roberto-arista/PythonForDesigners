@@ -12,6 +12,8 @@ body: #### text-block ####
 
 content: *Progetto grafico 33, Traslation by Isobel Butters*
 ----
+#### text-block ####
+content:
 Progetto Grafico asked me for a contribution on the value of programming in teaching graphic design. On various occasions member of the editorial board Silvio Lorusso and I have discussed the merits and limits of programming and the close relationship with the tools that ensues. Two years ago I was appointed teacher of the basic IT course at ISIA in Urbino and at the request of the then director Luciano Perondi I moved the syllabus from the usual desktop publishing software to programming. I also embarked a few months ago on the task of writing a programming manual in Python language for my students. “I’ll have no trouble writing this article,” I told myself. Instead, it has proven tricky. Finally, I realized why it was causing so much difficulty – it was not the technicalities or the abstract nature of some of the concepts, but the fact that learning to program for me turned out to be an emancipation process. And the process of emancipation is by nature personal.
 
 ----
