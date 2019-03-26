@@ -1,10 +1,14 @@
-_model: page
+_model: chapter
 ---
 title: Bibliography
+---
+abstract: Eager to learn more? Here's the reading list 📚
 ---
 visual_abstract: bibliography.svg
 ---
 og_image: bibliography.png
+---
+sort_key: 13
 ---
 body: #### section-title ####
 content: programming oriented

@@ -28,7 +28,7 @@
         <div class="tocCover-left">
           <img class='tocCover-image' src="{{ chapter._id }}.svg">
 
-          {% if chapter.sort_key > 0 %}
+          {% if 0 < chapter.sort_key < 13 %}
             <h3 class="tocCover-sortKey">{{ "%#02d"|format(chapter.sort_key) }}</h3>
           {% endif %}
         </div>

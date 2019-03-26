@@ -8,7 +8,7 @@
   <!-- dynamic part -->
   {% set chapters = site.get('/').children.filter(F._model == 'chapter').order_by('sort_key') %}
   {% for chapter in chapters %}
-    <li><div class="tocBar-sortKey {% if this._path == chapter._path %}tocBar-active{% endif %}">{% if chapter.sort_key > 0 %}{{ chapter.sort_key }})&#8199;{% endif %}</div>
+    <li><div class="tocBar-sortKey {% if this._path == chapter._path %}tocBar-active{% endif %}">{% if 0 < chapter.sort_key < 13 %}{{ chapter.sort_key }})&#8199;{% endif %}</div>
         <div class="tocBar-title"><a href="{{ chapter|url }}">{{ chapter.title }}</a></div></li>
   {% endfor %}
 
