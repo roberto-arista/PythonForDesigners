@@ -11,43 +11,94 @@ og_image: bibliography.png
 sort_key: 13
 ---
 body: #### section-title ####
-content: programming oriented
+content: Programming oriented
 ----
 class: default
 ----
 #### text-block ####
-
 content: Allen B., Downey. *Think Python. O’Reilly Media*, Inc., 2012.
-Arista, Roberto. *RoboTools: The influence of open source on typeface production tools.* Progetto Grafico 30, Autumn 2016.
-Goodrich, Michael T. *Data Structures and Algorithms in Python.* Wiley Ltd., 2016.
-Hunt, Andrew, and David Thomas. *The Pragmatic Programmer: From Journeyman to Master.* Addison Wesley, 1999.
-Jones, Brian, and David Beazley. *Python Cookbook Recipes for Mastering Python 3.* O’Reilly Media., 2013.
-Maeda, John. *Design by Numbers.* Cambridge, Massachusetts: The MIT Press, 1999.
-Reas, Casey, and Ben Fry. *Processing: A Programming Handbook for Visual Designers and Artists.* The MIT Press, 2007.
-Shiffman, Daniel. *The Nature of Code.* The Nature of Code, 2012.
+----
+#### text-block ####
+content: Arista, Roberto. *RoboTools: The influence of open source on typeface production tools.* Progetto Grafico 30, Autumn 2016.
+----
+#### text-block ####
+content: Goodrich, Michael T. *Data Structures and Algorithms in Python.* Wiley Ltd., 2016.
+----
+#### text-block ####
+content: Hunt, Andrew, and David Thomas. *The Pragmatic Programmer: From Journeyman to Master.* Addison Wesley, 1999.
+----
+#### text-block ####
+content: Jones, Brian, and David Beazley. *Python Cookbook Recipes for Mastering Python 3.* O’Reilly Media., 2013.
+----
+#### text-block ####
+content: Maeda, John. *Design by Numbers.* Cambridge, Massachusetts: The MIT Press, 1999.
+----
+#### text-block ####
+content: Reas, Casey, and Ben Fry. *Processing: A Programming Handbook for Visual Designers and Artists.* The MIT Press, 2007.
+----
+#### text-block ####
+content: Shiffman, Daniel. *The Nature of Code.* The Nature of Code, 2012.
 
----
+----
 #### section-title ####
-content: design oriented
+content: Design oriented
 ----
 class: default
 ----
 #### text-block ####
-content:
-Bertin, Jacques. *Sémiologie Graphique. Les Diagrammes, Les Réseaux, Les Cartes.* Esri, 2010.
-Fry, Benjamin. *Visualizing Data.* O’Reilly Media, Inc., 2007.
-Grunbaum, Branko, and Geoffrey Colin Shepard. *Tilings and Patterns.* U.S.A.: W.H. FREEMAN, 1987.
-Haralambous, Yannis. *Fonts & Encodings.* O’Reilly Media, 2007.
-Harris, Robert. *Information Graphics: A Comprehensive Illustrated Reference.* OUP USA, 2000.
-Kinross, Robin. *Modern Typography: An Essay in Critical History.* Hyphen Press, 1992.
-Klanten, Robert, Sven Ehmann, Nicolas Bourquin, and F. van Heerden, eds. *Data Flow 1: Visualizing Information in Graphic Design.* Gestalten, 2008.
-Klanten, Robert, Sven Ehmann, Nicolas Bourquin, and Thibaud Tissot, eds. *Data Flow 2: Visualizing Information in Graphic Design.* Die Gestalten Verlag, 2010.
-Nicolai, Carsten. *Grid Index.* Die Gestalten Verlag, 2009.
-Nicolai, Carsten. *Moire Index.* Die Gestalten Verlag, 2010.
-Noordzij, Gerrit. *The Stroke: Theory of Writing.* Hyphen, 2005.
-Paulus, Edo, Luna Maurer, Jonathan Puckey, and Roel Wouters. *Conditional Design Book.* Valiz, 2013.
-Perondi, Luciano. *Sinsemie: Scrittura Nello Spazio.* Stampa Alternativa, 2012.
-Potter, Norman. *What Is a Designer?: Things, Places, Messages.* Studio Vista, 1969.
-Smeijers, Fred. *Counterpunch*. Hypen, 1997.
-Tufte, Edward. *Envisioning Information.* Graphics Press, Cheshire, 1995.
-Tufte, Edward. *The Visual Display of Quantitative Information.* Connecticut: Graphics PressCheshire, 1983.
+content: Bertin, Jacques. *Sémiologie Graphique. Les Diagrammes, Les Réseaux, Les Cartes.* Esri, 2010.
+----
+#### text-block ####
+content: Fry, Benjamin. *Visualizing Data.* O’Reilly Media, Inc., 2007.
+----
+#### text-block ####
+content: Grunbaum, Branko, and Geoffrey Colin Shepard. *Tilings and Patterns.* U.S.A.: W.H. FREEMAN, 1987.
+----
+#### text-block ####
+content: Haralambous, Yannis. *Fonts & Encodings.* O’Reilly Media, 2007.
+----
+#### text-block ####
+content: Harris, Robert. *Information Graphics: A Comprehensive Illustrated Reference.* OUP USA, 2000.
+----
+#### text-block ####
+content: Kinross, Robin. *Modern Typography: An Essay in Critical History.* Hyphen Press, 1992.
+----
+#### text-block ####
+content: Klanten, Robert, Sven Ehmann, Nicolas Bourquin, and F. van Heerden, eds. *Data Flow 1: Visualizing Information in Graphic
+----
+#### text-block ####
+content: Design.* Gestalten, 2008.
+----
+#### text-block ####
+content: Klanten, Robert, Sven Ehmann, Nicolas Bourquin, and Thibaud Tissot, eds. *Data Flow 2: Visualizing Information in Graphic
+----
+#### text-block ####
+content: Design.* Die Gestalten Verlag, 2010.
+----
+#### text-block ####
+content: Nicolai, Carsten. *Grid Index.* Die Gestalten Verlag, 2009.
+----
+#### text-block ####
+content: Nicolai, Carsten. *Moire Index.* Die Gestalten Verlag, 2010.
+----
+#### text-block ####
+content: Noordzij, Gerrit. *The Stroke: Theory of Writing.* Hyphen, 2005.
+----
+#### text-block ####
+content: Paulus, Edo, Luna Maurer, Jonathan Puckey, and Roel Wouters. *Conditional Design Book.* Valiz, 2013.
+----
+#### text-block ####
+content: Perondi, Luciano. *Sinsemie: Scrittura Nello Spazio.* Stampa Alternativa, 2012.
+----
+#### text-block ####
+content: Potter, Norman. *What Is a Designer?: Things, Places, Messages.* Studio Vista, 1969.
+----
+#### text-block ####
+content: Smeijers, Fred. *Counterpunch*. Hypen, 1997.
+----
+#### text-block ####
+content: Tufte, Edward. *Envisioning Information.* Graphics Press, Cheshire, 1995.
+----
+#### text-block ####
+content: Tufte, Edward. *The Visual Display of Quantitative Information.* Connecticut: Graphics PressCheshire, 1983.
+----
