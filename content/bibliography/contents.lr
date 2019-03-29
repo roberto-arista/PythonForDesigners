@@ -1,0 +1,95 @@
+_model: chapter
+---
+title: Bibliography
+---
+abstract: Eager to learn more? Here's a continuously evolving reading list 📚
+---
+visual_abstract: bibliography.svg
+---
+og_image: bibliography.png
+---
+sort_key: 13
+---
+body: #### text-block ####
+content: *This reading list contains two kinds of books: the ones I have consulted while writing PFD and the ones that brought me to the place of writing PFD. Unfortunately, some of them are out-of-print; with a bit of luck you could find some of them in second-hand stores.*
+----
+#### section-title ####
+content: Programming oriented
+----
+class: default
+----
+#### text-block ####
+content: **Allen** B., Downey (2012) *Think Python*, O’Reilly Media
+----
+#### text-block ####
+content: **Arista**, Roberto (2016) *RoboTools: The influence of open source on typeface production tools* on Progetto Grafico 30, AIAP Edizioni
+----
+#### text-block ####
+content: **Goldwasser**, Michael H., Michael T. **Goodrich**, and Roberto **Tamassia** (2016) *Data Structures and Algorithms in Python*, Wiley Ltd.
+----
+#### text-block ####
+content: **Hunt**, Andrew, and David **Thomas** (1999) *The Pragmatic Programmer: From Journeyman to Master*, Addison Wesley
+----
+#### text-block ####
+content: **Jones**, Brian, and David **Beazley** (2013) *Python Cookbook Recipes for Mastering Python 3*, O’Reilly Media
+----
+#### text-block ####
+content: **Maeda**, John (1999) *Design by Numbers*, The MIT Press
+----
+#### text-block ####
+content: **Reas**, Casey, and Ben **Fry** (2007) *Processing: A Programming Handbook for Visual Designers and Artists*, The MIT Press
+----
+#### text-block ####
+content: **Shiffman**, Daniel (2012) *The Nature of Code*, The Nature of Code
+
+----
+#### section-title ####
+content: Graphic Design oriented
+----
+class: default
+----
+#### text-block ####
+content: **Bertin**, Jacques (2011) *Semiology of graphics*, Esri Press
+----
+#### text-block ####
+content: **Fry**, Benjamin (2007) *Visualizing Data*, O’Reilly Media
+----
+#### text-block ####
+content: **Grunbaum**, Branko, and Geoffrey C. **Shepard** (1987) *Tilings and Patterns*, W.H. Freeman
+----
+#### text-block ####
+content: **Haralambous**, Yannis (2007) *Fonts & Encodings*, O’Reilly Media
+----
+#### text-block ####
+content: **Harris**, Robert (2000) *Information Graphics: A Comprehensive Illustrated Reference*, Oxford University Press
+----
+#### text-block ####
+content: **Kinross**, Robin (1992) *Modern Typography: An Essay in Critical History*, Hyphen Press
+----
+#### text-block ####
+content: **Nicolai**, Carsten (2009) *Grid Index*, Gestalten
+----
+#### text-block ####
+content: **Nicolai**, Carsten (2010) *Moire Index*, Gestalten
+----
+#### text-block ####
+content: **Noordzij**, Gerrit (2005) *The Stroke: Theory of Writing*, Hyphen Press
+----
+#### text-block ####
+content: **Paulus**, Edo, Luna **Maurer**, Jonathan **Puckey**, and Roel **Wouters** (2013) *Conditional Design Book*, Valiz Editions
+----
+#### text-block ####
+content: **Perondi**, Luciano (2012) *Sinsemie: Scrittura Nello Spazio*, Stampa Alternativa
+----
+#### text-block ####
+content: **Potter**, Norman (1980) *What Is a Designer? : Things, Places, Messages*, Hyphen Press
+----
+#### text-block ####
+content: **Smeijers**, Fred (1997) *Counterpunch*, Hyphen Press
+----
+#### text-block ####
+content: **Tufte**, Edward (1995) *Envisioning Information*, Graphics Press
+----
+#### text-block ####
+content: **Tufte**, Edward (1983) *The Visual Display of Quantitative Information*, Graphics Press
+----

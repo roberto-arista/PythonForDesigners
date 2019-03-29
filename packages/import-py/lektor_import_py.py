@@ -8,6 +8,7 @@ import codecs
 def importPy(fileName):
     ctx = get_ctx()
     filePath = os.getcwd() + '/content' + ctx.source.path + '/' + fileName  # 🤷‍♂️
+    # filePath = os.getcwd() + ctx.source.path + '/' + fileName  # 🤷‍♂️
     with codecs.open(filePath, 'r', 'utf-8') as pyFile:
         pyStr = pyFile.read()
     return HTML(u'<code class="language-python">{}</code>'.format(pyStr))
