@@ -41,8 +41,8 @@
   font-family: 'Arnold Regular', monospace;
   color: #fff;
   padding-left: 100%;
-  -webkit-animation: marquee 15s linear infinite;
-          animation: marquee 15s linear infinite;
+  -webkit-animation: marquee 20s linear infinite;
+          animation: marquee 20s linear infinite;
 }
 
 @-webkit-keyframes marquee {
