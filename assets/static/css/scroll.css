@@ -1,0 +1,68 @@
+@font-face {
+  font-family: 'Laica Regular';
+  src: url("/static/fonts/LaicaB-Regular.woff2") format("woff2"), url("/static/fonts/LaicaB-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Laica Italic';
+  src: url("/static/fonts/LaicaB-Italic.woff2") format("woff2"), url("/static/fonts/LaicaB-Italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Laica Bold';
+  src: url("/static/fonts/LaicaB-Bold.woff") format("woff"), url("/static/fonts/LaicaB-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'Arnold Regular';
+  src: url("/static/fonts/Arnold_v0.3-Regular.woff2") format("woff2"), url("/static/fonts/Arnold_v0.3-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Arnold Italic';
+  src: url("/static/fonts/Arnold_v0.3-Italic.woff2") format("woff2"), url("/static/fonts/Arnold_v0.3-Italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Gig Regular';
+  src: url("/static/fonts/GigV0.2-Regular.woff") format("woff");
+}
+
+#scroll-left {
+  margin: 0 auto;
+  padding: .5em 0;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: #FF3366;
+}
+
+#scroll-left span {
+  display: inline-block;
+  font-family: 'Arnold Regular', monospace;
+  color: #fff;
+  padding-left: 100%;
+  -webkit-animation: marquee 20s linear infinite;
+          animation: marquee 20s linear infinite;
+}
+
+@-webkit-keyframes marquee {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(-100%, 0);
+            transform: translate(-100%, 0);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(-100%, 0);
+            transform: translate(-100%, 0);
+  }
+}
