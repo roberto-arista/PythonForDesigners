@@ -153,3 +153,18 @@ content: Your goal is to draw a boustrophedonic (from left to right and from rig
 ----
 image: pattern_oval.png
 ----
+#### exercise ####
+content: Create a 200x200pt canvas. Draw a sequence of squares from top to bottom using a while loop. The square side should be adjustable through a variable. Odd squares should be light gray, even tiles should be dark gray.
+----
+image: exercise6_1.png
+----
+#### exercise ####
+content: Extend the previous exercise. Nest two while statements and draw a pattern made of squares across the entire canvas. Try to get a chessboard effect.
+----
+image: chessboard.png
+----
+#### exercise ####
+content: Write a program able to draw a ruler of a specific measure unit (either PostScript points or millimeters) across the entire canvas. The ruler ticks should be of different lengths according to a given rhythm. Use a while loop. Numbers displayed along the ruler are a plus.
+----
+image: typometer.png
+----
