@@ -407,7 +407,7 @@ image: chessboard.png
 #### exercise ####
 content: Write a program able to draw a ruler of a specific measure unit (either PostScript points or millimeters) across the entire canvas. The ruler ticks should be of different lengths according to a given rhythm. Use a while loop. Numbers displayed along the ruler are a plus.
 ----
-image: tipometer.png
+image: typometer.png
 ----
 #### exercise ####
 content: Write a program able to draw a circle positioned at the center of the canvas. Its size should react to a parameter "factor" between 0 and 1:
