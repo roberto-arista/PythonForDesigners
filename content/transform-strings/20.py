@@ -1,2 +1,2 @@
-value = 45
+value = .45
 f'{value:.0%}' # 45%
