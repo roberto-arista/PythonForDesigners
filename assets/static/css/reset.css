@@ -13,39 +13,39 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 /* HTML5 display-role reset for older browsers */
-/* line 16, lib/sass/reset.scss */
+/* line 17, lib/sass/reset.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-/* line 19, lib/sass/reset.scss */
+/* line 20, lib/sass/reset.scss */
 body {
   line-height: 1;
 }
 
-/* line 22, lib/sass/reset.scss */
+/* line 23, lib/sass/reset.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 25, lib/sass/reset.scss */
+/* line 26, lib/sass/reset.scss */
 blockquote, q {
   quotes: none;
 }
 
-/* line 29, lib/sass/reset.scss */
+/* line 30, lib/sass/reset.scss */
 blockquote:before, blockquote:after {
   content: '';
   content: none;
 }
 
-/* line 34, lib/sass/reset.scss */
+/* line 35, lib/sass/reset.scss */
 q:before, q:after {
   content: '';
   content: none;
 }
 
-/* line 38, lib/sass/reset.scss */
+/* line 39, lib/sass/reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
