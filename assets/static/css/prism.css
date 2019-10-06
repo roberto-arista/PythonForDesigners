@@ -65,19 +65,19 @@ pre[class*="language-"] {
 pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
   text-shadow: none;
-  background: #0F0;
+  background: #F36;
 }
 
 /* line 59, lib/sass/prism.scss */
 pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
   text-shadow: none;
-  background: #0F0;
+  background: #F36;
 }
 pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
 code[class*="language-"]::selection, code[class*="language-"] ::selection {
   text-shadow: none;
-  background: #0F0;
+  background: #F36;
 }
 
 @media print {
@@ -111,7 +111,7 @@ pre[class*="language-"] {
 /* line 94, lib/sass/prism.scss */
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-  background-color: #fff5f8;
+  background-color: #FFF5F8;
   border-top: 3px solid #1858A8;
 }
 
@@ -175,7 +175,7 @@ div.code_image_wrapper pre[class*="language-"] {
 
 /* line 153, lib/sass/prism.scss */
 .token.builtin {
-  color: #0F0;
+  color: #F36;
   font-family: "Arnold Italic", Monaco, monospace;
 }
 

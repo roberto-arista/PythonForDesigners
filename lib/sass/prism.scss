@@ -15,13 +15,13 @@ $green: #96d400;
 $jade: #0abfaa;
 $orange: #ffa319;
 $violet: #ba8caf;
-$lightBlue: #0099ff;
+$light-blue: #0099ff;
 
 
 code[class*="language-"],
 pre[class*="language-"] {
 
-    color: $darkGrey;
+    color: $dark-grey;
     background: none;
     text-shadow: none;
     font-family: $Arnold;
@@ -170,7 +170,7 @@ div.code_image_wrapper pre[class*="language-"] {
 
 .token.function,
 .token.class-name {
-    color: $lightBlue;
+    color: $light-blue;
     font-family: $ArnoldItalic;
 
 }
