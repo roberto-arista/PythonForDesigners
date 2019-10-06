@@ -7,6 +7,12 @@ $breakpoints: (
   'xl': 1500
 ) !default;
 
+// sizes
+$headerHgt: ('xs': 2rem,
+             'sm': 2rem,
+             'md': 2rem,
+             'lg': 2rem);
+
 // fonts
 $Laica: 'Laica Regular', Georgia, serif;
 $LaicaItalic: 'Laica Italic', Georgia, serif;
@@ -17,22 +23,23 @@ $Gig: 'Gig Regular', Georgia, serif;
 
 // colors
 $black: #000;
-$darkGrey: #222;
+$dark-grey: #222;
 $grey: #777;
-$lightGrey: #eee;
-$white: #fff;
+$light-grey: #EEE;
+$white: #FFF;
 
 $dark-pink: #BC2650;
-$pink: #0F0;
+$pink: #F36;
 $light-pink: #FFEDED;
 
+$light-blue: #A6CEFF;
 $blue: #1858A8;
 
-// $lightGrey: #cdcdcd;
+// $light-grey: #cdcdcd;
 // $medium-gray: #cccccc;
 
-$main-background: #fff5f8;
-$exercise-background: #e2f4ff;
+$main-background: #FFF5F8;
+$exercise-background: #E2F4FF;
 
 // helpers
 @function getBreakpoint($key) {
