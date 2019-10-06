@@ -1,6 +1,7 @@
 @import "variables";
 @import "cssLocks";
 @import "breakpoints";
+@import "mixins";
 
 /*
 // xs
@@ -18,15 +19,15 @@ property: value;
 */
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
   height: 100%;
 
   // xs
-  @include css-lock($min-size: 20,
-                    $max-size: 23,
+  @include css-lock($min-size: 23,
+                    $max-size: 26,
                     $min-width: map-get($breakpoints, 'xs'),
                     $max-width: map-get($breakpoints, 'sm'),
                     $property: font-size, $unit: px);
@@ -54,23 +55,108 @@ html {
     }
 }
 
+
 body {
-  font-size: 1rem;
+  font-size: .82rem;
+  line-height: 1rem;
 
-  // xs
-  background-color: red;
+  font-family: $Laica;
+  font-kerning: normal;
 
-    @include bigger-than('sm') {
-      background-color: pink;
-    }
-    @include bigger-than('md') {
-      background-color: yellow;
-    }
-    @include bigger-than('lg') {
-      background-color: purple;
-    }
+  color: $dark-grey;
+  background: $white;
+
+  // text rendering
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
 }
 
+// wildcards
+.basic-container {
+  margin: 0 auto;
 
+  @include css-lock($min-size:  290,
+                    $max-size:  550,
+                    $min-width: map-get($breakpoints, 'xs'),
+                    $max-width: map-get($breakpoints, 'sm'),
+                    $property:  width, $unit: px);
+
+  @include bigger-than('sm') { 
+      @include css-lock($min-size:  550,
+                        $max-size:  700,
+                        $min-width: map-get($breakpoints, 'sm') +1,
+                        $max-width: map-get($breakpoints, 'md'),
+                        $property:  width, $unit: px);
+  }
+
+  @include bigger-than('md') { 
+      @include css-lock($min-size:  700,
+                        $max-size:  850,
+                        $min-width: map-get($breakpoints, 'md') +1,
+                        $max-width: map-get($breakpoints, 'lg'),
+                        $property: width, $unit: px);
+                   }
+
+  @include bigger-than('lg') { 
+      @include css-lock($min-size:  850,
+                        $max-size:  1024,
+                        $min-width: map-get($breakpoints, 'lg') +1,
+                        $max-width: map-get($breakpoints, 'xl'),
+                        $property: width, $unit: px);
+  }
+}
+
+.no-border {
+  border: none;
+}
+
+.lg-only {
+  @include smaller-than('lg') {
+    display: none;
+  }
+}
+
+strong {
+  font-family: $LaicaBold;
+}
+
+// basic typography
+h1 {
+  font-size: 1.8rem;
+  line-height: 2rem;
+  font-family: $Gig;
+  color: $blue;
+}
+
+p {
+  font-family: $Laica;
+}
+
+a {
+  color: $pink;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  border-bottom: 1px solid $pink;
+}
+
+a:visited {
+  color: $pink;
+}
+
+a:visited:hover {
+  color: $pink;
+  border-bottom: 1px solid $pink;
+}
+
+// text selection
+::selection {
+ background: $light-pink; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+ background: $light-pink; /* Gecko Browsers */
+}
 

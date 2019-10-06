@@ -12,118 +12,256 @@ property: value;
     property: value;
   }
 */
-/* line 20, lib/sass/style.scss */
+/* line 21, lib/sass/style.scss */
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-/* line 24, lib/sass/style.scss */
+/* line 25, lib/sass/style.scss */
 html {
   height: 100%;
-  font-size: calc(20px + (23px - 20px) * ((100vw - 320px) / (600px - 320px)));
+  font-size: calc(23px + (26 - 23) * ((100vw - 320px) / (600 - 320)));
 }
 
 @media (max-width: 320px) {
-  /* line 24, lib/sass/style.scss */
-  html {
-    font-size: 20px;
-  }
-}
-
-@media (min-width: 600px) {
-  /* line 24, lib/sass/style.scss */
+  /* line 25, lib/sass/style.scss */
   html {
     font-size: 23px;
   }
 }
 
 @media (min-width: 600px) {
-  /* line 24, lib/sass/style.scss */
+  /* line 25, lib/sass/style.scss */
   html {
-    font-size: calc(23px + (26px - 23px) * ((100vw - 601px) / (900px - 601px)));
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 600px) {
+  /* line 25, lib/sass/style.scss */
+  html {
+    font-size: calc(23px + (26 - 23) * ((100vw - 601px) / (900 - 601)));
   }
 }
 
 @media (min-width: 600px) and (max-width: 601px) {
-  /* line 24, lib/sass/style.scss */
+  /* line 25, lib/sass/style.scss */
   html {
     font-size: 23px;
   }
 }
 
 @media (min-width: 600px) and (min-width: 900px) {
-  /* line 24, lib/sass/style.scss */
+  /* line 25, lib/sass/style.scss */
   html {
     font-size: 26px;
   }
 }
 
 @media (min-width: 900px) {
-  /* line 24, lib/sass/style.scss */
+  /* line 25, lib/sass/style.scss */
   html {
-    font-size: calc(26px + (28px - 26px) * ((100vw - 901px) / (1200px - 901px)));
+    font-size: calc(26px + (28 - 26) * ((100vw - 901px) / (1200 - 901)));
   }
 }
 
 @media (min-width: 900px) and (max-width: 901px) {
-  /* line 24, lib/sass/style.scss */
+  /* line 25, lib/sass/style.scss */
   html {
     font-size: 26px;
   }
 }
 
 @media (min-width: 900px) and (min-width: 1200px) {
-  /* line 24, lib/sass/style.scss */
+  /* line 25, lib/sass/style.scss */
   html {
     font-size: 28px;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 24, lib/sass/style.scss */
+  /* line 25, lib/sass/style.scss */
   html {
-    font-size: calc(28px + (32px - 28px) * ((100vw - 1201px) / (1500px - 1201px)));
+    font-size: calc(28px + (32 - 28) * ((100vw - 1201px) / (1500 - 1201)));
   }
 }
 
 @media (min-width: 1200px) and (max-width: 1201px) {
-  /* line 24, lib/sass/style.scss */
+  /* line 25, lib/sass/style.scss */
   html {
     font-size: 28px;
   }
 }
 
 @media (min-width: 1200px) and (min-width: 1500px) {
-  /* line 24, lib/sass/style.scss */
+  /* line 25, lib/sass/style.scss */
   html {
     font-size: 32px;
   }
 }
 
-/* line 57, lib/sass/style.scss */
+/* line 59, lib/sass/style.scss */
 body {
-  font-size: 1rem;
-  background-color: red;
+  font-size: .82rem;
+  line-height: 1rem;
+  font-family: "Laica Regular", Georgia, serif;
+  -webkit-font-kerning: normal;
+          font-kerning: normal;
+  color: #222;
+  background: #FFF;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 76, lib/sass/style.scss */
+.basic-container {
+  margin: 0 auto;
+  width: calc(290px + (550 - 290) * ((100vw - 320px) / (600 - 320)));
+}
+
+@media (max-width: 320px) {
+  /* line 76, lib/sass/style.scss */
+  .basic-container {
+    width: 290px;
+  }
 }
 
 @media (min-width: 600px) {
-  /* line 57, lib/sass/style.scss */
-  body {
-    background-color: pink;
+  /* line 76, lib/sass/style.scss */
+  .basic-container {
+    width: 550px;
+  }
+}
+
+@media (min-width: 600px) {
+  /* line 76, lib/sass/style.scss */
+  .basic-container {
+    width: calc(550px + (700 - 550) * ((100vw - 601px) / (900 - 601)));
+  }
+}
+
+@media (min-width: 600px) and (max-width: 601px) {
+  /* line 76, lib/sass/style.scss */
+  .basic-container {
+    width: 550px;
+  }
+}
+
+@media (min-width: 600px) and (min-width: 900px) {
+  /* line 76, lib/sass/style.scss */
+  .basic-container {
+    width: 700px;
   }
 }
 
 @media (min-width: 900px) {
-  /* line 57, lib/sass/style.scss */
-  body {
-    background-color: yellow;
+  /* line 76, lib/sass/style.scss */
+  .basic-container {
+    width: calc(700px + (850 - 700) * ((100vw - 901px) / (1200 - 901)));
+  }
+}
+
+@media (min-width: 900px) and (max-width: 901px) {
+  /* line 76, lib/sass/style.scss */
+  .basic-container {
+    width: 700px;
+  }
+}
+
+@media (min-width: 900px) and (min-width: 1200px) {
+  /* line 76, lib/sass/style.scss */
+  .basic-container {
+    width: 850px;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 57, lib/sass/style.scss */
-  body {
-    background-color: purple;
+  /* line 76, lib/sass/style.scss */
+  .basic-container {
+    width: calc(850px + (1024 - 850) * ((100vw - 1201px) / (1500 - 1201)));
   }
+}
+
+@media (min-width: 1200px) and (max-width: 1201px) {
+  /* line 76, lib/sass/style.scss */
+  .basic-container {
+    width: 850px;
+  }
+}
+
+@media (min-width: 1200px) and (min-width: 1500px) {
+  /* line 76, lib/sass/style.scss */
+  .basic-container {
+    width: 1024px;
+  }
+}
+
+/* line 110, lib/sass/style.scss */
+.no-border {
+  border: none;
+}
+
+@media (max-width: 1200px) {
+  /* line 114, lib/sass/style.scss */
+  .lg-only {
+    display: none;
+  }
+}
+
+/* line 120, lib/sass/style.scss */
+strong {
+  font-family: "Laica Bold", Georgia, serif;
+}
+
+/* line 125, lib/sass/style.scss */
+h1 {
+  font-size: 1.8rem;
+  line-height: 2rem;
+  font-family: "Gig Regular", Georgia, serif;
+  color: #1858A8;
+}
+
+/* line 132, lib/sass/style.scss */
+p {
+  font-family: "Laica Regular", Georgia, serif;
+}
+
+/* line 136, lib/sass/style.scss */
+a {
+  color: #F36;
+  text-decoration: none;
+}
+
+/* line 141, lib/sass/style.scss */
+a:hover {
+  text-decoration: none;
+  border-bottom: 1px solid #F36;
+}
+
+/* line 146, lib/sass/style.scss */
+a:visited {
+  color: #F36;
+}
+
+/* line 150, lib/sass/style.scss */
+a:visited:hover {
+  color: #F36;
+  border-bottom: 1px solid #F36;
+}
+
+/* line 156, lib/sass/style.scss */
+::-moz-selection {
+  background: #FFEDED;
+  /* WebKit/Blink Browsers */
+}
+::selection {
+  background: #FFEDED;
+  /* WebKit/Blink Browsers */
+}
+
+/* line 159, lib/sass/style.scss */
+::-moz-selection {
+  background: #FFEDED;
+  /* Gecko Browsers */
 }
