@@ -14,7 +14,7 @@ var paths = {
     input: 'lib/',
     output: 'assets/static/',
     styles: {
-        input: 'lib/sass/**/*.{scss,sass}',
+        input: ['lib/sass/**/*.{scss,sass}', '!lib/sass/**/*_BAK.{scss,sass}'],
         output: 'assets/static/css/'
     },
     scripts: {
