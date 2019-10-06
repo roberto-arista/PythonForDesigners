@@ -1,0 +1,84 @@
+/* line 6, lib/sass/header.scss */
+header {
+  color: #FFF;
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Arnold Regular", Monaco, monospace;
+  background-color: #1858A8;
+  position: fixed;
+  top: 0;
+}
+
+@media (max-width: 900px) {
+  /* line 6, lib/sass/header.scss */
+  header {
+    border-bottom: 1px solid #FFEDED;
+  }
+}
+
+/* line 23, lib/sass/header.scss */
+header a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+/* line 28, lib/sass/header.scss */
+header a:hover {
+  text-decoration: none;
+  border: none;
+}
+
+/* line 33, lib/sass/header.scss */
+header a:visited {
+  color: #FFF;
+}
+
+/* line 37, lib/sass/header.scss */
+header a:visited:hover {
+  color: #FFF;
+  border: none;
+}
+
+/* line 42, lib/sass/header.scss */
+#resource_title, #author_name {
+  display: inline;
+  margin-bottom: 0;
+  font-family: "Arnold Regular", Monaco, monospace;
+  font-variant-caps: small-caps;
+  text-transform: lowercase;
+  font-size: .9rem;
+  line-height: 2rem;
+}
+
+@media (min-width: 600px) {
+  /* line 42, lib/sass/header.scss */
+  #resource_title, #author_name {
+    line-height: 2rem;
+  }
+}
+
+@media (min-width: 900px) {
+  /* line 42, lib/sass/header.scss */
+  #resource_title, #author_name {
+    line-height: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* line 42, lib/sass/header.scss */
+  #resource_title, #author_name {
+    line-height: 2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  /* line 67, lib/sass/header.scss */
+  #author_name {
+    display: none;
+  }
+}
+
+/* line 71, lib/sass/header.scss */
+#author_name:before {
+  content: '\2003\2003';
+}

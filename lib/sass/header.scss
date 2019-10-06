@@ -1,0 +1,73 @@
+@import "variables";
+@import "cssLocks";
+@import "breakpoints";
+
+
+header {
+  // standard
+  color: $white;
+  width: 100%;
+  margin: 0 auto;
+  font-family: $Arnold;
+  background-color: $blue;
+
+  position: fixed;
+  top: 0;
+
+  @include smaller-than('md') {
+    border-bottom: 1px solid $light-pink;
+  }
+
+}
+
+header a {
+  color: $white;
+  text-decoration: none;
+}
+
+header a:hover {
+  text-decoration: none;
+  border: none;
+}
+
+header a:visited {
+  color: $white;
+}
+
+header a:visited:hover {
+  color: $white;
+  border: none;
+}
+
+#resource_title, #author_name {
+  display: inline;
+  margin-bottom: 0;
+  font-family: $Arnold;
+  font-variant-caps: small-caps;
+  text-transform: lowercase;
+
+  // xs
+  font-size: .9rem;
+  line-height: map-get($headerHgt, 'xs');
+
+  @include bigger-than('sm') {
+    line-height: map-get($headerHgt, 'sm');
+  }
+
+  @include bigger-than('md') {
+    line-height: map-get($headerHgt, 'md');
+  }
+
+  @include bigger-than('lg') {
+    line-height: map-get($headerHgt, 'lg');
+  }
+
+}
+
+#author_name {
+  @include smaller-than('md') { display: none; }
+}
+
+#author_name:before {
+  content: '\2003\2003';
+}

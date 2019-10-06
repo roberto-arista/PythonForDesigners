@@ -1,0 +1,339 @@
+/* line 5, lib/sass/index.scss */
+#welcome {
+  background-color: #FFEDED;
+  margin-top: 2rem;
+}
+
+@media (min-width: 600px) {
+  /* line 5, lib/sass/index.scss */
+  #welcome {
+    margin-top: 2rem;
+  }
+}
+
+@media (min-width: 900px) {
+  /* line 5, lib/sass/index.scss */
+  #welcome {
+    margin-top: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* line 5, lib/sass/index.scss */
+  #welcome {
+    margin-top: 2rem;
+  }
+}
+
+/* line 20, lib/sass/index.scss */
+#welcome > div {
+  padding: 1rem 0;
+}
+
+@media (min-width: 900px) {
+  /* line 20, lib/sass/index.scss */
+  #welcome > div {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* line 29, lib/sass/index.scss */
+#welcome h1 {
+  color: #F36;
+  padding-bottom: .5rem;
+}
+
+/* line 34, lib/sass/index.scss */
+#welcome p, #welcome .callout > h4 {
+  line-height: 1.25rem;
+  font-size: 1rem;
+}
+
+/* line 39, lib/sass/index.scss */
+#toc {
+  margin: 1rem 0;
+}
+
+/* line 43, lib/sass/index.scss */
+#toc > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* line 49, lib/sass/index.scss */
+.toc-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: .5rem 0;
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  /* line 49, lib/sass/index.scss */
+  .toc-item {
+    width: 49%;
+  }
+}
+
+/* line 70, lib/sass/index.scss */
+.toc-left {
+  width: 22%;
+  margin-right: 3%;
+}
+
+/* line 76, lib/sass/index.scss */
+.toc-left h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  color: #1858A8;
+}
+
+/* line 83, lib/sass/index.scss */
+.toc-right {
+  width: 75%;
+}
+
+/* line 87, lib/sass/index.scss */
+.toc-right p a, .toc-right .callout > h4 a {
+  font-family: "Arnold Regular", Monaco, monospace;
+  line-height: 1rem;
+  font-size: .72rem;
+}
+
+/* line 94, lib/sass/index.scss */
+.toc-right h2 a {
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+  color: #1858A8;
+  font-family: "Gig Regular", Georgia, serif;
+  color: #F36;
+}
+
+/* line 103, lib/sass/index.scss */
+#callouts {
+  background-color: #FFEDED;
+  color: #1858A8;
+}
+
+/* line 108, lib/sass/index.scss */
+#callouts > div {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+@media (min-width: 1200px) {
+  /* line 108, lib/sass/index.scss */
+  #callouts > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+/* line 121, lib/sass/index.scss */
+.callout {
+  height: 100%;
+  padding: .5rem 0;
+}
+
+@media (min-width: 900px) {
+  /* line 121, lib/sass/index.scss */
+  .callout {
+    padding: .5rem 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* line 121, lib/sass/index.scss */
+  .callout {
+    width: 31%;
+    padding: .5rem 0;
+  }
+}
+
+/* line 139, lib/sass/index.scss */
+.callout > h4 {
+  font-family: "Laica Bold", Georgia, serif;
+  text-indent: 1rem;
+}
+
+@media (min-width: 1200px) {
+  /* line 139, lib/sass/index.scss */
+  .callout > h4 {
+    text-indent: .5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* line 149, lib/sass/index.scss */
+  .callout > p, .callout > h4 {
+    line-height: 1rem;
+    font-size: .62rem;
+  }
+}
+
+/* line 157, lib/sass/index.scss */
+#newsletter {
+  background-color: #F36;
+}
+
+/* line 161, lib/sass/index.scss */
+#newsletter > div {
+  padding: 0 0 .5rem 0;
+}
+
+/* line 165, lib/sass/index.scss */
+#mc_embed_signup form {
+  text-align: center;
+  padding: .25rem 0 .25rem 0;
+}
+
+/* positions input field horizontally */
+/* line 171, lib/sass/index.scss */
+.mc-field-group {
+  display: inline-block;
+}
+
+/* line 175, lib/sass/index.scss */
+#mc_embed_signup input.email {
+  font-family: "Arnold Regular", Monaco, monospace;
+  font-size: .7rem;
+  line-height: 1rem;
+  border: 1px solid #FFEDED;
+  border-radius: 3px;
+  color: #000;
+  background-color: #FFF5F8;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 1.25rem;
+  padding: 0px 0.5rem;
+  display: inline-block;
+  margin: 0;
+  width: 16rem;
+  vertical-align: top;
+}
+
+/* line 194, lib/sass/index.scss */
+#mc_embed_signup label {
+  margin-top: .25em;
+  display: block;
+  font-family: 'Gig Regular';
+  color: #FFEDED;
+  line-height: 1.5rem;
+  font-size: 1.5em;
+  padding-bottom: .25em;
+}
+
+/* positions button horizontally in line with input */
+/* line 205, lib/sass/index.scss */
+#mc_embed_signup .clear {
+  display: inline-block;
+}
+
+/* line 209, lib/sass/index.scss */
+#mc_embed_signup .button {
+  font-size: .5rem;
+  line-height: .5rem;
+  font-family: "Arnold Regular", Monaco, monospace;
+  border: none;
+  text-transform: uppercase;
+  border-radius: 3px;
+  color: #F36;
+  background-color: #FFEDED;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 1.25rem;
+  line-height: 32px;
+  padding: 0 18px;
+  display: inline-block;
+  margin: 0;
+  -webkit-transition: all 0.23s ease-in-out 0s;
+  transition: all 0.23s ease-in-out 0s;
+}
+
+/* line 229, lib/sass/index.scss */
+#mc_embed_signup .button:hover {
+  background-color: #BC2650;
+  color: #FFEDED;
+  cursor: pointer;
+}
+
+/* line 235, lib/sass/index.scss */
+#mc_embed_signup div#mce-responses {
+  float: left;
+  top: -1.4em;
+  padding: 0em .5em 0em .5em;
+  overflow: hidden;
+  width: 90%;
+  margin: 0 5%;
+  clear: both;
+}
+
+/* line 244, lib/sass/index.scss */
+#mc_embed_signup div.response {
+  margin: 1em 0;
+  padding: 1em .5em .5em 0;
+  font-weight: bold;
+  float: left;
+  top: -1.5em;
+  z-index: 1;
+  width: 80%;
+}
+
+/* line 254, lib/sass/index.scss */
+#mc_embed_signup #mce-error-response {
+  display: none;
+}
+
+/* line 255, lib/sass/index.scss */
+#mc_embed_signup #mce-success-response {
+  color: #529214;
+  display: none;
+}
+
+/* line 257, lib/sass/index.scss */
+#mc_embed_signup label.error {
+  display: block;
+  float: none;
+  width: auto;
+  margin-left: 1.05em;
+  text-align: left;
+  padding: .5em 0;
+}
+
+@media (max-width: 900px) {
+  /* line 267, lib/sass/index.scss */
+  #mc_embed_signup input.email {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  /* line 272, lib/sass/index.scss */
+  #mc_embed_signup .clear {
+    display: block;
+    width: 100%;
+  }
+  /* line 277, lib/sass/index.scss */
+  #mc_embed_signup .button {
+    width: 100%;
+    margin: 0;
+  }
+}
