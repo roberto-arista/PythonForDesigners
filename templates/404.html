@@ -18,14 +18,16 @@
 
 <div class="chapterContainer">
 
-    <div class="left-column">
-        {% include "leftMenu.html" %}
-    </div>
+    <aside>
+        {% include "toc-bar.html" %}
+    </aside>
 
-    <div class='right-column'>
+{#
+    <article>
         <h1>{{ this.title }}</h1>
         <img class='large_image' src="{{ 'static/imgs/404.svg' | asseturl }}">
-    </div>
+    </article>
+#}
 
 </div>
 {% endblock %}
