@@ -16,7 +16,7 @@ content: People have been debating this since the advent of computer graphics. M
 #### image ####
 name: typographicalMachine.svg
 ----
-class: small_image
+class: small-image
 ----
 #### text-block ####
 content: Nowadays, the computer is a mandatory toolbox for any design discipline, and also for most jobs. I am aware only of few designers who tend not to use digital tools. They compensate with a craftsmanship that takes decades to develop. However, one does not have to choose: you can have both.
@@ -26,7 +26,7 @@ What makes a computer is its ability to typeset and make calculation. These func
 #### image ####
 name: coffeeBooks.svg
 ----
-class: small_image
+class: small-image
 ----
 #### text-block ####
 content: You are a designer, and you also want to be a coder. It does not mean that you have to be a nerdy guy as Hollywood movies might make you think. Coding is mainly a language-oriented skill. The ability to describe a procedure in a formal language is not increased by testosterone. It requires instead logic, a little bit of math (less than might you think), stubbornness, studying and practice. These requirements are shared by many other disciplines which are not subjected to the same kind of racial and gender misrepresentation.
@@ -41,7 +41,7 @@ content: Explain to a friend how to get to the nearest ice-cream shop. If you li
 #### image ####
 name: writingTools.svg
 ----
-class: small_image
+class: small-image
 ----
 #### text-block ####
 content: Tools. Tools. Tools. Since the discovery of fire, we surrounded ourselves with tools to carry out most of our tasks. Prometheus, the Titan who donated fire to the ancient men making them closer to divinity, was punished by Zeus. Tools are a big deal. As a designer, you probably noticed that tools influence the way you do things. They are prostheses we use to make our arms longer, our eyes sharper, etc. They even change our perspective upon reality, because any tool is an expression of ideology.
@@ -53,7 +53,7 @@ Moreover, can you link an artists' body of work with a specific kind of photogra
 #### image ####
 name: WYGIWYG.svg
 ----
-class: small_image
+class: small-image
 ----
 #### text-block ####
 content: Once you acknowledge this, you can try to mold them in a way they will help you to achieve your goals and function according to your view of things, or use them as they are. Type designer Luciano Perondi summed up these two approaches with two acronyms: *What You See Is What You Get* (the mantra of Desktop Publishing) vs. *What You Get Is What You Want*. Graphical environments are a great achievement for the relationship between humans and machines. But, if GUIs are your only channel of communication with computers, you are probably missing out a whole lot of opportunities offered by your working environment. The problem with *What You See Is What You Get* is that *What You See Is All You Get*.
@@ -66,7 +66,7 @@ content: Try to list three moments when you wanted to go beyond a user interface
 #### image ####
 name: yogi_designer.svg
 ----
-class: small_image
+class: small-image
 ----
 #### text-block ####
 content: Take also into account that proprietary digital tools often are not made to be interchangeable. The interrelation between software belonging to the same suite (like Illustrator and InDesign) is unusual outside that specific fence. A little bit of code allows you to make two different tools (either open source or proprietary) communicate in a way that their developers did not think about. What I am trying to say is that coding makes you a more flexible designer. You will be able to bend your workflow (and yourself) to reach your goals.

@@ -13,7 +13,7 @@ og_image: abstract-8.png
 body: #### image ####
 name: textfile.gif
 ----
-class: small_image
+class: small-image
 ----
 #### text-block ####
 content: Since the advent of personal computers and desktop publishing, more and more people typeset fonts on a screen. This practice was once confined to a professional category. Nowadays typesetting is ubiquitous. It is so widespread that writing and typesetting are almost considered the same thing. The differences between the two realms are important and a visual designer should be aware of them.
@@ -25,7 +25,7 @@ The definition of Typography is narrower. Typography is the arrangement of visua
 #### image ####
 name: writing.svg
 ----
-class: large_image
+class: large-image
 ----
 #### section-title ####
 content: Gutenberg and Movable Type
@@ -35,7 +35,7 @@ class: default
 #### image ####
 name: vectorVSpixel.svg
 ----
-class: small_image
+class: small-image
 ----
 #### text-block ####
 content: Think about this: if you ask yourself what actually Gutenberg invented, you will not easily find an “object” to imagine. Presses, paper, ink, metal stamps, the Latin alphabet, books: they were already there. Can we name more precisely his invention? Of course: Gutenberg made the continuous surface of Writing *discrete*, which means consisting of separated elements.
@@ -49,12 +49,12 @@ In different words, Gutenberg reduced the inexhaustible possibilities of Writing
 #### image ####
 name: medievalVGutenberg.svg
 ----
-class: large_image
+class: large-image
 ----
 #### image ####
 name: illustrationVStypography.svg
 ----
-class: small_image
+class: small-image
 ----
 #### text-block ####
 content: In the case of  Gutenberg, this reduction meant that he had to identify and select the most occurring components of Writing – in his context the letters of the Latin alphabet – and make them fit into a box according to a number of restrictions. These restrictions were supposed to make these boxes interchangeable. Everything else outside this selection of elements started to be treated as illustration, carved in wooden blocks and kept separate from “text”.
@@ -64,7 +64,7 @@ Ok, but… the letters were already separate things before Gutenberg’s inventi
 #### image ####
 name: hello.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: What Gutenberg did was to break the continuum of Writing into rectangles of regular height. Because of production constraints, Gutenberg also wanted to have the graphism (the black shape) entirely contained into a box. The easiest and more logic way to do so was to cut between each black shape. This means that if the graphism is untouched, the void (white) needs to be sliced in different pieces and distributed across the boxes.
@@ -72,7 +72,7 @@ content: What Gutenberg did was to break the continuum of Writing into rectangle
 #### image ####
 name: space-glyph.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: This re-organization of the surface of Writing is condensed and represented in a tool that Gutenberg actually invented: the adjustable mould. This tool allowed him to cast many little lead boxes with the same height but different width. Here follows a synthetic scheme of the process:
@@ -80,7 +80,7 @@ content: This re-organization of the surface of Writing is condensed and represe
 #### image ####
 name: mould.svg
 ----
-class: large_image
+class: large-image
 ----
 #### section-title ####
 content: Digital Typesetting, from Solid to Virtual Boxes
@@ -93,12 +93,12 @@ content: Digital typesetting freed Typography from the physical limits of metal 
 #### image ####
 name: avatar.svg
 ----
-class: large_image
+class: large-image
 ----
 #### image ####
 name: body.svg
 ----
-class: small_image
+class: small-image
 ----
 #### text-block ####
 content: For example, given that metal type consisted of physical elements used as bricks forming a wall of prefabricated letters, it made sense to keep track of the height of the box instead of the height of the glyphs represented in the box. This custom is still in use nowadays even if the boxes are completely virtual. Take this aspect into account when comparing two different fonts. Often, even if you use the same body size, the resulting letters will not be of the same height.
@@ -106,7 +106,7 @@ content: For example, given that metal type consisted of physical elements used 
 #### image ####
 name: same-body.svg
 ----
-class: large_image
+class: large-image
 ----
 #### section-title ####
 content: Characters and Mapping
@@ -119,7 +119,7 @@ content: Before exploring the realm of typesetting in Python, we need to learn h
 #### image ####
 name: decimal-binar.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: The process of mapping a character to a number is called encoding. Morse Code is a very old kind of encoding. One of the oldest and most widespread standard for text encoding for the computer era is the (in)famous ASCII (American Standard Code for Information Interchange). Its origin goes way back to telegraph communication.
@@ -140,7 +140,7 @@ content: If we include the 0, the available indexes sum up to 128 options.
 #### image ####
 name: us-ascii.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: When 8-bit bytes became the standard in computing, each character started to be represented with an 8-digit binary number (1 byte). This opened up the mapping to 256 options.
@@ -159,7 +159,7 @@ content: This space of the mapping was often implemented in different ways acros
 #### image ####
 name: ISOLATIN1.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: Each character in the Unicode mapping can be represented as two bytes opening the mapping options to 65,536. The mapping can be extended beyond the two bytes, in fact emojis are stored in a supplementary multilingual plane which starts just after U+FFFF. We will sometimes refer to the Unicode mapping using the abbreviation UTF-8, which is a clever way to represent Unicode characters saving data according to their position into the mapping.
@@ -177,7 +177,7 @@ The Python string, like tuples and lists, is a sequence: a collection of values 
 #### image ####
 name: hello-access.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: Sequence indexing starts from the 0. Meaning that a string of n elements has the elements indexed from 0 to n-1 inclusive. 
@@ -255,7 +255,7 @@ snippet: 10.py
 #### image ####
 name: hello-access-negative.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: Take into account that providing an index equal or higher than the sequence length will cause an <code>IndexError</code> during runtime.
@@ -280,7 +280,7 @@ snippet: 12.py
 #### image ####
 name: startEndStep.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: The arguments can be omitted in order to make them implicit, in the following way:
@@ -297,7 +297,7 @@ snippet: 14.py
 #### image ####
 name: endStep.svg
 ----
-class: large_image
+class: large-image
 ----
 #### section-title ####
 content: Checking inclusion
@@ -359,7 +359,7 @@ snippet: 21.py
 #### image ####
 name: evaluateHat.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: The first two character representations are equal, but the third one (<code>b</code> vs. <code>t</code>) is not, meaning that <code>"habit"</code> is inferior to <code>"hat"</code>. In fact the expression evaluates to <code>True</code>. This applies to our common notion of alphabetical order. Then consider the following

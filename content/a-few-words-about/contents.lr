@@ -19,7 +19,7 @@ content: While working on this manual, I had a hypothetical reader in mind: my s
 #### image ####
 name: students.svg
 ----
-class: large_image
+class: large-image
 ----
 #### section-title ####
 content: … How to Use This Manual
@@ -29,7 +29,7 @@ class: default
 #### image ####
 name: hopscotch.svg
 ----
-class: small_image
+class: small-image
 ----
 #### text-block ####
 content: Browse, jump, skim, from the end to the beginning or vice-versa. You are in charge, the manual is yours. But take into account that I conceived it in a specific order. In my experience this order matters. I advise you to type the examples you will find in the book manually. I know it can be tedious at the beginning, but it will help you memorize the syntax. I also recommend to engage with other educational material concerning Python; I am not jealous. The Web is full of excellent resources, such as the language documentation you will find in the official Python website. A detailed list can be found in this manual’s bibliography.
@@ -42,7 +42,7 @@ class: default
 #### image ####
 name: head+books.svg
 ----
-class: small_image
+class: small-image
 ----
 #### text-block ####
 content: I struggle to consider myself the author of this manual. Of course, I am entirely responsible for its content, but I gathered, reorganized and rephrased content coming from different sources. I am not a developer of any of the tools I mention, and I can only wish to make them more accessible to a broader public. However, there are a few books that I used more than others and I believe they deserve more than just a mention in the bibliography: *Think Python* by Allen B. Downey and *Design by Numbers* by John Maeda.

@@ -27,12 +27,12 @@ content: + a key is pressed (usually with a finger, sometimes by your cat)
 #### image ####
 name: key_diagram.svg
 ----
-class: large_image
+class: large-image
 ----
 #### image ####
 name: different_a.svg
 ----
-class: small_image
+class: small-image
 ----
 #### text-block ####
 content: The drawing of the character appearing on the screen does not come from the Unicode encoding itself. It is stored in a different container: a font. The Unicode encoding is only an intermediate dictionary used to pick the right drawing from the font. In fact the Unicode encoding contains only characters descriptions and their organization. A font file is the translation of the typographer’s case to digital data. The term commonly used for the prefabricated representation of a character is ‘glyph’. Think of the character as an abstract idea, a collection of common features that make a sign recognizable as such. For example, let’s describe the notion of a capital A we mutually share: two diagonal lines connecting on top and diverging at the bottom plus a horizontal bar intersecting with both diagonal lines, usually placed halfway between top and bottom.
@@ -41,7 +41,7 @@ It is a rather generic description. Many different drawings can fall into that. 
 #### image ####
 name: encoding.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: During the era of metal type, lead glyphs were stored into special drawers with a standard organization. Did you know that terms *uppercase* and *lowercase* derive by such organization?
@@ -49,7 +49,7 @@ content: During the era of metal type, lead glyphs were stored into special draw
 #### image ####
 name: lower-upper-case.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: These drawers were then stored into cabinets. Usually, a cabinet would contain different related sizes or styles. Related how? Well, they would share some formal features that would make them look related, as the different faces of people who are part of the same family.
@@ -60,7 +60,7 @@ Note that the term *typeface* is instead used to refer to the common features sh
 #### image ####
 name: cabinet.svg
 ----
-class: small_image
+class: small-image
 ----
 #### text-block ####
 content: As you may have inferred, at that time, each font (think about the cabinet’s drawer filled with metal type) was size-specific. Things changed after the introduction of cubic and quadratic outlines, when a font was not tied anymore to a specific size. Nevertheless, reading distance and body size are still crucial aspects in the reading experience. Our eyes did not change with the digital transformation of typography. So, when using a font, check if the designer made it with a specific range of sizes in mind; even if you are allowed to scale it to any size without losing detail.
@@ -148,7 +148,7 @@ We are used to sequences of broken lines of text. These entities are the buildin
 #### image ####
 name: textbox.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: First of all, we should use a different function than <code>text()</code>. It would be possible to deal with line breaking ourselves, but DrawBot is generous enough to provide a function which will take care of it automatically: <code>textBox()</code>. Unlike <code>text()</code>, the glyph sequence fits into a rectangle. The function accepts a string as first argument, followed by what’s necessary to define the rectangle <code>(x, y, width, height)</code> and, as optional argument, the alignment of the text.
@@ -182,7 +182,7 @@ The vertical distribution of space in a paragraph is handled by the <code>lineHe
 #### image ####
 name: leading.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: Take also into account that the are no physical restrictions on a digital canvas, meaning that the leading value can be inferior to the body size or even negative.
@@ -202,7 +202,7 @@ But, there are a few cases where it makes sense to alter the composition with so
 #### image ####
 name: tracking.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: Breaking the lines of text could be painful for the visual quality of a paragraph. But, let’s face it, we have no other option: either we break the lines or we compose only poetry. Minimizing the negative effects of line breaking is part of a typographer’s job.
@@ -223,7 +223,7 @@ content: Hyphenation settings resonate enormously with the justified alignment. 
 #### image ####
 name: giustificazione.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: In other words, if a paragraph has a narrow width, justified alignment and no hyphenation, it is very likely that the word space will start to appear across consequent lines emerging from the paragraph texture. These are the so-called rivers.
@@ -234,7 +234,7 @@ content: Create a paragraph with many "rivers" of white.
 #### image ####
 name: hyphenation.svg
 ----
-class: large_image
+class: large-image
 ----
 #### code-example ####
 snippet: 12.py

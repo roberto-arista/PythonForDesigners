@@ -22,7 +22,7 @@ The designer’s work is based largely on a dialogue with monoliths of metal, gl
 #### image ####
 name: wall.svg
 ----
-class: large_image
+class: large-image
 ----
 #### section-title ####
 content: An Impenetrable Desk
@@ -49,7 +49,7 @@ of action. The width of this range is inscribed in its form. Let us consider the
 #### image ####
 name: tools.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: No mechanic would disassemble a component from a car using a Swiss army knife, unless it was the only tool at his disposal. The lack of specificity of a tool makes any task performed with it more complicated, especially if repeated. In an emergency you make do, but you don’t base your work on exceptions. How is it that image designers do not feel the need to use more specific tools? Has digital razed their workshops to the ground?
@@ -61,7 +61,7 @@ content: Programming then can become a way to escape this confinement, connectin
 #### image ####
 name: map-isle.svg
 ----
-class: large_image
+class: large-image
 ----
 #### section-title ####
 content: How the education system betrays us
@@ -79,7 +79,7 @@ On a technological level, I consider it wrong to teach the use of tools of a pro
 #### image ####
 name: tools_box.svg
 ----
-class: small_image
+class: small-image
 ----
 #### text-block ####
 content: What united me and my new colleagues was a profound sense of frustration. Our professionalizing studies were based on a model that was already crumbling in the nineties, and that in the 2000s was just a faded multiple of the original matrix. We were ready to offer services that our ideal interlocutors did not need and we had none of the tools required to fill the void. The school we had laid our trust in had not kept its promise. We had just set out and we already felt useless. We were too many scribes of a language that had become less and less complex to write.
@@ -99,7 +99,7 @@ Being a writing activity, one of the purposes of programming is to create a syst
 #### image ####
 name: map-city.svg
 ----
-class: large_image
+class: large-image
 
 ----
 #### text-block ####
@@ -137,7 +137,7 @@ class: default
 #### image ####
 name: strings.svg
 ----
-class: small_image
+class: small-image
 ----
 #### text-block ####
 content:
@@ -152,7 +152,7 @@ class: default
 #### image ####
 name: books.svg
 ----
-class: small_image
+class: small-image
 ----
 #### text-block ####
 content:
@@ -166,7 +166,7 @@ class: default
 #### image ####
 name: computer.svg
 ----
-class: small_image
+class: small-image
 ----
 #### text-block ####
 content:
@@ -182,7 +182,7 @@ class: default
 #### image ####
 name: arrow.svg
 ----
-class: small_image
+class: small-image
 ----
 #### text-block ####
 content:

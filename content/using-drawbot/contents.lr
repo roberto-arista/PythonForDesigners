@@ -21,7 +21,7 @@ Our needs differ from the ones of data scientists. This is why we are going to u
 #### image ####
 name: raster_vs_vectors.svg
 ----
-class: small_image
+class: small-image
 #### text-block ####
 content:
 
@@ -46,7 +46,7 @@ DrawBot has a very simple interface:
 #### image ####
 name: GUI.svg
 ----
-class: large_image
+class: large-image
 #### text-block ####
 content: Paste the following Python code into the coding area, hit cmd+R, and you will see some output into the canvas.
 #### code-example ####

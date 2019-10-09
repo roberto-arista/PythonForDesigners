@@ -16,7 +16,7 @@ content: What is data? Data is a Latin word currently used in English. It is the
 #### image ####
 name: datum.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: Python is a dynamically typed language, which means that the programmer does not have to declare in advance the data type is associated with an identifier. An identifier can be associated with any data type and then reassigned to another one. If you have experience with Processing/Java you have probably noticed that this is not the case there. This is because Java is statically typed. In the Python world, values are linked to a specific type, identifiers are not.
@@ -24,7 +24,7 @@ content: Python is a dynamically typed language, which means that the programmer
 #### image ####
 name: datum_label.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: Before our journey into data types, we have to introduce the notion of mutability and its opposite, immutability. A data type is immutable if it has a fixed value that cannot be changed after its creation. On the contrary, a mutable object can be updated along the way. Think of a mutable object as a vase made of clay before being fired in the oven. You can still change its shape. An immutable object instead is already fired and therefore it is fixed in a permanent shape. If you want a different shape, you have to create a new vase.
@@ -32,7 +32,7 @@ content: Before our journey into data types, we have to introduce the notion of 
 #### image ####
 name: vases.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: Programming languages have the crucial ability to change the values assigned to variables during the execution of a program. Take into account that an identifier cannot be assigned to two different values at the same time. Consider parsing a spreadsheet. A spreadsheet is a table filled with numbers and text. It is a very simple database and you will use it quite often. If you need to read the data within the spreadsheet, you will probably start line by line. During the iteration of the lines of the table it would make sense to have an identifier being reassigned each time to only one line in order to load and then visualize data.
@@ -40,7 +40,7 @@ content: Programming languages have the crucial ability to change the values ass
 #### image ####
 name: table.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: A programmer can establish an alias by assigning another identifier to an existing object.
@@ -51,7 +51,7 @@ snippet: 01.py
 #### image ####
 name: int20.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: This means that both names refer to the same object and they can be used to access the object. If the object supports behaviors that can affect its state, meaning it is mutable, both names will reflect these changes. However, if one of the names is reassigned to a new value using a subsequent assignment statement, this will not affect the aliased object, it will only break the link with the alias. Consider this example:
@@ -62,7 +62,7 @@ snippet: 02.py
 #### image ####
 name: int2030.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: Let’s observe line 6. The execution of this command begins with the evaluation of the expression on the right side of the assignment operator <code>=</code>. This expression is evaluated on the basis of the existing association of the name rectHeight. Since <code>rectHeight</code> is <code>20</code>, <code>rectHeight + 10</code> is <code>30</code>. Integer values are immutable, so a new value (<code>30</code>) is created and associated, according to the assignment operator to the name <code>rectHeight</code>. We will see an aliases example of a mutable object in a few paragraphs. We are now ready to dive into Python data types.
@@ -75,7 +75,7 @@ class: default
 #### image ####
 name: boolean.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: Boolean data types are used to manipulate logical values and the only two possible instances they can refer to are <code>True</code> and <code>False</code>. These are literal, not strings! In fact, they are part of the reserved keywords list. Python provides a built-in function to create boolean value starting from non boolean ones, it is <code>bool()</code>.
@@ -94,7 +94,7 @@ content: Python provides two main types for describing quantities, integers and 
 #### image ####
 name: int_float.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: In Python, an integer object is designated to represent whole numbers. The literal declaration of such value is a digit with an optional polarity sign: <code>2</code>, <code>+45</code>, <code>-12</code>.
@@ -108,22 +108,22 @@ headers: 0
 #### image ####
 name: binary.svg
 ----
-class: large_image
+class: large-image
 ----
 #### image ####
 name: octal.svg
 ----
-class: large_image
+class: large-image
 ----
 #### image ####
 name: standard_base.svg
 ----
-class: large_image
+class: large-image
 ----
 #### image ####
 name: hexadecimal.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: These expressions represent the same quantity with different notational systems.
@@ -169,7 +169,7 @@ content: + creating an identifier without assigning any specific data to it. Som
 #### image ####
 name: none.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: Note that if the call of a non-fruitful function (meaning that it doesn’t include neither <code>return</code> nor <code>yield</code> statements in its body) is assigned to an identifier, the Python interpreter will not raise any error, instead it will assign <code>None</code> value to the identifier. For example:
