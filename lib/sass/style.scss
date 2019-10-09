@@ -1,7 +1,6 @@
 @import "variables";
-@import "cssLocks";
-@import "breakpoints";
 @import "mixins";
+@import 'fonts';
 
 /*
 // xs
@@ -57,10 +56,10 @@ html {
 
 
 body {
-  font-size: .82rem;
+  font-size: .85rem;
   line-height: 1rem;
 
-  font-family: $Laica;
+  font-family: $laica;
   font-kerning: normal;
 
   color: $dark-grey;
@@ -117,20 +116,47 @@ body {
   }
 }
 
+// basic typography
 strong {
-  font-family: $LaicaBold;
+  font-family: $laica-bold;
 }
 
-// basic typography
+em {
+  font-family: $laica-italic;
+}
+
 h1 {
   font-size: 1.8rem;
   line-height: 2rem;
   font-family: $Gig;
-  color: $blue;
+  padding: .5rem 0;
+  color: $pink;
+}
+
+h2 {
+  font-family: $Gig;
+  color: $pink;
+
+  margin-top: 1em;
+  font-size: 1.25em;
+  line-height: 1.5em;
+}
+
+h2 > a, h2 > a:active, h2 > a:hover, h2 > a:visited, h2 > a:visited:hover {
+  font-family: $Gig;
 }
 
 p {
-  font-family: $Laica;
+  font-family: $laica;
+}
+
+ul > li {
+    text-indent: -1.2rem;
+    padding-left: 1.2rem;
+}
+
+ul > li:before {
+    content: '\2014  ';
 }
 
 a {
@@ -159,4 +185,3 @@ a:visited:hover {
 ::-moz-selection {
  background: $light-pink; /* Gecko Browsers */
 }
-

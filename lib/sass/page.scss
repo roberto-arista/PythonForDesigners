@@ -1,0 +1,33 @@
+@import 'mixins';
+@import 'variables';
+
+#page > div {
+
+    margin-top: map-get($header-hgt, 'xs');
+
+    @include bigger-than('sm') {
+        margin-top: map-get($header-hgt, 'sm');
+    }
+
+    @include bigger-than('md') {
+        margin-top: map-get($header-hgt, 'md');
+    }
+
+    @include bigger-than('lg') {
+        margin-top: map-get($header-hgt, 'lg');
+    }
+}
+
+.large-image {
+    padding-bottom: .5rem;
+}
+
+#page p, #page ul {
+    margin-bottom: .5rem;
+}
+
+@include bigger-than('lg') {
+    #page h1 { padding-left: 4rem; }
+    #page p { padding-left: 4rem; }
+    #page ul { padding-left: 4rem; }
+}

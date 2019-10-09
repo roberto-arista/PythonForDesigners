@@ -1,19 +1,18 @@
 @import "mixins";
 @import "variables";
-@import "breakpoints";
 
 #welcome {
   background-color: $light-pink;
 
-  margin-top: map-get($headerHgt, 'xs');
+  margin-top: map-get($header-hgt, 'xs');
   @include bigger-than('sm') {
-    margin-top: map-get($headerHgt, 'sm');
+    margin-top: map-get($header-hgt, 'sm');
   }
   @include bigger-than('md') {
-    margin-top: map-get($headerHgt, 'md');
+    margin-top: map-get($header-hgt, 'md');
   }
   @include bigger-than('lg') {
-    margin-top: map-get($headerHgt, 'lg');
+    margin-top: map-get($header-hgt, 'lg');
   }
 }
 
@@ -38,6 +37,10 @@
 
 #toc {
   margin: 1rem 0;
+}
+
+#toc h2 {
+  margin-top: 0;
 }
 
 #toc > div {
@@ -85,7 +88,7 @@
 }
 
 .toc-right p a {
-  font-family: $Arnold;
+  font-family: $arnold;
   line-height: 1rem;
   font-size: .72rem;
 }
@@ -120,7 +123,6 @@
 
 .callout {
   height: 100%;
-
   padding: .5rem 0;
 
   // let's make rows a bit shorter
@@ -138,7 +140,7 @@
 
 .callout > h4 {
   @extend p;
-  font-family: $LaicaBold;
+  font-family: $laica-bold;
 
   text-indent: 1rem;
   @include bigger-than('lg') {
@@ -173,13 +175,13 @@
   }
 
 #mc_embed_signup input.email {
-  font-family: $Arnold;
+  font-family: $arnold;
   font-size: .7rem;
   line-height: 1rem;
   border: 1px solid $light-pink;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-  border-radius: 3px;
+    -webkit-border-radius: .25rem;
+    -moz-border-radius: .25rem;
+  border-radius: .25rem;
   color: $black;
   background-color: $main-background;
   box-sizing: border-box;
@@ -209,18 +211,18 @@
 #mc_embed_signup .button {
   font-size: .5rem;
   line-height: .5rem;
-  font-family: $Arnold;
+  font-family: $arnold;
   border: none;
   text-transform: uppercase;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: .25rem;
+  -moz-border-radius: .25rem;
+  border-radius: .25rem;
   color: $pink;
   background-color: $light-pink;
   box-sizing: border-box;
   height: 1.25rem;
   line-height: 32px;
-  padding:0 18px;
+  padding: 0 18px;
   display: inline-block;
   margin: 0;
   transition: all 0.23s ease-in-out 0s;
@@ -233,22 +235,23 @@
 }
 
 #mc_embed_signup div#mce-responses {
-  float:left;
-  top:-1.4em;
-  padding:0em .5em 0em .5em;
-  overflow:hidden;
-  width:90%;margin: 0 5%;
+  float: left;
+  top: -1.4em;
+  padding: 0em .5em 0em .5em;
+  overflow: hidden;
+  width: 90%;
+  margin: 0 5%;
   clear: both;
 }
 
 #mc_embed_signup div.response {
-  margin:1em 0;
-  padding:1em .5em .5em 0;
-  font-weight:bold;
-  float:left;
-  top:-1.5em;
-  z-index:1;
-  width:80%;
+  margin: 1em 0;
+  padding: 1em .5em .5em 0;
+  font-weight: bold;
+  float: left;
+  top: -1.5em;
+  z-index: 1;
+  width: 80%;
 }
 
 #mc_embed_signup #mce-error-response {display:none;}
@@ -258,17 +261,20 @@
   display:block;
   float:none;
   width:auto;
-  margin-left:1.05em;
-  text-align:left;
+  margin-left: 1.05em;
+  text-align: left;
   padding:.5em 0;
 }
 
 @include smaller-than('md'){
+
+  // where you write the email address
   #mc_embed_signup input.email {
     width: 100%;
-    margin-bottom: 5px;
+    margin-bottom: .5rem;
     }
 
+    // button
     #mc_embed_signup .clear {
       display: block;
       width: 100%;
@@ -276,6 +282,12 @@
 
     #mc_embed_signup .button {
       width: 100%;
-      margin:0;
-  }
+      margin: 0;
+
+      // overrides standard iOS styling 🤷‍♂️
+      // https://stackoverflow.com/questions/24238330/button-css-style-not-working-on-ios
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
 }

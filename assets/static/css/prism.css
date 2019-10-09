@@ -5,36 +5,6 @@ https://prismjs.com/download.html#themes=prism&languages=python&plugins=line-num
  * Based on dabblet (http://dabblet.com)
  * @author Lea Verou
  */
-@font-face {
-  font-family: 'Laica Regular';
-  src: url("/static/fonts/LaicaB-Regular.woff2") format("woff2"), url("/static/fonts/LaicaB-Regular.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Laica Italic';
-  src: url("/static/fonts/LaicaB-Italic.woff2") format("woff2"), url("/static/fonts/LaicaB-Italic.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Laica Bold';
-  src: url("/static/fonts/LaicaB-Bold.woff2") format("woff2"), url("/static/fonts/LaicaB-Bold.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Arnold Regular';
-  src: url("/static/fonts/Arnold_v0.3-Regular.woff2") format("woff2"), url("/static/fonts/Arnold_v0.3-Regular.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Arnold Italic';
-  src: url("/static/fonts/Arnold_v0.3-Italic.woff2") format("woff2"), url("/static/fonts/Arnold_v0.3-Italic.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Gig Regular';
-  src: url("/static/fonts/GigV0.2-Regular.woff") format("woff");
-}
-
 /* line 21, lib/sass/prism.scss */
 code[class*="language-"],
 pre[class*="language-"] {
@@ -42,7 +12,7 @@ pre[class*="language-"] {
   background: none;
   text-shadow: none;
   font-family: "Arnold Regular", Monaco, monospace;
-  font-size: .9rem;
+  font-size: 0.7rem;
   -webkit-font-variant-ligatures: no-contextual;
           font-variant-ligatures: no-contextual;
   -webkit-font-feature-settings: "calt" 0;
@@ -52,7 +22,7 @@ pre[class*="language-"] {
   word-spacing: normal;
   word-break: normal;
   word-wrap: normal;
-  line-height: 1.5;
+  line-height: 1rem;
   -moz-tab-size: 4;
   -o-tab-size: 4;
   tab-size: 4;
@@ -101,40 +71,37 @@ pre[class*="language-"] {
   width: 100%;
 }
 
-/* line 88, lib/sass/prism.scss */
-.exercise_content pre[class*="language-"] {
-  background: transparent;
-  border: none;
-  margin-left: 0;
-}
-
-/* line 94, lib/sass/prism.scss */
+/* line 84, lib/sass/prism.scss */
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
   background-color: #FFF5F8;
-  border-top: 3px solid #1858A8;
+  border-top: 0.2rem solid #1858A8;
 }
 
-/* line 100, lib/sass/prism.scss */
-div.code_image_wrapper pre[class*="language-"] {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-  margin: 0;
+@media (min-width: 1200px) {
+  /* line 90, lib/sass/prism.scss */
+  div.example > pre[class*="language-"] {
+    width: 73%;
+  }
 }
 
 /* Inline code */
-/* line 110, lib/sass/prism.scss */
+/* line 97, lib/sass/prism.scss */
 :not(pre) > code[class*="language-"] {
   padding: .1rem;
   border-top: none;
   border-radius: .3rem;
   white-space: normal;
   margin-left: 0;
-  font-size: .9rem;
+  font-size: 0.7rem;
 }
 
-/* line 119, lib/sass/prism.scss */
+/* line 107, lib/sass/prism.scss */
+td > code[class*="language-"], th > code[class*="language-"] {
+  background-color: transparent;
+}
+
+/* line 111, lib/sass/prism.scss */
 .token.comment,
 .token.prolog,
 .token.doctype,
@@ -143,17 +110,17 @@ div.code_image_wrapper pre[class*="language-"] {
   font-family: "Arnold Italic", Monaco, monospace;
 }
 
-/* line 127, lib/sass/prism.scss */
+/* line 119, lib/sass/prism.scss */
 .token.punctuation {
   color: #1858A8;
 }
 
-/* line 131, lib/sass/prism.scss */
+/* line 123, lib/sass/prism.scss */
 .namespace {
   opacity: .7;
 }
 
-/* line 135, lib/sass/prism.scss */
+/* line 127, lib/sass/prism.scss */
 .token.property,
 .token.tag,
 .token.boolean,
@@ -164,7 +131,7 @@ div.code_image_wrapper pre[class*="language-"] {
   color: #ffa319;
 }
 
-/* line 145, lib/sass/prism.scss */
+/* line 137, lib/sass/prism.scss */
 .token.selector,
 .token.attr-name,
 .token.string,
@@ -173,13 +140,13 @@ div.code_image_wrapper pre[class*="language-"] {
   color: #96d400;
 }
 
-/* line 153, lib/sass/prism.scss */
+/* line 145, lib/sass/prism.scss */
 .token.builtin {
   color: #F36;
   font-family: "Arnold Italic", Monaco, monospace;
 }
 
-/* line 157, lib/sass/prism.scss */
+/* line 149, lib/sass/prism.scss */
 .token.operator,
 .token.entity,
 .token.url,
@@ -188,44 +155,44 @@ div.code_image_wrapper pre[class*="language-"] {
   color: #0abfaa;
 }
 
-/* line 165, lib/sass/prism.scss */
+/* line 157, lib/sass/prism.scss */
 .token.atrule,
 .token.attr-value,
 .token.keyword {
   color: #ba8caf;
 }
 
-/* line 171, lib/sass/prism.scss */
+/* line 163, lib/sass/prism.scss */
 .token.function,
 .token.class-name {
   color: #0099ff;
   font-family: "Arnold Italic", Monaco, monospace;
 }
 
-/* line 178, lib/sass/prism.scss */
+/* line 170, lib/sass/prism.scss */
 .token.regex,
 .token.important,
 .token.variable {
   color: #e90;
 }
 
-/* line 184, lib/sass/prism.scss */
+/* line 176, lib/sass/prism.scss */
 .token.important,
 .token.bold {
   font-weight: bold;
 }
 
-/* line 188, lib/sass/prism.scss */
+/* line 180, lib/sass/prism.scss */
 .token.italic {
   font-style: italic;
 }
 
-/* line 192, lib/sass/prism.scss */
+/* line 184, lib/sass/prism.scss */
 .token.entity {
   cursor: help;
 }
 
-/* line 196, lib/sass/prism.scss */
+/* line 188, lib/sass/prism.scss */
 .token.tab:not(:empty),
 .token.cr,
 .token.lf,
@@ -233,7 +200,7 @@ div.code_image_wrapper pre[class*="language-"] {
   position: relative;
 }
 
-/* line 203, lib/sass/prism.scss */
+/* line 195, lib/sass/prism.scss */
 .token.tab:not(:empty):before,
 .token.cr:before,
 .token.lf:before,
@@ -242,22 +209,22 @@ div.code_image_wrapper pre[class*="language-"] {
   position: absolute;
 }
 
-/* line 211, lib/sass/prism.scss */
+/* line 203, lib/sass/prism.scss */
 .token.tab:not(:empty):before {
   content: '\21E5';
 }
 
-/* line 215, lib/sass/prism.scss */
+/* line 207, lib/sass/prism.scss */
 .token.cr:before {
   content: '\240D';
 }
 
-/* line 219, lib/sass/prism.scss */
+/* line 211, lib/sass/prism.scss */
 .token.crlf:before {
   content: '\240D\240A';
 }
 
-/* line 223, lib/sass/prism.scss */
+/* line 215, lib/sass/prism.scss */
 .token.space:before {
   content: '\00B7';
 }

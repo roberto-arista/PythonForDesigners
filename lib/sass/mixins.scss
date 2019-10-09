@@ -1,3 +1,4 @@
+@import "variables";
 
 @mixin flex() {
   display: -webkit-box;
@@ -13,4 +14,54 @@
   -ms-flex-order: $val;
   -webkit-order: $val;
   order: $val;
+}
+
+// $min-size: minimum element $property size in $unit specified
+// $max-size: maximum element $property size in $unit specified
+// $min-width: the screen width in $units where you want to lock in the $min-size
+// $max-width: the screen width in $units where you want to lock in the $max-size
+// $property: the property of the element that you would like to scale/lock
+// $unit: the units which all measurements are taken in
+@mixin css-lock($min-size: 1, $max-size: 1.4, $min-width: 20, $max-width: 100, $property: font-size, $unit: rem) {
+  #{$property}: calc(#{$min-size}#{$unit} + (#{$max-size} - #{$min-size}) * ((100vw - #{$min-width}#{$unit}) / (#{$max-width} - #{$min-width})));
+
+  @media (max-width: #{$min-width}#{$unit}) {
+    #{$property}: #{$min-size}#{$unit};
+  }
+
+  @media (min-width: #{$max-width}#{$unit}) {
+    #{$property}: #{$max-size}#{$unit};
+  }
+}
+
+@mixin bigger-than($breakpoint, $unit:'px') {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (min-width: #{map-get($breakpoints, $breakpoint)}#{$unit}) {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+@mixin smaller-than($breakpoint, $unit:'px') {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (max-width: #{map-get($breakpoints, $breakpoint)}#{$unit}) {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
 }

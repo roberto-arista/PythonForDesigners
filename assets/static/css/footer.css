@@ -1,11 +1,11 @@
-/* line 5, lib/sass/footer.scss */
+/* line 4, lib/sass/footer.scss */
 footer {
   background: #1858A8;
   padding-bottom: 1rem;
 }
 
 @media (min-width: 1200px) {
-  /* line 10, lib/sass/footer.scss */
+  /* line 9, lib/sass/footer.scss */
   footer > div {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -18,7 +18,7 @@ footer {
   }
 }
 
-/* line 18, lib/sass/footer.scss */
+/* line 17, lib/sass/footer.scss */
 footer p {
   font-family: "Arnold Regular", Monaco, monospace;
   color: #FFF;
@@ -29,75 +29,80 @@ footer p {
 }
 
 @media (min-width: 1200px) {
-  /* line 18, lib/sass/footer.scss */
+  /* line 17, lib/sass/footer.scss */
   footer p {
     font-size: .5rem;
     line-height: .75rem;
   }
 }
 
-/* line 34, lib/sass/footer.scss */
+/* line 32, lib/sass/footer.scss */
+footer em {
+  font-family: "Arnold Italic", Monaco, monospace;
+}
+
+/* line 37, lib/sass/footer.scss */
 footer a {
   color: #A6CEFF;
   text-decoration: none;
 }
 
-/* line 39, lib/sass/footer.scss */
+/* line 42, lib/sass/footer.scss */
 footer a:hover {
   text-decoration: none;
   border-bottom: 1px solid #A6CEFF;
 }
 
-/* line 44, lib/sass/footer.scss */
+/* line 47, lib/sass/footer.scss */
 footer a:visited {
   color: #A6CEFF;
 }
 
-/* line 48, lib/sass/footer.scss */
+/* line 51, lib/sass/footer.scss */
 footer a:visited:hover {
   color: #A6CEFF;
   border-bottom: 1px solid #A6CEFF;
 }
 
-/* line 53, lib/sass/footer.scss */
+/* line 56, lib/sass/footer.scss */
 .footer-title:before {
   content: '[';
 }
 
-/* line 57, lib/sass/footer.scss */
+/* line 60, lib/sass/footer.scss */
 .footer-title:after {
   content: ']';
 }
 
 @media (min-width: 900px) {
-  /* line 61, lib/sass/footer.scss */
+  /* line 64, lib/sass/footer.scss */
   .footer-callout {
     padding: 0 2rem;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 61, lib/sass/footer.scss */
+  /* line 64, lib/sass/footer.scss */
   .footer-callout {
     padding: 0;
     width: 31%;
   }
 }
 
-/* line 73, lib/sass/footer.scss */
+/* line 76, lib/sass/footer.scss */
 .footer-title {
   padding-top: 1rem;
   text-indent: 1rem;
 }
 
 @media (min-width: 1200px) {
-  /* line 73, lib/sass/footer.scss */
+  /* line 76, lib/sass/footer.scss */
   .footer-title {
     text-indent: .5rem;
   }
 }
 
-/* line 82, lib/sass/footer.scss */
+/* line 85, lib/sass/footer.scss */
 img#license {
   padding-top: .5rem;
 }

@@ -8,17 +8,17 @@ $breakpoints: (
 ) !default;
 
 // sizes
-$headerHgt: ('xs': 2rem,
+$header-hgt: ('xs': 2rem,
              'sm': 2rem,
              'md': 2rem,
              'lg': 2rem);
 
 // fonts
-$Laica: 'Laica Regular', Georgia, serif;
-$LaicaItalic: 'Laica Italic', Georgia, serif;
-$LaicaBold: 'Laica Bold', Georgia, serif;
-$Arnold: 'Arnold Regular', Monaco, monospace;
-$ArnoldItalic: 'Arnold Italic', Monaco, monospace;
+$laica: 'Laica Regular', Georgia, serif;
+$laica-italic: 'Laica Italic', Georgia, serif;
+$laica-bold: 'Laica Bold', Georgia, serif;
+$arnold: 'Arnold Regular', Monaco, monospace;
+$arnold-italic: 'Arnold Italic', Monaco, monospace;
 $Gig: 'Gig Regular', Georgia, serif;
 
 // colors
@@ -35,17 +35,5 @@ $light-pink: #FFEDED;
 $light-blue: #A6CEFF;
 $blue: #1858A8;
 
-// $light-grey: #cdcdcd;
-// $medium-gray: #cccccc;
-
 $main-background: #FFF5F8;
 $exercise-background: #E2F4FF;
-
-// helpers
-@function getBreakpoint($key) {
-  @if map-has-key($breakpoints, $key) {
-    @return map-get($breakpoints, $key);
-  }
-  @warn "Unknown `#{$key}` in $breakpoints.";
-  @return null;
-}

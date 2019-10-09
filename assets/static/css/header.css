@@ -1,4 +1,4 @@
-/* line 6, lib/sass/header.scss */
+/* line 5, lib/sass/header.scss */
 header {
   color: #FFF;
   width: 100%;
@@ -7,78 +7,220 @@ header {
   background-color: #1858A8;
   position: fixed;
   top: 0;
+  z-index: 1;
 }
 
 @media (max-width: 900px) {
-  /* line 6, lib/sass/header.scss */
+  /* line 5, lib/sass/header.scss */
   header {
     border-bottom: 1px solid #FFEDED;
   }
 }
 
-/* line 23, lib/sass/header.scss */
+/* line 22, lib/sass/header.scss */
 header a {
   color: #FFF;
   text-decoration: none;
 }
 
-/* line 28, lib/sass/header.scss */
+/* line 27, lib/sass/header.scss */
 header a:hover {
   text-decoration: none;
   border: none;
 }
 
-/* line 33, lib/sass/header.scss */
+/* line 32, lib/sass/header.scss */
 header a:visited {
   color: #FFF;
 }
 
-/* line 37, lib/sass/header.scss */
+/* line 36, lib/sass/header.scss */
 header a:visited:hover {
   color: #FFF;
   border: none;
 }
 
-/* line 42, lib/sass/header.scss */
+/* line 41, lib/sass/header.scss */
 #resource_title, #author_name {
-  display: inline;
-  margin-bottom: 0;
+  display: inline-block;
   font-family: "Arnold Regular", Monaco, monospace;
   font-variant-caps: small-caps;
   text-transform: lowercase;
-  font-size: .9rem;
+  font-size: .8rem;
   line-height: 2rem;
 }
 
 @media (min-width: 600px) {
-  /* line 42, lib/sass/header.scss */
+  /* line 41, lib/sass/header.scss */
   #resource_title, #author_name {
     line-height: 2rem;
   }
 }
 
 @media (min-width: 900px) {
-  /* line 42, lib/sass/header.scss */
+  /* line 41, lib/sass/header.scss */
   #resource_title, #author_name {
     line-height: 2rem;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 42, lib/sass/header.scss */
+  /* line 41, lib/sass/header.scss */
   #resource_title, #author_name {
     line-height: 2rem;
   }
 }
 
 @media (max-width: 900px) {
-  /* line 67, lib/sass/header.scss */
+  /* line 64, lib/sass/header.scss */
   #author_name {
     display: none;
   }
 }
 
-/* line 71, lib/sass/header.scss */
+/* line 68, lib/sass/header.scss */
 #author_name:before {
   content: '\2003\2003';
+}
+
+/* line 72, lib/sass/header.scss */
+.ribbon {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media (max-width: 600px) {
+  /* line 72, lib/sass/header.scss */
+  .ribbon {
+    display: none;
+  }
+}
+
+/* line 83, lib/sass/header.scss */
+header ul {
+  margin: 0;
+  padding: 0 1rem;
+  list-style: none;
+  list-style-type: none;
+  overflow: hidden;
+}
+
+/* line 91, lib/sass/header.scss */
+header ul li {
+  padding-bottom: .5rem;
+  font-family: "Laica Regular", Georgia, serif;
+}
+
+/* line 96, lib/sass/header.scss */
+header li a {
+  padding: 0;
+  color: #FFF;
+  text-decoration: none;
+}
+
+/* line 102, lib/sass/header.scss */
+header li a:hover {
+  color: #FFF;
+  border: none;
+}
+
+/* menu */
+/* line 108, lib/sass/header.scss */
+header .responsive-menu {
+  max-height: 0;
+  -webkit-transition: max-height .2s ease-out;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+/* line 114, lib/sass/header.scss */
+header .responsive-menu-icon {
+  cursor: pointer;
+  float: left;
+  display: inline-block;
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding-right: 1rem;
+  height: 2rem;
+  line-height: 1.525rem;
+  vertical-align: middle;
+}
+
+@media (min-width: 1200px) {
+  /* line 114, lib/sass/header.scss */
+  header .responsive-menu-icon {
+    display: none;
+  }
+}
+
+/* line 134, lib/sass/header.scss */
+header .responsive-menu-icon .navicon {
+  background: #FFF;
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  -webkit-transition: background .2s ease-out;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+/* line 143, lib/sass/header.scss */
+header .responsive-menu-icon .navicon:before,
+header .responsive-menu-icon .navicon:after {
+  background: #FFF;
+  content: '';
+  display: inline-block;
+  position: absolute;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 154, lib/sass/header.scss */
+header .responsive-menu-icon .navicon:before {
+  top: 5px;
+}
+
+/* line 158, lib/sass/header.scss */
+header .responsive-menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+/* line 163, lib/sass/header.scss */
+header .responsive-menu-btn {
+  display: none;
+}
+
+/* line 167, lib/sass/header.scss */
+header .responsive-menu-btn:checked ~ .responsive-menu {
+  max-height: 100%;
+}
+
+/* line 171, lib/sass/header.scss */
+header .responsive-menu-btn:checked ~ .responsive-menu-icon .navicon {
+  background: transparent;
+}
+
+/* line 175, lib/sass/header.scss */
+header .responsive-menu-btn:checked ~ .responsive-menu-icon .navicon:before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+/* line 179, lib/sass/header.scss */
+header .responsive-menu-btn:checked ~ .responsive-menu-icon .navicon:after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+/* line 183, lib/sass/header.scss */
+header .responsive-menu-btn:checked ~ .responsive-menu-icon:not(.steps) .navicon:before,
+header .responsive-menu-btn:checked ~ .responsive-menu-icon:not(.steps) .navicon:after {
+  top: 0;
 }

@@ -1,5 +1,4 @@
 @import "variables";
-@import "breakpoints";
 @import "mixins";
 
 footer {
@@ -16,7 +15,7 @@ footer > div {
 }
 
 footer p {
-  font-family: $Arnold;
+  font-family: $arnold;
   color: $white;
   font-size: .7rem;
   line-height: 1rem;
@@ -28,8 +27,12 @@ footer p {
     font-size: .5rem;
     line-height: .75rem;
   }
-
 }
+
+footer em {
+  font-family: $arnold-italic;
+}
+
 
 footer a {
   color: $light-blue;

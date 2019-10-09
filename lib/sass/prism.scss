@@ -7,8 +7,7 @@ https://prismjs.com/download.html#themes=prism&languages=python&plugins=line-num
  */
 
 @import "variables";
-@import "fonts";
-@import "breakpoints";
+@import 'mixins';
 
 // specific code colors
 $green: #96d400;
@@ -17,6 +16,7 @@ $orange: #ffa319;
 $violet: #ba8caf;
 $light-blue: #0099ff;
 
+$code-size: .7rem;
 
 code[class*="language-"],
 pre[class*="language-"] {
@@ -24,8 +24,8 @@ pre[class*="language-"] {
     color: $dark-grey;
     background: none;
     text-shadow: none;
-    font-family: $Arnold;
-    font-size: .9rem;
+    font-family: $arnold;
+    font-size: $code-size;
 
     // no contextual alternates with code
     font-variant-ligatures: no-contextual;
@@ -38,7 +38,7 @@ pre[class*="language-"] {
     word-spacing: normal;
     word-break: normal;
     word-wrap: normal;
-    line-height: 1.5;
+    line-height: 1rem;
 
     -moz-tab-size: 4;
     -o-tab-size: 4;
@@ -79,31 +79,18 @@ pre[class*="language-"] {
     clear: right;
     width: 100%;
 
-    @include bigger-than('md') {
-      // margin-left: $colWidth-desktop+$gutter-desktop;
-      // width: $colWidth-desktop*4+$gutter-desktop*3;
-  }
-}
-
-.exercise_content pre[class*="language-"] {
-    background: transparent;
-    border: none;
-    margin-left: 0;
 }
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
     background-color: $main-background;
-    border-top: 3px solid $blue;
+    border-top: .2rem solid $blue;
 }
 
-div.code_image_wrapper pre[class*="language-"] {
-    order: 1;
-    margin: 0;
-
-    @include bigger-than('md') {
-        // width: $colWidth-desktop*4+$gutter-desktop*3;
-    }
+div.example > pre[class*="language-"] {
+    @include bigger-than('lg') {
+        width: 73%;
+  }
 }
 
 /* Inline code */
@@ -113,7 +100,12 @@ div.code_image_wrapper pre[class*="language-"] {
     border-radius: .3rem;
     white-space: normal;
     margin-left: 0;
-    font-size: .9rem;
+    font-size: $code-size;
+}
+
+// code in tables
+td > code[class*="language-"], th > code[class*="language-"] {
+    background-color: transparent;
 }
 
 .token.comment,
@@ -121,7 +113,7 @@ div.code_image_wrapper pre[class*="language-"] {
 .token.doctype,
 .token.cdata {
     color: $grey;
-    font-family: $ArnoldItalic;
+    font-family: $arnold-italic;
 }
 
 .token.punctuation {
@@ -151,7 +143,7 @@ div.code_image_wrapper pre[class*="language-"] {
 }
 
 .token.builtin{color: $pink;
-    font-family: $ArnoldItalic;
+    font-family: $arnold-italic;
 }
 
 .token.operator,
@@ -171,7 +163,7 @@ div.code_image_wrapper pre[class*="language-"] {
 .token.function,
 .token.class-name {
     color: $light-blue;
-    font-family: $ArnoldItalic;
+    font-family: $arnold-italic;
 
 }
 
