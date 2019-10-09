@@ -1,0 +1,61 @@
+@import 'mixins';
+@import 'variables';
+
+
+aside {
+    width: 11rem;
+    background-color: $light-grey;
+
+    margin-top: map-get($header-hgt, 'lg');
+    padding: .5rem;
+
+    line-height: .75rem;
+    font-size: .6rem;
+
+    @include smaller-than('lg') {
+        display: none;
+    }
+}
+
+#toc-bar li {
+    padding-top: .25rem;
+
+    @include flex();
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.toc-bar-key {
+    width: 1.25rem;
+    text-align: right;
+}
+
+.toc-bar-title {
+    width: 7.75rem;
+}
+
+#topButton {
+  // resetting
+  outline: none; /* Remove outline */
+
+  display: none; /* Hidden by default */
+  position: fixed;
+
+  bottom: 1rem;
+  right: 1rem;
+
+  cursor: pointer;
+  background-color: $white;
+
+  border: 1px solid $pink;
+  color: $pink;
+  padding: .2rem .4rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+}
+
+#topButton:hover {
+  color: $white;
+  background-color: $pink;
+  transition: all 0.23s ease-in-out 0s;
+}

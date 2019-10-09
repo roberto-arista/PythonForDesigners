@@ -1,39 +1,40 @@
-{% extends "baseLayout.html" %}
+{% extends "base.html" %}
+
+{% block styles %}
+  <link rel="stylesheet" href="{{ '/static/css/index.css'|asseturl }}" >
+{% endblock %}
 
 {% block title %}{{ this.title }}{% endblock %}
 {% block openGraph %}{% include "openGraph.html" %}{% endblock %}
-
 {% block content %}
 
-  <div class="opening">
-    <div class="alignmentContainer">
+  <section id="welcome">
+    <div class='basic-container'>
       <h1>{{ this.welcome }}</h1>
       <p>{{ this.intro }}</p>
     </div>
-  </div>
+  </section>
 
-  <div class="alignmentContainer">
-
-  <!-- table of contents -->
-  <div class="tocCover">
+  <section id="toc">
+    <div class='basic-container'>
 
     {% for chapter in site.get('/').children.filter(F._model == 'chapter').order_by('sort_key') %}
 
     {% if loop.revindex0 == 0 %}
-      <div class="tocCover-item noBorder">
+      <div class="toc-item noBorder">
     {% else %}
-      <div class="tocCover-item">
+      <div class="toc-item">
     {% endif %}
 
-        <div class="tocCover-left">
-          <img class='tocCover-image' src="{{ chapter._id }}.svg">
+        <div class="toc-left">
+          <img src="{{ chapter._id }}.svg">
 
           {% if 0 < chapter.sort_key < 13 %}
-            <h3 class="tocCover-sortKey">{{ "%#02d"|format(chapter.sort_key) }}</h3>
+            <h3>{{ "%#02d"|format(chapter.sort_key) }}</h3>
           {% endif %}
         </div>
 
-        <div class="tocCover-right">
+        <div class="toc-right">
           <h2><a href="{{ chapter.path }}">{{ chapter.title }}</a></h2>
           <p>{{ chapter.abstract }}</p>
           <p><a href="{{ chapter.path }}">>>> read()</a></p>
@@ -44,43 +45,47 @@
     {% endfor %}
     </div>
 
-  </div>
+    </div>
+  </section>
 
 
-    <!-- callout -->
-    <div class="opening">
-      <div class="homePageCallouts">
+  <!-- callout -->
+  <section id="callouts">
+    <div class="basic-container">
+      <div class="callout">
+        <h4>{{ this.leftBoxTitle }}</h4>
+            {{ this.leftBox }}
+      </div>
 
-        <div class="callout"><h2>{{ this.leftBoxTitle }}</h2>
-                <p>{{ this.leftBox }}</p></div>
+      <div class="callout">
+        <h4>{{ this.middleBoxTitle }}</h4>
+            {{ this.middleBox }}
+      </div>
 
-        <div class="callout"><h2>{{ this.middleBoxTitle }}</h2>
-                <p>{{ this.middleBox }}</p></div>
-
-        <div class="callout"><h2>{{ this.rightBoxTitle }}</h2>
-                <p>{{ this.rightBox }}</p></div>
+      <div class="callout">
+        <h4>{{ this.rightBoxTitle }}</h4>
+            {{ this.rightBox }}
       </div>
     </div>
+  </section>
 
   <!-- newsletter -->
-  <div class="opening" id='newsletter'>
+  <section id='newsletter'>
 
     <!-- Begin Mailchimp Signup Form -->
-    <div id="mc_embed_signup">
+    <div id="mc_embed_signup" class="basic-container">
     <form action="https://xyz.us19.list-manage.com/subscribe/post?u=a6cdfced9229049b93b75a13e&amp;id=d5199f98f9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
         <div id="mc_embed_signup_scroll">
-      <label for="mce-EMAIL">Join our newsletter! (less than a mail per month)</label>
-      <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a6cdfced9229049b93b75a13e_d5199f98f9" tabindex="-1" value=""></div>
-        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+          <label for="mce-EMAIL">Join our newsletter!</label>
+          <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address (no spam, I swear!)" required>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a6cdfced9229049b93b75a13e_d5199f98f9" tabindex="-1" value=""></div>
+            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
         </div>
     </form>
     </div>
     <!--End mc_embed_signup-->
 
-  </div>
+  </section>
 
-  {% endblock %}
-
-</div>
+{% endblock %}

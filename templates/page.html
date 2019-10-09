@@ -1,21 +1,27 @@
-{% extends "baseLayout.html" %}
+{% extends "base.html" %}
+{% block styles %}
+  <link rel="stylesheet" href="{{ '/static/css/page.css'|asseturl }}" >
+{% endblock %}
+
 {% block title %}{{ this.title }}{% endblock %}
 {% block openGraph %}{% include "openGraph.html" %}{% endblock %}
 
 {% block content %}
 
-    <div class="page-container">
-    <div class="alignmentContainer">
-        <h1>{{ this.title }}</h1>
+    <section id='page'>
 
-        {% if this.visual_abstract %}
-            <img class='large_image' src="{{ this.visual_abstract }}">
-        {% endif %}
+        <div class="basic-container">
 
-        <div class="chapterContainer" id='sourceTypography' style="display: none">{{ this.body }}</div>
-        <div class="chapterContainer" id="resultTypography"></div>
+            <h1>{{ this.title }}</h1>
 
-    </div>
-    </div>
+            {% if this.visual_abstract %}
+                <img class='large-image' src="{{ this.visual_abstract }}">
+            {% endif %}
+
+            {{ this.body }}
+
+        </div>
+
+    </section>
 
 {% endblock %}

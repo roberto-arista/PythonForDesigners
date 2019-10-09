@@ -7,16 +7,25 @@ https://prismjs.com/download.html#themes=prism&languages=python&plugins=line-num
  */
 
 @import "variables";
-@import "fonts";
+@import 'mixins';
+
+// specific code colors
+$green: #96d400;
+$jade: #0abfaa;
+$orange: #ffa319;
+$violet: #ba8caf;
+$light-blue: #0099ff;
+
+$code-size: .7rem;
 
 code[class*="language-"],
 pre[class*="language-"] {
 
-    color: $darkGrey;
+    color: $dark-grey;
     background: none;
     text-shadow: none;
-    font-family: 'Arnold Regular', monospace;
-    font-size: .9em;
+    font-family: $arnold;
+    font-size: $code-size;
 
     // no contextual alternates with code
     font-variant-ligatures: no-contextual;
@@ -29,7 +38,7 @@ pre[class*="language-"] {
     word-spacing: normal;
     word-break: normal;
     word-wrap: normal;
-    line-height: 1.5;
+    line-height: 1rem;
 
     -moz-tab-size: 4;
     -o-tab-size: 4;
@@ -62,57 +71,49 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
 
 /* Code blocks */
 pre[class*="language-"] {
-    padding: 1em;
+    padding: 1rem;
     margin: 0;
     box-sizing: border-box;
-    margin-bottom: .5em;
+    margin-bottom: .5rem;
     overflow: auto;
     clear: right;
     width: 100%;
 
-    @include breakpoint(desktop) {
-      margin-left: $colWidth-desktop+$gutter-desktop;
-      width: $colWidth-desktop*4+$gutter-desktop*3;
-  }
-}
-
-.exercise_content pre[class*="language-"] {
-    background: transparent;
-    border: none;
-    margin-left: 0;
 }
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-    background-color: $back-color;
-    border-top: 3px solid $blue;
+    background-color: $main-background;
+    border-top: .2rem solid $blue;
 }
 
-div.code_image_wrapper pre[class*="language-"] {
-    order: 1;
-    margin: 0;
-
-    @include breakpoint(desktop) {
-        width: $colWidth-desktop*4+$gutter-desktop*3;
-    }
+div.example > pre[class*="language-"] {
+    @include bigger-than('lg') {
+        width: 73%;
+  }
 }
 
 /* Inline code */
 :not(pre) > code[class*="language-"] {
-    padding: .1em;
+    padding: .1rem;
     border-top: none;
-    border-radius: .3em;
+    border-radius: .3rem;
     white-space: normal;
     margin-left: 0;
-    font-size: .9em;
+    font-size: $code-size;
+}
+
+// code in tables
+td > code[class*="language-"], th > code[class*="language-"] {
+    background-color: transparent;
 }
 
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-    color: $lightGrey;
-    font-family: 'Arnold Italic', monospace;
+    color: $grey;
+    font-family: $arnold-italic;
 }
 
 .token.punctuation {
@@ -142,7 +143,7 @@ div.code_image_wrapper pre[class*="language-"] {
 }
 
 .token.builtin{color: $pink;
-    font-family: 'Arnold Italic', monospace;
+    font-family: $arnold-italic;
 }
 
 .token.operator,
@@ -161,8 +162,8 @@ div.code_image_wrapper pre[class*="language-"] {
 
 .token.function,
 .token.class-name {
-    color: $lightBlue;
-    font-family: 'Arnold Italic', monospace;
+    color: $light-blue;
+    font-family: $arnold-italic;
 
 }
 

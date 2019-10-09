@@ -1,19 +1,19 @@
 @font-face {
   font-family: 'Laica Regular';
   src: url('/static/fonts/LaicaB-Regular.woff2') format('woff2'),
-  url('/static/fonts/LaicaB-Regular.woff') format('woff');
+       url('/static/fonts/LaicaB-Regular.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Laica Italic';
   src: url('/static/fonts/LaicaB-Italic.woff2') format('woff2'),
-  url('/static/fonts/LaicaB-Italic.woff') format('woff');
+       url('/static/fonts/LaicaB-Italic.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Laica Bold';
-  src:  url('/static/fonts/LaicaB-Bold.woff') format('woff'),
-        url('/static/fonts/LaicaB-Bold.woff2') format('woff2');
+  src:  url('/static/fonts/LaicaB-Bold.woff2') format('woff2'),
+        url('/static/fonts/LaicaB-Bold.woff') format('woff');
   }
 
 @font-face {

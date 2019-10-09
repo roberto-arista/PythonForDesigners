@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+
+    <link rel="stylesheet" href="{{ '/static/css/reset.css'|asseturl }}">
+    <link rel="stylesheet" href="{{ '/static/css/style.css'|asseturl }}">
+    <link rel="stylesheet" href="{{ '/static/css/header.css'|asseturl }}">
+    <link rel="stylesheet" href="{{ '/static/css/footer.css'|asseturl }}">
+    <link rel="stylesheet" href="{{ '/static/css/prism.css'|asseturl }}" >
+    {% block styles %}{% endblock %}
+    <link rel="shortcut icon" type="image/ico" href="{{ 'static/favicon.ico'|asseturl }}">
+
+    <!-- hyphenation -->
+    <script src="{{ 'static/js/jquery-1.7.1.min.js'|asseturl }}"></script>
+    <script src="{{ 'static/js/jquery.hypher.js'|asseturl }}"></script>
+    <script src="{{ 'static/js/en-us.js'|asseturl }}"></script>
+
+    <script>
+        jQuery(function ($) {
+            $('p').hyphenate('en-us');
+        });
+    </script>
+
+    <title>{% block title %}{% endblock %} — Python for designers</title>
+
+    {% block openGraph %}{% endblock %}
+    {% include "analytics.html" %}
+
+  </head>
+
+  <body class="language-python">
+
+    {% include "header.html" %}
+    {% block content %}{% endblock %}
+    {% include "footer.html" %}
+
+
+    <!-- code highlighter -->
+    <script src="{{ 'static/js/prism.js'|asseturl }}"></script>
+
+    <!-- smart quotes sub -->
+    <script src="{{ 'static/js/smartquotes.js'|asseturl }}"></script>
+    <script>smartquotes();</script>
+
+  </body>
+
+</html>

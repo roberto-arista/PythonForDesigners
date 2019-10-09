@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: 'Laica Bold';
-  src: url("/static/fonts/LaicaB-Bold.woff") format("woff"), url("/static/fonts/LaicaB-Bold.woff2") format("woff2");
+  src: url("/static/fonts/LaicaB-Bold.woff2") format("woff2"), url("/static/fonts/LaicaB-Bold.woff") format("woff");
 }
 
 @font-face {

@@ -1,0 +1,28 @@
+<!-- home button! -->
+<ol id='toc-bar'>
+  <li>
+    <div class="toc-bar-key">&#8199;</div>
+    <div class="toc-bar-title"><a href="/">Home!</a></div>
+  </li>
+
+  <!-- dynamic part -->
+  {% set chapters = site.get('/').children.filter(F._model == 'chapter').order_by('sort_key') %}
+  {% for chapter in chapters %}
+    <li><div class="toc-bar-key {% if this._path == chapter._path %}toc-bar-active{% endif %}">{% if 0 < chapter.sort_key < 13 %}{{ chapter.sort_key }}&#8199;{% endif %}</div>
+        <div class="toc-bar-title"><a href="{{ chapter|url }}">{{ chapter.title }}</a></div></li>
+  {% endfor %}
+
+  <!-- empty line -->
+  <li>
+    <div class="toc-bar-key">&#8199;</div>
+  </li>
+
+  <!-- impressum -->
+  <li>
+    <div class="toc-bar-key">&#8199;</div>
+    <div class="toc-bar-title"><a href="/impressum">Impressum</a></div>
+  </li>
+
+  <button onclick="topFunction()" id="topButton" title="Go to top">↑</button>
+
+</ol>

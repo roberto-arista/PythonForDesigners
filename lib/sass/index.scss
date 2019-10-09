@@ -1,0 +1,293 @@
+@import "mixins";
+@import "variables";
+
+#welcome {
+  background-color: $light-pink;
+
+  margin-top: map-get($header-hgt, 'xs');
+  @include bigger-than('sm') {
+    margin-top: map-get($header-hgt, 'sm');
+  }
+  @include bigger-than('md') {
+    margin-top: map-get($header-hgt, 'md');
+  }
+  @include bigger-than('lg') {
+    margin-top: map-get($header-hgt, 'lg');
+  }
+}
+
+#welcome > div {
+  padding: 1rem 0;
+
+  @include bigger-than('md') {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+#welcome h1 {
+  color: $pink;
+  padding-bottom: .5rem;
+}
+
+#welcome p {
+  line-height: 1.25rem;
+  font-size: 1rem;
+}
+
+#toc {
+  margin: 1rem 0;
+}
+
+#toc h2 {
+  margin-top: 0;
+}
+
+#toc > div {
+  @include flex();
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.toc-item {
+
+  @include flex();
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  margin: .5rem 0;
+  width: 100%;
+  @include bigger-than('md') {
+    width: 49%;
+  }
+}
+
+
+.toc img {
+}
+
+.toc-sortKey {
+  // text-align: center;
+}
+
+.toc-left {
+  width: 22%;
+  margin-right: 3%;
+}
+
+// chapter number
+.toc-left h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  color: $blue;
+}
+
+.toc-right {
+  width: 75%;
+}
+
+.toc-right p a {
+  font-family: $arnold;
+  line-height: 1rem;
+  font-size: .72rem;
+}
+
+// chapter title
+.toc-right h2 a {
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+
+  color: $blue;
+  font-family: $Gig;
+  color: $pink;
+}
+
+#callouts {
+  background-color: $light-pink;
+  color: $blue;
+}
+
+#callouts > div {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+
+  // three pieces in a row
+  @include bigger-than('lg') {
+    @include flex();
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+}
+
+.callout {
+  height: 100%;
+  padding: .5rem 0;
+
+  // let's make rows a bit shorter
+  // too many chars per line otherwise
+  @include bigger-than('md') {
+    padding: .5rem 2rem;
+  }
+
+  // three pieces in a row
+  @include bigger-than('lg') {
+    width: 31%;
+    padding: .5rem 0;
+  }
+}
+
+.callout > h4 {
+  @extend p;
+  font-family: $laica-bold;
+
+  text-indent: 1rem;
+  @include bigger-than('lg') {
+    text-indent: .5rem;
+  }
+}
+
+.callout > p {
+  // three pieces in a row
+  @include bigger-than('lg') {
+    line-height: 1rem;
+    font-size: .62rem;
+  }
+}
+
+#newsletter {
+  background-color: $pink;
+}
+
+#newsletter > div {
+  padding: 0 0 .5rem 0;
+}
+
+#mc_embed_signup form {
+  text-align: center;
+  padding: .25rem 0 .25rem 0;
+  }
+
+/* positions input field horizontally */
+.mc-field-group {
+  display: inline-block;
+  }
+
+#mc_embed_signup input.email {
+  font-family: $arnold;
+  font-size: .7rem;
+  line-height: 1rem;
+  border: 1px solid $light-pink;
+    -webkit-border-radius: .25rem;
+    -moz-border-radius: .25rem;
+  border-radius: .25rem;
+  color: $black;
+  background-color: $main-background;
+  box-sizing: border-box;
+  height: 1.25rem;
+  padding: 0px 0.5rem;
+  display: inline-block;
+  margin: 0;
+  width: 16rem;
+  vertical-align: top;
+}
+
+#mc_embed_signup label {
+  margin-top: .25em;
+  display:block;
+  font-family: 'Gig Regular';
+  color: $light-pink;
+  line-height: 1.5rem;
+  font-size: 1.5em;
+  padding-bottom: .25em;
+}
+
+/* positions button horizontally in line with input */
+#mc_embed_signup .clear {
+  display: inline-block;
+}
+
+#mc_embed_signup .button {
+  font-size: .5rem;
+  line-height: .5rem;
+  font-family: $arnold;
+  border: none;
+  text-transform: uppercase;
+  -webkit-border-radius: .25rem;
+  -moz-border-radius: .25rem;
+  border-radius: .25rem;
+  color: $pink;
+  background-color: $light-pink;
+  box-sizing: border-box;
+  height: 1.25rem;
+  line-height: 32px;
+  padding: 0 18px;
+  display: inline-block;
+  margin: 0;
+  transition: all 0.23s ease-in-out 0s;
+}
+
+#mc_embed_signup .button:hover {
+  background-color: $dark-pink;
+  color: $light-pink;
+  cursor: pointer;
+}
+
+#mc_embed_signup div#mce-responses {
+  float: left;
+  top: -1.4em;
+  padding: 0em .5em 0em .5em;
+  overflow: hidden;
+  width: 90%;
+  margin: 0 5%;
+  clear: both;
+}
+
+#mc_embed_signup div.response {
+  margin: 1em 0;
+  padding: 1em .5em .5em 0;
+  font-weight: bold;
+  float: left;
+  top: -1.5em;
+  z-index: 1;
+  width: 80%;
+}
+
+#mc_embed_signup #mce-error-response {display:none;}
+#mc_embed_signup #mce-success-response {color:#529214; display:none;}
+
+#mc_embed_signup label.error {
+  display:block;
+  float:none;
+  width:auto;
+  margin-left: 1.05em;
+  text-align: left;
+  padding:.5em 0;
+}
+
+@include smaller-than('md'){
+
+  // where you write the email address
+  #mc_embed_signup input.email {
+    width: 100%;
+    margin-bottom: .5rem;
+    }
+
+    // button
+    #mc_embed_signup .clear {
+      display: block;
+      width: 100%;
+    }
+
+    #mc_embed_signup .button {
+      width: 100%;
+      margin: 0;
+
+      // overrides standard iOS styling 🤷‍♂️
+      // https://stackoverflow.com/questions/24238330/button-css-style-not-working-on-ios
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+}

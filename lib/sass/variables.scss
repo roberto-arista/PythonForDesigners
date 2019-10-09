@@ -1,75 +1,39 @@
+// grid
+$breakpoints: (
+  'xs':  320,
+  'sm':  600,
+  'md':  900,
+  'lg': 1200,
+  'xl': 1500
+) !default;
+
+// sizes
+$header-hgt: ('xs': 2rem,
+             'sm': 2rem,
+             'md': 2rem,
+             'lg': 2rem);
+
+// fonts
+$laica: 'Laica Regular', Georgia, serif;
+$laica-italic: 'Laica Italic', Georgia, serif;
+$laica-bold: 'Laica Bold', Georgia, serif;
+$arnold: 'Arnold Regular', Monaco, monospace;
+$arnold-italic: 'Arnold Italic', Monaco, monospace;
+$Gig: 'Gig Regular', Georgia, serif;
+
 // colors
 $black: #000;
-$gray: #333;
-$light-gray: #eeeeee;
-$white: #fff;
-$pink: #FF3366;
-$blue: #1858A8;
-$light-pink: #FFEDED;
+$dark-grey: #222;
+$grey: #777;
+$light-grey: #EEE;
+$white: #FFF;
+
 $dark-pink: #BC2650;
+$pink: #F36;
+$light-pink: #FFEDED;
 
-$green: #96d400;
-$lightGrey: #cdcdcd;
-$medium-gray: #cccccc;
-$darkGrey: #666666;
-$lightBlue: #0099ff;
-$jade: #0abfaa;
-$violet: #ba8caf;
-$orange: #ffa319;
-$back-color: #fff5f8;
-$exercise-background: #e2f4ff;
+$light-blue: #A6CEFF;
+$blue: #1858A8;
 
-// mobile (to be structured)
-$bodySize-phone: 1em;
-$lineHeight-phone: 1.25em;
-
-$break-small: 600px;  // below phone, above tablet
-$break-small-plusOne: $break-small +1;
-
-// tablet (to be structured)
-$bodySize-tablet: 1.2em;
-$lineHeight-tablet: 1.4em;
-$colWidth-tablet: 100px;
-$gutter-tablet: 12px;
-
-$break-medium: 1280px;  // below tablet, above desktop
-$break-medium-plusOne: $break-medium +1;
-
-// desktop
-$bodySize-desktop: 1.2em;
-$lineHeight-desktop: 1.4em;
-$colWidth-desktop: 132px;
-$gutter-desktop: 32px;
-
-$standardShadow: 0px 3px 6px $medium-gray;
-
-// mixins breakpoints
-@mixin breakpoint($point) {
-  @if $point == smartphone {
-    @media only screen and (max-width: $break-small) { @content; }
-  }
-  @if $point == tablet {
-    @media only screen and (min-width: $break-small-plusOne) and (max-width: $break-medium) { @content; }
-  }
-  @if $point == desktop {
-    @media only screen and (min-width: $break-medium-plusOne) { @content; }
-  }
-}
-
-// prefixes flexbox
-@mixin flexbox() {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-}
-
-@mixin order($val) {
-  -webkit-box-ordinal-group: $val;
-  -moz-box-ordinal-group: $val;
-  -ms-flex-order: $val;
-  -webkit-order: $val;
-  order: $val;
-}
-
+$main-background: #FFF5F8;
+$exercise-background: #E2F4FF;
