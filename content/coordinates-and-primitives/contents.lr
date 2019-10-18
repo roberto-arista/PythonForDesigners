@@ -13,7 +13,7 @@ og_image: abstract-4.png
 body: #### image ####
 name: graphPaper.svg
 ----
-class: small_image
+class: small-image
 ----
 #### text-block ####
 content: A DrawBot program can control the drawing of multiple PDF canvases. Think of the canvas as a sheet of graph paper. DrawBot is a friend who is willing to draw on the graph paper according to your instructions. The most unambiguous way to communicate what you need is to provide numerical data to describe shapes: these are coordinates.
@@ -27,7 +27,7 @@ Given the two-dimensional nature of the PDF canvas you have to provide a pair of
 #### image ####
 name: cartesian.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: The order of the coordinates is conventionally x followed by y. In other words, width (x) comes first and then height (y).
@@ -37,7 +37,7 @@ Take into account that unlike a pixel grid, a vector canvas is continuous. This 
 #### image ####
 name: rounding.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: The <code>newPage()</code> function accepts two kind of parameters:
@@ -70,7 +70,7 @@ content: I assume width and height are straightforward notions, but, what do the
 #### image ####
 name: thumbmeter.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: You should see DrawBot as a skilled and quick draughtsman executing the instructions you gave in the code editor. As any drawing activity, you should think of colors and tools before actually using them. You first decide which color, then you start to spread ink on paper, right?
@@ -78,7 +78,7 @@ content: You should see DrawBot as a skilled and quick draughtsman executing the
 #### image ####
 name: glasses.svg
 ----
-class: small_image
+class: small-image
 ----
 #### text-block ####
 content: DrawBot sets some standard values as soon as you start the application: white background for the canvas, RGB black for the fill color, transparent stroke of width 1pt.

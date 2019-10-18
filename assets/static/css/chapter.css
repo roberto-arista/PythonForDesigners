@@ -145,84 +145,84 @@ body {
 }
 
 /* line 75, lib/sass/style.scss */
-.basic-container {
+.basic-container, article {
   margin: 0 auto;
   width: calc(290px + (550 - 290) * ((100vw - 320px) / (600 - 320)));
 }
 
 @media (max-width: 320px) {
   /* line 75, lib/sass/style.scss */
-  .basic-container {
+  .basic-container, article {
     width: 290px;
   }
 }
 
 @media (min-width: 600px) {
   /* line 75, lib/sass/style.scss */
-  .basic-container {
+  .basic-container, article {
     width: 550px;
   }
 }
 
 @media (min-width: 600px) {
   /* line 75, lib/sass/style.scss */
-  .basic-container {
+  .basic-container, article {
     width: calc(550px + (700 - 550) * ((100vw - 601px) / (900 - 601)));
   }
 }
 
 @media (min-width: 600px) and (max-width: 601px) {
   /* line 75, lib/sass/style.scss */
-  .basic-container {
+  .basic-container, article {
     width: 550px;
   }
 }
 
 @media (min-width: 600px) and (min-width: 900px) {
   /* line 75, lib/sass/style.scss */
-  .basic-container {
+  .basic-container, article {
     width: 700px;
   }
 }
 
 @media (min-width: 900px) {
   /* line 75, lib/sass/style.scss */
-  .basic-container {
+  .basic-container, article {
     width: calc(700px + (850 - 700) * ((100vw - 901px) / (1200 - 901)));
   }
 }
 
 @media (min-width: 900px) and (max-width: 901px) {
   /* line 75, lib/sass/style.scss */
-  .basic-container {
+  .basic-container, article {
     width: 700px;
   }
 }
 
 @media (min-width: 900px) and (min-width: 1200px) {
   /* line 75, lib/sass/style.scss */
-  .basic-container {
+  .basic-container, article {
     width: 850px;
   }
 }
 
 @media (min-width: 1200px) {
   /* line 75, lib/sass/style.scss */
-  .basic-container {
+  .basic-container, article {
     width: calc(850px + (1024 - 850) * ((100vw - 1201px) / (1500 - 1201)));
   }
 }
 
 @media (min-width: 1200px) and (max-width: 1201px) {
   /* line 75, lib/sass/style.scss */
-  .basic-container {
+  .basic-container, article {
     width: 850px;
   }
 }
 
 @media (min-width: 1200px) and (min-width: 1500px) {
   /* line 75, lib/sass/style.scss */
-  .basic-container {
+  .basic-container, article {
     width: 1024px;
   }
 }
@@ -245,7 +245,7 @@ strong {
 }
 
 /* line 124, lib/sass/style.scss */
-em {
+em, th {
   font-family: "Laica Italic", Georgia, serif;
 }
 
@@ -325,4 +325,249 @@ a:visited:hover {
 ::-moz-selection {
   background: #FFEDED;
   /* Gecko Browsers */
+}
+
+/* line 5, lib/sass/chapter.scss */
+#chapter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+/* line 11, lib/sass/chapter.scss */
+article {
+  padding-top: 2rem;
+}
+
+@media (min-width: 600px) {
+  /* line 11, lib/sass/chapter.scss */
+  article {
+    padding-top: 2rem;
+  }
+}
+
+@media (min-width: 900px) {
+  /* line 11, lib/sass/chapter.scss */
+  article {
+    padding-top: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* line 11, lib/sass/chapter.scss */
+  article {
+    padding-top: 2rem;
+    padding-left: 2rem;
+    margin: 0;
+  }
+}
+
+/* line 34, lib/sass/chapter.scss */
+article p, article ul {
+  margin-bottom: .5rem;
+}
+
+/* line 38, lib/sass/chapter.scss */
+article ul {
+  padding-top: 0;
+}
+
+@media (min-width: 1200px) {
+  /* line 43, lib/sass/chapter.scss */
+  article h1 {
+    padding-left: 4rem;
+  }
+  /* line 44, lib/sass/chapter.scss */
+  article h2 {
+    padding-left: 4rem;
+  }
+  /* line 45, lib/sass/chapter.scss */
+  article p {
+    padding-left: 4rem;
+  }
+  /* line 46, lib/sass/chapter.scss */
+  article ul {
+    padding-left: 4rem;
+  }
+  /* line 47, lib/sass/chapter.scss */
+  article table {
+    margin-left: 4rem;
+    width: calc(100% - 4rem);
+  }
+}
+
+/* line 50, lib/sass/chapter.scss */
+.large-image {
+  padding-bottom: .5rem;
+}
+
+/* line 54, lib/sass/chapter.scss */
+.small-image {
+  float: right;
+  clear: right;
+  margin-left: .5rem;
+  width: 33%;
+  height: 33%;
+}
+
+@media (min-width: 900px) {
+  /* line 54, lib/sass/chapter.scss */
+  .small-image {
+    width: 25%;
+    height: 25%;
+  }
+}
+
+/* line 69, lib/sass/chapter.scss */
+.example {
+  padding: .5rem 0 1rem 0;
+}
+
+@media (min-width: 1200px) {
+  /* line 69, lib/sass/chapter.scss */
+  .example {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+/* line 79, lib/sass/chapter.scss */
+.example-image {
+  margin-bottom: .5rem;
+}
+
+@media (min-width: 1200px) {
+  /* line 79, lib/sass/chapter.scss */
+  .example-image {
+    width: 25%;
+    height: 25%;
+    margin-bottom: 0;
+  }
+}
+
+/* line 91, lib/sass/chapter.scss */
+img.example-image, img.exercise-image {
+  -webkit-box-shadow: 0 0.25rem 0.5rem #777;
+          box-shadow: 0 0.25rem 0.5rem #777;
+}
+
+/* line 95, lib/sass/chapter.scss */
+h2.workbook {
+  color: #1858A8;
+  margin-bottom: .25rem;
+}
+
+/* line 100, lib/sass/chapter.scss */
+.exercise {
+  margin-bottom: .5rem;
+}
+
+@media (min-width: 1200px) {
+  /* line 100, lib/sass/chapter.scss */
+  .exercise {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+/* line 110, lib/sass/chapter.scss */
+.exercise-content {
+  border-top: 0.25em solid #1858A8;
+  background-color: #E2F4FF;
+  padding: .25rem 1rem .5rem 1rem;
+  margin-bottom: .5rem;
+}
+
+@media (min-width: 1200px) {
+  /* line 110, lib/sass/chapter.scss */
+  .exercise-content {
+    width: 73%;
+    margin-bottom: 0;
+  }
+}
+
+/* line 122, lib/sass/chapter.scss */
+.exercise-content p {
+  padding-left: 0;
+}
+
+/* line 126, lib/sass/chapter.scss */
+.exercise-image {
+  margin-bottom: .5rem;
+}
+
+@media (min-width: 1200px) {
+  /* line 126, lib/sass/chapter.scss */
+  .exercise-image {
+    width: 25%;
+    height: 25%;
+    margin-bottom: 0;
+  }
+}
+
+/* line 136, lib/sass/chapter.scss */
+#pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 1rem;
+}
+
+/* line 144, lib/sass/chapter.scss */
+#prevButton, #nextButton {
+  font-family: "Arnold Regular", Monaco, monospace;
+  text-align: center;
+  width: 50%;
+}
+
+@media (min-width: 1200px) {
+  /* line 150, lib/sass/chapter.scss */
+  p#prevButton, p#nextButton {
+    padding-left: 0;
+  }
+}
+
+/* line 154, lib/sass/chapter.scss */
+table {
+  border-collapse: collapse;
+  margin-bottom: .5em;
+  display: table;
+  width: 100%;
+}
+
+/* line 162, lib/sass/chapter.scss */
+th {
+  text-align: left;
+  border-bottom: solid 1px #F36;
+  border-top: solid 3px #F36;
+  padding: .25em;
+}
+
+/* line 171, lib/sass/chapter.scss */
+td {
+  text-align: left;
+  border-bottom: solid 1px #F36;
+  padding: .25em;
 }

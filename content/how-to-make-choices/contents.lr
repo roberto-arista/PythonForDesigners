@@ -30,7 +30,7 @@ content: Logical operators allow to manipulate and chain boolean values. Non-boo
 #### image ####
 name: not.svg
 ----
-class: small_image
+class: small-image
 ----
 #### text-block ####
 content: <code>not</code> (unary negation) is used to change the state of a boolean type, from <code>False</code> to <code>True</code>, from <code>True</code> to <code>False</code>. It is like pressing a switch. "Unary" means that the operator only affects the following operand.
@@ -38,7 +38,7 @@ content: <code>not</code> (unary negation) is used to change the state of a bool
 #### image ####
 name: or.svg
 ----
-class: small_image
+class: small-image
 ----
 #### text-block ####
 content: <code>or</code> is used to build a logical expression that will evaluate <code>True</code> if any of the operands is <code>True</code>. Look at the diagram: the pipe has a fork with a tap on each side. The fork is the "or" operator, and the taps are the operands; if any of the valves are open (<code>True</code>), the water will flow on the other side.
@@ -46,7 +46,7 @@ content: <code>or</code> is used to build a logical expression that will evaluat
 #### image ####
 name: and.svg
 ----
-class: small_image
+class: small-image
 ----
 #### text-block ####
 content: <code>and</code> (conditional and) is used to build a logical expression that will evaluate <code>True</code> if every operand is <code>True</code>. Look at the diagram: a straight pipe represents the boolean expression with two taps following each other. The only way to let the water through is to open both valves. Meaning that every operand has to be <code>True</code>.
@@ -56,7 +56,7 @@ content: <code>and</code> (conditional and) is used to build a logical expressio
 #### image ####
 name: not_evaluated.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: Here is a table showing their behaviours:
@@ -166,7 +166,7 @@ you can proceed as follows:
 #### image ####
 name: 4times.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: The integer division instead yields the mathematical floor of the quotient:
@@ -180,7 +180,7 @@ content: if you can’t slice units you group 4 units only once from a collectio
 #### image ####
 name: 4.svg
 ----
-class: small_image
+class: small-image
 ----
 #### text-block ####
 content: The modulo operator yields the remainder of such division:
@@ -191,7 +191,7 @@ snippet: 09.py
 #### image ####
 name: modulo.svg
 ----
-class: small_image
+class: small-image
 ----
 #### text-block ####
 content: In combination with the equivalent (<code>==</code>) or not equivalent (<code>!=</code>) operator, the modulo can be really helpful in checking whether a number is even or odd, whether a number is decimal or not and so on
@@ -241,7 +241,7 @@ content: Here we are taking no advantage of visual variables in order to make th
 #### image ####
 name: groceries.svg
 ----
-class: small_image
+class: small-image
 ----
 #### text-block ####
 content: There are a few contrivances we can implement to express this structure at best using only typography. Let’s start to make some order moving groceries to the top:
@@ -288,7 +288,7 @@ content: In order to execute the conditional construct nested into the for-loop,
 #### image ####
 name: paper.svg
 ----
-class: small_image
+class: small-image
 ----
 #### section-title ####
 content: Conditional Execution
@@ -304,7 +304,7 @@ Here’s a common standard diagram used to describe these patterns is the flowch
 #### image ####
 name: fridge.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: Python provides a control structure called “conditional construct” which allows to define whether a block of code should be executed or not. The minimal form of a conditional structure is:
@@ -315,7 +315,7 @@ snippet: 20.py
 #### image ####
 name: condition1.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: Here’s a concrete example:
@@ -346,7 +346,7 @@ snippet: 24.py
 #### image ####
 name: else.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: Here’s a concrete example:
@@ -360,7 +360,7 @@ content: The <code>else</code> keyword is not followed by any condition, because
 #### image ####
 name: parachute.svg
 ----
-class: small_image
+class: small-image
 ----
 #### text-block ####
 content: Moreover, Python allows to chain the evaluation of many conditions at once, using an indefinite number of <code>elif</code> (which means “else if”) statements between <code>if</code> (mandatory) and <code>else</code> (optional).
@@ -373,7 +373,7 @@ snippet: 26.py
 #### image ####
 name: elif.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: for example
@@ -384,7 +384,7 @@ snippet: 27.py
 #### image ####
 name: myVar.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: Take note of the use of indentation. <code>if</code>, <code>elif</code> and <code>else</code> are aligned to the left while their bodies are four spaces indented to the right.

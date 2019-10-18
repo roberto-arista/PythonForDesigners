@@ -1,0 +1,186 @@
+@import "variables";
+@import "mixins";
+
+
+header {
+  // standard
+  color: $white;
+  width: 100%;
+  margin: 0 auto;
+  font-family: $arnold;
+  background-color: $blue;
+
+  position: fixed;
+  top: 0;
+  z-index: 1;
+
+  @include smaller-than('md') {
+    border-bottom: 1px solid $light-pink;
+  }
+}
+
+header a {
+  color: $white;
+  text-decoration: none;
+}
+
+header a:hover {
+  text-decoration: none;
+  border: none;
+}
+
+header a:visited {
+  color: $white;
+}
+
+header a:visited:hover {
+  color: $white;
+  border: none;
+}
+
+#resource_title, #author_name {
+  display: inline-block;
+  font-family: $arnold;
+  font-variant-caps: small-caps;
+  text-transform: lowercase;
+
+  // xs
+  font-size: .8rem;
+  line-height: map-get($header-hgt, 'xs');
+
+  @include bigger-than('sm') {
+    line-height: map-get($header-hgt, 'sm');
+  }
+
+  @include bigger-than('md') {
+    line-height: map-get($header-hgt, 'md');
+  }
+
+  @include bigger-than('lg') {
+    line-height: map-get($header-hgt, 'lg');
+  }
+}
+
+#author_name {
+  @include smaller-than('md') { display: none; }
+}
+
+#author_name:before {
+  content: '\2003\2003';
+}
+
+.ribbon {
+  @include smaller-than('sm') {
+    display: none;
+  }
+
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+// responsive menu
+header ul {
+  margin: 0;
+  padding: 0 1rem;
+  list-style: none;
+  list-style-type: none;
+  overflow: hidden;
+}
+
+header ul li {
+  padding-bottom: .5rem;
+  font-family: $laica;
+}
+
+header li a {
+  padding: 0;
+  color: $white;
+  text-decoration: none;
+}
+
+header li a:hover {
+  color: $white;
+  border: none;
+}
+
+/* menu */
+header .responsive-menu {
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+header .responsive-menu-icon {
+  cursor: pointer;
+  float: left;
+  display: inline-block;
+  position: relative;
+  user-select: none;
+
+  padding-right: 1rem;
+
+  // some magic in order to vertically align the icon
+  height: 2rem;
+  line-height: 1.525rem;
+  vertical-align: middle;
+
+  @include bigger-than('lg') {
+    display: none;
+  }
+
+}
+
+header .responsive-menu-icon .navicon {
+  background: $white;
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+header .responsive-menu-icon .navicon:before,
+header .responsive-menu-icon .navicon:after {
+  background: $white;
+  content: '';
+  display: inline-block;
+  position: absolute;
+  transition: all .2s ease-out;
+  height: 100%;
+  width: 100%;
+}
+
+header .responsive-menu-icon .navicon:before {
+  top: 5px;
+}
+
+header .responsive-menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+header .responsive-menu-btn {
+  display: none;
+}
+
+header .responsive-menu-btn:checked ~ .responsive-menu {
+  max-height: 100%;
+}
+
+header .responsive-menu-btn:checked ~ .responsive-menu-icon .navicon {
+  background: transparent;
+}
+
+header .responsive-menu-btn:checked ~ .responsive-menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+header .responsive-menu-btn:checked ~ .responsive-menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+header .responsive-menu-btn:checked ~ .responsive-menu-icon:not(.steps) .navicon:before,
+header .responsive-menu-btn:checked ~ .responsive-menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}

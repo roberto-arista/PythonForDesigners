@@ -96,7 +96,7 @@ snippet: 13.py
 #### image ####
 name: u00c0.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: 

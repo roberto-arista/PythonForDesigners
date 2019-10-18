@@ -1,0 +1,176 @@
+@import 'mixins';
+@import 'variables';
+@import 'style';
+
+#chapter {
+    @include flex();
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+article {
+    @extend .basic-container;
+
+    padding-top: map-get($header-hgt, 'xs');
+
+    @include bigger-than('sm') {
+        padding-top: map-get($header-hgt, 'sm');
+    }
+
+    @include bigger-than('md') {
+        padding-top: map-get($header-hgt, 'md');
+    }
+
+    @include bigger-than('lg') {
+        padding-top: map-get($header-hgt, 'lg');
+        padding-left: 2rem;
+
+        // overrides margin: 0 auto; inherited from .basic-container
+        // in order to keep content near to toc-bar
+        margin: 0;
+    }
+}
+
+article p, article ul {
+    margin-bottom: .5rem;
+}
+
+article ul {
+    padding-top: 0;
+}
+
+@include bigger-than('lg') {
+    article h1 { padding-left: 4rem; }
+    article h2 { padding-left: 4rem; }
+    article p { padding-left: 4rem; }
+    article ul { padding-left: 4rem; }
+    article table { margin-left: 4rem; width: calc(100% - 4rem);}
+    }
+
+.large-image {
+    padding-bottom: .5rem;
+}
+
+.small-image {
+    float: right;
+    clear: right;
+    margin-left: .5rem;
+
+    width: 33%;
+    height: 33%;
+
+    @include bigger-than('md') {
+        width: 25%;
+        height: 25%;
+    }
+
+}
+
+.example {
+    padding: .5rem 0 1rem 0;
+
+    @include bigger-than('lg') {
+        @include flex();
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.example-image {
+    margin-bottom: .5rem;
+
+    @include bigger-than('lg') {
+        width: 25%;
+        height: 25%;
+        margin-bottom: 0;
+    }
+}
+
+.diagram {}
+
+img.example-image, img.exercise-image {
+    box-shadow: 0 .25rem .5rem $grey;
+}
+
+h2.workbook {
+    color: $blue;
+    margin-bottom: .25rem;
+}
+
+.exercise {
+    margin-bottom: .5rem;
+
+    @include bigger-than('lg') {
+        @include flex();
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.exercise-content {
+    border-top: .25em solid $blue;
+    background-color: $exercise-background;
+    padding: .25rem 1rem .5rem 1rem;
+    margin-bottom: .5rem;
+
+    @include bigger-than('lg') {
+        width: 73%;
+        margin-bottom: 0;
+    }
+}
+
+.exercise-content p {
+    padding-left: 0;
+}
+
+.exercise-image {
+    margin-bottom: .5rem;
+
+    @include bigger-than('lg') {
+        width: 25%;
+        height: 25%;
+        margin-bottom: 0;
+    }
+}
+
+#pagination {
+    @include flex();
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-top: 1rem;
+}
+
+#prevButton, #nextButton {
+    font-family: $arnold;
+    text-align: center;
+    width: 50%;
+}
+
+p#prevButton, p#nextButton {
+    @include bigger-than('lg') { padding-left: 0; }
+}
+
+table {
+  border-collapse: collapse;
+  margin-bottom: .5em;
+  display: table;
+  width: 100%;
+}
+
+
+th {
+  @extend em;
+  text-align: left;
+
+  border-bottom: solid 1px $pink;
+  border-top: solid 3px $pink;
+  padding: .25em;
+}
+
+td {
+  text-align: left;
+  border-bottom: solid 1px $pink;
+  padding: .25em;
+  }
+

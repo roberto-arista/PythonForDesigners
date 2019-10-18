@@ -1,53 +1,78 @@
-{% extends "baseLayout.html" %}
+{% extends "base.html" %}
+
+{% block styles %}
+  <link rel="stylesheet" href="{{ '/static/css/toc-bar.css'|asseturl }}" >
+  <link rel="stylesheet" href="{{ '/static/css/chapter.css'|asseturl }}" >
+{% endblock %}
+
 {% block title %}{{ this.title }}{% endblock %}
 {% block openGraph %}{% include "openGraph.html" %}{% endblock %}
 
 {% block content %}
-<div class="chapterContainer" id='sourceTypography' style="display: none">
 
-  <div class="left-column">
-    {% include "leftMenu.html" %}
-  </div>
+<section id=chapter>
+  <!-- table of contents -->
+  <aside>
+    {% include "toc-bar.html" %}
+  </aside>
 
-  <!-- start right column -->
-  <div class="right-column">
-
+  <!-- chapter content -->
+  <article>
     <h1>{{ this.title }}</h1>
-    {% if this.visual_abstract %}<img class='large_image' src="{{ this.visual_abstract }}">{% endif %}
+    {% if this.visual_abstract %}<img class='large-image' src="{{ this.visual_abstract }}">{% endif %}
+
     <div class="content">{{ this.body }}</div>
 
-    <div class="prevNext-wrapper">
-
+    <!-- pagination -->
+    <div id="pagination">
       {% set startingIndex = -1 %}
       {% set chapters = site.get('/').children.filter(F._model == 'chapter').order_by('sort_key') %}
       {% set lenChapters = chapters.all()|length %}
       {% if this.sort_key > startingIndex %}
         {% set prevIndex = this.sort_key-1 -startingIndex %}
-          <div class='prevButton'><p><a href="{{ chapters.all()[prevIndex].path }}">>>> prev()</a></p></div>
+          <p id='prevButton'><a href="{{ chapters.all()[prevIndex].path }}">>>> prev()</a></p>
       {% endif %}
 
       {% if this.sort_key < lenChapters-1 +startingIndex %}
         {% set nextIndex = this.sort_key+1 -startingIndex %}
-          <div class='nextButton'><p><a href="{{ chapters.all()[nextIndex].path }}">>>> next()</a></p></div>
+          <p id='nextButton'><a href="{{ chapters.all()[nextIndex].path }}">>>> next()</a></p>
       {% endif %}
-
     </div>
 
-  <!-- end right column -->
-  </div>
+  </article>
 
-</div>
+</section>
 
-<div class="chapterContainer" id="resultTypography"></div>
+<script src="{{ '/static/js/anchor.js'|asseturl}}"></script>
+<script>
+  anchors.options = {
+    placement: 'left',
+    visible: 'touch',
+    icon: '†'
+    };
+  anchors.add('h2');
+</script>
 
-    <script src="{{ '/static/js/anchor.js'|asseturl}}"></script>
-    <script>
-      anchors.options = {
-        placement: 'left',
-        visible: 'touch',
-        icon: '†'
-        };
-      anchors.add('h2');
-    </script>
+<script>
+  //Get the button
+  var mybutton = document.getElementById("topButton");
+
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
 
 {% endblock %}

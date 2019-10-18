@@ -61,7 +61,7 @@ snippet: 04.py
 #### image ####
 name: while.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: According to the colon syntax explored in the previous chapter, the body is considered as such if:
@@ -89,7 +89,7 @@ snippet: 06.py
 #### image ####
 name: while-if.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: Writing a fully functioning while block could be tricky at the beginning of your learning path. In fact, if the <code>while</code> body does not change somehow the <code>while</code> condition, your loop will run endlessly. If this is not your desired output, this is quite bad because you will have to force quit DrawBot. There is no other way from within the application to stop the interpreter before the end of a running script. A good solution for this issue could be to use a parachute technique.
@@ -110,7 +110,7 @@ snippet: 08.py
 #### image ####
 name: continue.svg
 ----
-class: large_image
+class: large-image
 ----
 #### section-title ####
 content: Workbook

@@ -13,7 +13,7 @@ og_image: abstract-2.png
 body: #### image ####
 name: orchestra.svg
 ----
-class: small_image
+class: small-image
 ----
 #### text-block ####
 content: Programming is a peculiar way of writing. Using a specific language, it is possible to instruct a machine to execute some actions. This process has many analogies with choreography and theatre writing. A director needs to write instructions with clarity, leaving ambiguities as much as possible outside of them. The computer is an actor and programming means composing choreographies for it. You have to tell it what it needs to do, but you must remember that a machine is less capable of interpretation than a human being. In fact, it is not capable at all. Moreover, writing a text which is entirely understandable by a machine without some translation or adaptation is very difficult and tedious. You do not want to write only 0’s and 1’s, do you? Low-level languages are verbose and used for a specific application. Luckily, a vast variety of high-level programming languages were created in the last decades. They make instructing machines much more pleasant and fun. Like any tool, programming languages bring along with them specific purposes and views of the world, so choosing the right one is a crucial factor. Python came out in the ’90s and in a few years became widely used in many fields, such as education. 
@@ -24,7 +24,7 @@ content: Many well-known companies use Python to provide digital services that y
 #### image ####
 name: script_CLI.svg
 ----
-class: small_image
+class: small-image
 ----
 #### text-block ####
 content: Python is an *interpreted* language. It means that the instructions contained in a script are read line by line and immediately executed. The program devoted to the interpretation and execution of commands is the Python Interpreter. This interpreter can be used interactively (just open terminal, write <code>'python'</code> and hit enter) or be called to read a text file with .py extension. 
@@ -34,7 +34,7 @@ On the contrary, languages as C++ or Java are *compiled*, meaning that the sourc
 #### image ####
 name: interpreted_vs_compiled.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: Python syntax relies heavily on whitespace. Which means that both the vertical and the horizontal axis of the writing field are meaningful to the interpreter.
@@ -42,7 +42,7 @@ content: Python syntax relies heavily on whitespace. Which means that both the v
 #### image ####
 name: themerson.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: <figcaption>Stefan Themerson, poetic semantic translation of Drinking under the moon by Li Bo, Bayamus, 1949 </figcaption>
@@ -58,7 +58,7 @@ content: + if you have a background in visual art, you are probably aware that f
 #### image ####
 name: magnification.svg
 ----
-class: small_image
+class: small-image
 ----
 #### text-block ####
 content: Python has been designed with readability in mind. Any designer should be aware of how slippery that notion can be, but generally we can say that it has been conceived with one simple assumption: code is executed by machines, but it is read by humans. Source code is usually the best study resource you have. Where manuals and documentation do not arrive, source code does.
@@ -68,7 +68,7 @@ In Python, individual statements finish at the end of the line, although in a fe
 #### image ####
 name: casual_vs_formal.svg
 ----
-class: small_image
+class: small-image
 ----
 #### text-block ####
 content: Programming languages are formal languages. It means they are specifically designed with a purpose in mind, instructing machines. On the contrary, natural languages evolve autonomously: they have multiple rules that often clash. The interpretation skills of the receiver is a key factor in solving these kind of conflicts. Instead formal languages have strict syntax rules because they aim at having the smallest amount of exceptions. Given that the Python interpreter is not able to handle conflicts and ambiguity, syntax errors in the code are just not admitted.
@@ -127,7 +127,7 @@ snippet: 02.py
 #### image ####
 name: notes.svg
 ----
-class: small_image
+class: small-image
 ----
 #### text-block ####
 content: Keep in mind that the first reader of your code is yourself in the future. So, write comments while you are programming, because you still know what you are doing. Later in the future, without annotations, it would be much more difficult to recall the meaning of some obscure code lines.
@@ -143,7 +143,7 @@ content: establishes <code>rectWidth</code> as an identifier (also known as a na
 #### image ####
 name: alias.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: Identifiers are a very important kind of token in Python. They have some specific, yet very simple rules:
@@ -169,7 +169,7 @@ content: Open up your terminal, define a variable and print it to the console
 #### image ####
 name: cookies.svg
 ----
-class: small_image
+class: small-image
 ----
 #### text-block ####
 content: Programming languages are designed with efficiency in mind. They offer various ways to assemble statements and avoid redundancy. The most common one is defining functions. A function is a named sequence of statements that performs a series of operations. A function can “take” some values in and it can provide some values back. The first ones are called arguments, the latter are the return values. In order to use a function you have to define its name so that you can “call” the function by name afterwards.
@@ -185,7 +185,7 @@ content: Let’s observe the anatomy of what we have executed:
 #### image ####
 name: commented_function.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: Remember that functions collect a sequence of statements. Grouping basic commands, they facilitate more articulated actions. So, when you have to choose a name for the function identifier, my advice is to go for a verb form. A verb could make the name a bit longer, but at the beginning it will help a lot distinguish what is what. A pseudo-code example inspired by real life:
@@ -207,7 +207,7 @@ Let’s observe the anatomy of the calling statement:
 #### image ####
 name: commented_invoke.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: Great, now it’s time to dive into DrawBot.

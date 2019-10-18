@@ -1,0 +1,87 @@
+@import "variables";
+@import "mixins";
+
+footer {
+  background: $blue;
+  padding-bottom: 1rem;
+}
+
+footer > div {
+  @include bigger-than('lg') {
+    @include flex();
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+footer p {
+  font-family: $arnold;
+  color: $white;
+  font-size: .7rem;
+  line-height: 1rem;
+
+  font-variant-caps: small-caps;
+  text-transform: lowercase;
+
+  @include bigger-than('lg') {
+    font-size: .5rem;
+    line-height: .75rem;
+  }
+}
+
+footer em {
+  font-family: $arnold-italic;
+}
+
+
+footer a {
+  color: $light-blue;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: none;
+  border-bottom: 1px solid $light-blue;
+}
+
+footer a:visited {
+  color: $light-blue;
+}
+
+footer a:visited:hover {
+  color: $light-blue;
+  border-bottom: 1px solid $light-blue;
+}
+
+.footer-title:before {
+  content: '[';
+}
+
+.footer-title:after {
+  content: ']';
+}
+
+.footer-callout {
+
+  @include bigger-than('md') {
+    padding: 0 2rem;
+  }
+
+  @include bigger-than('lg') {
+    padding: 0;
+    width: 31%;
+  }
+}
+
+.footer-title {
+  padding-top: 1rem;
+
+  text-indent: 1rem;
+  @include bigger-than('lg') {
+    text-indent: .5rem;
+  }
+}
+
+img#license {
+  padding-top: .5rem;
+}

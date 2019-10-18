@@ -25,7 +25,7 @@ snippet: 01.py
 #### image ####
 name: list.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: Now, this is a tuple:
@@ -36,7 +36,7 @@ snippet: 02.py
 #### image ####
 name: tuple.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: As we said, elements in lists and tuples are of arbitrary nature: they can be any kind of object, <code>None</code> included. They can be empty too.
@@ -81,7 +81,7 @@ content: Once finished, the route of the journey is saved on the smartphone memo
 #### image ####
 name: list-table.svg
 ----
-class: large_image
+class: large-image
 ----
 #### section-title ####
 content: Sequence Properties for Lists and Tuples
@@ -112,7 +112,7 @@ snippet: 07.py
 #### image ####
 name: append.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: .extend(iterable)
@@ -123,7 +123,7 @@ snippet: 08.py
 #### image ####
 name: extend.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: .insert(index, item)
@@ -134,7 +134,7 @@ snippet: 09.py
 #### image ####
 name: insert.svg
 ----
-class: large_image
+class: large-image
 ----
 #### exercise ####
 content: transform a right-angled triangle in a square adding a point
@@ -148,7 +148,7 @@ snippet: 10.py
 #### image ####
 name: remove.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: .pop(index)
@@ -159,7 +159,7 @@ snippet: 11.py
 #### image ####
 name: pop.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: .index(item)
@@ -170,7 +170,7 @@ snippet: 12.py
 #### image ####
 name: index.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: .sort()
@@ -181,7 +181,7 @@ snippet: 13.py
 #### image ####
 name: sort.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: .reverse()
@@ -192,7 +192,7 @@ snippet: 14.py
 #### image ####
 name: reverse.svg
 ----
-class: large_image
+class: large-image
 ----
 #### section-title ####
 content: For Syntax
@@ -214,7 +214,7 @@ content: Note that the body is four spaces indented rightwards. <code>for</code>
 #### image ####
 name: for.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: The iterable can be created either before the <code>for</code> opening statement or created on the spot. Meaning that this example:
@@ -260,7 +260,7 @@ content: How can this be useful in a graphic design application? Consider the fo
 #### image ####
 name: 16pages.svg
 ----
-class: large_image
+class: large-image
 ----
 #### code-example ####
 snippet: 22.py
@@ -347,7 +347,7 @@ If we need to draw a table or 90° based pattern, this technique becomes very ha
 #### image ####
 name: matrix.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: This is a bidimensional matrix, it is a simple table. Each element of the matrix is called cell. Each cell of this matrix can be described by two indexes: the index of the column and the row to which the cell belong. If we explicit write each index to each cell we obtain
@@ -355,7 +355,7 @@ content: This is a bidimensional matrix, it is a simple table. Each element of t
 #### image ####
 name: matrix-number.svg
 ----
-class: large_image
+class: large-image
 ----
 #### text-block ####
 content: At this point we only need to define a size for the cell and we are able to draw the left column of the matrix

@@ -1,21 +1,16 @@
-{% if this.image %}
-    <div class='code_image_wrapper'>
-{% elif this.diagram %}
-    <div class='code_image_wrapper'>
+
+{% if this.image or this.diagram %}
+    <div class='example'>
 {% endif %}
 
     {% if this.image %}
-        <img class="code_image" src="{{ this.image }}">
-    {% endif %}
-
-    {% if this.diagram %}
-        <img class="code_diagram" src="{{ this.diagram }}">
+        <img class="example-image" src="{{ this.image }}">
+    {% elif this.diagram %}
+        <img class="diagram" src="{{ this.diagram }}">
     {% endif %}
 
     <pre>{{ this.snippet|importPy }}</pre>
 
-{% if this.image %}
-    </div>
-{% elif this.diagram %}
+{% if this.image or this.diagram %}
     </div>
 {% endif %}
