@@ -30,7 +30,7 @@
 }
 
 /* line 25, lib/sass/page.scss */
-#page p, #page ul {
+#page p, #page ul, #page form {
   margin-bottom: .5rem;
 }
 
@@ -40,11 +40,58 @@
     padding-left: 4rem;
   }
   /* line 31, lib/sass/page.scss */
-  #page p {
+  #page h2 {
     padding-left: 4rem;
   }
   /* line 32, lib/sass/page.scss */
+  #page p {
+    padding-left: 4rem;
+  }
+  /* line 33, lib/sass/page.scss */
   #page ul {
     padding-left: 4rem;
+  }
+  /* line 34, lib/sass/page.scss */
+  #page form {
+    padding-left: 4rem;
+  }
+}
+
+/* line 39, lib/sass/page.scss */
+.button {
+  font-size: .5rem;
+  line-height: .5rem;
+  font-family: "Arnold Regular", Monaco, monospace;
+  border: none;
+  text-transform: uppercase;
+  border-radius: .25rem;
+  color: #FFF;
+  background-color: #1858A8;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 1.25rem;
+  line-height: 32px;
+  padding: 0 18px;
+  display: inline-block;
+  margin: 0;
+  -webkit-transition: all 0.23s ease-in-out 0s;
+  transition: all 0.23s ease-in-out 0s;
+}
+
+/* line 59, lib/sass/page.scss */
+.button:hover {
+  background-color: #F36;
+  color: #FFF;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  /* line 65, lib/sass/page.scss */
+  .button {
+    width: 100%;
+    margin: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
   }
 }

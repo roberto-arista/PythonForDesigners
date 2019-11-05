@@ -22,12 +22,53 @@
     padding-bottom: .5rem;
 }
 
-#page p, #page ul {
+#page p, #page ul, #page form {
     margin-bottom: .5rem;
 }
 
 @include bigger-than('lg') {
     #page h1 { padding-left: 4rem; }
+    #page h2 { padding-left: 4rem; }
     #page p { padding-left: 4rem; }
     #page ul { padding-left: 4rem; }
+    #page form { padding-left: 4rem; }
+}
+
+
+// just for the online courses
+.button {
+  font-size: .5rem;
+  line-height: .5rem;
+  font-family: $arnold;
+  border: none;
+  text-transform: uppercase;
+  -webkit-border-radius: .25rem;
+  -moz-border-radius: .25rem;
+  border-radius: .25rem;
+  color: $white;
+  background-color: $blue;
+  box-sizing: border-box;
+  height: 1.25rem;
+  line-height: 32px;
+  padding: 0 18px;
+  display: inline-block;
+  margin: 0;
+  transition: all 0.23s ease-in-out 0s;
+}
+
+.button:hover {
+  background-color: $pink;
+  color: $white;
+  cursor: pointer;
+}
+@include smaller-than('md'){
+    .button {
+      width: 100%;
+      margin: 0;
+      // overrides standard iOS styling 🤷‍♂️
+      // https://stackoverflow.com/questions/24238330/button-css-style-not-working-on-ios
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
 }

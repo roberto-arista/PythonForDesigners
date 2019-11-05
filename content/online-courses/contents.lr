@@ -1,0 +1,50 @@
+_model: page
+---
+title: Online Courses
+---
+body:
+
+#### text-block ####
+content:
+
+I have recently decided to offer online Python+Drawbot courses based on the manual. This kind of solution eases many logistical problems and allows me to reach a broader audience. The courses also provide financial help for the future development of the project.
+
+The course is structured in twelve hangout meetings of two hours each. During each session, I will explain concepts, throw some code around, and correct exercises. The course will guide you through the contents of the manual (and more) focusing on strategy and problem-solving. It is expected that you will reserve some time (about two hours) between each meeting for carrying out some assignments. We will share resources and solutions through a Slack workspace.
+
+The course is meant for beginners with no prior coding experience, practicing in the fields of design and art (or anything else dealing with images, really). If you already know the fundaments of programming and Python but you want to push your skills a little further, get in touch and we will fix something up for you.
+
+The enrollment costs €400 including taxes. If you are a company residing outside Italy, you won’t be charged 22% VAT. For the first two batches, I am giving away a 15% launch discount 😌. Each course has a minimum of 5 and a maximum of 10 participants.
+
+If you want to subscribe to a course, click on the "subscribe" button. You will be redirected to a Google Form. Please, enter the requested data. Shortly after I will send you an invoice with a Stripe payment form.
+
+## Python for Designers Online #1
+**Friday, 16:00 – 18:00 GMT+1**
+
+<del>€400</del> €340 (🎁 15% off!)
+* November 2019: 22nd and 29th
+* December 2019: 6th, 13th, and 20th
+* January 2020: 10th, 17th, 24th and 31st
+* February 2020: 7th, 14th, and 21th
+
+<form action="https://forms.gle/2pm7KrSt82GTcA7R9" method="get" target="_blank">
+    <button type="submit" class="button">Subscribe</button>
+</form>
+
+## Python for Designers Online #2
+**Saturday, 16:00 – 18:00 GMT+1**
+
+<del>€400</del> €340 (🎁 15% off!)
+* November 2019: 23rd and 30th
+* December 2019: 7th, 14th, and 21st
+* January 2020: 11th, 18th, and 25th
+* February 2020: 1st, 8th, 15th, and 22nd
+
+<form action="https://forms.gle/sYAE58xZi5mu2Jze7" method="get" target="_blank">
+    <button type="submit" class="button">Subscribe</button>
+</form>
+
+If you can't attend any course listed here, <a class='grayscale' href="mailto:&#x68;&#x65;&#x6C;&#x6C;&#x6F;&#x40;&#x72;&#x6F;&#x62;&#x65;&#x72;&#x74;&#x6F;&#x61;&#x72;&#x69;&#x73;&#x74;&#x61;&#x2E;&#x69;&#x74;">get in touch</a> and let me know which time would suit your needs. I'll think about it 💫, promised!
+<p>&nbsp</p>
+
+---
+visual_abstract: abstract.svg
