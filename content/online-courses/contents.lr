@@ -7,15 +7,15 @@ body:
 #### text-block ####
 content:
 
-I have recently decided to offer online Python+Drawbot courses based on the manual. This kind of solution eases many logistical problems and allows me to reach a broader audience. The courses also provide financial help for the future development of the project.
+I have re­cently de­cided to of­fer *Python for Designers* on­line courses which are based on this man­ual. This type of so­lu­tion eases many lo­gis­ti­cal prob­lems and al­lows me to reach a broader au­di­ence. The courses also pro­vide fi­nan­cial help for additional project developments.
 
-The course is structured in twelve hangout classes of two hours each. During each session, I will explain concepts, throw some code around, and correct exercises. The course will guide you through the contents of the manual (and more) focusing on strategy and problem-solving. It is expected that you will reserve some time (about two hours) between each class for carrying out some assignments. We will share resources and solutions through a Slack workspace.
+The *Python for Designers* on­line course is struc­tured in twelve classes of two hours each. Dur­ing each ses­sion, I will ex­plain the con­cepts, toss some code around and perform practice ex­er­cises. The course will guide you through the con­tents of the man­ual (and more) fo­cus­ing on strat­egy and prob­lem-solv­ing skills . You will have two hours be­tween each class for completing as­sign­ments. Re­sources and so­lu­tions will be shared via Slack work­space.
 
-The course is meant for beginners with no prior coding experience, practicing in the fields of design and art (or anything else dealing with images, really). If you already know the fundaments of programming and Python but you want to push your skills a little further, get in touch and we will fix something up for you.
+The course is meant for be­gin­ners with no prior cod­ing ex­pe­ri­ence, operating in the fields of de­sign and art (or any field deal­ing with im­ages, re­ally). If you al­ready know the fundamentals of pro­gram­ming and Python but you want to increase your skills fur­ther, get in touch and we will arrange some­thing up for you.
 
-The enrollment costs €400 including taxes. If you are a company residing outside Italy, you won’t be charged 22% VAT. For the first two batches, I am giving away a 15% launch discount 😌. Each course has a minimum of 5 and a maximum of 10 participants.
+The en­roll­ment costs €400 in­clud­ing taxes. If you are a com­pany re­sid­ing out­side Italy, you won’t be charged 22% VAT. For the first two batch, I am giv­ing away a 15% launch dis­count 😌. Each course has a min­i­mum of 5 and a max­i­mum of 10 par­tic­i­pants.
 
-If you want to subscribe to a course, click on the "subscribe" button. You will be redirected to a Google Form. Please, enter the requested data. Shortly after I will send you an invoice with a Stripe payment form.
+To enroll please click on the “sub­scribe” but­ton and complete the form. Shortly af­ter I will send you an in­voice with details for the payment. You’ll be able to pay with Credit Cards (through Stripe), Paypal or Bank Transfer.
 
 ## Python for Designers Online #1
 **Friday, 16:00 – 18:00 GMT+1 (12 classes)**
@@ -43,8 +43,9 @@ If you want to subscribe to a course, click on the "subscribe" button. You will 
     <button type="submit" class="button">Subscribe</button>
 </form>
 
-If you can't attend any course listed here, <a class='grayscale' href="mailto:&#x68;&#x65;&#x6C;&#x6C;&#x6F;&#x40;&#x72;&#x6F;&#x62;&#x65;&#x72;&#x74;&#x6F;&#x61;&#x72;&#x69;&#x73;&#x74;&#x61;&#x2E;&#x69;&#x74;">get in touch</a> and let me know which time would suit your needs. I'll think about it 💫, promised!
 <p>&nbsp</p>
+
+If you can't attend any course listed here, <a class='grayscale' href="mailto:&#x68;&#x65;&#x6C;&#x6C;&#x6F;&#x40;&#x72;&#x6F;&#x62;&#x65;&#x72;&#x74;&#x6F;&#x61;&#x72;&#x69;&#x73;&#x74;&#x61;&#x2E;&#x69;&#x74;">get in touch</a> and let me know which time would suit your needs. I'll try to arrange something!
 
 ---
 visual_abstract: abstract.svg
