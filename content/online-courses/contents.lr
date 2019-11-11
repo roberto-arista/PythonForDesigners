@@ -1,0 +1,50 @@
+_model: page
+---
+title: Online Courses
+---
+body:
+
+#### text-block ####
+content:
+
+I have re­cently de­cided to of­fer *Python for Designers* on­line courses which are based on this man­ual. This type of so­lu­tion eases many lo­gis­ti­cal prob­lems and al­lows me to reach a broader au­di­ence. The courses also pro­vide fi­nan­cial help for additional project developments.
+
+The *Python for Designers* on­line course is struc­tured in eight classes of three hours each. Dur­ing each ses­sion, I will ex­plain the con­cepts, toss some code around and perform practice ex­er­cises. The course will guide you through the con­tents of the man­ual (and more) fo­cus­ing on strat­egy and prob­lem-solv­ing skills . You will have two hours be­tween each class for completing as­sign­ments. Re­sources and so­lu­tions will be shared via Slack work­space.
+
+The course is meant for be­gin­ners with no prior cod­ing ex­pe­ri­ence, operating in the fields of de­sign and art (or any field deal­ing with im­ages, re­ally). If you al­ready know the fundamentals of pro­gram­ming and Python but you want to increase your skills fur­ther, get in touch and we will arrange some­thing up for you.
+
+The en­roll­ment costs €400 in­clud­ing taxes. If you are a com­pany re­sid­ing out­side Italy, you won’t be charged 22% VAT. For the first batch, I am giv­ing away a 10% launch dis­count 😌. Each course has a min­i­mum of 5 and a max­i­mum of 10 par­tic­i­pants.
+
+To enroll please click on the “sub­scribe” but­ton and complete the form. Shortly af­ter I will send you an in­voice with details for the payment. You’ll be able to pay with Credit Cards (through Stripe), Paypal or Bank Transfer.
+
+## Python for Designers Online #1
+**Saturday, 16:00 – 19:00 GMT+1 (8 classes)**
+
+<del>€400</del> €360 (🎁 10% off!)
+* November 2019: 23th and 30th
+* December 2019: 7th, 14th and 21st
+* January 2020: 18th and 25th
+* February 2020: 1st
+
+<form action="https://forms.gle/2pm7KrSt82GTcA7R9" method="get" target="_blank">
+    <button type="submit" class="button">Subscribe</button>
+</form>
+
+## Python for Designers Online #2
+**Friday, 16:00 – 19:00 GMT+1 (8 classes)**
+
+<del>€400</del> €360 (🎁 10% off!)
+* January 2020: 17th, 24th and 31st
+* February 2020: 7th, 14th and 21th
+* March 2020: 6th and 13th
+
+<form action="https://forms.gle/sYAE58xZi5mu2Jze7" method="get" target="_blank">
+    <button type="submit" class="button">Subscribe</button>
+</form>
+
+<p>&nbsp</p>
+
+If you can't attend any course listed here, <a class='grayscale' href="mailto:&#x68;&#x65;&#x6C;&#x6C;&#x6F;&#x40;&#x72;&#x6F;&#x62;&#x65;&#x72;&#x74;&#x6F;&#x61;&#x72;&#x69;&#x73;&#x74;&#x61;&#x2E;&#x69;&#x74;">get in touch</a> and let me know which time would suit your needs. I'll try to arrange something!
+
+---
+visual_abstract: abstract.svg
