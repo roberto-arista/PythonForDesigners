@@ -185,3 +185,13 @@ a:visited:hover {
 ::-moz-selection {
  background: $light-pink; /* Gecko Browsers */
 }
+
+figcaption {
+  font-family: $arnold;
+  color: $blue;
+  font-size: .55rem;
+  line-height: .65rem;
+  text-transform: lowercase;
+  font-variant-caps: small-caps;
+  margin-bottom: 1rem;
+}

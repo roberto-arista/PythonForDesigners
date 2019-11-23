@@ -55,9 +55,13 @@
   #page form {
     padding-left: 4rem;
   }
+  /* line 35, lib/sass/page.scss */
+  #page figcaption {
+    padding-left: 4rem;
+  }
 }
 
-/* line 39, lib/sass/page.scss */
+/* line 40, lib/sass/page.scss */
 .button {
   font-size: .5rem;
   line-height: .5rem;
@@ -78,7 +82,7 @@
   transition: all 0.23s ease-in-out 0s;
 }
 
-/* line 59, lib/sass/page.scss */
+/* line 60, lib/sass/page.scss */
 .button:hover {
   background-color: #F36;
   color: #FFF;
@@ -86,7 +90,7 @@
 }
 
 @media (max-width: 900px) {
-  /* line 65, lib/sass/page.scss */
+  /* line 66, lib/sass/page.scss */
   .button {
     width: 100%;
     margin: 0;
