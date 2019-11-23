@@ -326,3 +326,14 @@ a:visited:hover {
   background: #FFEDED;
   /* Gecko Browsers */
 }
+
+/* line 189, lib/sass/style.scss */
+figcaption {
+  font-family: "Arnold Regular", Monaco, monospace;
+  color: #1858A8;
+  font-size: .55rem;
+  line-height: .65rem;
+  text-transform: lowercase;
+  font-variant-caps: small-caps;
+  margin-bottom: 1rem;
+}
