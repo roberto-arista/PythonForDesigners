@@ -10,7 +10,8 @@ myFirstList is mySecondList
 id(myFirstList) == id(mySecondList)
 # True
 
-# two aliases referring to two different objects with the same content
+# two aliases referring to two different objects
+# with the same content
 myFirstList is myThirdList
 # False
 
