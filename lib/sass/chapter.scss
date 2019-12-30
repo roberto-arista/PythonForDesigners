@@ -48,8 +48,14 @@ article ul {
     article table { margin-left: 4rem; width: calc(100% - 4rem);}
     }
 
-.large-image {
+.large-image, .diagram {
     padding-bottom: .5rem;
+}
+
+.diagram {
+    @include bigger-than('lg') {
+        width: 73%;
+    }
 }
 
 .small-image {
@@ -87,9 +93,7 @@ article ul {
     }
 }
 
-.diagram {}
-
-img.example-image, img.exercise-image {
+img.example-image, img.ex-image {
     box-shadow: 0 .25rem .5rem $grey;
 }
 
@@ -108,9 +112,9 @@ h2.workbook {
     }
 }
 
-.exercise-content {
-    border-top: .25em solid $blue;
-    background-color: $exercise-background;
+.ex-assignment, .ex-number {
+    // border-top: .25em solid $blue;
+    // background-color: $exercise-background;
     padding: .25rem 1rem .5rem 1rem;
     margin-bottom: .5rem;
 
@@ -120,11 +124,45 @@ h2.workbook {
     }
 }
 
-.exercise-content p {
+.ex-number {
+    background-color: $blue;
+    margin-bottom: 0;
+    padding: .28rem 1rem .01rem 1rem;
+}
+
+.ex-number p {
+    font-family: "Arnold Regular";
+    font-size: .7rem;
+    line-height: .7rem;
+    color: $white;
+    font-variant-caps: small-caps;
+    text-transform: lowercase;
+}
+
+.ex-assignment {
+    background-color: $exercise-background;
+}
+
+.ex-assignment p, .ex-assignment ul, .ex-number p {
     padding-left: 0;
 }
 
-.exercise-image {
+.ex-solution {
+    font-family: "Arnold Regular";
+    font-size: .7rem;
+    line-height: .7rem;
+    color: $blue;
+    font-variant-caps: small-caps;
+    text-transform: lowercase;
+    text-decoration: none;
+}
+
+.ex-solution a { color: $blue; }
+.ex-solution a:hover { color: $blue; border-bottom: 1px solid $blue}
+.ex-solution a:active { color: $blue; }
+.ex-solution a:visited { color: $blue; }
+
+.ex-image {
     margin-bottom: .5rem;
 
     @include bigger-than('lg') {

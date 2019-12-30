@@ -137,7 +137,7 @@ name: insert.svg
 class: large-image
 ----
 #### exercise ####
-content: transform a right-angled triangle in a square adding a point
+assignment: transform a right-angled triangle in a square adding a point
 ----
 #### text-block ####
 content:     .remove(item)

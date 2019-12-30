@@ -118,53 +118,53 @@ content: Workbook
 class: workbook
 ----
 #### exercise ####
-content: Try to cover the entire canvas with a striped black & white pattern. The user should be able to control the density of the pattern and the direction of lines (horizontal or vertical).
+assignment: Try to cover the entire canvas with a striped black & white pattern. The user should be able to control the density of the pattern and the direction of lines (horizontal or vertical).
 ----
 image: stripes.png
 ----
 #### exercise ####
-content: Try to cover the entire canvas with a zig-zag line. The line moves horizontally starting at top left canvas vertex. Allow the user to control the density of wave lines.
+assignment: Try to cover the entire canvas with a zig-zag line. The line moves horizontally starting at top left canvas vertex. Allow the user to control the density of wave lines.
 ----
 image: zigzag.png
 ----
 #### exercise ####
-content: Draw a leaf white shape using only black lines.
+assignment: Draw a leaf white shape using only black lines.
 ----
 image: threadCurves.png
 ----
 #### exercise ####
-content: Extend the previous exercise: draw a white circle using only black straight lines.
+assignment: Extend the previous exercise: draw a white circle using only black straight lines.
 ----
 image: theadCicle.png
 ----
 #### exercise ####
-content: Create a sequence of horizontal gradients. You cannot use any automatic gradient function, try to achieve this visual effect through separate shapes.
+assignment: Create a sequence of horizontal gradients. You cannot use any automatic gradient function, try to achieve this visual effect through separate shapes.
 The gradients should have alternate direction.
 ----
 image: gradientStripes.png
 ----
 #### exercise ####
-content: Create a pattern of horizontal lines. The lines should be thicker in the middle as you can see in the example image. Allow the user to control the density of the pattern, the maximum value of the thickness and a canvas margin.
+assignment: Create a pattern of horizontal lines. The lines should be thicker in the middle as you can see in the example image. Allow the user to control the density of the pattern, the maximum value of the thickness and a canvas margin.
 ----
 image: linePattern.png
 ----
 #### exercise ####
-content: Your goal is to draw a boustrophedonic (from left to right and from right to left in alternate lines) sequence of ovals. Start from the lower left canvas corner and alternate ovals color (dark gray, light gray). Increase the oval radius according to its position within the drawing sequence of the line (little at the beginning, larger at the end). The vertical and horizontal distance between the ovals is constant. Give the user the option to set a margin value for the canvas and try to use only one while construct.
+assignment: Your goal is to draw a boustrophedonic (from left to right and from right to left in alternate lines) sequence of ovals. Start from the lower left canvas corner and alternate ovals color (dark gray, light gray). Increase the oval radius according to its position within the drawing sequence of the line (little at the beginning, larger at the end). The vertical and horizontal distance between the ovals is constant. Give the user the option to set a margin value for the canvas and try to use only one while construct.
 ----
 image: pattern_oval.png
 ----
 #### exercise ####
-content: Create a 200x200pt canvas. Draw a sequence of squares from top to bottom using a while loop. The square side should be adjustable through a variable. Odd squares should be light gray, even tiles should be dark gray.
+assignment: Create a 200x200pt canvas. Draw a sequence of squares from top to bottom using a while loop. The square side should be adjustable through a variable. Odd squares should be light gray, even tiles should be dark gray.
 ----
 image: exercise6_1.png
 ----
 #### exercise ####
-content: Extend the previous exercise. Nest two while statements and draw a pattern made of squares across the entire canvas. Try to get a chessboard effect.
+assignment: Extend the previous exercise. Nest two while statements and draw a pattern made of squares across the entire canvas. Try to get a chessboard effect.
 ----
 image: chessboard.png
 ----
 #### exercise ####
-content: Write a program able to draw a ruler of a specific measure unit (either PostScript points or millimeters) across the entire canvas. The ruler ticks should be of different lengths according to a given rhythm. Use a while loop. Numbers displayed along the ruler are a plus.
+assignment: Write a program able to draw a ruler of a specific measure unit (either PostScript points or millimeters) across the entire canvas. The ruler ticks should be of different lengths according to a given rhythm. Use a while loop. Numbers displayed along the ruler are a plus.
 ----
 image: typometer.png
 ----

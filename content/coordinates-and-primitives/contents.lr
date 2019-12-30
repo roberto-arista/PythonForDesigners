@@ -118,9 +118,13 @@ snippet: 05.py
 image: rect.png
 ----
 #### exercise ####
-content: canvas 100x100. Draw four squares, side 20 units, each one facing a corner of the canvas
+reference: 4.1
+----
+assignment: Create a 100x100pt canvas. Draw four squares, side 20 units, each one facing a corner of the canvas
 ----
 image: esRects.png
+----
+solution: True
 ----
 #### code-example ####
 snippet: 06.py
@@ -136,9 +140,13 @@ snippet: 07.py
 image: ovals.png
 ----
 #### exercise ####
-content: canvas 100x100. Draw four ovals, 20 units diameter, each one having its center point to a canvas corner
+reference: 4.2
+----
+assignment: Create a 100x100pt canvas. Draw four ovals, diameter 20 units, each one having its center point to a canvas corner
 ----
 image: esOvals.png
+----
+solution: True
 ----
 #### code-example ####
 snippet: 08.py
@@ -154,7 +162,7 @@ snippet: 09.py
 image: lines-01.png
 ----
 #### exercise ####
-content: How could you improve the quality of the code adding two identifiers?
+assignment: How could you improve the quality of the code adding two identifiers?
 ----
 #### code-example ####
 snippet: 10.py
@@ -167,7 +175,7 @@ snippet: 11.py
 image: lines3-01.png
 ----
 #### exercise ####
-content: canvas 100x100
+assignment: canvas 100x100
 draw two lines connecting two non-contiguous canvas corners
 ----
 image: esX.png
@@ -178,7 +186,7 @@ snippet: 12.py
 image: lines4-01.png
 ----
 #### exercise ####
-content: canvas 100x100
+assignment: canvas 100x100
 draw a zig zag connected polyline starting from top left corner and ending in bottom right corner of the canvas
 ----
 image: esZigZig.png
@@ -194,7 +202,7 @@ snippet: 14.py
 image: polygon.png
 ----
 #### exercise ####
-content: canvas 100x100
+assignment: canvas 100x100
 draw two polygons of three sides
 each one, each polygon should have two vertices matching two contiguous canvas corners and one vertex matching the canvas centre
 ----
@@ -217,7 +225,7 @@ snippet: 16.py
 image: oval_rect.png
 ----
 #### exercise ####
-content: canvas 100x100
+assignment: canvas 100x100
 combine the circles and the squares exercises, draw the four squares below the four ovals
 ----
 image: esOvalRect.png
@@ -244,14 +252,14 @@ content: Workbook
 class: workbook
 ----
 #### exercise ####
-content: Your goal is to draw a black rectangle positioned in the middle of the canvas. Its height is equal to the height of the canvas. The rectangle's width instead changes according to a variable "factor" between 0 and 1:
+assignment: Your goal is to draw a black rectangle positioned in the middle of the canvas. Its height is equal to the height of the canvas. The rectangle's width instead changes according to a variable "factor" between 0 and 1:
 + if 0, the rectangle's width is equal to 0
 + if 1, the rectangle's width is equal to the canvas width
 ----
 image: exercise1.png
 ----
 #### exercise ####
-content: Draw two rectangles, one leaning on the left side of the canvas, the other leaning on the right side. Their heights are equal to the canvas. Instead, each rectangle width is controlled by a variable "factor" between 0 and 1. When "factor":
+assignment: Draw two rectangles, one leaning on the left side of the canvas, the other leaning on the right side. Their heights are equal to the canvas. Instead, each rectangle width is controlled by a variable "factor" between 0 and 1. When "factor":
 
 +  is 0, you see no rectangle
 +  is 1, you cannot see the white canvas background
@@ -259,31 +267,31 @@ content: Draw two rectangles, one leaning on the left side of the canvas, the ot
 image: exercise2.png
 ----
 #### exercise ####
-content: Draw four triangles. Fill each triangle with a different shade of gray. Also, each triangle should have two vertices matching to contiguous canvas corners and the last vertex positioned in the middle of the canvas.
+assignment: Draw four triangles. Fill each triangle with a different shade of gray. Also, each triangle should have two vertices matching to contiguous canvas corners and the last vertex positioned in the middle of the canvas.
 ----
 image: exercise3.png
 ----
 #### exercise ####
-content: Extend the previous exercise: how could you make the height of each triangle react to a variable called "factor"?
+assignment: Extend the previous exercise: how could you make the height of each triangle react to a variable called "factor"?
 - when "factor" is 0, you see no triangle (they have no height!)
 - when "factor" is 1, the vertices touch in the middle of the canvas
 ----
 image: exercise3b.png
 ----
 #### exercise ####
-content: Draw four circles vertically aligned in the middle of a canvas. The shapes should be equally spread out. A variable "radius" controls the size of each circle. The color of each shape should be calculated according to its horizontal position in the canvas: left darker, right lighter.
+assignment: Draw four circles vertically aligned in the middle of a canvas. The shapes should be equally spread out. A variable "radius" controls the size of each circle. The color of each shape should be calculated according to its horizontal position in the canvas: left darker, right lighter.
 ----
 image: exercise4.png
 ----
 #### exercise ####
-content: Draw two crosses, a dark gray "plus" shape, and a light gray "multiply" shape. The variable "factor" controls the thickness of the crosses:
+assignment: Draw two crosses, a dark gray "plus" shape, and a light gray "multiply" shape. The variable "factor" controls the thickness of the crosses:
 +  if 0, the thickness is 2pt
 +  if 1, the thickness is 30pt
 ----
 image: exercise5.png
 ----
 #### exercise ####
-content: Draw a grid with three columns and three rows. The program should allow the presence of a safe space between the elements (often referred to as "gutter"). The "gutter" value should be expressed in typographical points.
+assignment: Draw a grid with three columns and three rows. The program should allow the presence of a safe space between the elements (often referred to as "gutter"). The "gutter" value should be expressed in typographical points.
 ----
 image: exercise6.png
 ----

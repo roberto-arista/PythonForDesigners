@@ -395,7 +395,7 @@ content: Workbook
 class: workbook
 ----
 #### exercise ####
-content: Write a program able to draw a circle positioned at the center of the canvas. Its size should react to a parameter "factor" between 0 and 1:
+assignment: Write a program able to draw a circle positioned at the center of the canvas. Its size should react to a parameter "factor" between 0 and 1:
 - if 0, the diameter should be a quarter of the canvas height
 - if 1, the diameter should be three-quarters of the canvas height
 - anything in between should smoothly interpolate

@@ -1,14 +1,21 @@
 <div class='exercise'>
 
-    <div class='exercise-content'>
-        <p>{{ this.content }}</p>
+    <div class='ex-text'>
+        <div class='ex-number'>
+            <p>exercise {{ this.reference }}</p>
+        </div>
+
+        <div class="ex-assignment">
+            <p>{{ this.assignment }}</p>
+
+            {% if this.solution %}
+                <p class='ex-solution'><a href="{{ this.reference | url}}.py">>>> Solution (.py)</a></p>
+            {% endif %}
+        </div>
     </div>
 
     {% if this.image %}
-        <img class='exercise-image' src="{{ this.image }}">
+        <img class='ex-image' src="{{ this.image }}">
     {% endif %}
-
-    <!-- solution to be added -->
-    <a href="{{ this.solution | url}}">{{ this.solution }}</a>
 
 </div>

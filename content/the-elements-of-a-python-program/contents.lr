@@ -19,7 +19,7 @@ class: small-image
 content: Programming is a peculiar way of writing. Using a specific language, it is possible to instruct a machine to execute some actions. This process has many analogies with choreography and theatre writing. A director needs to write instructions with clarity, leaving ambiguities as much as possible outside of them. The computer is an actor and programming means composing choreographies for it. You have to tell it what it needs to do, but you must remember that a machine is less capable of interpretation than a human being. In fact, it is not capable at all. Moreover, writing a text which is entirely understandable by a machine without some translation or adaptation is very difficult and tedious. You do not want to write only 0’s and 1’s, do you? Low-level languages are verbose and used for a specific application. Luckily, a vast variety of high-level programming languages were created in the last decades. They make instructing machines much more pleasant and fun. Like any tool, programming languages bring along with them specific purposes and views of the world, so choosing the right one is a crucial factor. Python came out in the ’90s and in a few years became widely used in many fields, such as education. 
 ----
 #### exercise ####
-content: Many well-known companies use Python to provide digital services that you probably use on a daily basis. Check on the web and find out which ones I am referring to. You will be amazed.
+assignment: Many well-known companies use Python to provide digital services that you probably use on a daily basis. Check on the web and find out which ones I am referring to. You will be amazed.
 ----
 #### image ####
 name: script_CLI.svg
@@ -74,7 +74,7 @@ class: small-image
 content: Programming languages are formal languages. It means they are specifically designed with a purpose in mind, instructing machines. On the contrary, natural languages evolve autonomously: they have multiple rules that often clash. The interpretation skills of the receiver is a key factor in solving these kind of conflicts. Instead formal languages have strict syntax rules because they aim at having the smallest amount of exceptions. Given that the Python interpreter is not able to handle conflicts and ambiguity, syntax errors in the code are just not admitted.
 ----
 #### exercise ####
-content: Can you point to a sentence in your natural language which was once considered a mistake but is now accepted as correct?
+assignment: Can you point to a sentence in your natural language which was once considered a mistake but is now accepted as correct?
 ----
 #### text-block ####
 content: These errors can concern two different aspects. For example, token errors like:
@@ -164,7 +164,7 @@ snippet: 04.py
 content: The list includes <code>'global'</code>, doesn't it? You just executed your first import and print statements. Well done. We will go more into these later on.
 ----
 #### exercise ####
-content: Open up your terminal, define a variable and print it to the console
+assignment: Open up your terminal, define a variable and print it to the console
 ----
 #### image ####
 name: cookies.svg
