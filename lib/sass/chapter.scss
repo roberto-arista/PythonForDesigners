@@ -112,22 +112,17 @@ h2.workbook {
     }
 }
 
-.ex-assignment, .ex-number {
-    // border-top: .25em solid $blue;
-    // background-color: $exercise-background;
-    padding: .25rem 1rem .5rem 1rem;
-    margin-bottom: .5rem;
-
+.ex-text {
     @include bigger-than('lg') {
-        width: 73%;
-        margin-bottom: 0;
+    width: 73%;
+    margin-bottom: 0;
     }
 }
 
 .ex-number {
     background-color: $blue;
     margin-bottom: 0;
-    padding: .28rem 1rem .01rem 1rem;
+    padding: .38rem 1rem .01rem 1rem;
 }
 
 .ex-number p {
@@ -140,6 +135,7 @@ h2.workbook {
 }
 
 .ex-assignment {
+    padding: .25rem 1rem .5rem 1rem;
     background-color: $exercise-background;
 }
 

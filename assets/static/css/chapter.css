@@ -509,28 +509,22 @@ h2.workbook {
   }
 }
 
-/* line 115, lib/sass/chapter.scss */
-.ex-assignment, .ex-number {
-  padding: .25rem 1rem .5rem 1rem;
-  margin-bottom: .5rem;
-}
-
 @media (min-width: 1200px) {
   /* line 115, lib/sass/chapter.scss */
-  .ex-assignment, .ex-number {
+  .ex-text {
     width: 73%;
     margin-bottom: 0;
   }
 }
 
-/* line 127, lib/sass/chapter.scss */
+/* line 122, lib/sass/chapter.scss */
 .ex-number {
   background-color: #1858A8;
   margin-bottom: 0;
-  padding: .28rem 1rem .01rem 1rem;
+  padding: .38rem 1rem .01rem 1rem;
 }
 
-/* line 133, lib/sass/chapter.scss */
+/* line 128, lib/sass/chapter.scss */
 .ex-number p {
   font-family: "Arnold Regular";
   font-size: .7rem;
@@ -540,17 +534,18 @@ h2.workbook {
   text-transform: lowercase;
 }
 
-/* line 142, lib/sass/chapter.scss */
+/* line 137, lib/sass/chapter.scss */
 .ex-assignment {
+  padding: .25rem 1rem .5rem 1rem;
   background-color: #E2F4FF;
 }
 
-/* line 146, lib/sass/chapter.scss */
+/* line 142, lib/sass/chapter.scss */
 .ex-assignment p, .ex-assignment ul, .ex-number p {
   padding-left: 0;
 }
 
-/* line 150, lib/sass/chapter.scss */
+/* line 146, lib/sass/chapter.scss */
 .ex-solution {
   font-family: "Arnold Regular";
   font-size: .7rem;
@@ -561,34 +556,34 @@ h2.workbook {
   text-decoration: none;
 }
 
-/* line 160, lib/sass/chapter.scss */
+/* line 156, lib/sass/chapter.scss */
 .ex-solution a {
   color: #1858A8;
 }
 
-/* line 161, lib/sass/chapter.scss */
+/* line 157, lib/sass/chapter.scss */
 .ex-solution a:hover {
   color: #1858A8;
   border-bottom: 1px solid #1858A8;
 }
 
-/* line 162, lib/sass/chapter.scss */
+/* line 158, lib/sass/chapter.scss */
 .ex-solution a:active {
   color: #1858A8;
 }
 
-/* line 163, lib/sass/chapter.scss */
+/* line 159, lib/sass/chapter.scss */
 .ex-solution a:visited {
   color: #1858A8;
 }
 
-/* line 165, lib/sass/chapter.scss */
+/* line 161, lib/sass/chapter.scss */
 .ex-image {
   margin-bottom: .5rem;
 }
 
 @media (min-width: 1200px) {
-  /* line 165, lib/sass/chapter.scss */
+  /* line 161, lib/sass/chapter.scss */
   .ex-image {
     width: 25%;
     height: 25%;
@@ -596,7 +591,7 @@ h2.workbook {
   }
 }
 
-/* line 175, lib/sass/chapter.scss */
+/* line 171, lib/sass/chapter.scss */
 #pagination {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -609,7 +604,7 @@ h2.workbook {
   margin-top: 1rem;
 }
 
-/* line 183, lib/sass/chapter.scss */
+/* line 179, lib/sass/chapter.scss */
 #prevButton, #nextButton {
   font-family: "Arnold Regular", Monaco, monospace;
   text-align: center;
@@ -617,13 +612,13 @@ h2.workbook {
 }
 
 @media (min-width: 1200px) {
-  /* line 189, lib/sass/chapter.scss */
+  /* line 185, lib/sass/chapter.scss */
   p#prevButton, p#nextButton {
     padding-left: 0;
   }
 }
 
-/* line 193, lib/sass/chapter.scss */
+/* line 189, lib/sass/chapter.scss */
 table {
   border-collapse: collapse;
   margin-bottom: .5em;
@@ -631,7 +626,7 @@ table {
   width: 100%;
 }
 
-/* line 201, lib/sass/chapter.scss */
+/* line 197, lib/sass/chapter.scss */
 th {
   text-align: left;
   border-bottom: solid 1px #F36;
@@ -639,7 +634,7 @@ th {
   padding: .25em;
 }
 
-/* line 210, lib/sass/chapter.scss */
+/* line 206, lib/sass/chapter.scss */
 td {
   text-align: left;
   border-bottom: solid 1px #F36;
