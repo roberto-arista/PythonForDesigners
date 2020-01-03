@@ -143,6 +143,9 @@ content: By default <code>int()</code> uses a 10 base for the conversion. If you
 #### code-example ####
 snippet: 03.py
 ----
+#### exercise ####
+assignment: How would you represent 30₁₀ using base 2, 8 and 16? Try to use the same visual conversion method from the diagrams above
+----
 #### text-block ####
 content: The <code>float</code> object in Python is used to represent a positive or negative decimal number. Its literal declaration is made of a polarity sign (optional), digits, and a trailing point optionally followed by other digits. So, both <code>-3.14</code> and <code>3.</code> can be floating-point numbers.
 

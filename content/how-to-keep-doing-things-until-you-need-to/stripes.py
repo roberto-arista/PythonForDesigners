@@ -14,11 +14,11 @@ while jumpinValue < limit:
         fill(0)
     else:
         fill(1)
-        
+
     if isHorizontal is True:
         rect(0, jumpinValue, width(), thickness)
     else:
         rect(jumpinValue, 0, thickness, height())
-    
+
     isBlack = not isBlack
     jumpinValue += thickness

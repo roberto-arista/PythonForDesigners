@@ -1,26 +1,26 @@
 @font-face {
-  font-family: 'Laica Regular';
+  font-family: "Laica Regular";
   src: url("/static/fonts/LaicaB-Regular.woff2") format("woff2"), url("/static/fonts/LaicaB-Regular.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Laica Italic';
+  font-family: "Laica Italic";
   src: url("/static/fonts/LaicaB-Italic.woff2") format("woff2"), url("/static/fonts/LaicaB-Italic.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Laica Bold';
-  src: url("/static/fonts/LaicaB-Bold.woff2") format("woff2"), url("/static/fonts/LaicaB-Bold.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Arnold Regular';
+  font-family: "Arnold Regular";
   src: url("/static/fonts/Arnold_v0.3-Regular.woff2") format("woff2"), url("/static/fonts/Arnold_v0.3-Regular.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Arnold Italic';
+  font-family: "Arnold Italic";
   src: url("/static/fonts/Arnold_v0.3-Italic.woff2") format("woff2"), url("/static/fonts/Arnold_v0.3-Italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Download Icon";
+  src: url("/static/fonts/Download-Icon.woff2") format("woff2"), url("/static/fonts/Download-Icon.woff") format("woff");
 }
 
 @font-face {
@@ -417,11 +417,18 @@ article ul {
 }
 
 /* line 51, lib/sass/chapter.scss */
-.large-image {
+.large-image, .diagram {
   padding-bottom: .5rem;
 }
 
-/* line 55, lib/sass/chapter.scss */
+@media (min-width: 1200px) {
+  /* line 55, lib/sass/chapter.scss */
+  .diagram {
+    width: 73%;
+  }
+}
+
+/* line 61, lib/sass/chapter.scss */
 .small-image {
   float: right;
   clear: right;
@@ -431,20 +438,20 @@ article ul {
 }
 
 @media (min-width: 900px) {
-  /* line 55, lib/sass/chapter.scss */
+  /* line 61, lib/sass/chapter.scss */
   .small-image {
     width: 25%;
     height: 25%;
   }
 }
 
-/* line 70, lib/sass/chapter.scss */
+/* line 76, lib/sass/chapter.scss */
 .example {
   padding: .5rem 0 1rem 0;
 }
 
 @media (min-width: 1200px) {
-  /* line 70, lib/sass/chapter.scss */
+  /* line 76, lib/sass/chapter.scss */
   .example {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -457,13 +464,13 @@ article ul {
   }
 }
 
-/* line 80, lib/sass/chapter.scss */
+/* line 86, lib/sass/chapter.scss */
 .example-image {
   margin-bottom: .5rem;
 }
 
 @media (min-width: 1200px) {
-  /* line 80, lib/sass/chapter.scss */
+  /* line 86, lib/sass/chapter.scss */
   .example-image {
     width: 25%;
     height: 25%;
@@ -471,25 +478,25 @@ article ul {
   }
 }
 
-/* line 92, lib/sass/chapter.scss */
-img.example-image, img.exercise-image {
+/* line 96, lib/sass/chapter.scss */
+img.example-image, img.ex-image {
   -webkit-box-shadow: 0 0.25rem 0.5rem #777;
           box-shadow: 0 0.25rem 0.5rem #777;
 }
 
-/* line 96, lib/sass/chapter.scss */
+/* line 100, lib/sass/chapter.scss */
 h2.workbook {
   color: #1858A8;
   margin-bottom: .25rem;
 }
 
-/* line 101, lib/sass/chapter.scss */
+/* line 105, lib/sass/chapter.scss */
 .exercise {
   margin-bottom: .5rem;
 }
 
 @media (min-width: 1200px) {
-  /* line 101, lib/sass/chapter.scss */
+  /* line 105, lib/sass/chapter.scss */
   .exercise {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -502,42 +509,89 @@ h2.workbook {
   }
 }
 
-/* line 111, lib/sass/chapter.scss */
-.exercise-content {
-  border-top: 0.25em solid #1858A8;
-  background-color: #E2F4FF;
-  padding: .25rem 1rem .5rem 1rem;
-  margin-bottom: .5rem;
-}
-
 @media (min-width: 1200px) {
-  /* line 111, lib/sass/chapter.scss */
-  .exercise-content {
+  /* line 115, lib/sass/chapter.scss */
+  .ex-text {
     width: 73%;
     margin-bottom: 0;
   }
 }
 
-/* line 123, lib/sass/chapter.scss */
-.exercise-content p {
+/* line 122, lib/sass/chapter.scss */
+.ex-number {
+  background-color: #1858A8;
+  margin-bottom: 0;
+  padding: .38rem 1rem .01rem 1rem;
+}
+
+/* line 128, lib/sass/chapter.scss */
+.ex-number p {
+  font-family: "Arnold Regular";
+  font-size: .7rem;
+  line-height: .7rem;
+  color: #FFF;
+  font-variant-caps: small-caps;
+  text-transform: lowercase;
+}
+
+/* line 137, lib/sass/chapter.scss */
+.ex-assignment {
+  padding: .25rem 1rem .5rem 1rem;
+  background-color: #E2F4FF;
+}
+
+/* line 142, lib/sass/chapter.scss */
+.ex-assignment p, .ex-assignment ul, .ex-number p {
   padding-left: 0;
 }
 
-/* line 127, lib/sass/chapter.scss */
-.exercise-image {
+/* line 146, lib/sass/chapter.scss */
+.ex-solution {
+  font-family: "Arnold Regular";
+  font-size: .7rem;
+  line-height: .7rem;
+  color: #1858A8;
+  font-variant-caps: small-caps;
+  text-transform: lowercase;
+  text-decoration: none;
+}
+
+/* line 156, lib/sass/chapter.scss */
+.ex-solution a {
+  color: #1858A8;
+}
+
+/* line 157, lib/sass/chapter.scss */
+.ex-solution a:hover {
+  color: #1858A8;
+  border-bottom: 1px solid #1858A8;
+}
+
+/* line 158, lib/sass/chapter.scss */
+.ex-solution a:active {
+  color: #1858A8;
+}
+
+/* line 159, lib/sass/chapter.scss */
+.ex-solution a:visited {
+  color: #1858A8;
+}
+
+/* line 161, lib/sass/chapter.scss */
+.ex-image {
   margin-bottom: .5rem;
 }
 
 @media (min-width: 1200px) {
-  /* line 127, lib/sass/chapter.scss */
-  .exercise-image {
+  /* line 161, lib/sass/chapter.scss */
+  .ex-image {
     width: 25%;
     height: 25%;
     margin-bottom: 0;
   }
 }
 
-/* line 137, lib/sass/chapter.scss */
+/* line 171, lib/sass/chapter.scss */
 #pagination {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -550,7 +604,7 @@ h2.workbook {
   margin-top: 1rem;
 }
 
-/* line 145, lib/sass/chapter.scss */
+/* line 179, lib/sass/chapter.scss */
 #prevButton, #nextButton {
   font-family: "Arnold Regular", Monaco, monospace;
   text-align: center;
@@ -558,13 +612,13 @@ h2.workbook {
 }
 
 @media (min-width: 1200px) {
-  /* line 151, lib/sass/chapter.scss */
+  /* line 185, lib/sass/chapter.scss */
   p#prevButton, p#nextButton {
     padding-left: 0;
   }
 }
 
-/* line 155, lib/sass/chapter.scss */
+/* line 189, lib/sass/chapter.scss */
 table {
   border-collapse: collapse;
   margin-bottom: .5em;
@@ -572,7 +626,7 @@ table {
   width: 100%;
 }
 
-/* line 163, lib/sass/chapter.scss */
+/* line 197, lib/sass/chapter.scss */
 th {
   text-align: left;
   border-bottom: solid 1px #F36;
@@ -580,7 +634,7 @@ th {
   padding: .25em;
 }
 
-/* line 172, lib/sass/chapter.scss */
+/* line 206, lib/sass/chapter.scss */
 td {
   text-align: left;
   border-bottom: solid 1px #F36;
