@@ -81,7 +81,7 @@ body {
                     $max-width: map-get($breakpoints, 'sm'),
                     $property:  width, $unit: px);
 
-  @include bigger-than('sm') { 
+  @include bigger-than('sm') {
       @include css-lock($min-size:  550,
                         $max-size:  700,
                         $min-width: map-get($breakpoints, 'sm') +1,
@@ -89,7 +89,7 @@ body {
                         $property:  width, $unit: px);
   }
 
-  @include bigger-than('md') { 
+  @include bigger-than('md') {
       @include css-lock($min-size:  700,
                         $max-size:  850,
                         $min-width: map-get($breakpoints, 'md') +1,
@@ -97,7 +97,7 @@ body {
                         $property: width, $unit: px);
                    }
 
-  @include bigger-than('lg') { 
+  @include bigger-than('lg') {
       @include css-lock($min-size:  850,
                         $max-size:  1024,
                         $min-width: map-get($breakpoints, 'lg') +1,

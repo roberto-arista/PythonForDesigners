@@ -9,6 +9,11 @@
 }
 
 @font-face {
+  font-family: "Laica Bold";
+  src: url("/static/fonts/LaicaB-Bold.woff2") format("woff2"), url("/static/fonts/LaicaB-Bold.woff") format("woff");
+}
+
+@font-face {
   font-family: "Arnold Regular";
   src: url("/static/fonts/Arnold_v0.3-Regular.woff2") format("woff2"), url("/static/fonts/Arnold_v0.3-Regular.woff") format("woff");
 }
@@ -16,11 +21,6 @@
 @font-face {
   font-family: "Arnold Italic";
   src: url("/static/fonts/Arnold_v0.3-Italic.woff2") format("woff2"), url("/static/fonts/Arnold_v0.3-Italic.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Download Icon";
-  src: url("/static/fonts/Download-Icon.woff2") format("woff2"), url("/static/fonts/Download-Icon.woff") format("woff");
 }
 
 @font-face {
