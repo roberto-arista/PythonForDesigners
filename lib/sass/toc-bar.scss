@@ -1,6 +1,6 @@
 @import 'mixins';
 @import 'variables';
-
+@import 'fonts';
 
 aside {
     width: 11rem;
@@ -26,12 +26,16 @@ aside {
 }
 
 .toc-bar-key {
-    width: 1.25rem;
+    width: 1.5rem;
     text-align: right;
 }
 
 .toc-bar-title {
     width: 7.75rem;
+}
+
+.toc-bar-active:before {
+  content: '*';
 }
 
 #topButton {

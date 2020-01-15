@@ -1,13 +1,29 @@
 <div class='exercise'>
 
-    <div class='exercise-content'>
-        <p>{{ this.content }}</p>
+    {# discover exercise index #}
+    {% set ns = namespace(number=1) %}
+    {% for blk in record.body.blocks if blk._flowblock == 'exercise' %}
+        {% if blk == this %}
+            {% set ns.number = loop.index %}
+        {% endif %}
+    {% endfor %}
+
+    <div class='ex-text'>
+        <div class='ex-number'>
+            <p>exercise {{ record.sort_key }}.{{ ns.number }}</p>
+        </div>
+
+        <div class="ex-assignment">
+            <p>{{ this.assignment }}</p>
+
+            {% if this.solution != '' %}
+                <p class='ex-solution'><a href="{{ this.solution | url}}">>>> Solution (.py)</a></p>
+            {% endif %}
+        </div>
     </div>
 
     {% if this.image %}
-        <img class='exercise-image' src="{{ this.image }}">
+        <img class='ex-image' src="{{ this.image }}">
     {% endif %}
-
-    <!-- solution to be added -->
 
 </div>
