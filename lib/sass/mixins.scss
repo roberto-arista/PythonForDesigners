@@ -8,6 +8,12 @@
   display: flex;
 }
 
+@mixin load-font($fontFamilyName, $fileName) {
+  font-family: $fontFamilyName;
+  src: url('/static/fonts/#{$fileName}.woff2') format('woff2'),
+       url('/static/fonts/#{$fileName}.woff') format('woff');
+}
+
 @mixin order($val) {
   -webkit-box-ordinal-group: $val;
   -moz-box-ordinal-group: $val;

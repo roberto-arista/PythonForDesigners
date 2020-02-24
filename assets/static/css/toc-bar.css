@@ -1,3 +1,33 @@
+@font-face {
+  font-family: "Laica Regular";
+  src: url("/static/fonts/LaicaB-Regular.woff2") format("woff2"), url("/static/fonts/LaicaB-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Laica Italic";
+  src: url("/static/fonts/LaicaB-Italic.woff2") format("woff2"), url("/static/fonts/LaicaB-Italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Laica Bold";
+  src: url("/static/fonts/LaicaB-Bold.woff2") format("woff2"), url("/static/fonts/LaicaB-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Arnold Regular";
+  src: url("/static/fonts/Arnold_v0.3-Regular.woff2") format("woff2"), url("/static/fonts/Arnold_v0.3-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Arnold Italic";
+  src: url("/static/fonts/Arnold_v0.3-Italic.woff2") format("woff2"), url("/static/fonts/Arnold_v0.3-Italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Gig Regular';
+  src: url("/static/fonts/GigV0.2-Regular.woff") format("woff");
+}
+
 /* line 5, lib/sass/toc-bar.scss */
 aside {
   width: 11rem;
@@ -30,7 +60,7 @@ aside {
 
 /* line 28, lib/sass/toc-bar.scss */
 .toc-bar-key {
-  width: 1.25rem;
+  width: 1.5rem;
   text-align: right;
 }
 
@@ -40,6 +70,11 @@ aside {
 }
 
 /* line 37, lib/sass/toc-bar.scss */
+.toc-bar-active:before {
+  content: '*';
+}
+
+/* line 41, lib/sass/toc-bar.scss */
 #topButton {
   outline: none;
   /* Remove outline */
@@ -57,7 +92,7 @@ aside {
   font-size: 1rem;
 }
 
-/* line 57, lib/sass/toc-bar.scss */
+/* line 61, lib/sass/toc-bar.scss */
 #topButton:hover {
   color: #FFF;
   background-color: #F36;

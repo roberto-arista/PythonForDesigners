@@ -16,7 +16,6 @@ else:
 
 actualTck = minTck + (maxTck-minTck)*factor
 strokeWidth(actualTck)
-print(actualTck)
 
 # plus
 stroke(plusColor)
