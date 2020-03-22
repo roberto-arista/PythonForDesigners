@@ -44,24 +44,35 @@
     padding-left: 4rem;
   }
   /* line 32, lib/sass/page.scss */
-  #page p {
+  #page h3 {
     padding-left: 4rem;
   }
   /* line 33, lib/sass/page.scss */
-  #page ul {
+  #page p {
     padding-left: 4rem;
   }
   /* line 34, lib/sass/page.scss */
-  #page form {
+  #page ul {
     padding-left: 4rem;
   }
   /* line 35, lib/sass/page.scss */
+  #page form {
+    padding-left: 4rem;
+  }
+  /* line 36, lib/sass/page.scss */
   #page figcaption {
     padding-left: 4rem;
   }
 }
 
-/* line 40, lib/sass/page.scss */
+/* line 41, lib/sass/page.scss */
+#page h3 {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-family: "Laica Bold", Georgia, serif;
+}
+
+/* line 48, lib/sass/page.scss */
 .button {
   font-size: .5rem;
   line-height: .5rem;
@@ -77,12 +88,13 @@
   line-height: 32px;
   padding: 0 18px;
   display: inline-block;
-  margin: 0;
   -webkit-transition: all 0.23s ease-in-out 0s;
   transition: all 0.23s ease-in-out 0s;
+  margin: 0;
+  margin-bottom: 1rem;
 }
 
-/* line 60, lib/sass/page.scss */
+/* line 69, lib/sass/page.scss */
 .button:hover {
   background-color: #F36;
   color: #FFF;
@@ -90,7 +102,7 @@
 }
 
 @media (max-width: 900px) {
-  /* line 66, lib/sass/page.scss */
+  /* line 75, lib/sass/page.scss */
   .button {
     width: 100%;
     margin: 0;
