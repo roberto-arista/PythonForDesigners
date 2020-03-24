@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block styles %}
+  <link rel="stylesheet" href="{{ '/static/css/tutorials.css'|asseturl }}" >
+{% endblock %}
+
+{% block title %}Tutorials{% endblock %}
+
+{% block content %}
+
+    <section id="welcome">
+        <div class='basic-container'>
+            <h1>Welcome to the Tutorials section</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+        </div>
+    </section>
+
+    <section id='tutorial-list'>
+
+        <div class="basic-container">
+
+            {% for tutorial in site.get('/tutorials').children.order_by('sort_key') %}
+                <div class='tutorial-li'>
+                    <img src="{{ tutorial.path | url }}{{ tutorial.visual_abstract }}">
+                    <h2><a href="{{ tutorial.path | url }}">{{ tutorial.title }}</a></h2>
+                    <p class='abstract'>{{ tutorial.abstract }}</p>
+                    <p class='read-more'><a href="{{ tutorial.path | url }}">>>> read()</a></p>
+                </div>
+            {% endfor %}
+
+        </div>
+
+    </section>
+
+{% endblock %}
