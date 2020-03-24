@@ -123,25 +123,24 @@
 .toc-right h2 a {
   line-height: 1.5rem;
   font-size: 1.2rem;
-  color: #1858A8;
   font-family: "Gig Regular", Georgia, serif;
   color: #F36;
 }
 
-/* line 106, lib/sass/index.scss */
+/* line 104, lib/sass/index.scss */
 #callouts {
   background-color: #FFEDED;
   color: #1858A8;
 }
 
-/* line 111, lib/sass/index.scss */
+/* line 109, lib/sass/index.scss */
 #callouts > div {
   padding-top: .5rem;
   padding-bottom: .5rem;
 }
 
 @media (min-width: 1200px) {
-  /* line 111, lib/sass/index.scss */
+  /* line 109, lib/sass/index.scss */
   #callouts > div {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -154,71 +153,71 @@
   }
 }
 
-/* line 124, lib/sass/index.scss */
+/* line 122, lib/sass/index.scss */
 .callout {
   height: 100%;
   padding: .5rem 0;
 }
 
 @media (min-width: 900px) {
-  /* line 124, lib/sass/index.scss */
+  /* line 122, lib/sass/index.scss */
   .callout {
     padding: .5rem 2rem;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 124, lib/sass/index.scss */
+  /* line 122, lib/sass/index.scss */
   .callout {
     width: 31%;
     padding: .5rem 0;
   }
 }
 
-/* line 141, lib/sass/index.scss */
+/* line 139, lib/sass/index.scss */
 .callout > h4 {
   font-family: "Laica Bold", Georgia, serif;
   text-indent: 1rem;
 }
 
 @media (min-width: 1200px) {
-  /* line 141, lib/sass/index.scss */
+  /* line 139, lib/sass/index.scss */
   .callout > h4 {
     text-indent: .5rem;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 151, lib/sass/index.scss */
+  /* line 149, lib/sass/index.scss */
   .callout > p, .callout > h4 {
     line-height: 1rem;
     font-size: .62rem;
   }
 }
 
-/* line 159, lib/sass/index.scss */
+/* line 157, lib/sass/index.scss */
 #newsletter {
   background-color: #F36;
 }
 
-/* line 163, lib/sass/index.scss */
+/* line 161, lib/sass/index.scss */
 #newsletter > div {
   padding: 0 0 .5rem 0;
 }
 
-/* line 167, lib/sass/index.scss */
+/* line 165, lib/sass/index.scss */
 #mc_embed_signup form {
   text-align: center;
   padding: .25rem 0 .25rem 0;
 }
 
 /* positions input field horizontally */
-/* line 173, lib/sass/index.scss */
+/* line 171, lib/sass/index.scss */
 .mc-field-group {
   display: inline-block;
 }
 
-/* line 177, lib/sass/index.scss */
+/* line 175, lib/sass/index.scss */
 #mc_embed_signup input.email {
   font-family: "Arnold Regular", Monaco, monospace;
   font-size: .7rem;
@@ -237,7 +236,7 @@
   vertical-align: top;
 }
 
-/* line 196, lib/sass/index.scss */
+/* line 194, lib/sass/index.scss */
 #mc_embed_signup label {
   margin-top: .25em;
   display: block;
@@ -249,12 +248,12 @@
 }
 
 /* positions button horizontally in line with input */
-/* line 207, lib/sass/index.scss */
+/* line 205, lib/sass/index.scss */
 #mc_embed_signup .clear {
   display: inline-block;
 }
 
-/* line 211, lib/sass/index.scss */
+/* line 209, lib/sass/index.scss */
 #mc_embed_signup .button {
   font-size: .5rem;
   line-height: .5rem;
@@ -275,14 +274,14 @@
   transition: all 0.23s ease-in-out 0s;
 }
 
-/* line 231, lib/sass/index.scss */
+/* line 229, lib/sass/index.scss */
 #mc_embed_signup .button:hover {
   background-color: #BC2650;
   color: #FFEDED;
   cursor: pointer;
 }
 
-/* line 237, lib/sass/index.scss */
+/* line 235, lib/sass/index.scss */
 #mc_embed_signup div#mce-responses {
   float: left;
   top: -1.4em;
@@ -293,7 +292,7 @@
   clear: both;
 }
 
-/* line 247, lib/sass/index.scss */
+/* line 245, lib/sass/index.scss */
 #mc_embed_signup div.response {
   margin: 1em 0;
   padding: 1em .5em .5em 0;
@@ -304,18 +303,18 @@
   width: 80%;
 }
 
-/* line 257, lib/sass/index.scss */
+/* line 255, lib/sass/index.scss */
 #mc_embed_signup #mce-error-response {
   display: none;
 }
 
-/* line 258, lib/sass/index.scss */
+/* line 256, lib/sass/index.scss */
 #mc_embed_signup #mce-success-response {
   color: #529214;
   display: none;
 }
 
-/* line 260, lib/sass/index.scss */
+/* line 258, lib/sass/index.scss */
 #mc_embed_signup label.error {
   display: block;
   float: none;
@@ -326,17 +325,17 @@
 }
 
 @media (max-width: 900px) {
-  /* line 272, lib/sass/index.scss */
+  /* line 270, lib/sass/index.scss */
   #mc_embed_signup input.email {
     width: 100%;
     margin-bottom: .5rem;
   }
-  /* line 278, lib/sass/index.scss */
+  /* line 276, lib/sass/index.scss */
   #mc_embed_signup .clear {
     display: block;
     width: 100%;
   }
-  /* line 283, lib/sass/index.scss */
+  /* line 281, lib/sass/index.scss */
   #mc_embed_signup .button {
     width: 100%;
     margin: 0;

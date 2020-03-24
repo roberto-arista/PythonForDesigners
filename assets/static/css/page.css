@@ -27,52 +27,53 @@
 /* line 21, lib/sass/page.scss */
 .large-image {
   padding-bottom: .5rem;
+  width: 100%;
 }
 
-/* line 25, lib/sass/page.scss */
+/* line 26, lib/sass/page.scss */
 #page p, #page ul, #page form {
   margin-bottom: .5rem;
 }
 
 @media (min-width: 1200px) {
-  /* line 30, lib/sass/page.scss */
+  /* line 31, lib/sass/page.scss */
   #page h1 {
     padding-left: 4rem;
   }
-  /* line 31, lib/sass/page.scss */
+  /* line 32, lib/sass/page.scss */
   #page h2 {
     padding-left: 4rem;
   }
-  /* line 32, lib/sass/page.scss */
+  /* line 33, lib/sass/page.scss */
   #page h3 {
     padding-left: 4rem;
   }
-  /* line 33, lib/sass/page.scss */
+  /* line 34, lib/sass/page.scss */
   #page p {
     padding-left: 4rem;
   }
-  /* line 34, lib/sass/page.scss */
+  /* line 35, lib/sass/page.scss */
   #page ul {
     padding-left: 4rem;
   }
-  /* line 35, lib/sass/page.scss */
+  /* line 36, lib/sass/page.scss */
   #page form {
     padding-left: 4rem;
   }
-  /* line 36, lib/sass/page.scss */
+  /* line 37, lib/sass/page.scss */
   #page figcaption {
     padding-left: 4rem;
   }
 }
 
-/* line 41, lib/sass/page.scss */
+/* line 42, lib/sass/page.scss */
 #page h3 {
   font-size: 1rem;
   line-height: 1.25rem;
   font-family: "Laica Bold", Georgia, serif;
 }
 
-/* line 48, lib/sass/page.scss */
+/* line 49, lib/sass/page.scss */
 .button {
   font-size: .5rem;
   line-height: .5rem;
@@ -94,7 +95,7 @@
   margin-bottom: 1rem;
 }
 
-/* line 69, lib/sass/page.scss */
+/* line 70, lib/sass/page.scss */
 .button:hover {
   background-color: #F36;
   color: #FFF;
@@ -102,7 +103,7 @@
 }
 
 @media (max-width: 900px) {
-  /* line 75, lib/sass/page.scss */
+  /* line 76, lib/sass/page.scss */
   .button {
     width: 100%;
     margin: 0;

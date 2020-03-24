@@ -1,0 +1,63 @@
+@import "mixins";
+@import "variables";
+
+#welcome {
+  background-color: $light-pink;
+
+  margin-top: map-get($header-hgt, 'xs');
+  @include bigger-than('sm') {
+    margin-top: map-get($header-hgt, 'sm');
+  }
+  @include bigger-than('md') {
+    margin-top: map-get($header-hgt, 'md');
+  }
+  @include bigger-than('lg') {
+    margin-top: map-get($header-hgt, 'lg');
+  }
+}
+
+#welcome > div {
+  padding: 1rem 0;
+
+  @include bigger-than('md') {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+#welcome h1 {
+  color: $pink;
+  padding-bottom: .5rem;
+}
+
+#welcome p {
+  line-height: 1.25rem;
+  font-size: 1rem;
+}
+
+@include bigger-than('lg') {
+    #tutorial-list h2 { padding-left: 4rem; }
+    #tutorial-list p { padding: 0 5rem 0 4rem; }
+}
+
+.tutorial-li {
+    margin: 1.5rem 0;
+}
+
+.tutorial-li img {
+    width: 100%;
+}
+
+.tutorial-li h2 {
+  line-height: 1.5rem;
+  margin-top: .5rem;
+  font-size: 1.2rem;
+  font-family: $Gig;
+  color: $pink;
+}
+
+.read-more {
+    font-family: $arnold;
+    line-height: 1rem;
+    font-size: .72rem;
+}
