@@ -1,0 +1,80 @@
+_model: chapter
+---
+title: Should a Designer Code?
+---
+abstract: Before diving into the code, let’s clarify why coding could be a good skill for a designer
+---
+sort_key: 1
+---
+visual_abstract: abstract-1.svg
+---
+og_image: abstract-1.png
+---
+body:
+
+#### text-block ####
+content: People have been debating this since the advent of computer graphics. My opinion is easy to imagine, given the goal of this manual. But, dear designer, don’t get me wrong. Coding will not save the world. It will not guarantee you a brilliant career: you will still have to study and practice many other things, but sure it will be a important skill among others. Coding can help you lighten the burden of production – automating simple tasks– leaving you with more time to think, sketch and design.
+----
+#### image ####
+name: typographicalMachine.svg
+----
+class: small-image
+----
+#### text-block ####
+content: Nowadays, the computer is a mandatory toolbox for any design discipline, and also for most jobs. I am aware only of few designers who tend not to use digital tools. They compensate with a craftsmanship that takes decades to develop. However, one does not have to choose: you can have both.
+
+What makes a computer is its ability to typeset and make calculation. These functions are really at its core. If you want to have a better understanding of computers, a little bit of math and typography can help.
+----
+#### image ####
+name: coffeeBooks.svg
+----
+class: small-image
+----
+#### text-block ####
+content: You are a designer, and you also want to be a coder. It does not mean that you have to be a nerdy guy as Hollywood movies might make you think. Coding is mainly a language-oriented skill. The ability to describe a procedure in a formal language is not increased by testosterone. It requires instead logic, a little bit of math (less than might you think), stubbornness, studying and practice. These requirements are shared by many other disciplines which are not subjected to the same kind of racial and gender misrepresentation.
+
+Also, coding is not only for programmers: it is a skill that can complement other ones. A physician codes to simulate experiments. A skilled accountant knows how to write formulas and macros to handle big and complex spreadsheets. A designer can code to automate repetitive tasks.
+
+Take into account that this manual is not meant to train a super advanced coder. A computer science faculty is a better place if you are looking for that kind of guidance. Its goal is to strengthen the relationship between designers and computers and hopefully make it more friendly. Programming is an excellent exercise for designers because it improves their communication skills. Once you start practicing programming, slowly your natural language (the language you speak) will become more and more accurate. Maybe a little bit more formal. You will tend to reduce the space for ambiguity in your daily communication, increasing clarity (maybe).
+----
+#### exercise ####
+assignment: Explain to a friend how to get to the nearest ice-cream shop. If you like to, you can use pen and paper. Try to avoid redundancy, yet to be completely non-ambiguous.
+----
+#### image ####
+name: writingTools.svg
+----
+class: small-image
+----
+#### text-block ####
+content: Tools. Tools. Tools. Since the discovery of fire, we surrounded ourselves with tools to carry out most of our tasks. Prometheus, the Titan who donated fire to the ancient men making them closer to divinity, was punished by Zeus. Tools are a big deal. As a designer, you probably noticed that tools influence the way you do things. They are prostheses we use to make our arms longer, our eyes sharper, etc. They even change our perspective upon reality, because any tool is an expression of ideology.
+----
+#### exercise ####
+assignment: Look at the development of photography as a medium. The way cameras and supports evolved over the years have enormously influenced the status of the "image." Can you point out some of those critical moments? You could start with color films or portable cameras.
+Moreover, can you link an artists' body of work with a specific kind of photographic technology?
+----
+#### image ####
+name: WYGIWYG.svg
+----
+class: small-image
+----
+#### text-block ####
+content: Once you acknowledge this, you can try to mold them in a way they will help you to achieve your goals and function according to your view of things, or use them as they are. Type designer Luciano Perondi summed up these two approaches with two acronyms: *What You See Is What You Get* (the mantra of Desktop Publishing) vs. *What You Get Is What You Want*. Graphical environments are a great achievement for the relationship between humans and machines. But, if GUIs are your only channel of communication with computers, you are probably missing out a whole lot of opportunities offered by your working environment. The problem with *What You See Is What You Get* is that *What You See Is All You Get*.
+
+When designing a new tool, tool makers as well as software houses try to reach the widest user base with the least possible code. In order to generate some profit a tool should be generic enough, easy to use and cheap to maintain. Of course there are different balances between these aspects, given if the tool is made for professionals or not. But, what if that problem you are trying to solve today was not on the priority list of the product design department of your tool provider? You can hire someone to solve it for you or you can do it yourself. The choice is yours.
+----
+#### exercise ####
+assignment: Try to list three moments when you wanted to go beyond a user interface to achieve a task less painfully.
+----
+#### image ####
+name: yogi_designer.svg
+----
+class: small-image
+----
+#### text-block ####
+content: Take also into account that proprietary digital tools often are not made to be interchangeable. The interrelation between software belonging to the same suite (like Illustrator and InDesign) is unusual outside that specific fence. A little bit of code allows you to make two different tools (either open source or proprietary) communicate in a way that their developers did not think about. What I am trying to say is that coding makes you a more flexible designer. You will be able to bend your workflow (and yourself) to reach your goals.
+----
+#### exercise ####
+assignment: Try to list three moments when you found difficult to exchange data between different applications (for example Excel vs. Illustrator). What did you want to achieve? What would you have asked your computer?
+----
+---
+hasTocNumber: yes

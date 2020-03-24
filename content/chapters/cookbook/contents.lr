@@ -1,0 +1,20 @@
+title: Cookbook
+---
+abstract: A collection of handy Python recipes
+---
+og_image: cookbook.png
+---
+sort_key: 13
+---
+visual_abstract: cookbook.svg
+---
+body:
+
+#### section-title ####
+content: Load a csv table
+----
+class: default
+#### text-block ####
+content: Here's an example
+---
+hasTocNumber: yes
