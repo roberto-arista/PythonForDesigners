@@ -11,7 +11,7 @@ var settings = {
  */
 
 var paths = {
-    input: ['lib/', 'content/'],
+    input: ['lib/', 'content/', 'templates/'],
     output: 'assets/static/',
     styles: {
         input: ['lib/sass/**/*.{scss,sass}', '!lib/sass/**/*_BAK.{scss,sass}'],
