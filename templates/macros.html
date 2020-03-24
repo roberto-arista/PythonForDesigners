@@ -1,0 +1,47 @@
+{% macro renderTocBar(this, category) %}
+
+  <!-- home button! -->
+  <ol id='toc-bar'>
+    <li>
+      <div class="toc-bar-key">&#8199;</div>
+      <div class="toc-bar-title"><a href="/">Home!</a></div>
+    </li>
+
+    <!-- dynamic part -->
+    {% set articles = site.get('/'+category).children.order_by('sort_key') %}
+    {% for eachArticle in articles %}
+      <li><div class="toc-bar-key {% if this._path == eachArticle._path %}toc-bar-active{% endif %}">{% if eachArticle.hasTocNumber %}{{ eachArticle.sort_key }}&#8199;{% endif %}</div>
+          <div class="toc-bar-title"><a href="{{ eachArticle|url }}">{{ eachArticle.title }}</a></div></li>
+    {% endfor %}
+
+    <!-- empty line -->
+    <li>
+      <div class="toc-bar-key">&#8199;</div>
+    </li>
+
+    <!-- impressum -->
+    <li>
+      <div class="toc-bar-key">&#8199;</div>
+      <div class="toc-bar-title"><a href="/impressum">Impressum</a></div>
+    </li>
+
+    <button onclick="topFunction()" id="topButton" title="Go to top">↑</button>
+
+  </ol>
+{% endmacro %}
+
+{% macro renderPagination(this, category, startingIndex) %}
+    <div id="pagination">
+      {% set article = site.get('/'+category).children.order_by('sort_key') %}
+      {% set lenChapters = article.all()|length %}
+      {% if this.sort_key > startingIndex %}
+        {% set prevIndex = this.sort_key-1 -startingIndex %}
+          <p id='prevButton'><a href="{{ article.all()[prevIndex].path | url }}">>>> prev()</a></p>
+      {% endif %}
+
+      {% if this.sort_key < lenChapters-1 +startingIndex %}
+        {% set nextIndex = this.sort_key+1 -startingIndex %}
+          <p id='nextButton'><a href="{{ article.all()[nextIndex].path | url }}">>>> next()</a></p>
+      {% endif %}
+    </div>
+{% endmacro %}
