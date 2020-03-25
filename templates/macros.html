@@ -2,10 +2,18 @@
 
   <!-- home button! -->
   <ol id='toc-bar'>
+
+    {% if category == 'chapters' %}
     <li>
       <div class="toc-bar-key">&#8199;</div>
-      <div class="toc-bar-title"><a href="/">Home!</a></div>
+      <div class="toc-bar-title"><a href="/">Home</a></div>
     </li>
+    {% else %}
+    <li>
+      <div class="toc-bar-key">&#8199;</div>
+      <div class="toc-bar-title"><a href="/tutorials">Tutorials</a></div>
+    </li>
+    {% endif %}
 
     <!-- dynamic part -->
     {% set articles = site.get('/'+category).children.order_by('sort_key') %}
@@ -19,7 +27,19 @@
       <div class="toc-bar-key">&#8199;</div>
     </li>
 
-    <!-- impressum -->
+    <!-- static part -->
+    {% if category == 'chapters' %}
+    <li>
+      <div class="toc-bar-key">&#8199;</div>
+      <div class="toc-bar-title"><a href="/tutorials">Tutorials</a></div>
+    </li>
+    {% endif %}
+
+    <li>
+      <div class="toc-bar-key">&#8199;</div>
+      <div class="toc-bar-title"><a href="/online-courses">Online Courses</a></div>
+    </li>
+
     <li>
       <div class="toc-bar-key">&#8199;</div>
       <div class="toc-bar-title"><a href="/impressum">Impressum</a></div>
