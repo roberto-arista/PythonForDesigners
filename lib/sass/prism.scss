@@ -16,7 +16,7 @@ $orange: #ffa319;
 $violet: #ba8caf;
 $light-blue: #0099ff;
 
-$code-size: .7rem;
+$code-size: .65rem;
 
 code[class*="language-"],
 pre[class*="language-"] {
@@ -71,7 +71,7 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
 
 /* Code blocks */
 pre[class*="language-"] {
-    padding: 1rem;
+    padding: .5rem .75rem .75rem .75rem;
     margin: 0;
     box-sizing: border-box;
     margin-bottom: .5rem;

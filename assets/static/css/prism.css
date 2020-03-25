@@ -12,7 +12,7 @@ pre[class*="language-"] {
   background: none;
   text-shadow: none;
   font-family: "Arnold Regular", Monaco, monospace;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   -webkit-font-variant-ligatures: no-contextual;
           font-variant-ligatures: no-contextual;
   -webkit-font-feature-settings: "calt" 0;
@@ -61,7 +61,7 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
 /* Code blocks */
 /* line 73, lib/sass/prism.scss */
 pre[class*="language-"] {
-  padding: 1rem;
+  padding: .5rem .75rem .75rem .75rem;
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -93,7 +93,7 @@ pre[class*="language-"] {
   border-radius: .3rem;
   white-space: normal;
   margin-left: 0;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
 }
 
 /* line 107, lib/sass/prism.scss */
