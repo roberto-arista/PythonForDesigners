@@ -56,6 +56,11 @@
   color: $pink;
 }
 
+.abstract {
+@include bigger-than('md') {
+    padding-right: 5rem;
+  }
+}
 .read-more {
     font-family: $arnold;
     line-height: 1rem;

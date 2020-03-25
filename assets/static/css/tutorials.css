@@ -80,7 +80,14 @@
   color: #F36;
 }
 
-/* line 59, lib/sass/tutorials.scss */
+@media (min-width: 900px) {
+  /* line 59, lib/sass/tutorials.scss */
+  .abstract {
+    padding-right: 5rem;
+  }
+}
+
+/* line 64, lib/sass/tutorials.scss */
 .read-more {
   font-family: "Arnold Regular", Monaco, monospace;
   line-height: 1rem;
