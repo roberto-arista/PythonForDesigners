@@ -1,4 +1,5 @@
 {% from "macros.html" import renderTocBar %}
+{% from "macros.html" import renderSvgImage %}
 {% extends "base.html" %}
 
 {% block title %}{{ this.title }}{% endblock %}
@@ -30,7 +31,7 @@
 
       <article>
         <h1>{{ this.title }}</h1>
-        <img class='large_image' src="{{ 'static/imgs/404.svg' | asseturl }}">
+        <img class='lazyload large_image' src="{{ 'static/imgs/404.svg' | asseturl }}">
       </article>
 
     </section>

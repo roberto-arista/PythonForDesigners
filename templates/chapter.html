@@ -1,5 +1,7 @@
 {% from "macros.html" import renderTocBar %}
 {% from "macros.html" import renderPagination %}
+{% from "macros.html" import renderSvgImage %}
+{% from "macros.html" import renderRasterImage %}
 {% extends "base.html" %}
 
 {% block styles %}
@@ -21,7 +23,18 @@
   <!-- chapter content -->
   <article>
     <h1>{{ this.title }}</h1>
-    {% if this.visual_abstract %}<img class='large-image' src="{{ this.visual_abstract }}">{% endif %}
+    {% if this.visual_abstract %}
+
+      {% if this.visual_abstract.endswith('.png') %}
+        {% set imageObj = record.attachments.get(this.visual_abstract) %}
+        {{ renderRasterImage(this.visual_abstract, imageObj, 'large-image') }}
+        <!-- <img class='large-image' src="{{ this.visual_abstract }}"> -->
+      {% else %}
+        {{ renderSvgImage(this.visual_abstract, 'large-image') }}
+      {% endif %}
+
+    {% endif %}
+    
     <div class="content">{{ this.body }}</div>
 
     <!-- pagination -->

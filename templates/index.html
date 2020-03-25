@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from 'macros.html' import renderSvgImage %}
 
 {% block styles %}
   <link rel="stylesheet" href="{{ '/static/css/index.css'|asseturl }}" >
@@ -27,7 +28,7 @@
     {% endif %}
 
         <div class="toc-left">
-          <img src="index-elements/{{ chapter._id }}.svg">
+          <img class='lazyload' src="index-elements/{{ chapter._id }}.svg">
 
           {% if 0 < chapter.sort_key < 14 %}
             <h3>{{ "%#02d"|format(chapter.sort_key) }}</h3>

@@ -65,3 +65,17 @@
       {% endif %}
     </div>
 {% endmacro %}
+
+{% macro renderRasterImage(imageName, imageObj, imageClass) %}
+  <img alt='{{ imageName }}'
+       src='{{ imageObj.thumbnail(width=20)|url }}'
+       data-sizes="auto"
+       data-src='{{ imageObj|url }}'
+       class="lazyload {{ imageClass | replace('_', '-') }}"/>
+{% endmacro %}
+
+{% macro renderSvgImage(imageName, imageClass) %}
+    <img alt='{{ imageName }}'
+         src='{{ imageName|url }}'
+         class="lazyload {{ imageClass | replace('_', '-') }}"/>
+{% endmacro %}

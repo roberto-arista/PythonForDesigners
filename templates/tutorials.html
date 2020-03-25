@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from 'macros.html' import renderRasterImage %}
 
 {% block styles %}
   <link rel="stylesheet" href="{{ '/static/css/tutorials.css'|asseturl }}" >
@@ -21,7 +22,9 @@
 
             {% for tutorial in site.get('/tutorials').children.order_by('sort_key') %}
                 <div class='tutorial-li'>
-                    <img src="{{ tutorial.path | url }}{{ tutorial.visual_abstract }}">
+                    {% set imageObj = tutorial.attachments.get(tutorial.visual_abstract) %}
+                    {{ renderRasterImage(tutorial.visual_abstract, imageObj, '') }}
+                    <!-- <img src="{{ tutorial.path | url }}{{ tutorial.visual_abstract }}"> -->
                     <h2><a href="{{ tutorial.path | url }}">{{ tutorial.title }}</a></h2>
                     <p class='abstract'>{{ tutorial.abstract }}</p>
                     <p class='read-more'><a href="{{ tutorial.path | url }}">>>> read()</a></p>

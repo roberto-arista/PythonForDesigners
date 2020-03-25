@@ -1,1 +1,9 @@
-<img class="{{ this.class | replace('_', '-') }}" src="{{ this.name }}">
+{% from 'macros.html' import renderRasterImage %}
+{% from 'macros.html' import renderSvgImage %}
+
+{% if this.name.endswith('.png') %}
+    {% set imageObj = record.attachments.get(this.name) %}
+    {{ renderRasterImage(this.name, imageObj, this.class) }}
+{% else %}
+    {{ renderSvgImage(this.name, this.class) }}
+{% endif %}
