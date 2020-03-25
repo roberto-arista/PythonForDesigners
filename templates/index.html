@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from 'macros.html' import renderSvgImage %}
 
 {% block styles %}
   <link rel="stylesheet" href="{{ '/static/css/index.css'|asseturl }}" >
@@ -18,7 +19,7 @@
   <section id="toc">
     <div class='basic-container'>
 
-    {% for chapter in site.get('/').children.filter(F._model == 'chapter').order_by('sort_key') %}
+    {% for chapter in site.get('/chapters').children.order_by('sort_key') %}
 
     {% if loop.revindex0 == 0 %}
       <div class="toc-item noBorder">
@@ -27,17 +28,17 @@
     {% endif %}
 
         <div class="toc-left">
-          <img src="{{ chapter._id }}.svg">
+          <img class='lazyload' src="index-elements/{{ chapter._id }}.svg">
 
-          {% if 0 < chapter.sort_key < 13 %}
+          {% if 0 < chapter.sort_key < 14 %}
             <h3>{{ "%#02d"|format(chapter.sort_key) }}</h3>
           {% endif %}
         </div>
 
         <div class="toc-right">
-          <h2><a href="{{ chapter.path }}">{{ chapter.title }}</a></h2>
+          <h2><a href="{{ chapter.path | url }}">{{ chapter.title }}</a></h2>
           <p>{{ chapter.abstract }}</p>
-          <p><a href="{{ chapter.path }}">>>> read()</a></p>
+          <p><a href="{{ chapter.path | url }}">>>> read()</a></p>
         </div>
 
       </div>
@@ -48,6 +49,17 @@
     </div>
   </section>
 
+  <!-- tutorials -->
+  <section id='tutorial-access'>
+    <div class="basic-container">
+
+      <h4>Tutorials</h4>
+      <h1><a href="/tutorials">Hands-on Guides</a></h1>
+      <p>Looking for an opportunity to use the knowledge you acquired from the manual? This section is packed with step-by-step guides for real application scenarios</p>
+      <p class='read-more'><a href="/tutorials">>>> read()</a></p>
+
+    </div>
+  </section>
 
   <!-- callout -->
   <section id="callouts">

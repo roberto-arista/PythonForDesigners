@@ -1,0 +1,37 @@
+{% extends "chapter.html" %}
+
+{% block content %}
+
+    <section id=chapter>
+
+      <!-- table of contents -->
+      <aside>
+        {{ renderTocBar(this, 'tutorials') }}
+      </aside>
+
+      <article>
+
+        <h1>{{ this.title }}</h1>
+
+        {% if this.visual_abstract %}
+
+            {% if this.visual_abstract.endswith('.png') %}
+                {% set imageObj = this.attachments.get(this.visual_abstract) %}
+                {{ renderRasterImage(this.visual_abstract, imageObj, 'large-image') }}
+                <!-- <img class='large-image' src="{{ this.visual_abstract }}"> -->
+            {% else %}
+                {{ renderSvgImage(this.visual_abstract, 'large-image') }}
+            {% endif %}
+
+        {% endif %}
+
+        <div class="content">{{ this.body }}</div>
+
+        <!-- pagination -->
+        {{ renderPagination(this, 'tutorials', 1) }}
+
+      </article>
+
+    </section>
+
+{% endblock %}

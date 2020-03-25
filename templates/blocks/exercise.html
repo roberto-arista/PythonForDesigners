@@ -1,3 +1,5 @@
+{% from 'macros.html' import renderRasterImage %}
+
 <div class='exercise'>
 
     {# discover exercise index #}
@@ -23,7 +25,9 @@
     </div>
 
     {% if this.image %}
-        <img class='ex-image' src="{{ this.image }}">
+        {% set imageObj = record.attachments.get(this.image) %}
+        {{ renderRasterImage(this.image, imageObj, 'ex-image') }}
+        <!-- <img class='ex-image' src="{{ this.image }}"> -->
     {% endif %}
 
 </div>

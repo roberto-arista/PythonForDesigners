@@ -1,6 +1,6 @@
 _model: page
 ---
-title: 404 Page not found!
+title: Page not found!
 ---
 _template: 404.html
 ---

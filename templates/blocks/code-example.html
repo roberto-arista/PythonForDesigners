@@ -1,12 +1,17 @@
+{% from 'macros.html' import renderRasterImage %}
+{% from 'macros.html' import renderSvgImage %}
 
 {% if this.image or this.diagram %}
     <div class='example'>
 {% endif %}
 
     {% if this.image %}
-        <img class="example-image" src="{{ this.image }}">
+        {% set imageObj = record.attachments.get(this.image) %}
+        {{ renderRasterImage(this.image, imageObj, 'example-image') }}
+        <!-- <img class="example-image" src="{{ this.image }}"> -->
     {% elif this.diagram %}
-        <img class="diagram" src="{{ this.diagram }}">
+        {{ renderSvgImage(this.diagram, 'diagram') }}
+        <!-- <img class="diagram" src="{{ this.diagram }}"> -->
     {% endif %}
 
     <pre>{{ this.snippet|importPy }}</pre>

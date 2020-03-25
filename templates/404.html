@@ -1,6 +1,13 @@
+{% from "macros.html" import renderTocBar %}
+{% from "macros.html" import renderSvgImage %}
 {% extends "base.html" %}
 
 {% block title %}{{ this.title }}{% endblock %}
+
+{% block styles %}
+  <link rel="stylesheet" href="{{ '/static/css/toc-bar.css'|asseturl }}" >
+  <link rel="stylesheet" href="{{ '/static/css/chapter.css'|asseturl }}" >
+{% endblock %}
 
 {% block openGraph %}
     <meta property="og:title" content="{{ this.title }} | Python for Designers">
@@ -16,18 +23,17 @@
 
 {% block content %}
 
-<div class="chapterContainer">
+    <section id=chapter>
 
-    <aside>
-        {% include "toc-bar.html" %}
-    </aside>
+      <aside>
+        {{ renderTocBar(this, 'chapters') }}
+      </aside>
 
-{#
-    <article>
+      <article>
         <h1>{{ this.title }}</h1>
-        <img class='large_image' src="{{ 'static/imgs/404.svg' | asseturl }}">
-    </article>
-#}
+        <img class='lazyload large_image' src="{{ 'static/imgs/404.svg' | asseturl }}">
+      </article>
 
-</div>
+    </section>
+
 {% endblock %}

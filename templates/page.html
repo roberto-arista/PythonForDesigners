@@ -1,4 +1,6 @@
 {% extends "base.html" %}
+{% from 'macros.html' import renderSvgImage %}
+
 {% block styles %}
   <link rel="stylesheet" href="{{ '/static/css/page.css'|asseturl }}" >
 {% endblock %}
@@ -15,7 +17,15 @@
             <h1>{{ this.title }}</h1>
 
             {% if this.visual_abstract %}
-                <img class='large-image' src="{{ this.visual_abstract }}">
+
+                {% if this.visual_abstract.endswith('.png') %}
+                    {% set imageObj = record.attachments.get(this.visual_abstract) %}
+                    {{ renderRasterImage(this.visual_abstract, imageObj, 'large-image') }}
+                    <!-- <img class='large-image' src="{{ this.visual_abstract }}"> -->
+                {% else %}
+                    {{ renderSvgImage(this.visual_abstract, 'large-image') }}
+                {% endif %}
+
             {% endif %}
 
             {{ this.body }}
