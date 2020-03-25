@@ -106,6 +106,46 @@
   color: $blue;
 }
 
+#tutorial-access {
+  margin: 2rem 0;
+}
+
+#tutorial-access div {
+  text-align: center;
+}
+
+#tutorial-access div h4 {
+  line-height: 1rem;
+  font-size: .72rem;
+  color: $blue;
+  text-align: center;
+  font-family: $arnold;
+  text-transform: lowercase;
+  letter-spacing: 12px;
+  font-variant-caps: small-caps;
+  }
+
+#tutorial-access div h1 {
+    font-family: $Gig;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+#tutorial-access div p {
+  line-height: 1.1rem;
+
+  @include bigger-than('md') {
+    padding: 0 3rem;
+  }
+
+}
+#tutorial-access div p.read-more {
+  margin-top: .2rem;
+  font-family: $arnold;
+  line-height: 1rem;
+  font-size: .72rem;
+  }
+
 #callouts > div {
   padding-top: .5rem;
   padding-bottom: .5rem;
