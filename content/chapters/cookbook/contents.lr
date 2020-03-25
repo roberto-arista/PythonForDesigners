@@ -18,3 +18,5 @@ class: default
 content: Here's an example
 ---
 hasTocNumber: yes
+---
+_hidden: yes
