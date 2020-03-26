@@ -13,7 +13,7 @@ visual_abstract: visual-abstract-hsl.png
 body:
 
 #### text-block ####
-content: This tutorial will guide you through the details of an alternative visualization of the RGB color model, called [Hue Saturation and Luminosity](https://en.wikipedia.org/wiki/HSL_and_HSV). It is widely used in graphics applications, and differently from RGB, it more tied to our perception. HSL are qualities we often use to describe color in our daily life. RGB instead is more of a technical description of how color is generated on a screen – and stored in memory.
+content: This tutorial will guide you through the details of an alternative visualization of the RGB color model, called [Hue Saturation and Luminosity](https://en.wikipedia.org/wiki/HSL_and_HSV). It is widely used in graphics applications, and differently from RGB, it is more tied to our perception. HSL are qualities we often use to describe color in our daily life. RGB instead is more of a technical description of how color is generated on a screen – and stored in memory.
 #### image ####
 name: cylinder.png
 ----
