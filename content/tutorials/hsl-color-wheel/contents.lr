@@ -6,7 +6,7 @@ sort_key: 1
 ---
 og_image: visual-abstract-hsl.png
 ---
-abstract: It is widely used in graphics applications, and differently from RGB, it more tied to our perception. HSL are qualities we often use to describe color in our daily life
+abstract: Hue, Saturation and Luminosity are qualities we often use to describe colors in our daily life. Let's represent this colors model using the `colorsys` Python module and the Drawbot `arc()` function
 ---
 visual_abstract: visual-abstract-hsl.png
 ---
