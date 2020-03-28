@@ -2,5 +2,5 @@ _model: tutorials
 ---
 title: Hands-on Guides
 ---
-intro: This section contains a selection of practical guides for [Python3](https://www.python.org/) and [Drawbot](https://www.drawbot.com/). The aim is to counterbalance the isolated context provided by manuals' chapters. This is the place where various topics are mixed and used to solve real-world scenarios. Expect a lot of code and tricky problems
+intro: This section contains a selection of practical guides for [Python3](https://www.python.org/) and [Drawbot](https://www.drawbot.com/). The aim is to counterbalance the isolated contexts provided by manuals' chapters. This is the place where various topics are mixed and used to solve real-world issues. Expect a ton of code and tricky problems
 ---
