@@ -123,19 +123,46 @@ h2.workbook {
     }
 }
 
-.ex-number {
+.ex-number, .recipe-title {
     background-color: $blue;
     margin-bottom: 0;
-    padding: .38rem 1rem .01rem 1rem;
+}
+.ex-number { padding: .38rem 1rem .01rem 1rem; }
+.recipe-title {
+    padding: .38rem 1rem .01rem .75rem;
+    margin-top: 1rem;
 }
 
-.ex-number p {
+.recipe-title p, .ex-number p {
     font-family: "Arnold Regular";
     font-size: .7rem;
     line-height: .7rem;
     color: $white;
     font-variant-caps: small-caps;
     text-transform: lowercase;
+}
+
+.recipe-title p {
+    padding-left: 0px;
+}
+
+.recipe-code a:link {
+    color: $white;
+}
+
+a.recipe-download { color: $white; }
+a:hover.recipe-download { 
+    color: $white; 
+    border-bottom: 1px solid $white
+    }
+a:visited.recipe-download { color: $white; }
+a:visited:hover.recipe-download {
+    color: $white;
+    border-bottom: 1px solid $white
+}
+
+pre.recipe-code {
+    border-top: none;
 }
 
 .ex-assignment {
