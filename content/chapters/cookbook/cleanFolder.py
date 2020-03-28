@@ -7,6 +7,5 @@ def clean(folder):
         rmtree(folder)
     mkdir(folder)
 
-
 if __name__ == '__main__':
     clean('someFolder')

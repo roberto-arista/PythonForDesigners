@@ -5,7 +5,6 @@ def HEX2RGB(hexColor):
     bb = int(hexColor[offset+4:], 16)
     return rr, gg, bb
 
-
 if __name__ == '__main__':
     rgbColor = HEX2RGB('#DC7814')
     print(rgbColor)

@@ -5,6 +5,5 @@ def deleteFilesFromFolder(folder, extension):
     for eachP in paths:
         remove(eachP)
 
-
 if __name__ == '__main__':
     deleteFilesFromFolder('someFolder', '.jpg')

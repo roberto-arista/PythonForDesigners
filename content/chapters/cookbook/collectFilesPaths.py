@@ -10,6 +10,5 @@ def collectFilesPaths(folder, extension=''):
             paths.append(eachPath)
     return paths
 
-
 if __name__ == '__main__':
     filePaths = collectFilesPaths('someFolder')

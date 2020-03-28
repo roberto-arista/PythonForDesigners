@@ -7,7 +7,6 @@ def lerpRGB(colorOne, colorTwo, factor):
     bb = lerp(colorOne[2], colorTwo[2], factor)
     return rr, gg, bb
 
-
 if __name__ == '__main__':
     red = 255, 0, 0
     blue = 0, 0, 255

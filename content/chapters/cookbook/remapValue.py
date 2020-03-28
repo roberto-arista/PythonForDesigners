@@ -9,7 +9,6 @@ def remapValue(val, pMin, pMax, nMin, nMax):
     nVal = lerp(nMin, nMax, factor)
     return nVal
 
-
 if __name__ == '__main__':
     newVal = remapValue(2, 0, 10, -1, +1)
     # -0.6

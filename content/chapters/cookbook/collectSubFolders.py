@@ -6,6 +6,5 @@ def collectSubFolders(folder):
             for sub in listdir(folder)
             if isdir(join(folder, sub))]
 
-
 if __name__ == '__main__':
     subFolders = collectSubFolders('someFolder')
