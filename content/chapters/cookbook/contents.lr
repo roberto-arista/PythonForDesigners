@@ -2,21 +2,87 @@ title: Cookbook
 ---
 abstract: A collection of handy Python super short recipes 🍳
 ---
-og_image: cookbook.png
+og_image: fakeVisualAbstract.png
 ---
 sort_key: 13
 ---
-visual_abstract: cookbook.svg
+hasTocNumber: yes
+---
+_hidden: no
+---
+visual_abstract: fakeVisualAbstract.svg
 ---
 body:
 
 #### section-title ####
-content: Load a csv table
+content: Input/Output
 ----
 class: default
-#### text-block ####
-content: Here's an example
----
-hasTocNumber: yes
----
-_hidden: yes
+#### recipe ####
+title: Collecting files from a folder
+----
+snippet: collectFilesPaths.py
+----
+image: 
+#### recipe ####
+title: Collecting folders from a folder
+----
+snippet: collectSubFolders.py
+----
+image: 
+#### recipe ####
+title: Cleaning a folder
+----
+snippet: cleanFolder.py
+----
+image: 
+#### recipe ####
+title: Deleting file with a specific extension from a folder
+----
+snippet: deleteFilesFromFolder.py
+----
+image: 
+#### section-title ####
+content: Colors
+----
+class: default
+#### recipe ####
+title: Converting hexadecimal to RGB (255)
+----
+snippet: HEX2RGB.py
+----
+image: 
+#### recipe ####
+title: Converting RGB (255) to hexadecimal
+----
+snippet: RGB2HEX.py
+----
+image: 
+#### recipe ####
+title: Interpolating RGB colors
+----
+snippet: lerpRGB.py
+----
+image: 
+#### section-title ####
+content: Calculation
+----
+class: default
+#### recipe ####
+title: Interpolating single value
+----
+snippet: lerp.py
+----
+image: 
+#### recipe ####
+title: Extracting factor from extremes and inner value
+----
+snippet: getFactor.py
+----
+image: 
+#### recipe ####
+title: Mapping value to a new range of extremes
+----
+snippet: remapValue.py
+----
+image: 
