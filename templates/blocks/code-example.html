@@ -14,7 +14,7 @@
         <!-- <img class="diagram" src="{{ this.diagram }}"> -->
     {% endif %}
 
-    <pre>{{ this.snippet|importPy }}</pre>
+    <pre data-src="{{ this.snippet | url }}"></pre>
 
 {% if this.image or this.diagram %}
     </div>
