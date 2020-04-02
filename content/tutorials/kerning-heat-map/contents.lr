@@ -1,0 +1,42 @@
+title: Kerning Heat Map
+---
+visual_abstract: visual-abstract-kerning.png
+---
+abstract: Just an abstract
+---
+hasTocNumber: yes
+---
+sort_key: 2
+---
+body:
+
+#### code-example ####
+snippet: open.py
+----
+image: 
+----
+diagram: 
+#### code-example ####
+snippet: items.py
+----
+image: 
+----
+diagram: 
+#### code-example ####
+snippet: iterateOverKerning.py
+----
+image: 
+----
+diagram: 
+#### code-example ####
+snippet: groupAccess.py
+----
+image: 
+----
+diagram: 
+#### code-example ####
+snippet: flatKerning.py
+----
+image: 
+----
+diagram: 
