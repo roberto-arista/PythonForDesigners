@@ -35,7 +35,31 @@ image:
 ----
 diagram: 
 #### code-example ####
+snippet: flatGroup.py
+----
+image: 
+----
+diagram: 
+#### code-example ####
 snippet: flatKerning.py
+----
+image: 
+----
+diagram: 
+#### code-example ####
+snippet: lettersMatrix.py
+----
+image: 
+----
+diagram: 
+#### code-example ####
+snippet: ternary.py
+----
+image: 
+----
+diagram: 
+#### code-example ####
+snippet: lettersMatrixTernary.py
 ----
 image: 
 ----
