@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 # coding: utf-8
 
-# ------------ #
-# Script title #
-# ------------ #
+# ------------------------------- #
+# Make multiple Kerning Heat Maps #
+# ------------------------------- #
 
 ### Modules
 # from the project folder
 from flatKerning2 import flatKerning
-from six_captions import kerningHeatMap, CELL_SIZE
+from withCaptions import kerningHeatMap, CELL_SIZE
 
 # dependency
 from fontParts.world import OpenFont

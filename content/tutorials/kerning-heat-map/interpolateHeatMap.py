@@ -32,11 +32,10 @@ def shapeQualities(clr=BLACK):
     stroke(None)
 
 def kerningHeatMap(kerning, glyphNames, isFirstVertical):
-
     corrections = list(kerning.values())
     corrections.sort()
-    minCorrection, maxCorrection = corrections[0], corrections[-1]
-    reference = maxCorrection if abs(minCorrection) < maxCorrection else abs(minCorrection)
+    minCorrection, maxCorrection = abs(corrections[0]), abs(corrections[-1])
+    reference = maxCorrection if minCorrection < maxCorrection else minCorrection
 
     for jj, glyphY in enumerate(glyphNames):
         for ii, glyphX in enumerate(glyphNames):

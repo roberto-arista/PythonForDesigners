@@ -23,12 +23,6 @@ def shapeQualities(clr=BLACK):
     stroke(None)
 
 def kerningHeatMap(kerning, glyphNames, isFirstVertical):
-
-    corrections = list(kerning.values())
-    corrections.sort()
-    minCorrection, maxCorrection = corrections[0], corrections[-1]
-    reference = maxCorrection if abs(minCorrection) < maxCorrection else abs(minCorrection)
-
     for jj, glyphY in enumerate(glyphNames):
         for ii, glyphX in enumerate(glyphNames):
             pair = (glyphY, glyphX) if isFirstVertical else (glyphX, glyphY)
@@ -46,7 +40,8 @@ def kerningHeatMap(kerning, glyphNames, isFirstVertical):
                 rect(0, 0, CELL_SIZE, CELL_SIZE)
 
                 typeQualities(clr=WHITE)
-                text(f'{pair[0]}, {pair[1]}\n{correction}', (CELL_SIZE*.1, CELL_SIZE*.5))
+                text(f'{pair[0]}, {pair[1]}\n{correction}',
+                     (CELL_SIZE*.1, CELL_SIZE*.5))
 
 
 if __name__ == '__main__':

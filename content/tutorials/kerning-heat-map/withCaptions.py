@@ -39,11 +39,10 @@ def shapeQualities(clr=BLACK):
     stroke(None)
 
 def kerningHeatMap(kerning, glyphNames, isFirstVertical):
-
     corrections = list(kerning.values())
     corrections.sort()
-    minCorrection, maxCorrection = corrections[0], corrections[-1]
-    reference = maxCorrection if abs(minCorrection) < maxCorrection else abs(minCorrection)
+    minCorrection, maxCorrection = abs(corrections[0]), abs(corrections[-1])
+    reference = maxCorrection if minCorrection < maxCorrection else minCorrection
 
     for jj, glyphY in enumerate(glyphNames):
 
@@ -66,6 +65,7 @@ def kerningHeatMap(kerning, glyphNames, isFirstVertical):
                     typeQualities()
                     text(f'{glyphX}', (CELL_SIZE*.5, -CELL_SIZE*.8), align='center')
 
+                # draw the cells
                 factor = .6 + .4 * abs(correction)/reference
                 if correction == 0:
                     rectClr = BLACK
@@ -82,6 +82,7 @@ def kerningHeatMap(kerning, glyphNames, isFirstVertical):
                 if correction != 0:
                     corrStr = f'{abs(correction)}'
 
+                    # just a check for body size
                     if textSize(corrStr)[0] > CELL_SIZE:
                         print(f'[WARNING] {pair} correction cannot be displayed correctly')
 

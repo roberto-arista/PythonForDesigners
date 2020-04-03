@@ -53,6 +53,12 @@ image:
 ----
 diagram: 
 #### code-example ####
+snippet: enumerate.py
+----
+image: 
+----
+diagram: 
+#### code-example ####
 snippet: ternary.py
 ----
 image: 
@@ -60,6 +66,48 @@ image:
 diagram: 
 #### code-example ####
 snippet: lettersMatrixTernary.py
+----
+image: 
+----
+diagram: 
+#### code-example ####
+snippet: lettersMatrixFunc.py
+----
+image: 
+----
+diagram: 
+#### code-example ####
+snippet: kerningHeatMap.py
+----
+image: 
+----
+diagram: 
+#### code-example ####
+snippet: findExtremes.py
+----
+image: 
+----
+diagram: 
+#### code-example ####
+snippet: flatKerning2.py
+----
+image: 
+----
+diagram: 
+#### code-example ####
+snippet: interpolateHeatMap.py
+----
+image: 
+----
+diagram: 
+#### code-example ####
+snippet: withCaptions.py
+----
+image: 
+----
+diagram: 
+#### code-example ####
+snippet: multipleOutputs.py
 ----
 image: 
 ----
