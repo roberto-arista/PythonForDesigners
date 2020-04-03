@@ -1,10 +1,14 @@
+### Modules
+from collections import defaultdict
+
 ### Constants
 FIRST_PREFIX = 'public.kern1.'
 SECOND_PREFIX = 'public.kern2.'
 
 ### Functions
 def flatKerning(aFont, glyphSet=None):
-    flatKerning = {}
+    flatKerning = defaultdict(int)
+    flatKerning.setdefault(0)
 
     for pair, correction in aFont.kerning.items():
         first, second = pair

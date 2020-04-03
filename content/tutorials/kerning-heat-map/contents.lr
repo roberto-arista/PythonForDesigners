@@ -9,9 +9,18 @@ hasTocNumber: yes
 sort_key: 2
 ---
 body:
-
+#### text-block ####
+content: heat map explanation
 #### code-example ####
 snippet: open.py
+----
+image: 
+----
+diagram: 
+#### text-block ####
+content: ufo object model diagram
+#### code-example ####
+snippet: dummyKerning.py
 ----
 image: 
 ----
@@ -46,6 +55,8 @@ snippet: flatKerning.py
 image: 
 ----
 diagram: 
+#### text-block ####
+content: letters matrix 1
 #### code-example ####
 snippet: lettersMatrix.py
 ----
@@ -59,23 +70,39 @@ image:
 ----
 diagram: 
 #### code-example ####
-snippet: ternary.py
-----
-image: 
-----
-diagram: 
-#### code-example ####
 snippet: lettersMatrixTernary.py
 ----
 image: 
 ----
 diagram: 
 #### code-example ####
+snippet: ternary.py
+----
+image: 
+----
+diagram: 
+#### text-block ####
+content: letters matrix 2 (alternata)
+#### code-example ####
 snippet: lettersMatrixFunc.py
 ----
 image: 
 ----
 diagram: 
+#### code-example ####
+snippet: defaultdict.py
+----
+image: 
+----
+diagram: 
+#### code-example ####
+snippet: flatKerning2.py
+----
+image: 
+----
+diagram: 
+#### text-block ####
+content: heat map no interpolation
 #### code-example ####
 snippet: kerningHeatMap.py
 ----
@@ -88,24 +115,24 @@ snippet: findExtremes.py
 image: 
 ----
 diagram: 
-#### code-example ####
-snippet: flatKerning2.py
-----
-image: 
-----
-diagram: 
+#### text-block ####
+content: heat map interpolation
 #### code-example ####
 snippet: interpolateHeatMap.py
 ----
 image: 
 ----
 diagram: 
+#### text-block ####
+content: with captions
 #### code-example ####
 snippet: withCaptions.py
 ----
 image: 
 ----
 diagram: 
+#### text-block ####
+content: folder diagram
 #### code-example ####
 snippet: multipleOutputs.py
 ----

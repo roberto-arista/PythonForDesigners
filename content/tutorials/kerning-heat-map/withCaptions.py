@@ -55,7 +55,7 @@ def kerningHeatMap(kerning, glyphNames, isFirstVertical):
         # drawing the row
         for ii, glyphX in enumerate(glyphNames):
             pair = (glyphY, glyphX) if isFirstVertical else (glyphX, glyphY)
-            correction = kerning[pair] if pair in kerning else 0
+            correction = kerning[pair]
 
             with savedState():
                 translate(ii*CELL_SIZE, jj*CELL_SIZE)

@@ -9,8 +9,8 @@ corrections = list(kerning.values())
 corrections.sort()
 # >>> [-80, -80, -60, -20]
 
-minCorrection, maxCorrection = abs(corrections[0]), abs(corrections[-1])
+minCorrection, maxCorrection = corrections[0], corrections[-1]
 # >>> 80 20
 
-reference = maxCorrection if minCorrection < maxCorrection else minCorrection
+reference = abs(maxCorrection) if abs(minCorrection) < abs(maxCorrection) else abs(minCorrection)
 # >>> 80
