@@ -48,6 +48,8 @@ article ul {
     article table { margin-left: 4rem; width: calc(100% - 4rem);}
     }
 
+li > ul { padding-left: 1rem; }
+
 .large-image {
     width: 100%;
 }
