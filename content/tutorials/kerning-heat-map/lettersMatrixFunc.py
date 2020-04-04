@@ -14,8 +14,8 @@ def drawLettersMatrix(glyphNames, isFirstVertical):
 
             with savedState():
                 typeQualities()
-                translate(ii*CELL_SIZE, jj*CELL_SIZE)
-                text(f'{pair[0]}{pair[1]}', (0, 0))
+                translate((ii+.5)*CELL_SIZE, jj*CELL_SIZE)
+                text(f'{pair[0]}{pair[1]}', (0, 0), align='center')
 
 
 if __name__ == '__main__':

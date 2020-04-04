@@ -7,7 +7,7 @@
 
 ### Modules
 # from the project folder
-from flatKerning2 import flatKerning
+from flatKerningDefault import flatKerning
 from withCaptions import kerningHeatMap, CELL_SIZE
 
 # dependency

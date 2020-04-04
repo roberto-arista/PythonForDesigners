@@ -3,7 +3,7 @@ CELL_SIZE = 30
 
 ### Variables
 glyphNames = 'ABCDE'
-isFirstVertical = True
+isFirstVertical = False
 
 ### Instructions
 canvasSize = (len(glyphNames)+2) * CELL_SIZE

@@ -1,10 +1,14 @@
+### Modules
+from collections import defaultdict
+
 ### Constants
 FIRST_PREFIX = 'public.kern1.'
 SECOND_PREFIX = 'public.kern2.'
 
 ### Functions
 def flatKerning(aFont):
-    flatK = {}
+    flatK = defaultdict(int)
+    flatK.setdefault(0)
 
     for pair, correction in aFont.kerning.items():
         first, second = pair
@@ -30,17 +34,3 @@ def flatKerning(aFont):
             flatK[(first, second)] = correction
 
     return flatK
-
-
-### Instructions
-if __name__ == '__main__':
-    from fontParts.world import OpenFont
-    fontName = 'Source Serif Pro Regular.ufo'
-
-    thisFont = OpenFont(fontName)
-    print(len(thisFont.kerning))
-    # 7970
-
-    flatK = flatKerning(thisFont)
-    print(len(flatK))
-    # 237806 😅

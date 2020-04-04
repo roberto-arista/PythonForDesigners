@@ -1,7 +1,8 @@
 ### Modules
 from fontParts.world import OpenFont
-from flatKerning2 import flatKerning
+from flatKerningDefault import flatKerning
 from string import ascii_uppercase
+from itertools import product
 
 ### Constants
 CELL_SIZE = 30
@@ -32,7 +33,7 @@ def shapeQualities(clr=BLACK):
     stroke(None)
 
 def kerningHeatMap(kerning, glyphNames, isFirstVertical):
-    corrections = list(kerning.values())
+    corrections = [kerning[nn] for nn in product(glyphNames, repeat=2)]
     corrections.sort()
     minCorrection, maxCorrection = abs(corrections[0]), abs(corrections[-1])
     reference = maxCorrection if minCorrection < maxCorrection else minCorrection
@@ -45,7 +46,7 @@ def kerningHeatMap(kerning, glyphNames, isFirstVertical):
             with savedState():
                 translate(ii*CELL_SIZE, jj*CELL_SIZE)
 
-                factor = .6 + .4 * abs(correction)/reference
+                factor = .5 + .5 * abs(correction)/reference
                 if correction == 0:
                     rectClr = BLACK
                     typeClr = WHITE
@@ -59,7 +60,7 @@ def kerningHeatMap(kerning, glyphNames, isFirstVertical):
                 rect(0, 0, CELL_SIZE, CELL_SIZE)
 
                 typeQualities(clr=typeClr)
-                text(f'{pair[0]}, {pair[1]}\n{correction}', (CELL_SIZE*.1, CELL_SIZE*.5))
+                text(f'{pair[0]}\u2004{pair[1]}\n{correction}', (CELL_SIZE*.1, CELL_SIZE*.5))
 
 
 if __name__ == '__main__':
@@ -69,7 +70,7 @@ if __name__ == '__main__':
 
     ### Instructions
     thisFont = OpenFont(fontName)
-    flat = flatKerning(thisFont, glyphSet=glyphNames)
+    flat = flatKerning(thisFont)
 
     canvasSize = (len(glyphNames)+4)*CELL_SIZE
     newPage(canvasSize, canvasSize)

@@ -9,16 +9,19 @@ hasTocNumber: yes
 sort_key: 2
 ---
 body:
+
 #### text-block ####
 content: heat map explanation
+#### image ####
+name: multiplicationMatrix.png
+----
+class: large_image
 #### code-example ####
 snippet: open.py
 ----
 image: 
 ----
 diagram: 
-#### text-block ####
-content: ufo object model diagram
 #### code-example ####
 snippet: dummyKerning.py
 ----
@@ -37,6 +40,10 @@ snippet: iterateOverKerning.py
 image: 
 ----
 diagram: 
+#### image ####
+name: fontPartsObjects.png
+----
+class: large_image
 #### code-example ####
 snippet: groupAccess.py
 ----
@@ -83,6 +90,10 @@ image:
 diagram: 
 #### text-block ####
 content: letters matrix 2 (alternata)
+#### image ####
+name: lettersMatrixFunc.png
+----
+class: large_image
 #### code-example ####
 snippet: lettersMatrixFunc.py
 ----
@@ -96,7 +107,7 @@ image:
 ----
 diagram: 
 #### code-example ####
-snippet: flatKerning2.py
+snippet: flatKerningDefault.py
 ----
 image: 
 ----
@@ -104,9 +115,9 @@ diagram:
 #### text-block ####
 content: heat map no interpolation
 #### code-example ####
-snippet: kerningHeatMap.py
+snippet: discreteKerningHeatMap.py
 ----
-image: 
+image: discreteHeatMap.png
 ----
 diagram: 
 #### code-example ####
@@ -117,6 +128,10 @@ image:
 diagram: 
 #### text-block ####
 content: heat map interpolation
+#### image ####
+name: interpolateHeatMap.png
+----
+class: large_image
 #### code-example ####
 snippet: interpolateHeatMap.py
 ----
@@ -125,17 +140,37 @@ image:
 diagram: 
 #### text-block ####
 content: with captions
+#### image ####
+name: kerningHeatMap.png
+----
+class: large_image
 #### code-example ####
-snippet: withCaptions.py
+snippet: kerningHeatMap.py
 ----
 image: 
 ----
 diagram: 
 #### text-block ####
-content: folder diagram
+content:
+project folder
+- flatKerningDefault.py
+- kerningHeatMap.py
+- multipleHeatMaps.py
+- output folder
+ + fontName-UC.pdf
+ + fontName-LC.pdf
+ + [...]
+- fonts
+ + fontRegular.ufo
+ + fontItalic.ufo
+ + [...]
 #### code-example ####
 snippet: multipleOutputs.py
 ----
 image: 
 ----
 diagram: 
+#### text-block ####
+content:
+extras:
+- differentiate between first and second glyph set (uppercase vs lowercase)
