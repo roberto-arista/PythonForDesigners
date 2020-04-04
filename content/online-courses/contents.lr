@@ -33,7 +33,7 @@ To enroll check the open courses and click on the “sub­scribe” but­ton to 
 
 # Active Courses
 
-### Python for Designers Online, 3rd ed. (intensive)
+### Python for Designers Online, 3rd ed. (subscriptions closed)
 *Monday & Friday, 16:00 – 19:00 GMT+1, 8 classes*
 
 <del>€400</del> **€300**, VAT incl. (🎁 25% off! #WFH sale)
@@ -41,8 +41,8 @@ To enroll check the open courses and click on the “sub­scribe” but­ton to 
 * March 2020: 27th and 30th
 * April 2020: 3rd, 6th, 10th, 17th, 20th and 24th
 
-<form action="https://forms.gle/18tBdW5dvbMXGRzf8" method="get" target="_blank">
-    <button type="submit" class="button">Subscribe</button>
+<form>
+    <button type="submit" class="button" disabled><del>Subscribe</del></button>
 </form>
 
 ### Python for Designers Online, 4th ed.
