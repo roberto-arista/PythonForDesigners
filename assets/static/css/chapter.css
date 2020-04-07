@@ -527,14 +527,71 @@ h2.workbook {
   }
 }
 
-/* line 128, lib/sass/chapter.scss */
+@media (min-width: 1200px) {
+  /* line 128, lib/sass/chapter.scss */
+  div.example > div {
+    width: 73%;
+  }
+}
+
+/* line 134, lib/sass/chapter.scss */
+.snippet-download-wrapper {
+  margin-top: .5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+/* line 141, lib/sass/chapter.scss */
+.snippet-download {
+  width: 1.8rem;
+  text-align: center;
+  background-color: #1858A8;
+  margin-bottom: 0;
+  padding: .1rem 0 .1rem 0;
+  font-family: "Arnold Regular";
+  font-size: .65rem;
+  line-height: .7rem;
+  color: #FFF;
+  font-variant-caps: small-caps;
+  text-transform: lowercase;
+}
+
+/* line 156, lib/sass/chapter.scss */
+.snippet-download a {
+  color: #FFF;
+}
+
+/* line 157, lib/sass/chapter.scss */
+.snippet-download a:hover {
+  color: #FFF;
+  border-bottom: 1px solid #FFF;
+}
+
+/* line 161, lib/sass/chapter.scss */
+.snippet-download a:visited {
+  color: #FFF;
+}
+
+/* line 162, lib/sass/chapter.scss */
+.snippet-download a:visited:hover {
+  color: #FFF;
+  border-bottom: 1px solid #FFF;
+}
+
+/* line 167, lib/sass/chapter.scss */
 .ex-number {
   background-color: #1858A8;
   margin-bottom: 0;
   padding: .38rem 1rem .01rem 1rem;
 }
 
-/* line 134, lib/sass/chapter.scss */
+/* line 173, lib/sass/chapter.scss */
 .ex-number p {
   font-family: "Arnold Regular";
   font-size: .7rem;
@@ -544,18 +601,18 @@ h2.workbook {
   text-transform: lowercase;
 }
 
-/* line 143, lib/sass/chapter.scss */
+/* line 182, lib/sass/chapter.scss */
 .ex-assignment {
   padding: .25rem 1rem .5rem 1rem;
   background-color: #E2F4FF;
 }
 
-/* line 148, lib/sass/chapter.scss */
+/* line 187, lib/sass/chapter.scss */
 .ex-assignment p, .ex-assignment ul, .ex-number p {
   padding-left: 0;
 }
 
-/* line 152, lib/sass/chapter.scss */
+/* line 191, lib/sass/chapter.scss */
 .ex-solution {
   font-family: "Arnold Regular";
   font-size: .7rem;
@@ -566,34 +623,34 @@ h2.workbook {
   text-decoration: none;
 }
 
-/* line 162, lib/sass/chapter.scss */
+/* line 201, lib/sass/chapter.scss */
 .ex-solution a {
   color: #1858A8;
 }
 
-/* line 163, lib/sass/chapter.scss */
+/* line 202, lib/sass/chapter.scss */
 .ex-solution a:hover {
   color: #1858A8;
   border-bottom: 1px solid #1858A8;
 }
 
-/* line 164, lib/sass/chapter.scss */
+/* line 203, lib/sass/chapter.scss */
 .ex-solution a:active {
   color: #1858A8;
 }
 
-/* line 165, lib/sass/chapter.scss */
+/* line 204, lib/sass/chapter.scss */
 .ex-solution a:visited {
   color: #1858A8;
 }
 
-/* line 167, lib/sass/chapter.scss */
+/* line 206, lib/sass/chapter.scss */
 .ex-image {
   margin-bottom: .5rem;
 }
 
 @media (min-width: 1200px) {
-  /* line 167, lib/sass/chapter.scss */
+  /* line 206, lib/sass/chapter.scss */
   .ex-image {
     width: 25%;
     height: 25%;
@@ -601,7 +658,7 @@ h2.workbook {
   }
 }
 
-/* line 177, lib/sass/chapter.scss */
+/* line 216, lib/sass/chapter.scss */
 #pagination {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -614,7 +671,7 @@ h2.workbook {
   margin-top: 1rem;
 }
 
-/* line 185, lib/sass/chapter.scss */
+/* line 224, lib/sass/chapter.scss */
 #prevButton, #nextButton {
   font-family: "Arnold Regular", Monaco, monospace;
   text-align: center;
@@ -622,13 +679,13 @@ h2.workbook {
 }
 
 @media (min-width: 1200px) {
-  /* line 191, lib/sass/chapter.scss */
+  /* line 230, lib/sass/chapter.scss */
   p#prevButton, p#nextButton {
     padding-left: 0;
   }
 }
 
-/* line 195, lib/sass/chapter.scss */
+/* line 234, lib/sass/chapter.scss */
 table {
   border-collapse: collapse;
   margin-bottom: .5em;
@@ -636,7 +693,7 @@ table {
   width: 100%;
 }
 
-/* line 203, lib/sass/chapter.scss */
+/* line 242, lib/sass/chapter.scss */
 th {
   text-align: left;
   border-bottom: solid 1px #F36;
@@ -644,7 +701,7 @@ th {
   padding: .25em;
 }
 
-/* line 212, lib/sass/chapter.scss */
+/* line 251, lib/sass/chapter.scss */
 td {
   text-align: left;
   border-bottom: solid 1px #F36;

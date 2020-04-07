@@ -79,15 +79,8 @@ pre[class*="language-"] {
   border-top: 0.2rem solid #1858A8;
 }
 
-@media (min-width: 1200px) {
-  /* line 91, lib/sass/prism.scss */
-  div.example > pre[class*="language-"] {
-    width: 73%;
-  }
-}
-
 /* Inline code */
-/* line 98, lib/sass/prism.scss */
+/* line 92, lib/sass/prism.scss */
 :not(pre) > code[class*="language-"] {
   padding: .1rem;
   border-top: none;
@@ -97,12 +90,12 @@ pre[class*="language-"] {
   font-size: 0.6rem;
 }
 
-/* line 108, lib/sass/prism.scss */
+/* line 102, lib/sass/prism.scss */
 td > code[class*="language-"], th > code[class*="language-"] {
   background-color: transparent;
 }
 
-/* line 112, lib/sass/prism.scss */
+/* line 106, lib/sass/prism.scss */
 .token.comment,
 .token.prolog,
 .token.doctype,
@@ -111,17 +104,17 @@ td > code[class*="language-"], th > code[class*="language-"] {
   font-family: "Arnold Italic", Monaco, monospace;
 }
 
-/* line 120, lib/sass/prism.scss */
+/* line 114, lib/sass/prism.scss */
 .token.punctuation {
   color: #1858A8;
 }
 
-/* line 124, lib/sass/prism.scss */
+/* line 118, lib/sass/prism.scss */
 .namespace {
   opacity: .7;
 }
 
-/* line 128, lib/sass/prism.scss */
+/* line 122, lib/sass/prism.scss */
 .token.property,
 .token.tag,
 .token.boolean,
@@ -132,7 +125,7 @@ td > code[class*="language-"], th > code[class*="language-"] {
   color: #ffa319;
 }
 
-/* line 138, lib/sass/prism.scss */
+/* line 132, lib/sass/prism.scss */
 .token.selector,
 .token.attr-name,
 .token.string,
@@ -141,13 +134,13 @@ td > code[class*="language-"], th > code[class*="language-"] {
   color: #96d400;
 }
 
-/* line 146, lib/sass/prism.scss */
+/* line 140, lib/sass/prism.scss */
 .token.builtin {
   color: #F36;
   font-family: "Arnold Italic", Monaco, monospace;
 }
 
-/* line 150, lib/sass/prism.scss */
+/* line 144, lib/sass/prism.scss */
 .token.operator,
 .token.entity,
 .token.url,
@@ -156,44 +149,44 @@ td > code[class*="language-"], th > code[class*="language-"] {
   color: #0abfaa;
 }
 
-/* line 158, lib/sass/prism.scss */
+/* line 152, lib/sass/prism.scss */
 .token.atrule,
 .token.attr-value,
 .token.keyword {
   color: #ba8caf;
 }
 
-/* line 164, lib/sass/prism.scss */
+/* line 158, lib/sass/prism.scss */
 .token.function,
 .token.class-name {
   color: #0099ff;
   font-family: "Arnold Italic", Monaco, monospace;
 }
 
-/* line 171, lib/sass/prism.scss */
+/* line 165, lib/sass/prism.scss */
 .token.regex,
 .token.important,
 .token.variable {
   color: #e90;
 }
 
-/* line 177, lib/sass/prism.scss */
+/* line 171, lib/sass/prism.scss */
 .token.important,
 .token.bold {
   font-weight: bold;
 }
 
-/* line 181, lib/sass/prism.scss */
+/* line 175, lib/sass/prism.scss */
 .token.italic {
   font-style: italic;
 }
 
-/* line 185, lib/sass/prism.scss */
+/* line 179, lib/sass/prism.scss */
 .token.entity {
   cursor: help;
 }
 
-/* line 189, lib/sass/prism.scss */
+/* line 183, lib/sass/prism.scss */
 .token.tab:not(:empty),
 .token.cr,
 .token.lf,
@@ -201,7 +194,7 @@ td > code[class*="language-"], th > code[class*="language-"] {
   position: relative;
 }
 
-/* line 196, lib/sass/prism.scss */
+/* line 190, lib/sass/prism.scss */
 .token.tab:not(:empty):before,
 .token.cr:before,
 .token.lf:before,
@@ -210,22 +203,22 @@ td > code[class*="language-"], th > code[class*="language-"] {
   position: absolute;
 }
 
-/* line 204, lib/sass/prism.scss */
+/* line 198, lib/sass/prism.scss */
 .token.tab:not(:empty):before {
   content: '\21E5';
 }
 
-/* line 208, lib/sass/prism.scss */
+/* line 202, lib/sass/prism.scss */
 .token.cr:before {
   content: '\240D';
 }
 
-/* line 212, lib/sass/prism.scss */
+/* line 206, lib/sass/prism.scss */
 .token.crlf:before {
   content: '\240D\240A';
 }
 
-/* line 216, lib/sass/prism.scss */
+/* line 210, lib/sass/prism.scss */
 .token.space:before {
   content: '\00B7';
 }

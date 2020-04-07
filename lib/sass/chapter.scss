@@ -125,6 +125,45 @@ h2.workbook {
     }
 }
 
+div.example > div {
+    @include bigger-than('lg') {
+        width: 73%;
+  }
+}
+
+.snippet-download-wrapper {
+    margin-top: .5rem;
+    @include flex();
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.snippet-download {
+    width: 1.8rem;
+    text-align: center;
+    background-color: $blue;
+    margin-bottom: 0;
+    padding: .1rem 0 .1rem 0;
+    // margin-top: 1rem;
+    font-family: "Arnold Regular";
+    font-size: .65rem;
+    line-height: .7rem;
+    color: $white;
+    font-variant-caps: small-caps;
+    text-transform: lowercase;
+}
+
+.snippet-download a { color: $white; }
+.snippet-download a:hover { 
+    color: $white; 
+    border-bottom: 1px solid $white
+    }
+.snippet-download a:visited { color: $white; }
+.snippet-download a:visited:hover {
+    color: $white;
+    border-bottom: 1px solid $white
+}
+
 .ex-number {
     background-color: $blue;
     margin-bottom: 0;

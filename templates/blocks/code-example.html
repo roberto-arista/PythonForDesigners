@@ -14,8 +14,12 @@
         <!-- <img class="diagram" src="{{ this.diagram }}"> -->
     {% endif %}
 
-    {# <p>download <a href="{{ this.snippet | url }}">(↓)</a></p> #}
-    <pre data-src="{{ this.snippet | url }}"></pre>
+    <div>
+        <div class='snippet-download-wrapper'>
+            <p class='snippet-download'><a href="{{ this.snippet | url }}">(↓)</a></p>
+        </div>
+        <pre data-src="{{ this.snippet | url }}"></pre>
+    </div>
 
 {% if this.image or this.diagram %}
     </div>
