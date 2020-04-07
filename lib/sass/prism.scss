@@ -22,6 +22,7 @@ code[class*="language-"],
 pre[class*="language-"] {
 
     color: $dark-grey;
+    max-height: 20rem;
     background: none;
     text-shadow: none;
     font-family: $arnold;
