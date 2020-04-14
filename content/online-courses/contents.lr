@@ -41,8 +41,8 @@ To enroll check the open courses and click on the “sub­scribe” but­ton to 
 * March 2020: 27th and 30th
 * April 2020: 3rd, 6th, 10th, 17th, 20th and 24th
 
-<form action="https://forms.gle/18tBdW5dvbMXGRzf8" method="get" target="_blank">
-    <button type="submit" class="button">Subscribe</button>
+<form action="" method="get" target="_blank">
+    <button type="submit" class="button" disabled><del>Subscribe</del></button>
 </form>
 
 ### Python for Designers Online, 4th ed.
@@ -50,9 +50,9 @@ To enroll check the open courses and click on the “sub­scribe” but­ton to 
 
 **€400**, VAT incl.
 
-* April 2020: 16th, 23rd and 30th
+* April 2020: 23rd and 30th
 * May 2020: 7th, 14th, 21st, 28th
-* June 2020: 4th
+* June 2020: 4th, 11th
 
 <form action="https://forms.gle/JVCiXUn2rGgWErPG9" method="get" target="_blank">
     <button type="submit" class="button">Subscribe</button>
