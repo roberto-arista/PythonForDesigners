@@ -1,9 +1,9 @@
 semesterGrades = {'francesca': 'A',
-                  'loredana': 'B',
-                  'ruggero': 'B'}
+                  'giovanna': 'B',
+                  'mario': 'B'}
 
 for student, grade in semesterGrades.items():
     print(student, grade)
     # >>> francesca A
-    # >>> loredana B
-    # >>> ruggero B
+    # >>> giovanna B
+    # >>> mario B

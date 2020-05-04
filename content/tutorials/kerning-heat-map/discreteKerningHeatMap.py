@@ -62,7 +62,3 @@ if __name__ == '__main__':
     with savedState():
         translate(CELL_SIZE, CELL_SIZE*1.4)
         kerningHeatMap(flat, glyphNames, isFirstVertical=True)
-
-    # AVATAR caption
-    typeQualities(bodySize=20, fontName='SourceSerifPro-Regular')
-    text('AVATAR', (width()/2, CELL_SIZE*.5), align='center')

@@ -15,5 +15,5 @@ for pair, correction in myFont.kerning.items():
     # glyph vs group
     # >>> zeta vs public.kern2.GRK_alpha = -20
 
-    # glyph vs glyps
+    # glyph vs glyph
     # >>> B vs AE = -50
