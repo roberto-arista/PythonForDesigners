@@ -21,7 +21,7 @@ class: small_image
 #### text-block ####
 content: A peculiar feature of the HSL model is the way the hue is distributed in space. In fact, the hue has a radial organization, colors of each hue are arranged in a radial slice. Instead saturation and luminosity are linear dimensions. We can represent the sum of two linear dimensions and an angular dimension using a cylinder (with a longitudinal hole).
 #### text-block ####
-content: We can assume that values belonging to the linear dimensions fluctuate between 0 and 1, while the angular dimension – hue – moves across 0 and 360. This assumption does not come up from a technical need – in fact we are going to use floating points from 0 to 1 for hue too – but I believe it will make our code more accessible
+content: We can assume that values belonging to the linear dimensions fluctuate between 0 and 1, while the angular dimension – hue – moves across 0 and 360. This assumption does not come up from a technical need – in fact we are going to use floating points from 0 to 1 for hue too – but I believe it will make our code more accessible. Here you can see how we are going to create our hue factor from an iteration over a full circle angle, run the script and check the console output
 #### code-example ####
 snippet: hueRange.py
 ----
@@ -41,7 +41,7 @@ name: cd-rom-saw.png
 ----
 class: large_image
 #### text-block ####
-content: Let’s start to assemble some code. First of all, we need to convert the HSL value into RGB, because Drawbot can only accept RGB or CMYK values. The colorsys module from the standard library provides the perfect function for this need hls_to_rgb(h, l, s).
+content: Let’s start to assemble some code. First of all, we need to convert the HSL value into RGB, because Drawbot can only accept RGB or CMYK values. The `colorsys` module from the standard library provides the perfect function for this need `hls_to_rgb(h, l, s)`.
 #### code-example ####
 snippet: hls_func.py
 ----
@@ -125,7 +125,7 @@ name: donuts.png
 ----
 class: large_image
 #### code-example ####
-snippet: multi-ring.py
+snippet: donut.py
 ----
 image: 
 ----
