@@ -16,7 +16,7 @@
 
     <div>
         <div class='snippet-download-wrapper'>
-            <p class='snippet-download'><a href="{{ this.snippet | url }}">(↓)</a></p>
+            <p class='snippet-download'><a download="{{ this.snippet }}" href="{{ this.snippet | url }}">(↓)</a></p>
         </div>
         <pre data-src="{{ this.snippet | url }}"></pre>
     </div>
