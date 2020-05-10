@@ -133,7 +133,7 @@ image:
 ----
 diagram: 
 #### text-block ####
-content: We use the indices to position the rectangles over the canvas, while the glyph names become the argument of the `text()` function. I arbitrairaly placed the `glyphY` as second letter after the `glyphX`. It could be an assumption of the script, but it is a limitation easy to address with a [shortcut conditional expression](https://www.python.org/dev/peps/pep-0308/) (programmers refer to it also as *ternary operator*). It is an if-else one-liner, here is compared to a standard conditional construct
+content: We use the indices to position the rectangles over the canvas, while the glyph names become the argument of the `text()` function. I arbitrarily placed the `glyphY` as second letter after the `glyphX`. It could be an assumption of the script, but it is a limitation easy to address with a [shortcut conditional expression](https://www.python.org/dev/peps/pep-0308/) (programmers refer to it also as *ternary operator*). It is an if-else one-liner, here is compared to a standard conditional construct
 
 #### code-example ####
 snippet: ternary.py
