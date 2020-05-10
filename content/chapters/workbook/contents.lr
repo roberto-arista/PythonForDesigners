@@ -1,0 +1,26 @@
+title: Workbook
+---
+abstract: A miscellanea of advanced exercises
+---
+og_image: workbook.png
+---
+sort_key: 14
+---
+visual_abstract: workbook.svg
+---
+hasTocNumber: yes
+---
+body:
+
+#### exercise ####
+image: unicodeTable.png
+----
+assignment: Write a script able to create a table on multiple A4 pages describing an arbitrary sequence of Unicode characters. Each line of the table should report binary, decimal, and UTF-8 hexadecimal representations. Also, the line should render the character itself surrounded by two pipes “|” in gray and a description of the character according to the Unicode standard (check the [unicodedata](https://docs.python.org/3/library/unicodedata.html) module). [Here](unicodeTable.pdf) you can check a PDF example. Table header (in bold) and page numbering would be a nice to have, don’t you think?
+----
+solution: unicodeTable.py
+#### exercise ####
+image: operationMatrix.png
+----
+assignment: Draw a multiplication table. You should be able to define the first and last values of the range of multiplied numbers (from 1 to 10, from 10 to 100, and so on). Then, extend the program capabilities in order to compute many different operations like addition, difference, power of, and division. Check the [operator module](https://docs.python.org/3/library/operator.html) for some hints. With different operations, you will probably face very large numbers or numbers with a decimal part. In the first case, scale down the type size if the number does not fit the cell size, in the other case use some tools from the [fractions module](https://docs.python.org/3/library/fractions.html) mixed with OpenType features to typeset numbers like 0.333333333 in a compact way. [Here](operationMatrix.pdf) is a an example.
+----
+solution: funcMatrix.py
