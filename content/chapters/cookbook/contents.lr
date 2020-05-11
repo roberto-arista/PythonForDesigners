@@ -112,3 +112,13 @@ title: Calc distance between two points
 snippet: calcDistance.py
 ----
 image: 
+#### section-title ####
+content: Curves
+----
+class: cookbook
+#### recipe ####
+title: lissajous
+----
+snippet: lissajous.py
+----
+image: lissajous.png
