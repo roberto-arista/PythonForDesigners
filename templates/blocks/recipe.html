@@ -1,3 +1,5 @@
+{% from "macros.html" import renderRasterImage %}
+
 {% if this.image.endswith('.png') %}
     {% set imageObj = record.attachments.get(this.image) %}
     {{ renderRasterImage(this.image, imageObj, 'small-image') }}
