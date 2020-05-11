@@ -6,6 +6,6 @@
 {% endif %}
 
 <div class='recipe-title'>
-    <p>{{ this.title }} <a class='recipe-download' href="{{ this.snippet | url }}">(↓)</a></p>
+    <p>{{ this.title }} <a download="{{ this.snippet | url }}" class='recipe-download' href="{{ this.snippet | url }}">(.py)</a></p>
 </div>
 <pre data-src='{{ this.snippet|url }}' class='recipe-code'></pre>

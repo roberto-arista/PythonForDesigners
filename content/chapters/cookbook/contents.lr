@@ -17,7 +17,7 @@ body:
 #### section-title ####
 content: Input/Output
 ----
-class: default
+class: cookbook
 #### recipe ####
 title: Collecting files from a folder
 ----
@@ -45,7 +45,7 @@ image:
 #### section-title ####
 content: Colors
 ----
-class: default
+class: cookbook
 #### recipe ####
 title: Converting hexadecimal to RGB (255)
 ----
@@ -67,7 +67,7 @@ image:
 #### section-title ####
 content: Calculation
 ----
-class: default
+class: cookbook
 #### recipe ####
 title: Interpolating single value
 ----

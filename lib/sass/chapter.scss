@@ -101,6 +101,12 @@ img.example-image, img.ex-image {
     box-shadow: 0 .25rem .5rem $grey;
 }
 
+h2.cookbook {
+    margin-bottom: 0rem;
+    margin-top: 1.25rem;
+    font-size: 1.25rem;
+}
+
 h2.workbook {
     color: $blue;
     margin-bottom: .25rem;
@@ -130,7 +136,7 @@ h2.workbook {
 .ex-number { padding: .38rem 1rem .01rem 1rem; }
 .recipe-title {
     padding: .38rem 1rem .01rem .75rem;
-    margin-top: 1rem;
+    margin-top: .5rem;
 }
 
 .recipe-title p, .ex-number p {
@@ -163,6 +169,7 @@ a:visited:hover.recipe-download {
 
 pre.recipe-code {
     border-top: none;
+    margin-bottom: 1rem;
 }
 
 .ex-assignment {
