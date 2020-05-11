@@ -16,12 +16,13 @@ $orange: #ffa319;
 $violet: #ba8caf;
 $light-blue: #0099ff;
 
-$code-size: .65rem;
+$code-size: .6rem;
 
 code[class*="language-"],
 pre[class*="language-"] {
 
     color: $dark-grey;
+    max-height: 20rem;
     background: none;
     text-shadow: none;
     font-family: $arnold;
@@ -38,7 +39,7 @@ pre[class*="language-"] {
     word-spacing: normal;
     word-break: normal;
     word-wrap: normal;
-    line-height: 1rem;
+    line-height: .9rem;
 
     -moz-tab-size: 4;
     -o-tab-size: 4;
@@ -85,12 +86,6 @@ pre[class*="language-"] {
 pre[class*="language-"] {
     background-color: $main-background;
     border-top: .2rem solid $blue;
-}
-
-div.example > pre[class*="language-"] {
-    @include bigger-than('lg') {
-        width: 73%;
-  }
 }
 
 /* Inline code */

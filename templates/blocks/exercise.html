@@ -19,7 +19,7 @@
             <p>{{ this.assignment }}</p>
 
             {% if this.solution != '' %}
-                <p class='ex-solution'><a href="{{ this.solution | url}}">>>> Solution (.py)</a></p>
+                <p class='ex-solution'><a download='{{ this.solution }}' href="{{ this.solution | url}}">>>> Solution (.py)</a></p>
             {% endif %}
         </div>
     </div>

@@ -17,9 +17,6 @@ def donut(slices):
         arc((0, 0), 100, startAngle, endAngle, clockwise=False)
         drawPath()
 
-### Variables
-slices = 15
-
 ### Instructions
 newPage(952, 340)
 translate(width()*.2, height()/2)
@@ -33,5 +30,3 @@ donut(12)
 
 translate(width()*.3, 0)
 donut(36)
-
-

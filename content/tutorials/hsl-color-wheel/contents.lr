@@ -21,7 +21,7 @@ class: small_image
 #### text-block ####
 content: A peculiar feature of the HSL model is the way the hue is distributed in space. In fact, the hue has a radial organization, colors of each hue are arranged in a radial slice. Instead saturation and luminosity are linear dimensions. We can represent the sum of two linear dimensions and an angular dimension using a cylinder (with a longitudinal hole).
 #### text-block ####
-content: We can assume that values belonging to the linear dimensions fluctuate between 0 and 1, while the angular dimension – hue – moves across 0 and 360. This assumption does not come up from a technical need – in fact we are going to use floating points from 0 to 1 for hue too – but I believe it will make our code more accessible
+content: We can assume that values belonging to the linear dimensions fluctuate between 0 and 1, while the angular dimension – hue – moves across 0 and 360. This assumption does not come up from a technical need – in fact we are going to use floating points from 0 to 1 for hue too – but I believe it will make our code more accessible. Here you can see how we are going to create our hue factor from an iteration over a full circle angle, run the script and check the console output
 #### code-example ####
 snippet: hueRange.py
 ----
@@ -41,7 +41,7 @@ name: cd-rom-saw.png
 ----
 class: large_image
 #### text-block ####
-content: Let’s start to assemble some code. First of all, we need to convert the HSL value into RGB, because Drawbot can only accept RGB or CMYK values. The colorsys module from the standard library provides the perfect function for this need hls_to_rgb(h, l, s).
+content: Let’s start to assemble some code. First of all, we need to convert the HSL value into RGB, because Drawbot can only accept RGB or CMYK values. The `colorsys` module from the standard library provides the perfect function for this need `hls_to_rgb(h, l, s)`.
 #### code-example ####
 snippet: hls_func.py
 ----
@@ -125,7 +125,7 @@ name: donuts.png
 ----
 class: large_image
 #### code-example ####
-snippet: multi-ring.py
+snippet: donut.py
 ----
 image: 
 ----
@@ -141,7 +141,7 @@ diagram:
 #### text-block ####
 content: Notice also the way I organized the styles of the different elements, the arcs and the captions. I wrote two separate functions where I grouped the properties functions (`font()`, `fill()`, `stroke()`, `strokeWidth()`) and I defined some default values into the function interface. In this way you can pour some logic without prohibiting a different application.
 #### text-block ####
-content: At this point, the program is fully working, but there are still a few things that can be improved. They are optional. I like my code, even simple scripts like this, to be as modular as possible, which means that I would like to encapsulate the HSL donut into a function in order to be able to import it from another python script quite easily. In this way I am also forced to be very accurate on handling the function namespace. Def statement on the rescue, than any function call should be wrapped into a `if __name__ == "__main__":` conditional construct. In this way the donut will be drawn only if the module is explicitly run, not if imported. Last but not least, be sure that the script file has a name following the identifier.
+content: At this point, the program is fully working, but there are still a few things that can be improved. They are optional. I like my code, even simple scripts like this, to be as modular as possible, which means that I would like to encapsulate the HSL donut into a function in order to be able to import it from another python script quite easily. In this way I am also forced to be very accurate on handling the function namespace. Def statement on the rescue, than any function call should be wrapped into a `if __name__ == "__main__":` conditional construct. In this way the donut will be drawn only if the module is explicitly run, not if imported. Last but not least, be sure that the script file has a name following the identifier rules.
 #### text-block ####
 content: Furthermore, I like to write – and often run – my scripts from outside the drawbot app, in order to take advantage of IDE features as code linting, multiple cursors, and other stuff programmers love. For this reason, I have to explicitly import any drawbot function I need at the top of the script. Also, the drawing should be embrace by `newDrawing()` and `endDrawing()` functions in order to initiate the drawing stack and then to clean it. Saving an image, especially if launching the script from the terminal is advised, otherwise you won’t have any visual feedback. So, here you can find the final result
 #### code-example ####
@@ -159,4 +159,4 @@ image:
 ----
 diagram: 
 ---
-hasTocNumber: no
+hasTocNumber: yes

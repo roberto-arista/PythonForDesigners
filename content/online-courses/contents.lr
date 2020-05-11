@@ -41,34 +41,21 @@ To enroll check the open courses and click on the “sub­scribe” but­ton to 
 * March 2020: 27th and 30th
 * April 2020: 3rd, 6th, 10th, 17th, 20th and 24th
 
-<form action="https://forms.gle/18tBdW5dvbMXGRzf8" method="get" target="_blank">
-    <button type="submit" class="button">Subscribe</button>
+<form action="" method="get" target="_blank">
+    <button type="submit" class="button" disabled><del>Subscribe</del></button>
 </form>
 
 ### Python for Designers Online, 4th ed.
-*Thursday, 16:00 – 19:00 GMT+1, 8 classes*
+*Thursday, <del>16:00 – 19:00</del> 19:00 – 22:00 GMT+1, 8 classes*
 
 **€400**, VAT incl.
 
-* April 2020: 16th, 23rd and 30th
+* April 2020: 23rd and 30th
 * May 2020: 7th, 14th, 21st, 28th
-* June 2020: 4th
+* June 2020: 4th, 11th
 
-<form action="https://forms.gle/JVCiXUn2rGgWErPG9" method="get" target="_blank">
-    <button type="submit" class="button">Subscribe</button>
-</form>
-
-### Python for Designers Online, 5th ed.
-*Monday, 10:00 – 13:00 GMT+1, 8 classes*
-
-**€400**, VAT incl.
-
-* April 2020: 27th
-* May 2020: 4th, 11th, 18th and 25th
-* June 2020: 1st, 8th and 15th
-
-<form action="https://forms.gle/NCWa7CqnQcXLfeTb7" method="get" target="_blank">
-    <button type="submit" class="button">Subscribe</button>
+<form action="" method="get" target="_blank">
+    <button type="submit" class="button" disabled><del>Subscribe</del></button>
 </form>
 
 If you can't attend any course listed here, <a class='grayscale' href="mailto:&#x68;&#x65;&#x6C;&#x6C;&#x6F;&#x40;&#x72;&#x6F;&#x62;&#x65;&#x72;&#x74;&#x6F;&#x61;&#x72;&#x69;&#x73;&#x74;&#x61;&#x2E;&#x69;&#x74;">get in touch</a> and let me know which time would suit your needs. I'll try to arrange something!
