@@ -86,3 +86,29 @@ title: Mapping value to a new range of extremes
 snippet: remapValue.py
 ----
 image: 
+#### section-title ####
+content: UFO Data
+----
+class: cookbook
+#### recipe ####
+title: flat kerning
+----
+snippet: flatKerning.py
+----
+image: 
+#### section-title ####
+content: Geometry
+----
+class: cookbook
+#### recipe ####
+title: Calc angle from two points
+----
+snippet: calcAngle.py
+----
+image: 
+#### recipe ####
+title: Calc distance between two points
+----
+snippet: calcDistance.py
+----
+image: 
