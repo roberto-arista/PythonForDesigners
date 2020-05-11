@@ -103,6 +103,12 @@ img.example-image, img.ex-image {
     box-shadow: 0 .25rem .5rem $grey;
 }
 
+h2.cookbook {
+    margin-bottom: 0rem;
+    margin-top: 1.25rem;
+    font-size: 1.25rem;
+}
+
 h2.workbook {
     color: $blue;
     margin-bottom: .25rem;
@@ -125,58 +131,47 @@ h2.workbook {
     }
 }
 
-div.example > div {
-    @include bigger-than('lg') {
-        width: 73%;
-  }
+.ex-number, .recipe-title {
+    background-color: $blue;
+    margin-bottom: 0;
 }
-
-.snippet-download-wrapper {
+.ex-number { padding: .38rem 1rem .01rem 1rem; }
+.recipe-title {
+    padding: .38rem 1rem .01rem .75rem;
     margin-top: .5rem;
-    @include flex();
-    flex-wrap: wrap;
-    justify-content: flex-end;
 }
 
-.snippet-download {
-    width: 1.8rem;
-    text-align: center;
-    background-color: $blue;
-    margin-bottom: 0;
-    padding: .1rem 0 .1rem 0;
-    // margin-top: 1rem;
-    font-family: "Arnold Regular";
-    font-size: .65rem;
-    line-height: .7rem;
-    color: $white;
-    font-variant-caps: small-caps;
-    text-transform: lowercase;
-}
-
-.snippet-download a { color: $white; }
-.snippet-download a:hover { 
-    color: $white; 
-    border-bottom: 1px solid $white
-    }
-.snippet-download a:visited { color: $white; }
-.snippet-download a:visited:hover {
-    color: $white;
-    border-bottom: 1px solid $white
-}
-
-.ex-number {
-    background-color: $blue;
-    margin-bottom: 0;
-    padding: .38rem 1rem .01rem 1rem;
-}
-
-.ex-number p {
+.recipe-title p, .ex-number p {
     font-family: "Arnold Regular";
     font-size: .7rem;
     line-height: .7rem;
     color: $white;
     font-variant-caps: small-caps;
     text-transform: lowercase;
+}
+
+.recipe-title p {
+    padding-left: 0px;
+}
+
+.recipe-code a:link {
+    color: $white;
+}
+
+a.recipe-download { color: $white; }
+a:hover.recipe-download { 
+    color: $white; 
+    border-bottom: 1px solid $white
+    }
+a:visited.recipe-download { color: $white; }
+a:visited:hover.recipe-download {
+    color: $white;
+    border-bottom: 1px solid $white
+}
+
+pre.recipe-code {
+    border-top: none;
+    margin-bottom: 1rem;
 }
 
 .ex-assignment {
