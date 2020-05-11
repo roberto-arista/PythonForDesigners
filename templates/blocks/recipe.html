@@ -1,13 +1,22 @@
 {% from "macros.html" import renderRasterImage %}
 
-{% if this.image.endswith('.png') %}
-    {% set imageObj = record.attachments.get(this.image) %}
-    {{ renderRasterImage(this.image, imageObj, 'small-image') }}
-{% elif this.image.endswith('.svg') %}
-    {{ renderSvgImage(this.image, 'small-image') }}
-{% endif %}
+<div class='recipe'>
 
-<div class='recipe-title'>
-    <p>{{ this.title }} <a download="{{ this.snippet | url }}" class='recipe-download' href="{{ this.snippet | url }}">(.py)</a></p>
+    {% if this.image.endswith('.png') %}
+        {% set imageObj = record.attachments.get(this.image) %}
+        {{ renderRasterImage(this.image, imageObj, 'recipe-image') }}
+    <div class='recipe-with-image'>
+    {% elif this.image.endswith('.svg') %}
+        {{ renderSvgImage(this.image, 'recipe-image') }}
+    <div class='recipe-with-image'>
+    {% else %}
+    <div class='recipe-without-image'>
+    {% endif %}
+
+        <div class='recipe-title'>
+            <p>{{ this.title }} <a download="{{ this.snippet | url }}" class='recipe-download' href="{{ this.snippet | url }}">(.py)</a></p>
+        </div>
+        <pre data-src='{{ this.snippet|url }}' class='recipe-code'></pre>
+    </div>
+
 </div>
-<pre data-src='{{ this.snippet|url }}' class='recipe-code'></pre>

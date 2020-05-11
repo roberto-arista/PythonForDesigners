@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Laica Regular";
   src: url("/static/fonts/LaicaB-Regular.woff2") format("woff2"), url("/static/fonts/LaicaB-Regular.woff") format("woff");
@@ -548,10 +549,9 @@ h2.workbook {
 /* line 139, lib/sass/chapter.scss */
 .recipe-title {
   padding: .38rem 1rem .01rem .75rem;
-  margin-top: .5rem;
 }
 
-/* line 144, lib/sass/chapter.scss */
+/* line 143, lib/sass/chapter.scss */
 .recipe-title p, .ex-number p {
   font-family: "Arnold Regular";
   font-size: .7rem;
@@ -561,56 +561,111 @@ h2.workbook {
   text-transform: lowercase;
 }
 
-/* line 153, lib/sass/chapter.scss */
+/* line 152, lib/sass/chapter.scss */
 .recipe-title p {
   padding-left: 0px;
 }
 
-/* line 157, lib/sass/chapter.scss */
+/* line 156, lib/sass/chapter.scss */
 .recipe-code a:link {
   color: #FFF;
 }
 
-/* line 161, lib/sass/chapter.scss */
+/* line 160, lib/sass/chapter.scss */
+.recipe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: .5rem;
+}
+
+/* line 166, lib/sass/chapter.scss */
+.recipe-without-image, .recipe-with-image  {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+/* line 167, lib/sass/chapter.scss */
+.recipe-with-image {
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  /* line 167, lib/sass/chapter.scss */
+  .recipe-with-image {
+    width: 73%;
+  }
+}
+
+/* line 171, lib/sass/chapter.scss */
+.recipe-without-image {
+  width: 100%;
+}
+
+/* line 173, lib/sass/chapter.scss */
+.recipe-image {
+  margin-left: .5rem;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  width: 33%;
+  height: 33%;
+  -webkit-box-shadow: 0 0.25rem 0.5rem #777;
+          box-shadow: 0 0.25rem 0.5rem #777;
+}
+
+@media (min-width: 900px) {
+  /* line 173, lib/sass/chapter.scss */
+  .recipe-image {
+    width: 25%;
+    height: 25%;
+  }
+}
+
+/* line 188, lib/sass/chapter.scss */
 a.recipe-download {
   color: #FFF;
 }
 
-/* line 162, lib/sass/chapter.scss */
+/* line 189, lib/sass/chapter.scss */
 a:hover.recipe-download {
   color: #FFF;
   border-bottom: 1px solid #FFF;
 }
 
-/* line 166, lib/sass/chapter.scss */
+/* line 193, lib/sass/chapter.scss */
 a:visited.recipe-download {
   color: #FFF;
 }
 
-/* line 167, lib/sass/chapter.scss */
+/* line 194, lib/sass/chapter.scss */
 a:visited:hover.recipe-download {
   color: #FFF;
   border-bottom: 1px solid #FFF;
 }
 
-/* line 172, lib/sass/chapter.scss */
+/* line 199, lib/sass/chapter.scss */
 pre.recipe-code {
+  width: 100%;
   border-top: none;
   margin-bottom: 1rem;
 }
 
-/* line 177, lib/sass/chapter.scss */
+/* line 205, lib/sass/chapter.scss */
 .ex-assignment {
   padding: .25rem 1rem .5rem 1rem;
   background-color: #E2F4FF;
 }
 
-/* line 182, lib/sass/chapter.scss */
+/* line 210, lib/sass/chapter.scss */
 .ex-assignment p, .ex-assignment ul, .ex-number p {
   padding-left: 0;
 }
 
-/* line 186, lib/sass/chapter.scss */
+/* line 214, lib/sass/chapter.scss */
 .ex-solution {
   font-family: "Arnold Regular";
   font-size: .7rem;
@@ -621,34 +676,34 @@ pre.recipe-code {
   text-decoration: none;
 }
 
-/* line 196, lib/sass/chapter.scss */
+/* line 224, lib/sass/chapter.scss */
 .ex-solution a {
   color: #1858A8;
 }
 
-/* line 197, lib/sass/chapter.scss */
+/* line 225, lib/sass/chapter.scss */
 .ex-solution a:hover {
   color: #1858A8;
   border-bottom: 1px solid #1858A8;
 }
 
-/* line 198, lib/sass/chapter.scss */
+/* line 226, lib/sass/chapter.scss */
 .ex-solution a:active {
   color: #1858A8;
 }
 
-/* line 199, lib/sass/chapter.scss */
+/* line 227, lib/sass/chapter.scss */
 .ex-solution a:visited {
   color: #1858A8;
 }
 
-/* line 201, lib/sass/chapter.scss */
+/* line 229, lib/sass/chapter.scss */
 .ex-image {
   margin-bottom: .5rem;
 }
 
 @media (min-width: 1200px) {
-  /* line 201, lib/sass/chapter.scss */
+  /* line 229, lib/sass/chapter.scss */
   .ex-image {
     width: 25%;
     height: 25%;
@@ -656,7 +711,57 @@ pre.recipe-code {
   }
 }
 
-/* line 211, lib/sass/chapter.scss */
+/* line 239, lib/sass/chapter.scss */
+.snippet-download-wrapper {
+  margin-top: .5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+/* line 246, lib/sass/chapter.scss */
+.snippet-download {
+  width: 1.8rem;
+  text-align: center;
+  background-color: #1858A8;
+  margin-bottom: 0;
+  padding: .1rem 0 .1rem 0;
+  font-family: "Arnold Regular";
+  font-size: .65rem;
+  line-height: .7rem;
+  color: #FFF;
+  font-variant-caps: small-caps;
+  text-transform: lowercase;
+}
+
+/* line 261, lib/sass/chapter.scss */
+.snippet-download a {
+  color: #FFF;
+}
+
+/* line 262, lib/sass/chapter.scss */
+.snippet-download a:hover {
+  color: #FFF;
+  border-bottom: 1px solid #FFF;
+}
+
+/* line 266, lib/sass/chapter.scss */
+.snippet-download a:visited {
+  color: #FFF;
+}
+
+/* line 267, lib/sass/chapter.scss */
+.snippet-download a:visited:hover {
+  color: #FFF;
+  border-bottom: 1px solid #FFF;
+}
+
+/* line 272, lib/sass/chapter.scss */
 #pagination {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -669,7 +774,7 @@ pre.recipe-code {
   margin-top: 1rem;
 }
 
-/* line 219, lib/sass/chapter.scss */
+/* line 280, lib/sass/chapter.scss */
 #prevButton, #nextButton {
   font-family: "Arnold Regular", Monaco, monospace;
   text-align: center;
@@ -677,13 +782,13 @@ pre.recipe-code {
 }
 
 @media (min-width: 1200px) {
-  /* line 225, lib/sass/chapter.scss */
+  /* line 286, lib/sass/chapter.scss */
   p#prevButton, p#nextButton {
     padding-left: 0;
   }
 }
 
-/* line 229, lib/sass/chapter.scss */
+/* line 290, lib/sass/chapter.scss */
 table {
   border-collapse: collapse;
   margin-bottom: .5em;
@@ -691,7 +796,7 @@ table {
   width: 100%;
 }
 
-/* line 237, lib/sass/chapter.scss */
+/* line 298, lib/sass/chapter.scss */
 th {
   text-align: left;
   border-bottom: solid 1px #F36;
@@ -699,7 +804,7 @@ th {
   padding: .25em;
 }
 
-/* line 246, lib/sass/chapter.scss */
+/* line 307, lib/sass/chapter.scss */
 td {
   text-align: left;
   border-bottom: solid 1px #F36;
