@@ -122,3 +122,29 @@ title: lissajous
 snippet: lissajous.py
 ----
 image: lissajous.png
+#### section-title ####
+content: Drawing
+----
+class: cookbook
+#### recipe ####
+title: Draw a UFO Glyph Object
+----
+snippet: drawGlyph.py
+----
+image: 
+#### recipe ####
+title: Draw a regular polygon
+----
+snippet: regularPolygon.py
+----
+image: regularPolygon.png
+#### section-title ####
+content: Text
+----
+class: cookbook
+#### recipe ####
+title: retrieve name from unicode database
+----
+snippet: unicodeName.py
+----
+image: 
