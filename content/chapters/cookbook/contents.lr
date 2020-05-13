@@ -19,6 +19,18 @@ content: Input/Output
 ----
 class: cookbook
 #### recipe ####
+title: Load CSV table
+----
+snippet: loadTable.py
+----
+image: 
+#### recipe ####
+title: Load CSV table with keys
+----
+snippet: loadTableWithKeys.py
+----
+image: 
+#### recipe ####
 title: Collecting files from a folder
 ----
 snippet: collectFilesPaths.py
@@ -117,11 +129,53 @@ content: Curves
 ----
 class: cookbook
 #### recipe ####
+title: oval
+----
+snippet: oval.py
+----
+image: oval.png
+#### recipe ####
 title: lissajous
 ----
 snippet: lissajous.py
 ----
 image: lissajous.png
+#### recipe ####
+title: welch
+----
+snippet: welch.py
+----
+image: welch.png
+#### recipe ####
+title: bartlett
+----
+snippet: bartlett.py
+----
+image: bartlett.png
+#### recipe ####
+title: sine
+----
+snippet: sine.py
+----
+image: sine.png
+#### recipe ####
+title: cosine
+----
+snippet: cosine.py
+----
+image: cosine.png
+#### recipe ####
+title: square root
+----
+snippet: sqRoot.py
+----
+image: sqRoot.png
+#### recipe ####
+title: quadratic
+----
+snippet: quadratic.py
+----
+image: quadratic.png
 #### section-title ####
 content: Drawing
 ----

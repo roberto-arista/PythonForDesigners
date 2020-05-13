@@ -13,4 +13,7 @@ def regularPolygon(sides, radius):
 if __name__ == '__main__':
     newPage(500, 500)
     translate(width()/2, height()/2)
+    stroke(0)
+    fill(None)
+    strokeWidth(10)
     regularPolygon(sides=8, radius=200)
