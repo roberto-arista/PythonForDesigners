@@ -31,6 +31,24 @@ snippet: loadTableWithKeys.py
 ----
 image: 
 #### recipe ####
+title: Write csv table
+----
+snippet: writeTable.py
+----
+image: 
+#### recipe ####
+title: read lines from text file
+----
+snippet: readStrings.py
+----
+image: 
+#### recipe ####
+title: write lines to text file
+----
+snippet: writeStrings.py
+----
+image: 
+#### recipe ####
 title: Collecting files from a folder
 ----
 snippet: collectFilesPaths.py
