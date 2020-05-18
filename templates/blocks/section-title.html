@@ -1,5 +1,7 @@
 {% if this.class == "workbook" %}
     <h2 class="workbook">{{ this.content }}</h2>
+{% elif this.class == "cookbook" %}
+    <h2 class="cookbook">{{ this.content }}</h2>
 {% else %}
     <h2>{{ this.content }}</h2>
 {% endif %}
