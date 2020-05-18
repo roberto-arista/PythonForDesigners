@@ -1,0 +1,95 @@
+/* line 4, lib/sass/tutorials.scss */
+#welcome {
+  background-color: #FFEDED;
+  margin-top: 2rem;
+}
+
+@media (min-width: 600px) {
+  /* line 4, lib/sass/tutorials.scss */
+  #welcome {
+    margin-top: 2rem;
+  }
+}
+
+@media (min-width: 900px) {
+  /* line 4, lib/sass/tutorials.scss */
+  #welcome {
+    margin-top: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* line 4, lib/sass/tutorials.scss */
+  #welcome {
+    margin-top: 2rem;
+  }
+}
+
+/* line 19, lib/sass/tutorials.scss */
+#welcome > div {
+  padding: 1rem 0;
+}
+
+@media (min-width: 900px) {
+  /* line 19, lib/sass/tutorials.scss */
+  #welcome > div {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* line 28, lib/sass/tutorials.scss */
+#welcome h1 {
+  color: #F36;
+  padding-bottom: .5rem;
+}
+
+/* line 33, lib/sass/tutorials.scss */
+#welcome p {
+  line-height: 1.25rem;
+  font-size: 1rem;
+}
+
+@media (min-width: 1200px) {
+  /* line 39, lib/sass/tutorials.scss */
+  #tutorial-list h2 {
+    padding-left: 4rem;
+  }
+  /* line 40, lib/sass/tutorials.scss */
+  #tutorial-list p {
+    padding: 0 5rem 0 4rem;
+  }
+}
+
+/* line 43, lib/sass/tutorials.scss */
+.tutorial-li {
+  margin: 1.5rem 0;
+}
+
+/* line 47, lib/sass/tutorials.scss */
+.tutorial-li img {
+  width: 100%;
+}
+
+/* line 51, lib/sass/tutorials.scss */
+.tutorial-li h2 {
+  line-height: 1.5rem;
+  margin-top: .5rem;
+  font-size: 1.2rem;
+  font-family: "Gig Regular", Georgia, serif;
+  color: #F36;
+}
+
+@media (min-width: 900px) {
+  /* line 59, lib/sass/tutorials.scss */
+  .abstract {
+    padding-right: 5rem;
+  }
+}
+
+/* line 64, lib/sass/tutorials.scss */
+.read-more {
+  font-family: "Arnold Regular", Monaco, monospace;
+  line-height: 1rem;
+  font-size: .72rem;
+}

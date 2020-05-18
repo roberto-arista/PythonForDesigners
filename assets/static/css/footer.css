@@ -105,4 +105,5 @@ footer a:visited:hover {
 /* line 85, lib/sass/footer.scss */
 img#license {
   padding-top: .5rem;
+  height: 2rem;
 }

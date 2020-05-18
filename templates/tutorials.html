@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% from 'macros.html' import renderRasterImage %}
+
+{% block styles %}
+  <link rel="stylesheet" href="{{ '/static/css/tutorials.css'|asseturl }}" >
+{% endblock %}
+
+{% block title %}Tutorials{% endblock %}
+{% block openGraph %}{% include "openGraph.html" %}{% endblock %}
+
+{% block content %}
+
+    <section id="welcome">
+        <div class='basic-container'>
+            <h1>{{ this.title }}</h1>
+            <p>{{ this.intro }}</p>
+        </div>
+    </section>
+
+    <section id='tutorial-list'>
+
+        <div class="basic-container">
+
+            {% for tutorial in site.get('/tutorials').children.order_by('sort_key') %}
+                <div class='tutorial-li'>
+                    {% set imageObj = tutorial.attachments.get(tutorial.visual_abstract) %}
+                    {{ renderRasterImage(tutorial.visual_abstract, imageObj, '') }}
+                    <!-- <img src="{{ tutorial.path | url }}{{ tutorial.visual_abstract }}"> -->
+                    <h2><a href="{{ tutorial.path | url }}">{{ tutorial.title }}</a></h2>
+                    <p class='abstract'>{{ tutorial.abstract }}</p>
+                    <p class='read-more'><a href="{{ tutorial.path | url }}">>>> read()</a></p>
+                </div>
+            {% endfor %}
+
+        </div>
+
+    </section>
+
+{% endblock %}

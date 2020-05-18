@@ -1,0 +1,189 @@
+_model: chapter
+---
+title: Basic Data Types
+---
+abstract: What values are made of? It is time to answer some existential questions
+---
+sort_key: 6
+---
+visual_abstract: abstract-5.svg
+---
+og_image: abstract-5.png
+---
+body:
+
+#### text-block ####
+content: What is data? Data is a Latin word currently used in English. It is the plural of datum. We can consider a datum as an atom of a bigger pool of information. The smallest piece, the minimum value we can use to build a bigger collection of quantities and relations. Data are our bricks in the act of coding. The size of a rectangle, the amount of people in a country, an email address, the position of the mouse pointer on the screen, the location of a file on a server. Since there are different kinds of data, Python provides a series of data types. Types that indicate quantities (<code>int</code>, <code>float</code>), if a condition is true or not (<code>bool</code>), pieces of text (<code>str</code>), ordered collections of other data (<code>list</code>), data for the absence of data (<code>None</code>), unsorted collections (<code>set</code>, <code>dict</code>) and so on.
+----
+#### image ####
+name: datum.svg
+----
+class: large-image
+----
+#### text-block ####
+content: Python is a dynamically typed language, which means that the programmer does not have to declare in advance the data type is associated with an identifier. An identifier can be associated with any data type and then reassigned to another one. If you have experience with Processing/Java you have probably noticed that this is not the case there. This is because Java is statically typed. In the Python world, values are linked to a specific type, identifiers are not.
+----
+#### image ####
+name: datum_label.svg
+----
+class: large-image
+----
+#### text-block ####
+content: Before our journey into data types, we have to introduce the notion of mutability and its opposite, immutability. A data type is immutable if it has a fixed value that cannot be changed after its creation. On the contrary, a mutable object can be updated along the way. Think of a mutable object as a vase made of clay before being fired in the oven. You can still change its shape. An immutable object instead is already fired and therefore it is fixed in a permanent shape. If you want a different shape, you have to create a new vase.
+----
+#### image ####
+name: vases.svg
+----
+class: large-image
+----
+#### text-block ####
+content: Programming languages have the crucial ability to change the values assigned to variables during the execution of a program. Take into account that an identifier cannot be assigned to two different values at the same time. Consider parsing a spreadsheet. A spreadsheet is a table filled with numbers and text. It is a very simple database and you will use it quite often. If you need to read the data within the spreadsheet, you will probably start line by line. During the iteration of the lines of the table it would make sense to have an identifier being reassigned each time to only one line in order to load and then visualize data.
+----
+#### image ####
+name: table.svg
+----
+class: large-image
+----
+#### text-block ####
+content: A programmer can establish an alias by assigning another identifier to an existing object.
+----
+#### code-example ####
+snippet: 01.py
+----
+#### image ####
+name: int20.svg
+----
+class: large-image
+----
+#### text-block ####
+content: This means that both names refer to the same object and they can be used to access the object. If the object supports behaviors that can affect its state, meaning it is mutable, both names will reflect these changes. However, if one of the names is reassigned to a new value using a subsequent assignment statement, this will not affect the aliased object, it will only break the link with the alias. Consider this example:
+----
+#### code-example ####
+snippet: 02.py
+----
+#### image ####
+name: int2030.svg
+----
+class: large-image
+----
+#### text-block ####
+content: Let’s observe line 6. The execution of this command begins with the evaluation of the expression on the right side of the assignment operator <code>=</code>. This expression is evaluated on the basis of the existing association of the name rectHeight. Since <code>rectHeight</code> is <code>20</code>, <code>rectHeight + 10</code> is <code>30</code>. Integer values are immutable, so a new value (<code>30</code>) is created and associated, according to the assignment operator to the name <code>rectHeight</code>. We will see an aliases example of a mutable object in a few paragraphs. We are now ready to dive into Python data types.
+----
+#### section-title ####
+content: Boolean Type
+----
+class: default
+----
+#### image ####
+name: boolean.svg
+----
+class: large-image
+----
+#### text-block ####
+content: Boolean data types are used to manipulate logical values and the only two possible instances they can refer to are <code>True</code> and <code>False</code>. These are literal, not strings! In fact, they are part of the reserved keywords list. Python provides a built-in function to create boolean value starting from non boolean ones, it is <code>bool()</code>.
+
+A number is converted to <code>False</code> if it’s equal to zero, <code>True</code> if it’s different from zero.
+Sequences or other containers are translated to <code>False</code> if empty, to <code>True</code> if they have objects inside. Boolean type is mostly used to describe a condition: is it black? is it a digit? did I reach the door? do I have still space on the page? and so on. This condition is then used in combination with control structures as <code>if</code> or <code>while</code>.
+----
+#### section-title ####
+content: Numbers (Integers and Floating-point)
+----
+class: default
+----
+#### text-block ####
+content: Python provides two main types for describing quantities, integers and floating-points. Aren’t numbers all the same? Well, yes and no. In programming there are several situations where you need precision, for example while scaling a drawing. In other cases, you cannot allow to describe a quantity using a fraction of a whole number, for example when you want to describe an iterative process. Can you repeat an action three and a half times? It could make some sense in natural language, because of the level of ambiguity allowed, but it certainly does not make sense to our Python interpreter.
+----
+#### image ####
+name: int_float.svg
+----
+class: large-image
+----
+#### text-block ####
+content: In Python, an integer object is designated to represent whole numbers. The literal declaration of such value is a digit with an optional polarity sign: <code>2</code>, <code>+45</code>, <code>-12</code>.
+Sometimes it can be handy to describe an integer using a different base, such as binary, octal or hexadecimal. This can be done using <code>0</code> as a prefix and a character representing the base
+----
+#### table ####
+path: 01.csv
+----
+headers: 0
+----
+#### image ####
+name: binary.svg
+----
+class: large-image
+----
+#### image ####
+name: octal.svg
+----
+class: large-image
+----
+#### image ####
+name: standard_base.svg
+----
+class: large-image
+----
+#### image ####
+name: hexadecimal.svg
+----
+class: large-image
+----
+#### text-block ####
+content: These expressions represent the same quantity with different notational systems.
+
+Python provides a function to convert a value into an integer: <code>int()</code>.
+
+These are the behaviours you should expect:
+
+----
+#### text-block ####
+content: + if a floating-point is provided as argument, the interpreter will truncate the point and any following digit. For instance, <code>3.99</code> and <code>3.1</code> will both become <code>3</code>.
++ if a string is provided as argument, the interpreter will try to parse it and transform it to an integer value. The output of <code>int('-3')</code> will be <code>-3</code>. Something like <code>int('hello')</code> will raise a <code>ValueError</code>.
+----
+#### text-block ####
+content: By default <code>int()</code> uses a 10 base for the conversion. If you need a different base you can indicate a second optional argument, like
+----
+#### code-example ####
+snippet: 03.py
+----
+#### exercise ####
+assignment: How would you represent 30₁₀ using base 2, 8 and 16? Try to use the same visual conversion method from the diagrams above
+----
+#### text-block ####
+content: The <code>float</code> object in Python is used to represent a positive or negative decimal number. Its literal declaration is made of a polarity sign (optional), digits, and a trailing point optionally followed by other digits. So, both <code>-3.14</code> and <code>3.</code> can be floating-point numbers.
+
+Another way to declare a floating point number is to use a scientific notation. The Python equivalent for <code>6.02x10²³</code> is <code>6.02e23</code>.
+
+Python provides a function to obtain a floating-point value from an existing object: <code>float()</code>. These are the behaviours you should expect:
++ if the argument is an integer it will be converted to floating-point
++ if the argument is a string the interpreter will try to parse it and transform it to a floating-point value. You can expect <code>float('-3.14')</code> to be transformed to <code>-3.14</code>. Otherwise, if the interpreter encounters <code>float('-3,14')</code> or <code>float('world')</code>, it will raise a <code>ValueError</code>.
+----
+#### section-title ####
+content: None Type
+----
+class: default
+----
+#### text-block ####
+content: In Python the reserved keyword <code>None</code> allows to express the absence of data. It can be used in various situations:
+
+----
+#### text-block ####
+content: + creating an identifier without assigning any specific data to it. Something like saying “I am going to use this, I just do not know how yet”
++ untying an identifier from a value without assigning it to anything else
++ using <code>None</code> into a conditional statement to check whether an identifier is tied to a value or not.
+----
+#### image ####
+name: none.svg
+----
+class: large-image
+----
+#### text-block ####
+content: Note that if the call of a non-fruitful function (meaning that it doesn’t include neither <code>return</code> nor <code>yield</code> statements in its body) is assigned to an identifier, the Python interpreter will not raise any error, instead it will assign <code>None</code> value to the identifier. For example:
+----
+#### code-example ####
+snippet: 04.py
+----
+#### text-block ####
+content: The value associated with <code>myValue</code> will be <code>None</code> because <code>interpolateValue</code> has no return statement.
+----
+---
+hasTocNumber: yes

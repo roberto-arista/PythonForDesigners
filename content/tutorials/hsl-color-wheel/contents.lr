@@ -1,0 +1,162 @@
+_model: tutorial
+---
+title: HSL Color Wheel
+---
+sort_key: 1
+---
+og_image: visual-abstract-hsl.png
+---
+abstract: Hue, Saturation and Luminosity are qualities we often use to describe colors in our daily life. Let's represent this colors model using the `colorsys` Python module and the Drawbot `arc()` function
+---
+visual_abstract: visual-abstract-hsl.png
+---
+body:
+
+#### text-block ####
+content: This tutorial will guide you through the details of an alternative visualization of the RGB color model, called [Hue Saturation and Luminosity](https://en.wikipedia.org/wiki/HSL_and_HSV). It is widely used in graphics applications, and differently from RGB, it is more tied to our perception. HSL are qualities we often use to describe color in our daily life. RGB instead is more of a technical description of how color is generated on a screen – and stored in memory.
+#### image ####
+name: cylinder.png
+----
+class: small_image
+#### text-block ####
+content: A peculiar feature of the HSL model is the way the hue is distributed in space. In fact, the hue has a radial organization, colors of each hue are arranged in a radial slice. Instead saturation and luminosity are linear dimensions. We can represent the sum of two linear dimensions and an angular dimension using a cylinder (with a longitudinal hole).
+#### text-block ####
+content: We can assume that values belonging to the linear dimensions fluctuate between 0 and 1, while the angular dimension – hue – moves across 0 and 360. This assumption does not come up from a technical need – in fact we are going to use floating points from 0 to 1 for hue too – but I believe it will make our code more accessible. Here you can see how we are going to create our hue factor from an iteration over a full circle angle, run the script and check the console output
+#### code-example ####
+snippet: hueRange.py
+----
+image: 
+----
+diagram: 
+#### text-block ####
+content: Consider also that the two linear dimensions – saturation and luminosity – can be swapped in the HSL 3D model, so our program should be able to acknowledge it. The following cylinders are both valid representations of the HSL color model.
+#### image ####
+name: cd-roms.png
+----
+class: large_image
+#### text-block ####
+content: But, our visualization reference image is a bi-dimensional disc, which relation does it have with these cylinders? The program will cut the cylinder like a saw, and then show the face where the cut was made. This procedure will require an independent variable, to let the user decide where to cut the cylinder.
+#### image ####
+name: cd-rom-saw.png
+----
+class: large_image
+#### text-block ####
+content: Let’s start to assemble some code. First of all, we need to convert the HSL value into RGB, because Drawbot can only accept RGB or CMYK values. The `colorsys` module from the standard library provides the perfect function for this need `hls_to_rgb(h, l, s)`.
+#### code-example ####
+snippet: hls_func.py
+----
+image: 
+----
+diagram: 
+#### text-block ####
+content: `hls_to_rgb()` return a tuple with three floating points that we can use directly into the Drawbot fill function. This operation can be achived in two ways, we can pick up each single element using the accessing syntax for sequences
+#### code-example ####
+snippet: tuple_access.py
+----
+image: 
+----
+diagram: 
+#### text-block ####
+content: or we can use the [iterable unpacking](https://www.python.org/dev/peps/pep-3132/)
+#### code-example ####
+snippet: iterable_unpacking.py
+----
+image: 
+----
+diagram: 
+#### text-block ####
+content: Now that we know how to pair `hls_to_rgb()` with the Drawbot drawing functions, let’s try to traverse separately the three different dimensions of the HSL color model. The angular dimension – hue – can be showed through a ring of ovals filled with different hues
+#### code-example ####
+snippet: hue_traverse.py
+----
+image: 
+----
+diagram: 
+#### text-block ####
+content: The linear dimensions – saturation and luminosity – can be presented using a series of stripes. Notice the conditional construct inside the for loop, it is already possible for the user to switch between saturation and luminosity.
+#### code-example ####
+snippet: linear_traverse.py
+----
+image: 
+----
+diagram: 
+#### text-block ####
+content: We could also show them at once, using a matrix visual structure
+#### code-example ####
+snippet: sat+lum.py
+----
+image: 
+----
+diagram: 
+#### text-block ####
+content: If we line up the three outputs of the previous script using the 0°, 120° and 240° hue angle, we will get three saturation/luminosity tables for the RGB channels:  red, green and blue.
+#### image ####
+name: matrix-sat-lum.png
+----
+class: large_image
+#### image ####
+name: radial.png
+----
+class: small_image
+#### text-block ####
+content: How can we mix the linear dimensions with the angular dimension? A radial visual structure can serve the purpose. We can make it using a nested for loop – from the matrix example – combined with the ring of ovals. In this example each ring represents a different luminosity value while each slice of ovals represents a different hue value. Saturation is constant. Here follows the code used to generate this image.
+#### code-example ####
+snippet: radial.py
+----
+image: 
+----
+diagram: 
+#### image ####
+name: detail.png
+----
+class: small_image
+#### text-block ####
+content: We are almost there, but we still have to figure out how to plot the sequence of rings from the initial example. We cannot use a stack of circles with increasing radius, because we cannot fill the circles with multiple colors. But, we can slice the circles in multiple – very small – arcs. If we zoom in the initial example, we can see how to different paths are arranged 🔎
+#### text-block ####
+content: Drawbot provides a group of [functions](https://www.drawbot.com/content/shapes/drawingPath.html) to draw Bézier paths on a canvas. In this group stands out the arc function, the exact tool we need to solve this issue. The `arc()` function needs to be embraced by `newPath()` and `drawPath()` functions in order to be placed on the canvas. Its arguments are the center point and radius of the circle to which the arc belongs, plus the angles defining the arc range and the drawing direction – clockwise or anticlockwise –.
+#### image ####
+name: arcs.png
+----
+class: large_image
+#### text-block ####
+content: If we combine many arcs together with a thick stroke, the result on the canvas will resemble a flat donut, a ring with many arcs colored with different hues. If we substitute the ovals from one of the examples above, we can obtain the multi-ring structure from the initial example, we just have to ensure a hole for the donut.
+#### image ####
+name: donuts.png
+----
+class: large_image
+#### code-example ####
+snippet: donut.py
+----
+image: 
+----
+diagram: 
+#### text-block ####
+content: At this point we only miss the captions. They should be positioned into the outer for loop, after each slice with the same has been placed on the canvas. Considered the need for a matrix transformation – in order to rotate the text –, it is essential to encapsulate this part of the code into a `savedState()` context
+#### code-example ####
+snippet: multi-ring-with-captions.py
+----
+image: 
+----
+diagram: 
+#### text-block ####
+content: Notice also the way I organized the styles of the different elements, the arcs and the captions. I wrote two separate functions where I grouped the properties functions (`font()`, `fill()`, `stroke()`, `strokeWidth()`) and I defined some default values into the function interface. In this way you can pour some logic without prohibiting a different application.
+#### text-block ####
+content: At this point, the program is fully working, but there are still a few things that can be improved. They are optional. I like my code, even simple scripts like this, to be as modular as possible, which means that I would like to encapsulate the HSL donut into a function in order to be able to import it from another python script quite easily. In this way I am also forced to be very accurate on handling the function namespace. Def statement on the rescue, than any function call should be wrapped into a `if __name__ == "__main__":` conditional construct. In this way the donut will be drawn only if the module is explicitly run, not if imported. Last but not least, be sure that the script file has a name following the identifier rules.
+#### text-block ####
+content: Furthermore, I like to write – and often run – my scripts from outside the drawbot app, in order to take advantage of IDE features as code linting, multiple cursors, and other stuff programmers love. For this reason, I have to explicitly import any drawbot function I need at the top of the script. Also, the drawing should be embrace by `newDrawing()` and `endDrawing()` functions in order to initiate the drawing stack and then to clean it. Saving an image, especially if launching the script from the terminal is advised, otherwise you won’t have any visual feedback. So, here you can find the final result
+#### code-example ####
+snippet: HSLdonut.py
+----
+image: 
+----
+diagram: 
+#### text-block ####
+content: Are you curious about how I made the colored cylinders illustrations? I imported the `hslDonut()` function from another module and called it multiple times with the following script:
+#### code-example ####
+snippet: axonometry.py
+----
+image: 
+----
+diagram: 
+---
+hasTocNumber: yes

@@ -1,0 +1,205 @@
+_model: chapter
+---
+title: Transform Strings
+---
+abstract: Efficiently transforming values into strings is essential for proper typesetting
+---
+visual_abstract: abstract-9.svg
+---
+og_image: abstract-9.png
+---
+sort_key: 10
+---
+body:
+
+#### section-title ####
+content: Formatting Strings
+----
+class: default
+----
+#### text-block ####
+content: Python supports multiple ways to format strings. With formatting I mean building new strings out of different kind of values.  The most commons are the old school <code>%</code>-formatting, the <code>.format()</code> method and the Python3 novelty <code>f-strings</code>. In this manual, we will look into the latest way, given its minimal syntax and high flexibility.
+
+Formatting strings with <code>f-string</code> is as easy as defining a standard string literal, look at this example:
+----
+#### code-example ####
+snippet: 01.py
+----
+#### text-block ####
+content: Moreover, <code>f-strings</code> allow to include full Python expressions like:
+----
+#### code-example ####
+snippet: 02.py
+----
+#### text-block ####
+content: Don't forget to prefix the f-string with an <code>'f'</code> or <code>'F'</code> otherwise it would be considered just a regular string, look:
+----
+#### code-example ####
+snippet: 03.py
+----
+#### text-block ####
+content: As you may have already noticed, the expression into the 'f-string' should be surrounded by braces:
+----
+#### code-example ####
+snippet: 04.py
+----
+#### text-block ####
+content: Otherwise, the expression is not evaluated.
+
+<code>f-strings</code> and <code>.format()</code> share the same format specifier mini-language. Which can be synthesized in the following way:
+----
+#### code-example ####
+snippet: 05.py
+----
+#### text-block ####
+content: This mini-language allows us to precisely instruct how to format the data into the string adding some extra information after a colon. For example:
+----
+#### code-example ####
+snippet: 06.py
+----
+#### text-block ####
+content: This step is optional, so if we omit any extra instruction, Python will use a standard conversion intent.
+----
+#### code-example ####
+snippet: 07.py
+----
+#### text-block ####
+content: <code>[width]</code> provides instructions concerning padding, for example allowing the appending of extra characters to the right
+----
+#### code-example ####
+snippet: 08.py
+----
+#### text-block ####
+content: or to the left
+----
+#### code-example ####
+snippet: 09.py
+----
+#### text-block ####
+content: In the cases above, white spaces will be added until the length of 10 characters is reached.
+
+<code>[width]</code> also allows to center a string within a certain amount of characters:
+----
+#### code-example ####
+snippet: 10.py
+----
+#### text-block ####
+content: You can easily define which character should be used by the interpreter:
+----
+#### code-example ####
+snippet: 11.py
+----
+#### code-example ####
+snippet: 12.py
+----
+#### code-example ####
+snippet: 13.py
+----
+#### image ####
+name: u00c0.svg
+----
+class: large-image
+----
+#### text-block ####
+content: 
+If no instruction for <code>[type]</code> is defined, Python will use the basic string representation for the value provided. For example, integers will be represented using 10 base notation, but it is conveniently possible to specify a different base adding <code>[type]</code>. What follows is a list of the possible conversion options for integer values.
+----
+#### table ####
+path: 01.csv
+----
+headers: 1
+----
+#### text-block ####
+content: Consider the following examples:
+----
+#### code-example ####
+snippet: 14.py
+----
+#### text-block ####
+content: <code>242</code> is converted to <code>11110010</code>. The binary representation is then centered in a string of length 12 using <code>'.'</code> as placeholder
+----
+#### code-example ####
+snippet: 15.py
+----
+#### text-block ####
+content: 65 in the Unicode mapping points to the uppercase 'A' which is then joined to the string literal
+----
+#### code-example ####
+snippet: 16.py
+----
+#### text-block ####
+content: The plus in front of the string’s width forces the interpreter to put a sign in front of the decimal integer even if positive. Note that the plus can be applied to any numerical data conversion. 200 is displayed in base 10, and some white spaces are put in front of the sign until the string reaches length 6.
+----
+#### code-example ####
+snippet: 17.py
+----
+#### text-block ####
+content: converts <code>3792₁₀</code> to <code>17B₁₆</code>, using uppercase letters. Then it adds an extra <code>0</code> character in front of the hexadecimal representation to reach length 4. Finally, it is linked to the string literal <code>'U+'</code>.
+
+Now, let’s look at a selection of options for floating-point numbers
+----
+#### table ####
+path: 02.csv
+----
+headers: 1
+----
+#### text-block ####
+content: Consider the following examples:
+----
+#### code-example ####
+snippet: 18.py
+----
+#### text-block ####
+content: <code>'f'</code> in combination with <code>'.2'</code> will output a floating point representation which precision is limited to 2 digits after the dot
+----
+#### code-example ####
+snippet: 19.py
+----
+#### text-block ####
+content: This conversion method could be useful when typesetting languages different from English. Check the Python standard <code>locale</code> module documentation.
+----
+#### code-example ####
+snippet: 20.py
+----
+#### text-block ####
+content: The <code>'%'</code> conversion type will convert the floating point to percentage. <code>'.0'</code> will truncate the decimal information of the percentage (<code>45%</code> instead of <code>45.000000%</code>).
+----
+#### section-title ####
+content: Useful String Methods
+----
+class: default
+----
+#### text-block ####
+content: Python provides a number of specific methods to transform text data. Remember that strings are immutable, so they are not manipulated “in place”. The following methods generate a brand new string that you have to assign to an identifier if you need to use their output afterwards.
+----
+#### table ####
+path: 03.csv
+----
+headers: 1
+----
+#### text-block ####
+content: Python provides a number of specific methods to inspect text data. These methods return a boolean value, in fact their identifier describes a string condition
+----
+#### table ####
+path: 04.csv
+----
+headers: 1
+----
+#### text-block ####
+content: You can find correspondences of a substring into a string using the following methods:
+----
+#### table ####
+path: 05.csv
+----
+headers: 1
+----
+#### text-block ####
+content: Or, you can generate new strings (or list of strings) using the following common methods:
+----
+#### table ####
+path: 06.csv
+----
+headers: 1
+----
+---
+hasTocNumber: yes

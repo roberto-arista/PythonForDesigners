@@ -1,0 +1,240 @@
+title: Cookbook
+---
+abstract: A collection of handy Python super short recipes 🍳
+---
+og_image: fakeVisualAbstract.png
+---
+sort_key: 13
+---
+hasTocNumber: yes
+---
+_hidden: no
+---
+visual_abstract: abstract-cookbook.svg
+---
+body:
+
+#### section-title ####
+content: Input/Output
+----
+class: cookbook
+#### recipe ####
+title: Load CSV table
+----
+snippet: loadTable.py
+----
+image: 
+#### recipe ####
+title: Load CSV table with keys
+----
+snippet: loadTableWithKeys.py
+----
+image: 
+#### recipe ####
+title: Write csv table
+----
+snippet: writeTable.py
+----
+image: 
+#### recipe ####
+title: read lines from text file
+----
+snippet: readStrings.py
+----
+image: 
+#### recipe ####
+title: write lines to text file
+----
+snippet: writeStrings.py
+----
+image: 
+#### recipe ####
+title: Collecting files from a folder
+----
+snippet: collectFilesPaths.py
+----
+image: 
+#### recipe ####
+title: Collecting folders from a folder
+----
+snippet: collectSubFolders.py
+----
+image: 
+#### recipe ####
+title: Cleaning a folder
+----
+snippet: cleanFolder.py
+----
+image: 
+#### recipe ####
+title: Deleting file with a specific extension from a folder
+----
+snippet: deleteFilesFromFolder.py
+----
+image: 
+#### section-title ####
+content: Colors
+----
+class: cookbook
+#### recipe ####
+title: Converting hexadecimal to RGB (255)
+----
+snippet: HEX2RGB.py
+----
+image: 
+#### recipe ####
+title: Converting RGB (255) to hexadecimal
+----
+snippet: RGB2HEX.py
+----
+image: 
+#### recipe ####
+title: Interpolating RGB colors
+----
+snippet: lerpRGB.py
+----
+image: 
+#### section-title ####
+content: Calculation
+----
+class: cookbook
+#### recipe ####
+title: Interpolating single value
+----
+snippet: lerp.py
+----
+image: 
+#### recipe ####
+title: Extracting factor from extremes and inner value
+----
+snippet: getFactor.py
+----
+image: 
+#### recipe ####
+title: Mapping value to a new range of extremes
+----
+snippet: remapValue.py
+----
+image: 
+#### section-title ####
+content: UFO Data
+----
+class: cookbook
+#### recipe ####
+title: flat kerning
+----
+snippet: flatKerning.py
+----
+image: 
+#### section-title ####
+content: Geometry
+----
+class: cookbook
+#### recipe ####
+title: Calc angle from two points
+----
+snippet: calcAngle.py
+----
+image: 
+#### recipe ####
+title: Calc distance between two points
+----
+snippet: calcDistance.py
+----
+image: 
+#### recipe ####
+title: closest point
+----
+snippet: closestPoint.py
+----
+image: closestPoint.png
+#### section-title ####
+content: Curves
+----
+class: cookbook
+#### recipe ####
+title: oval
+----
+snippet: oval.py
+----
+image: oval.png
+#### recipe ####
+title: lissajous
+----
+snippet: lissajous.py
+----
+image: lissajous.png
+#### recipe ####
+title: welch
+----
+snippet: welch.py
+----
+image: welch.png
+#### recipe ####
+title: bartlett
+----
+snippet: bartlett.py
+----
+image: bartlett.png
+#### recipe ####
+title: sine
+----
+snippet: sine.py
+----
+image: sine.png
+#### recipe ####
+title: cosine
+----
+snippet: cosine.py
+----
+image: cosine.png
+#### recipe ####
+title: square root
+----
+snippet: sqRoot.py
+----
+image: sqRoot.png
+#### recipe ####
+title: quadratic
+----
+snippet: quadratic.py
+----
+image: quadratic.png
+#### section-title ####
+content: Drawing
+----
+class: cookbook
+#### recipe ####
+title: Draw a UFO Glyph Object
+----
+snippet: drawGlyph.py
+----
+image: 
+#### recipe ####
+title: Draw a regular polygon
+----
+snippet: regularPolygon.py
+----
+image: regularPolygon.png
+#### recipe ####
+title: Draw a grid
+----
+snippet: drawGrid.py
+----
+image: grid.png
+#### recipe ####
+title: background
+----
+snippet: background.py
+----
+image: background.png
+#### section-title ####
+content: Text
+----
+class: cookbook
+#### recipe ####
+title: retrieve name from unicode database
+----
+snippet: unicodeName.py
+----
+image: 
