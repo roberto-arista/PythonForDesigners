@@ -8,13 +8,16 @@
     {% if this.image %}
         {% set imageObj = record.attachments.get(this.image) %}
         {{ renderRasterImage(this.image, imageObj, 'example-image') }}
-        <!-- <img class="example-image" src="{{ this.image }}"> -->
     {% elif this.diagram %}
         {{ renderSvgImage(this.diagram, 'diagram') }}
-        <!-- <img class="diagram" src="{{ this.diagram }}"> -->
     {% endif %}
 
-    <div>
+{% if this.image or this.diagram %}
+    <div class='example-code'>
+{% else %}
+    <div class='example-code-noimage'>
+{% endif %}
+
         <div class='snippet-download-wrapper'>
             <p class='snippet-download'><a download="{{ this.snippet }}" href="{{ this.snippet | url }}">.py</a></p>
         </div>

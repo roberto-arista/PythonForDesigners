@@ -35,7 +35,7 @@ pre[class*="language-"] {
     font-feature-settings: "calt" 0;
 
     text-align: left;
-    white-space: pre;
+    white-space: pre-wrap;
     word-spacing: normal;
     word-break: normal;
     word-wrap: normal;
@@ -76,8 +76,8 @@ pre[class*="language-"] {
     margin: 0;
     box-sizing: border-box;
     margin-bottom: .5rem;
-    overflow: auto;
-    clear: right;
+    overflow: scroll;
+    // clear: right;
     width: 100%;
 
 }
