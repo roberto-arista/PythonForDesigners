@@ -10,7 +10,12 @@
         {% endif %}
     {% endfor %}
 
-    <div class='ex-text'>
+    {% if this.image %}
+        <div class='ex-text'>
+    {% else %}
+        <div class='ex-text-noimage'>
+    {% endif %}
+
         <div class='ex-number'>
             <p>exercise {{ record.sort_key }}.{{ ns.number }}</p>
         </div>
@@ -27,7 +32,6 @@
     {% if this.image %}
         {% set imageObj = record.attachments.get(this.image) %}
         {{ renderRasterImage(this.image, imageObj, 'ex-image') }}
-        <!-- <img class='ex-image' src="{{ this.image }}"> -->
     {% endif %}
 
 </div>

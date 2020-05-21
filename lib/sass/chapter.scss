@@ -59,8 +59,9 @@ li > ul { padding-left: 1rem; }
 }
 
 .diagram {
+    flex-grow: 1;
     @include bigger-than('lg') {
-        width: 73%;
+        width: 60%;
     }
 }
 
@@ -84,13 +85,25 @@ li > ul { padding-left: 1rem; }
 
     @include bigger-than('lg') {
         @include flex();
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: space-between;
     }
 }
 
+.example-code {
+    @include bigger-than('lg') {
+        width: 73%;
+    }
+    margin-left: 1rem;
+}
+
+.example-code-noimage {
+    margin-left: 1rem;
+}
+
 .example-image {
     margin-bottom: .5rem;
+    flex-grow: 1;
 
     @include bigger-than('lg') {
         width: 25%;
@@ -119,7 +132,7 @@ h2.workbook {
 
     @include bigger-than('lg') {
         @include flex();
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: space-between;
     }
 }
@@ -127,6 +140,12 @@ h2.workbook {
 .ex-text {
     @include bigger-than('lg') {
     width: 73%;
+    margin-bottom: 0;
+    }
+}
+
+.ex-text-noimage {
+    @include bigger-than('lg') {
     margin-bottom: 0;
     }
 }

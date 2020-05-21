@@ -432,14 +432,21 @@ li > ul {
   padding-bottom: .5rem;
 }
 
+/* line 61, lib/sass/chapter.scss */
+.diagram {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
 @media (min-width: 1200px) {
   /* line 61, lib/sass/chapter.scss */
   .diagram {
-    width: 73%;
+    width: 60%;
   }
 }
 
-/* line 67, lib/sass/chapter.scss */
+/* line 68, lib/sass/chapter.scss */
 .small-image {
   float: right;
   clear: right;
@@ -449,39 +456,59 @@ li > ul {
 }
 
 @media (min-width: 900px) {
-  /* line 67, lib/sass/chapter.scss */
+  /* line 68, lib/sass/chapter.scss */
   .small-image {
     width: 25%;
     height: 25%;
   }
 }
 
-/* line 82, lib/sass/chapter.scss */
+/* line 83, lib/sass/chapter.scss */
 .example {
   padding: .5rem 0 1rem 0;
 }
 
 @media (min-width: 1200px) {
-  /* line 82, lib/sass/chapter.scss */
+  /* line 83, lib/sass/chapter.scss */
   .example {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
 }
 
-/* line 92, lib/sass/chapter.scss */
-.example-image {
-  margin-bottom: .5rem;
+/* line 93, lib/sass/chapter.scss */
+.example-code {
+  margin-left: 1rem;
 }
 
 @media (min-width: 1200px) {
-  /* line 92, lib/sass/chapter.scss */
+  /* line 93, lib/sass/chapter.scss */
+  .example-code {
+    width: 73%;
+  }
+}
+
+/* line 100, lib/sass/chapter.scss */
+.example-code-noimage {
+  margin-left: 1rem;
+}
+
+/* line 104, lib/sass/chapter.scss */
+.example-image {
+  margin-bottom: .5rem;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+@media (min-width: 1200px) {
+  /* line 104, lib/sass/chapter.scss */
   .example-image {
     width: 25%;
     height: 25%;
@@ -489,38 +516,38 @@ li > ul {
   }
 }
 
-/* line 102, lib/sass/chapter.scss */
+/* line 115, lib/sass/chapter.scss */
 img.example-image, img.ex-image {
   -webkit-box-shadow: 0 0.25rem 0.5rem #777;
           box-shadow: 0 0.25rem 0.5rem #777;
 }
 
-/* line 106, lib/sass/chapter.scss */
+/* line 119, lib/sass/chapter.scss */
 h2.cookbook {
   margin-bottom: 0rem;
   margin-top: 1.25rem;
   font-size: 1.25rem;
 }
 
-/* line 112, lib/sass/chapter.scss */
+/* line 125, lib/sass/chapter.scss */
 h2.workbook {
   color: #1858A8;
   margin-bottom: .25rem;
 }
 
-/* line 117, lib/sass/chapter.scss */
+/* line 130, lib/sass/chapter.scss */
 .exercise {
   margin-bottom: .5rem;
 }
 
 @media (min-width: 1200px) {
-  /* line 117, lib/sass/chapter.scss */
+  /* line 130, lib/sass/chapter.scss */
   .exercise {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -528,30 +555,37 @@ h2.workbook {
 }
 
 @media (min-width: 1200px) {
-  /* line 127, lib/sass/chapter.scss */
+  /* line 140, lib/sass/chapter.scss */
   .ex-text {
     width: 73%;
     margin-bottom: 0;
   }
 }
 
-/* line 134, lib/sass/chapter.scss */
+@media (min-width: 1200px) {
+  /* line 147, lib/sass/chapter.scss */
+  .ex-text-noimage {
+    margin-bottom: 0;
+  }
+}
+
+/* line 153, lib/sass/chapter.scss */
 .ex-number, .recipe-title {
   background-color: #1858A8;
   margin-bottom: 0;
 }
 
-/* line 138, lib/sass/chapter.scss */
+/* line 157, lib/sass/chapter.scss */
 .ex-number {
   padding: .38rem 1rem .01rem 1rem;
 }
 
-/* line 139, lib/sass/chapter.scss */
+/* line 158, lib/sass/chapter.scss */
 .recipe-title {
   padding: .38rem 1rem .01rem .75rem;
 }
 
-/* line 143, lib/sass/chapter.scss */
+/* line 162, lib/sass/chapter.scss */
 .recipe-title p, .ex-number p {
   font-family: "Arnold Regular";
   font-size: .7rem;
@@ -561,17 +595,17 @@ h2.workbook {
   text-transform: lowercase;
 }
 
-/* line 152, lib/sass/chapter.scss */
+/* line 171, lib/sass/chapter.scss */
 .recipe-title p {
   padding-left: 0px;
 }
 
-/* line 156, lib/sass/chapter.scss */
+/* line 175, lib/sass/chapter.scss */
 .recipe-code a:link {
   color: #FFF;
 }
 
-/* line 160, lib/sass/chapter.scss */
+/* line 179, lib/sass/chapter.scss */
 .recipe {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -581,31 +615,31 @@ h2.workbook {
   margin-top: .5rem;
 }
 
-/* line 166, lib/sass/chapter.scss */
+/* line 185, lib/sass/chapter.scss */
 .recipe-without-image, .recipe-with-image  {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
 }
 
-/* line 167, lib/sass/chapter.scss */
+/* line 186, lib/sass/chapter.scss */
 .recipe-with-image {
   width: 100%;
 }
 
 @media (min-width: 1200px) {
-  /* line 167, lib/sass/chapter.scss */
+  /* line 186, lib/sass/chapter.scss */
   .recipe-with-image {
     width: 73%;
   }
 }
 
-/* line 171, lib/sass/chapter.scss */
+/* line 190, lib/sass/chapter.scss */
 .recipe-without-image {
   width: 100%;
 }
 
-/* line 173, lib/sass/chapter.scss */
+/* line 192, lib/sass/chapter.scss */
 .recipe-image {
   margin-left: .5rem;
   -webkit-box-ordinal-group: 3;
@@ -618,54 +652,54 @@ h2.workbook {
 }
 
 @media (min-width: 900px) {
-  /* line 173, lib/sass/chapter.scss */
+  /* line 192, lib/sass/chapter.scss */
   .recipe-image {
     width: 25%;
     height: 25%;
   }
 }
 
-/* line 188, lib/sass/chapter.scss */
+/* line 207, lib/sass/chapter.scss */
 a.recipe-download {
   color: #FFF;
 }
 
-/* line 189, lib/sass/chapter.scss */
+/* line 208, lib/sass/chapter.scss */
 a:hover.recipe-download {
   color: #FFF;
   border-bottom: 1px solid #FFF;
 }
 
-/* line 193, lib/sass/chapter.scss */
+/* line 212, lib/sass/chapter.scss */
 a:visited.recipe-download {
   color: #FFF;
 }
 
-/* line 194, lib/sass/chapter.scss */
+/* line 213, lib/sass/chapter.scss */
 a:visited:hover.recipe-download {
   color: #FFF;
   border-bottom: 1px solid #FFF;
 }
 
-/* line 199, lib/sass/chapter.scss */
+/* line 218, lib/sass/chapter.scss */
 pre.recipe-code {
   width: 100%;
   border-top: none;
   margin-bottom: 1rem;
 }
 
-/* line 205, lib/sass/chapter.scss */
+/* line 224, lib/sass/chapter.scss */
 .ex-assignment {
   padding: .25rem 1rem .5rem 1rem;
   background-color: #E2F4FF;
 }
 
-/* line 210, lib/sass/chapter.scss */
+/* line 229, lib/sass/chapter.scss */
 .ex-assignment p, .ex-assignment ul, .ex-number p {
   padding-left: 0;
 }
 
-/* line 214, lib/sass/chapter.scss */
+/* line 233, lib/sass/chapter.scss */
 .ex-solution {
   font-family: "Arnold Regular";
   font-size: .7rem;
@@ -676,34 +710,34 @@ pre.recipe-code {
   text-decoration: none;
 }
 
-/* line 224, lib/sass/chapter.scss */
+/* line 243, lib/sass/chapter.scss */
 .ex-solution a {
   color: #1858A8;
 }
 
-/* line 225, lib/sass/chapter.scss */
+/* line 244, lib/sass/chapter.scss */
 .ex-solution a:hover {
   color: #1858A8;
   border-bottom: 1px solid #1858A8;
 }
 
-/* line 226, lib/sass/chapter.scss */
+/* line 245, lib/sass/chapter.scss */
 .ex-solution a:active {
   color: #1858A8;
 }
 
-/* line 227, lib/sass/chapter.scss */
+/* line 246, lib/sass/chapter.scss */
 .ex-solution a:visited {
   color: #1858A8;
 }
 
-/* line 229, lib/sass/chapter.scss */
+/* line 248, lib/sass/chapter.scss */
 .ex-image {
   margin-bottom: .5rem;
 }
 
 @media (min-width: 1200px) {
-  /* line 229, lib/sass/chapter.scss */
+  /* line 248, lib/sass/chapter.scss */
   .ex-image {
     width: 25%;
     height: 25%;
@@ -711,7 +745,7 @@ pre.recipe-code {
   }
 }
 
-/* line 239, lib/sass/chapter.scss */
+/* line 258, lib/sass/chapter.scss */
 .snippet-download-wrapper {
   margin-top: .5rem;
   display: -webkit-box;
@@ -724,7 +758,7 @@ pre.recipe-code {
           justify-content: flex-end;
 }
 
-/* line 246, lib/sass/chapter.scss */
+/* line 265, lib/sass/chapter.scss */
 .snippet-download {
   width: 1.8rem;
   text-align: center;
@@ -739,29 +773,29 @@ pre.recipe-code {
   text-transform: lowercase;
 }
 
-/* line 261, lib/sass/chapter.scss */
+/* line 280, lib/sass/chapter.scss */
 .snippet-download a {
   color: #FFF;
 }
 
-/* line 262, lib/sass/chapter.scss */
+/* line 281, lib/sass/chapter.scss */
 .snippet-download a:hover {
   color: #FFF;
   border-bottom: 1px solid #FFF;
 }
 
-/* line 266, lib/sass/chapter.scss */
+/* line 285, lib/sass/chapter.scss */
 .snippet-download a:visited {
   color: #FFF;
 }
 
-/* line 267, lib/sass/chapter.scss */
+/* line 286, lib/sass/chapter.scss */
 .snippet-download a:visited:hover {
   color: #FFF;
   border-bottom: 1px solid #FFF;
 }
 
-/* line 272, lib/sass/chapter.scss */
+/* line 291, lib/sass/chapter.scss */
 #pagination {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -774,7 +808,7 @@ pre.recipe-code {
   margin-top: 1rem;
 }
 
-/* line 280, lib/sass/chapter.scss */
+/* line 299, lib/sass/chapter.scss */
 #prevButton, #nextButton {
   font-family: "Arnold Regular", Monaco, monospace;
   text-align: center;
@@ -782,13 +816,13 @@ pre.recipe-code {
 }
 
 @media (min-width: 1200px) {
-  /* line 286, lib/sass/chapter.scss */
+  /* line 305, lib/sass/chapter.scss */
   p#prevButton, p#nextButton {
     padding-left: 0;
   }
 }
 
-/* line 290, lib/sass/chapter.scss */
+/* line 309, lib/sass/chapter.scss */
 table {
   border-collapse: collapse;
   margin-bottom: .5em;
@@ -796,7 +830,7 @@ table {
   width: 100%;
 }
 
-/* line 298, lib/sass/chapter.scss */
+/* line 317, lib/sass/chapter.scss */
 th {
   text-align: left;
   border-bottom: solid 1px #F36;
@@ -804,7 +838,7 @@ th {
   padding: .25em;
 }
 
-/* line 307, lib/sass/chapter.scss */
+/* line 326, lib/sass/chapter.scss */
 td {
   text-align: left;
   border-bottom: solid 1px #F36;
