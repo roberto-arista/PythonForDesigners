@@ -77,6 +77,9 @@ image:
 ----
 diagram: 
 #### text-block ####
+content: [DISCLAIMER: a few weeks after the publication of this tutorial I discovered that the fontParts API provides a method for retrieving the flat kerning from an opened font, so if you don't want to reinvent the wheel, you can you use [this](/chapters/cookbook/flatKerning.py) snippet from the cookbook and jump a bit forward in the tutorial, but bear in mind that it is a regular dictionary, not a defauldict. Thanks to [Ben Kiel](https://twitter.com/benkiel/status/1266575925531066368) for the suggestion]
+
+#### text-block ####
 content: So, we can finally access and iterate over the kerning dictionary of Source Serif Pro. In the following snippet, commented into the loop, you will find the four possible options we could encouter: group vs group, group vs glyph, glyph vs group, glyph vs glyph.
 
 #### code-example ####
