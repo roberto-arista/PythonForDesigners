@@ -45,7 +45,7 @@ header a:visited:hover {
   text-transform: lowercase;
 
   // xs
-  font-size: .75rem;
+  font-size: .7rem;
   line-height: map-get($header-hgt, 'xs');
 
   @include bigger-than('sm') {
