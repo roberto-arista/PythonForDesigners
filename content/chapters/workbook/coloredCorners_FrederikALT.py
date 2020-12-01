@@ -8,6 +8,9 @@
 # --- Modules --- #
 from drawBot import newPage, fill, oval, blendMode, BezierPath, clipPath, radialGradient, rect
 
+# --- Constants --- #
+WHITE = 1, 1, 1, 0
+
 # --- Variables --- #
 originX, originY = 0, 0
 canvasWdt = canvasHgt = 200
@@ -31,21 +34,23 @@ if __name__ == '__main__':
 
     newPage(canvasWdt, canvasHgt)
 
-    # corners
+    # solid corners
     for cx, cy, color in colorMap:
         fill(*color)
         oval(cx-thickness, cy-thickness, thickness*2, thickness*2)
 
     # rings
-    blendMode("multiply")
     path = BezierPath()
-    for i in range(circles):
-        factor = i / (circles - 1)
+    for ii in range(circles):
+        factor = ii / (circles - 1)
         inset = offset + (canvasWdt / 2-offset*2) * factor
         path.oval(originX+inset, originY+inset, canvasWdt-inset*2, canvasHgt-inset*2)
     path = path.expandStroke(thickness)
     clipPath(path)
 
+    # draw a rectangle with radial gradient from the specified color to white
+    # thanks to the multiply blend mode the white becomes transparent ✨
+    blendMode("multiply")
     for cx, cy, color in colorMap:
-        radialGradient((cx, cy), (cx, cy), [color, (1, 1, 1, 0)], startRadius=0, endRadius=canvasWdt)
+        radialGradient((cx, cy), (cx, cy), [color, WHITE], startRadius=0, endRadius=canvasWdt)
         rect(originX, originY, canvasWdt, canvasHgt)
