@@ -24,8 +24,8 @@
 }
 
 @font-face {
-  font-family: 'Gig Regular';
-  src: url("/static/fonts/GigV0.2-Regular.woff") format("woff");
+  font-family: "Gig Bold";
+  src: url("/static/fonts/GigV0.3-Bold.woff2") format("woff2"), url("/static/fonts/GigV0.3-Bold.woff") format("woff");
 }
 
 /* line 5, lib/sass/toc-bar.scss */
