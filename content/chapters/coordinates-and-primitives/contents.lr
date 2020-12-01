@@ -124,7 +124,9 @@ assignment: Create a 100x100pt canvas. Draw four squares, side 20 units, each on
 ----
 image: esRects.png
 ----
-solution: fourSquares.py
+solutions:
+##### linkToAttachment #####
+name: fourSquares.py
 ----
 #### code-example ####
 snippet: 06.py
@@ -144,7 +146,9 @@ assignment: Create a 100x100pt canvas. Draw four ovals, diameter 20 units, each 
 ----
 image: esOvals.png
 ----
-solution: fourOvals.py
+solutions:
+##### linkToAttachment #####
+name: fourOvals.py
 ----
 #### code-example ####
 snippet: 08.py
@@ -162,7 +166,9 @@ image: lines-01.png
 #### exercise ####
 assignment: How could you improve the quality of the code adding two identifiers?
 ----
-solution: improve.py
+solutions:
+##### linkToAttachment #####
+name: improve.py
 ----
 #### code-example ####
 snippet: 10.py
@@ -179,7 +185,9 @@ assignment: Create a 100x100pt canvas. Draw two lines connecting two non-contigu
 ----
 image: esX.png
 ----
-solution: connectCorners.py
+solutions:
+##### linkToAttachment #####
+name: connectCorners.py
 ----
 #### code-example ####
 snippet: 12.py
@@ -191,7 +199,9 @@ assignment: Create a 100x100pt canvas. Draw a zig zag connected polyline startin
 ----
 image: esZigZig.png
 ----
-solution: polyline.py
+solutions:
+##### linkToAttachment #####
+name: polyline.py
 ----
 #### code-example ####
 snippet: 13.py
@@ -208,7 +218,9 @@ assignment: Draw two polygons of three sides each one, each polygon should have 
 ----
 image: esBlackWhite.png
 ----
-solution: blackWhite.py
+solutions:
+##### linkToAttachment #####
+name: blackWhite.py
 ----
 #### text-block ####
 content: The order of execution of the code, i.e. the arrangement of your statements, reflects the order in which elements will be drawn onto the canvas. For example:
@@ -231,7 +243,9 @@ assignment: Create a 100x100pt canvas. Combine the circles and the squares exerc
 ----
 image: esOvalRect.png
 ----
-solution: circles+squares.py
+solutions:
+##### linkToAttachment #####
+name: circles+squares.py
 ----
 #### text-block ####
 content: Take also into account that once a <code>fill()</code> or <code>stroke()</code> is set, it is used until further change. This script:
@@ -261,7 +275,9 @@ assignment: Your goal is to draw a black rectangle positioned in the middle of t
 ----
 image: ex4.8.png
 ----
-solution: middleCurtain.py
+solutions:
+##### linkToAttachment #####
+name: middleCurtain.py
 ----
 #### exercise ####
 assignment: Draw two rectangles, one leaning on the left side of the canvas, the other leaning on the right side. Their heights are equal to the canvas. Instead, each rectangle width is controlled by a variable "factor" between 0 and 1. When "factor":
@@ -271,14 +287,18 @@ assignment: Draw two rectangles, one leaning on the left side of the canvas, the
 ----
 image: ex4.9.png
 ----
-solution: externalCurtain.py
+solutions:
+##### linkToAttachment #####
+name: externalCurtain.py
 ----
 #### exercise ####
 assignment: Draw four triangles. Fill each triangle with a different shade of gray. Also, each triangle should have two vertices matching to contiguous canvas corners and the last vertex positioned in the middle of the canvas.
 ----
 image: ex4.10.png
 ----
-solution: fourTriangles.py
+solutions:
+##### linkToAttachment #####
+name: fourTriangles.py
 ----
 #### exercise ####
 assignment: Extend the previous exercise: how could you make the height of each triangle react to a variable called "factor"?
@@ -287,14 +307,18 @@ assignment: Extend the previous exercise: how could you make the height of each 
 ----
 image: ex4.11.png
 ----
-solution: fourTrianglesMoving.py
+solutions:
+##### linkToAttachment #####
+name: fourTrianglesMoving.py
 ----
 #### exercise ####
 assignment: Draw four circles vertically aligned in the middle of a canvas. The shapes should be equally spread out. A variable "radius" controls the size of each circle. The color of each shape should be calculated according to its horizontal position in the canvas: left darker, right lighter.
 ----
 image: ex4.12.png
 ----
-solution: fourCircles.py
+solutions:
+##### linkToAttachment #####
+name: fourCircles.py
 ----
 #### exercise ####
 assignment: Draw two crosses, a dark gray "plus" shape, and a light gray "multiply" shape. The variable "factor" controls the thickness of the crosses:
@@ -303,14 +327,18 @@ assignment: Draw two crosses, a dark gray "plus" shape, and a light gray "multip
 ----
 image: ex4.13.png
 ----
-solution: crosses.py
+solutions:
+##### linkToAttachment #####
+name: crosses.py
 ----
 #### exercise ####
 assignment: Draw a grid with three columns and three rows. The program should allow the presence of a safe space between the elements (often referred to as "gutter"). The "gutter" value should be expressed in typographical points.
 ----
 image: ex4.14.png
 ----
-solution: grid.py
+solutions:
+##### linkToAttachment #####
+name: grid.py
 ----
 ---
 hasTocNumber: yes

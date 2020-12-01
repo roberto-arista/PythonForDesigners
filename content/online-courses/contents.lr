@@ -44,7 +44,7 @@ To enroll check the open courses and click on the “sub­scribe” but­ton to 
 
 
 <form action="https://forms.gle/EuEwbSHstkYPwdd28" method="get" target="_blank">
-    <button type="submit" class="button">Subscribe</button>
+    <button type="submit" class="button" disabled>Subscribe</button>
 </form>
 
 If you can't attend any course listed here, <a class='grayscale' href="mailto:&#x68;&#x65;&#x6C;&#x6C;&#x6F;&#x40;&#x72;&#x6F;&#x62;&#x65;&#x72;&#x74;&#x6F;&#x61;&#x72;&#x69;&#x73;&#x74;&#x61;&#x2E;&#x69;&#x74;">get in touch</a> and let me know which time would suit your needs. I'll try to arrange something!
