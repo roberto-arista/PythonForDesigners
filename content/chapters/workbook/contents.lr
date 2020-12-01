@@ -15,18 +15,65 @@ body:
 #### exercise ####
 image: unicodeTable.png
 ----
-assignment: Write a script able to create a table on multiple A4 pages describing an arbitrary sequence of Unicode characters. Each line of the table should report binary, decimal, and UTF-8 hexadecimal representations. Also, the line should render the character itself surrounded by two pipes “|” in gray and a description of the character according to the Unicode standard (check the [unicodedata](https://docs.python.org/3/library/unicodedata.html) module). [Here](unicodeTable.pdf) you can check a PDF example. Table header (in bold) and page numbering would be a nice to have, don’t you think?
+solutions:
+
+##### linkToAttachment #####
+name: unicodeTable.py
 ----
-solution: unicodeTable.py
+assignment: Write a script able to create a table on multiple A4 pages describing an arbitrary sequence of Unicode characters. Each line of the table should report binary, decimal, and UTF-8 hexadecimal representations. Also, the line should render the character itself surrounded by two pipes “|” in gray and a description of the character according to the Unicode standard (check the [unicodedata](https://docs.python.org/3/library/unicodedata.html) module). [Here](unicodeTable.pdf) you can check a PDF example. Table header (in bold) and page numbering would be a nice to have, don’t you think?
 #### exercise ####
 image: operationMatrix.png
 ----
-assignment: Draw a multiplication table. You should be able to define the first and last values of the range of multiplied numbers (from 1 to 10, from 10 to 100, and so on). Then, extend the program capabilities in order to compute many different operations like addition, difference, power of, and division. Check the [operator module](https://docs.python.org/3/library/operator.html) for some hints. With different operations, you will probably face very large numbers or numbers with a decimal part. In the first case, scale down the type size if the number does not fit the cell size, in the other case use some tools from the [fractions module](https://docs.python.org/3/library/fractions.html) mixed with OpenType features to typeset numbers like 0.333333333 in a compact way. [Here](operationMatrix.pdf) is a an example.
+solutions:
+
+##### linkToAttachment #####
+name: funcMatrix.py
 ----
-solution: funcMatrix.py
+assignment: Draw a multiplication table. You should be able to define the first and last values of the range of multiplied numbers (from 1 to 10, from 10 to 100, and so on). Then, extend the program capabilities in order to compute many different operations like addition, difference, power of, and division. Check the [operator module](https://docs.python.org/3/library/operator.html) for some hints. With different operations, you will probably face very large numbers or numbers with a decimal part. In the first case, scale down the type size if the number does not fit the cell size, in the other case use some tools from the [fractions module](https://docs.python.org/3/library/fractions.html) mixed with OpenType features to typeset numbers like 0.333333333 in a compact way. [Here](operationMatrix.pdf) is a an example.
 #### exercise ####
 image: colors.png
 ----
-assignment: The following exercise consists of typesetting a color table. This [CSV](colors.csv) file contains a collection of hex values followed by a name; it is compiled from [this](https://en.wikipedia.org/wiki/List_of_colors:_A%E2%80%93F) Wikipedia colors list. Your table should show a color swatch, the name, the HLS value, the RGB value, and the hexadecimal value. You are free to choose the page format, but the data should spread automatically over as many pages needed. Each page should have a header describing the content of the columns. Here you can find a [PDF](colors.pdf) example.
+solutions:
+
+##### linkToAttachment #####
+name: colors.py
 ----
-solution: colors.py
+assignment: The following exercise consists of typesetting a color table. This [CSV](colors.csv) file contains a collection of hex values followed by a name; it is compiled from [this](https://en.wikipedia.org/wiki/List_of_colors:_A%E2%80%93F) Wikipedia colors list. Your table should show a color swatch, the name, the HLS value, the RGB value, and the hexadecimal value. You are free to choose the page format, but the data should spread automatically over as many pages needed. Each page should have a header describing the content of the columns. Here you can find a [PDF](colors.pdf) example.
+#### exercise ####
+image: coloredCorners.png
+----
+solutions:
+
+##### linkToAttachment #####
+name: coloredCorners.py
+##### linkToAttachment #####
+name: coloredCorners_FrederikALT.py
+----
+assignment: Choose four colors and assign them to the canvas corners. Draw one or more donuts, each donut stroke color should be influenced (aka interpolated) by the canvas corners colors. You can either use arcs (and color them separately) or clipPath over a gradient.
+#### exercise ####
+image: randomPoints.png
+----
+solutions:
+
+##### linkToAttachment #####
+name: randomPoints.py
+----
+assignment: Plot a collection of random locations on the canvas. Calculate the mean for x and y axes. Represent the values using colored lines. A caption with the mean values would be a nice addition. The [statistics](https://docs.python.org/3/library/statistics.html) and [random](https://docs.python.org/3/library/random.html) modules can come in handy
+#### exercise ####
+image: watch.png
+----
+solutions:
+
+##### linkToAttachment #####
+name: watch.py
+----
+assignment: Draw a watch. Choose an iconic design you like and reproduce it. Or, just imagine a new one. The program should represent the time at runtime. You can use the [datetime](https://docs.python.org/3.7/library/datetime.html) module for it
+#### exercise ####
+image: ambivalentSequence.gif
+----
+solutions:
+
+##### linkToAttachment #####
+name: ambivalentSequence.py
+----
+assignment: Try to emulate Julio Le Parc's “[Séquences progressives ambivalentes](http://julioleparc.org/images/sur015.jpg)”. Draw a grid of black squares evenly distributed on the canvas. Superimpose a grid of circles filled with the background color. Animate the squares grid harmonically using sin() and cos() functions. In the original work, the circles did not move. How would you organize the code to animate them too? Export a looping animation in gif and mp4 format.

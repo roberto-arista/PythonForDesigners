@@ -13,7 +13,7 @@ og_image: abstract-7.png
 body:
 
 #### text-block ####
-content: Computers are fast calculating machines. They manage to accomplish very simple tasks very quickly. A complex task is just a big amount of simple tasks very well organized. Organized how? Through programming. 
+content: Computers are fast calculating machines. They manage to accomplish very simple tasks very quickly. A complex task is just a big amount of simple tasks very well organized. Organized how? Through programming.
 In this chapter we will learn how to instruct Python –and DrawBot– to accomplish repetitive commands without making our instructions themselves repetitive. Follow me!
 
 In chapter 5, we have seen how to draw basic shapes on the DrawBot canvas. As you remember, we can draw a line using:
@@ -52,7 +52,7 @@ content: + it is compact and therefore elegant
 + it is generally easier to edit, scale and reuse
 ----
 #### text-block ####
-content: Python offers two different iteration constructs. We have just seen the <code>while</code> syntax in action, which is similar to the  conditional construct (<code>if</code>, <code>elif</code>, <code>else</code>) we have presented in the last chapter. This construct allows a general repetition based upon the evaluation of a boolean expression. We could define it a “conditional iteration”: *keep doing this, until it’s necessary*. 
+content: Python offers two different iteration constructs. We have just seen the <code>while</code> syntax in action, which is similar to the  conditional construct (<code>if</code>, <code>elif</code>, <code>else</code>) we have presented in the last chapter. This construct allows a general repetition based upon the evaluation of a boolean expression. We could define it a “conditional iteration”: *keep doing this, until it’s necessary*.
 
 The syntax is the following one:
 
@@ -124,49 +124,63 @@ assignment: Try to cover the entire canvas with a striped black & white pattern.
 ----
 image: stripes.png
 ----
-solution: stripes.py
+solutions:
+##### linkToAttachment #####
+name: stripes.py
 ----
 #### exercise ####
 assignment: Try to cover the entire canvas with a zig-zag line. The line moves horizontally starting at top left canvas vertex. Allow the user to control the density of wave lines.
 ----
 image: zigzag.png
 ----
-solution: zigzag.py
+solutions:
+##### linkToAttachment #####
+name: zigzag.py
 ----
 #### exercise ####
 assignment: Create a 200x200pt canvas. Draw a sequence of squares from top to bottom using a while loop. The square side should be adjustable through a variable. Odd squares should be light gray, even tiles should be dark gray.
 ----
 image: exercise6_1.png
 ----
-solution: sequenceOfSquares.py
+solutions:
+##### linkToAttachment #####
+name: sequenceOfSquares.py
 ----
 #### exercise ####
 assignment: Extend the previous exercise. Nest two while statements and draw a pattern made of squares across the entire canvas. Try to get a chessboard effect.
 ----
 image: chessboard.png
 ----
-solution: squaresMatrix.py
+solutions:
+##### linkToAttachment #####
+name: squaresMatrix.py
 ----
 #### exercise ####
 assignment: Write a program able to cover a rectangle (so, not necessarily the canvas) with vertical black lines. The user should be able to control the total coverage of the rectangle (from 0% to 100%) and line thickness. The step between each line should be calculated according to these variables. A nice plus would be to have the first and the last line of the pattern touching the edges of the rectangle without any overflow. You are free to allow some rounding to get a better visual result
 ----
 image: grayscaleLines.png
 ----
-solution: grayscaleLines.py
+solutions:
+##### linkToAttachment #####
+name: grayscaleLines.py
 ----
 #### exercise ####
 assignment: Draw a leaf white shape using only black lines.
 ----
 image: threadCurves.png
 ----
-solution: whiteLeaf.py
+solutions:
+##### linkToAttachment #####
+name: whiteLeaf.py
 ----
 #### exercise ####
 assignment: Extend the previous exercise: draw a white circle using only black straight lines.
 ----
 image: theadCicle.png
 ----
-solution: whiteCircle.py
+solutions:
+##### linkToAttachment #####
+name: whiteCircle.py
 ----
 #### exercise ####
 assignment: Create a sequence of horizontal gradients. You cannot use any automatic gradient function, try to achieve this visual effect through separate shapes.
@@ -174,28 +188,36 @@ The gradients should have alternate direction.
 ----
 image: gradientStripes.png
 ----
-solution: gradientStripes.py
+solutions:
+##### linkToAttachment #####
+name: gradientStripes.py
 ----
 #### exercise ####
 assignment: Create a pattern of horizontal lines. The lines should be thicker in the middle as you can see in the example image. Allow the user to control the density of the pattern, the maximum value of the thickness and a canvas margin.
 ----
 image: linePattern.png
 ----
-solution: dashedLinesPattern.py
+solutions:
+##### linkToAttachment #####
+name: dashedLinesPattern.py
 ----
 #### exercise ####
 assignment: Your goal is to draw a boustrophedonic (from left to right and from right to left in alternate lines) sequence of ovals. Start from the lower left canvas corner and alternate ovals color (dark gray, light gray). Increase the oval radius according to its position within the drawing sequence of the line (little at the beginning, larger at the end). The vertical and horizontal distance between the ovals is constant. Give the user the option to set a margin value for the canvas and try to use only one while construct. You can solve it avoiding two nested while loops, a basic while loop is sufficient.
 ----
 image: pattern_oval.png
 ----
-solution: boustrophedonic.py
+solutions:
+##### linkToAttachment #####
+name: boustrophedonic.py
 ----
 #### exercise ####
 assignment: Write a program able to draw a ruler of a specific measure unit (either PostScript points or millimeters) across the entire canvas. The ruler ticks should be of different lengths according to a given rhythm. Use a while loop. Numbers displayed along the ruler are a plus.
 ----
 image: typometer.png
 ----
-solution: tipometer.py
+solutions:
+##### linkToAttachment #####
+name: tipometer.py
 ----
 ---
 hasTocNumber: yes

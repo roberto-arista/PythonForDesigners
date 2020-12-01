@@ -407,21 +407,27 @@ Define also a variable "switch" pointing to a boolean value. A True value should
 ----
 image: exercisepy29.png
 ----
-solution: flipCircle.py
+solutions:
+##### linkToAttachment #####
+name: flipCircle.py
 ----
 #### exercise ####
 assignment: Draw four circles placed on the bottom left – top right canvas diagonal. Circles fill color should change from light to dark grey, following the diagonal direction. Then, assign a boolean value to an identifier called “firstLightThenDark”. This variable should allow the user to decide in which direction the circles should be drawn.
 ----
 image: ex6.2.png
 ----
-solution: circlesOnDiagonal.py
+solutions:
+##### linkToAttachment #####
+name: circlesOnDiagonal.py
 ----
 #### exercise ####
 assignment: Draw three dots vertically aligned in the middle of a squared canvas. Define a “distance” variable between 0 and 1. This value should push the dots away towards the canvas edges alternatively in opposite direction. Define also a “switch” variable with a boolean value assigned able to flip the dots direction.
 ----
 image: ex6.3.png
 ----
-solution: pushingDots.py
+solutions:
+##### linkToAttachment #####
+name: pushingDots.py
 ----
 ---
 hasTocNumber: yes
