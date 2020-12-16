@@ -1,7 +1,5 @@
 *.glif
 node_modules/
-package-lock.json
-package.json
 
 # font files
 assets/static/fonts
