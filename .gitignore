@@ -3,6 +3,7 @@ node_modules/
 
 # font files
 assets/static/fonts
+content/tutorials/variable-waterfall-poster-1/dictionaries/*.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
