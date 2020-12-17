@@ -1,0 +1,133 @@
+abstract: 
+---
+hasTocNumber: yes
+---
+og_image: open-graph.png
+---
+sort_key: 4
+---
+title: Variable Waterfall Poster #2
+---
+visual_abstract: visual-abstract.png
+---
+body:
+
+#### text-block ####
+content: This article is the second segment of a two-part series on drawing a variable waterfall poster. You can find the first segment [here](/tutorials/variable-waterfall-poster-1/). The process described here will focus on how to move from the example on the left to the example on the right. In other words, instead of using the neutral form of a variable font (or any non-variable font), the program should present a different instance from a specific axis of a variable font.
+#### text-block ####
+content: Right, so what is a variable font? That's a reasonable question. It is an OpenType format released in 20XX. This new format allows the distribution of a *dynamic* font, where glyphs can be manipulated according to arbitrary variables organized over axes. These axes can reflect common typographic variables like weight, width, slant, optical size (as in the original Multiple Master fonts), or more peculiar ones like nib form and contrast. The Noordzij Cube, a visual synthesis of a model invented by Gerrit Noorzij, has deeply influenced the development of the format.
+#### image ####
+name: noordzij_cube.png
+----
+class: large_image
+#### text-block ####
+content: Our font choice is Skia, a variable font bundled in any recent macOS computer. We can check its axes by using the Drawbot API
+#### code-example ####
+snippet: listFontVariations.py
+----
+image: 
+----
+diagram: 
+#### text-block ####
+content:
+
+Resulting in the following [`OrderedDict`](https://docs.python.org/3/library/collections.html#collections.OrderedDict)
+```txt
+OrderedDict([('wght', {'name': 'Weight',
+                       'minValue': 0.4799,
+                       'maxValue': 3.1999,
+                       'defaultValue': 1.0}),
+             ('wdth', {'name': 'Width',
+                       'minValue': 0.6199,
+                       'maxValue': 1.3,
+                       'defaultValue': 1.0})])
+```
+#### image ####
+name: skia.png
+----
+class: large_image
+#### text-block ####
+content: So, if we want to show the weight progression in Skia, we need to define a fixed value for the width axis, and then combine the fixed value with equidistant steps from the weight. The following diagram shows a weight progression with a constant width on the left and a width progression with a constant weight on the right.
+#### image ####
+name: equidistantSteps.png
+----
+class: large_image
+#### text-block ####
+content: And, we can highlight the underlying values also on our posters
+#### image ####
+name: postersWithValues.png
+----
+class: large_image
+#### text-block ####
+content: Every time we change the instance parameters – so in the case of Skia width and weight values – we should expect a different word length, meaning that we have to recalculate the length of the entire word list to find the right word for the line. That's not feasible, this would make our program too damn slow. How do we achieve the same result without so much calculation? What information can we store to maximize the usefulness of our JSON cache files? Trying to solve this problem, I have come up with a trick that should work well with the degree of resolution needed for our posters. It might not return the most accurate calculation, but you will see that it works quite well with this application. The general idea is to record in our cache a few arbitrary steps – somewhere between 5 and 10 – over the waterfall axis, and then interpolate the desired value from these steps while drawing the poster.
+#### image ####
+name: equidistantSteps_extraVal.png
+----
+class: large_image
+#### text-block ####
+content: If we observe the example on the left, we can approximate the desired value by detecting the interval around it (0.62 and 0.76), retrieve the location of the desired value within the interval, and then use linear interpolation to calculate the word width we need. So, considered that we cannot know what we will need to typeset the poster, we store a bunch of measures, and then we use these measures to *predict* the value we need. These sorts of methods – as [Kriging](https://desktop.arcgis.com/en/arcmap/10.3/tools/3d-analyst-toolbox/how-kriging-works.htm) – are often used in statistics when measurement can be fairly expansive.
+#### text-block ####
+content:
+
+This changes the structure of our cache, we will not store groups of words, but each word will store several widths at different values over the waterfall axis.  Here is a small sample of the JSON file:
+```json
+    "PERSONA": {
+        "0.4799": 2.41455078125,
+        "1.1599": 3.4765625,
+        "1.8398999999999999": 3.66015625,
+        "2.5199": 3.84375,
+        "3.1998999999999995": 4.02734375
+    },
+    "OCCHI": {
+        "0.4799": 1.5380859375,
+        "1.1599": 2.23095703125,
+        "1.8398999999999999": 2.3125,
+        "2.5199": 2.39453125,
+        "3.1998999999999995": 2.47509765625
+    },
+    "QUELLE": {
+        "0.4799": 1.9931640625,
+        "1.1599": 2.8701171875,
+        "1.8398999999999999": 2.97607421875,
+        "2.5199": 3.0830078125,
+        "3.1998999999999995": 3.1875
+    },
+```
+This means that we will group the words each time we approach the drawing of a different poster line, which looks like a lot of calculation but starting from cached measures you won't even notice. To generate this structure we need to invoke `textSize()` a number of times equal to the number of words stored in our words list while setting the variable font to the correct state. Let's make a variant of our original `calcWordsLength()` and call it `calcWordsIntervals()`
+#### code-example ####
+snippet: lengthIntervals.py
+----
+image: 
+----
+diagram: 
+#### text-block ####
+content: What is returned by `calcWordsIntervals()` can't be used directly to typeset our posters, we need another function to query `word_2_intervals` and find the actual based on a specific value on the waterfall axis.
+#### code-example ####
+snippet: findInterval.py
+----
+image: 
+----
+diagram: 
+#### text-block ####
+content: Then we can infer the location of the desired value between the interval extremes using the linear interpolation inverse function, instead of providing a factor and get a value we provide a value and get a factor:
+#### code-example ####
+snippet: getFactor.py
+----
+image: 
+----
+diagram: 
+#### text-block ####
+content: Then we can use this *location* factor to interpolate the width of the word
+#### code-example ####
+snippet: lerp.py
+----
+image: 
+----
+diagram: 
+#### text-block ####
+content: The result of these operations will be then stored in groups of words organized by length, as in the first section of this tutorial. Differently from before, we won't cache this data.
+#### text-block ####
+content:
+
+Reading List:
++ [Introducing OpenType Variable Fonts](https://medium.com/variable-fonts/https-medium-com-tiro-introducing-opentype-variable-fonts-12ba6cd2369)
