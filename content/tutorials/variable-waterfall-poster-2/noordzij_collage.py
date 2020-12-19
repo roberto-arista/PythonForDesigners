@@ -1,10 +1,10 @@
 from drawBot import newPage, fill, rect, width, height, blendMode
 from drawBot import image, saveImage, translate, scale
 
-GRAY = .7, .7, .7
+WHITE = 1, 1, 1
 
-def background():
-    fill(*GRAY)
+def background(clr=WHITE):
+    fill(*clr)
     rect(0, 0, width(), height())
 
 

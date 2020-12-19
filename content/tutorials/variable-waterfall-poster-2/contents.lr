@@ -1,4 +1,4 @@
-abstract: 
+abstract: Part two: get variable font technology to work and typeset a different instance of each line of the poster
 ---
 hasTocNumber: yes
 ---
@@ -13,7 +13,11 @@ visual_abstract: visual-abstract.png
 body:
 
 #### text-block ####
-content: This article is the second segment of a two-part series on drawing a variable waterfall poster. You can find the first segment [here](/tutorials/variable-waterfall-poster-1/). The process described here will focus on how to move from the example on the left to the example on the right. In other words, instead of using the neutral form of a variable font (or any non-variable font), the program should present a different instance from a specific axis of a variable font.
+content: This article is the second segment of a two-part series on drawing a variable waterfall poster. You can find the first segment [here](/tutorials/variable-waterfall-poster-1/). The process described here will focus on how to move from the example on the left to the example on the right [↓]. In other words, instead of using the neutral form of a variable font (or any non-variable font), the program should present a different instance from a specific axis of a variable font.
+#### image ####
+name: fromLeftToRight.png
+----
+class: large_image
 #### text-block ####
 content: Right, so what is a variable font? That's a reasonable question. It is an OpenType format released in 20XX. This new format allows the distribution of a *dynamic* font, where glyphs can be manipulated according to arbitrary variables organized over axes. These axes can reflect common typographic variables like weight, width, slant, optical size (as in the original Multiple Master fonts), or more peculiar ones like nib form and contrast. The Noordzij Cube, a visual synthesis of a model invented by Gerrit Noorzij, has deeply influenced the development of the format.
 #### image ####
@@ -101,7 +105,7 @@ image:
 ----
 diagram: 
 #### text-block ####
-content: What is returned by `calcWordsIntervals()` can't be used directly to typeset our posters, we need another function to query `word_2_intervals` and find the actual based on a specific value on the waterfall axis.
+content: What is returned by `calcWordsIntervals()` can't be used directly to typeset our posters, we need another function to query `word_2_intervals` and find the right interval based on a specific value on the waterfall axis.
 #### code-example ####
 snippet: findInterval.py
 ----
@@ -124,10 +128,40 @@ snippet: lerp.py
 image: 
 ----
 diagram: 
-#### text-block ####
-content: The result of these operations will be then stored in groups of words organized by length, as in the first section of this tutorial. Differently from before, we won't cache this data.
+#### image ####
+name: locationsDiagram.png
+----
+class: large_image
 #### text-block ####
 content:
 
-Reading List:
+(Worried about what's the asterisk doing with `getFactor()`'s and `lerp()`'s arguments? Check [this](https://treyhunner.com/2018/03/tuple-unpacking-improves-python-code-readability/#An_alternative_to_slicing) out!)
+
+The result of these operations will be then stored in groups of words organized by length, as in the first section of this tutorial. Differing from what was done in the previous version, we won't cache this data. Mixed all together, the code will look like this
+#### code-example ####
+snippet: intervalsCalculation.py
+----
+image: 
+----
+diagram: 
+#### text-block ####
+content: Look's promising, right? But, at this point, we need some visual proof. Let's implement this code in the main poster function. We'll need to extend the function interface with a few extra arguments: `axisSteps`, `waterFallAxisName`, and `fixedAxes`. Then we need to adapt the caching section with `calcWordsIntervals()` and the drawing section with `calcWordsLengthFromIntervals()`.
+#### code-example ####
+snippet: varWaterfallPoster.py
+----
+image: 
+----
+diagram: 
+#### text-block ####
+content: That's very easy (and quick) to typeset a few variations of the poster (as you can see on the cover). And you can always switch language or typeface if you aren't' satisfied.
+#### image ####
+name: back-cover.png
+----
+class: large_image
+#### text-block ####
+content: Thanks to [Ben Kiel](https://benkiel.com) and [Paolo Mazzetti](https://twitter.com/folengo) for reviewing the code in the early stage of the process. The outlines used for the Noordzij Cube were made with Ikarus by Petr van Blokland, who traced the original drawings by Gerrit Noordzij. They were a huge inspiration for design spaces and variable font technology.
+#### text-block ####
+content:
+
+External Resources:
 + [Introducing OpenType Variable Fonts](https://medium.com/variable-fonts/https-medium-com-tiro-introducing-opentype-variable-fonts-12ba6cd2369)

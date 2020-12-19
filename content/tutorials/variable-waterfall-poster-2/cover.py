@@ -18,13 +18,15 @@ def background(clr):
     dB.fill(*clr)
     dB.rect(0, 0, dB.width(), dB.height())
 
-def generateSourcePosters(fontName, imagePath, language, iterations=1):
+def generateSourcePosters(fontName, imagePath, language, axisSteps,
+                          waterFallAxisName, fixedAxes, iterations=1):
     dictName = f'{language}.txt'
 
     dB.newDrawing()
     for ii in range(iterations):
         dB.newPage('A3')
-        drawWaterFallPoster(fontName, dictName, pointSize, leading)
+        drawWaterFallPoster(fontName, dictName, pointSize, leading,
+                            axisSteps, waterFallAxisName, fixedAxes)
     dB.saveImage(imagePath)
     dB.endDrawing()
 
@@ -53,17 +55,51 @@ def generateCover(horElems, verElems, scalingFactor, inputPath, outputPath, marg
     dB.saveImage(outputPath)
     dB.endDrawing()
 
+def combinePDF(inputs, outputPath):
+    dB.newDrawing()
+    for eachInputFile in inputs:
+        imgWdt, imgHgt = dB.imageSize(eachInputFile)
+        dB.newPage(imgWdt, imgHgt)
+        dB.image(eachInputFile, (0, 0), pageNumber=1)
+    dB.saveImage(outputPath)
+    dB.endDrawing()
 
-# --- Variables --- #
-fontName = 'ObviouslyVariable-None'
-inputPath = 'coverPosters.pdf'
-
-scalingFactor = .75
-
-horElems = 8
-verElems = 3
 
 # --- Instructions --- #
 if __name__ == '__main__':
-    generateSourcePosters(fontName, inputPath, language='english', iterations=28)
-    generateCover(horElems, verElems, scalingFactor, inputPath, outputPath='visual-abstract.png')
+    # front cover
+    generateSourcePosters(fontName='Skia',
+                          imagePath='coverPosters.pdf',
+                          language='italian',
+                          axisSteps=7,
+                          waterFallAxisName='wght',
+                          fixedAxes={'wdth': 1.5},
+                          iterations=28)
+    generateCover(horElems=8,
+                  verElems=3,
+                  scalingFactor=.75,
+                  inputPath='coverPosters.pdf',
+                  outputPath='visual-abstract.png')
+
+    # back cover
+    generateSourcePosters(fontName='ObviouslyVariable-None',
+                          imagePath='backCover.pdf',
+                          language='english',
+                          axisSteps=7,
+                          waterFallAxisName='wght',
+                          fixedAxes={'wdth': 480, 'slnt': 11},
+                          iterations=28)
+    generateCover(horElems=6,
+                  verElems=2,
+                  scalingFactor=1.15,
+                  inputPath='backCover.pdf',
+                  outputPath='back-cover.png')
+
+    combinePDF(inputs=['../variable-waterfall-poster-1/coverPosters.pdf',
+                       'coverPosters.pdf'],
+               outputPath='leftToRight.pdf')
+    generateCover(horElems=2,
+                  verElems=1,
+                  scalingFactor=2.5,
+                  inputPath='leftToRight.pdf',
+                  outputPath='fromLeftToRight.png')

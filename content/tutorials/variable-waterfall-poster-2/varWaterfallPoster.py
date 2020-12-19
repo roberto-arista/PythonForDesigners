@@ -47,6 +47,11 @@ def identity(ss):
 def uppercase(ss):
     return ss.upper()
 
+TXT_FILTERS = {
+    'identity': identity,
+    'uppercase': uppercase,
+}
+
 def pairwise(iterable):
     """s -> (s0,s1), (s1,s2), (s2, s3), ...
     straight from itertools docs page"""
@@ -60,16 +65,19 @@ def findInterval(sequence, value):
             return thisValue, nextValue
     raise ValueError('no interval found')
 
-def loadWords(filePath, minLength=5, txtFunc=identity):
-    with open(filePath, mode='r', encoding='utf-8') as txtFile:
-        lines = [ll.rstrip() for ll in txtFile.readlines()]
-    words = []
+def loadWords(filePath, minChars=5, txtFilter=identity):
     include = False
-    for eachLine in lines:
-        if include is True and len(eachLine) >= minLength:
-            words.append(txtFunc(eachLine))
-        if eachLine == '*****':
-            include = not include
+    words = set()
+
+    with open(filePath, mode='r', encoding='utf-8') as txtFile:
+        for eachLine in (ll.strip() for ll in txtFile.readlines()):
+
+            if include is True and len(eachLine) >= minChars:
+                words.add(txtFilter(eachLine))
+
+            if eachLine == '*****':
+                include = True
+
     return words
 
 def calcWordsLengthIntervals(words, fontName, axisName, axisSteps, fixedAxes={}):
@@ -106,10 +114,11 @@ def findNearestWord(length_2_words, wdt, pointSize):
 def drawWaterFallPoster(fontName='Skia', dictName='italian.txt', pointSize=120, leading=120,
                         axisSteps=5, waterFallAxisName='wght', fixedAxes={'wdth': 1.2}):
     dictPath = DICT_LOCATION / dictName
+    txtFilterName = 'uppercase'
 
-    # words length calc is influenced by: dictName, fontName, axisSteps, waterFallAxis, fixedAxes
+    # words length calc is influenced by: dictName, fontName, axisSteps, waterFallAxis, fixedAxes, txtFilter
     fixedAxesRepr = "-".join([f'{kk}{vv}' for (kk, vv) in fixedAxes.items()])
-    lengthIntervalsPath = DICT_LOCATION / f'lang={dictPath.stem}_font={fontName}_steps={axisSteps}_waterFallAxis={waterFallAxisName}_fixedAxes={fixedAxesRepr}.json'
+    lengthIntervalsPath = DICT_LOCATION / f'lang={dictPath.stem}_font={fontName}_steps={axisSteps}_waterFallAxis={waterFallAxisName}_fixedAxes={fixedAxesRepr}_filter={txtFilterName}.json'
 
     if lengthIntervalsPath.exists() and REBUILD is False:
         with open(lengthIntervalsPath, mode='r', encoding='utf-8') as wordsJson:
@@ -117,7 +126,7 @@ def drawWaterFallPoster(fontName='Skia', dictName='italian.txt', pointSize=120, 
             for eachWord, intervals in json.load(wordsJson).items():
                 word_2_lengthIntervals[eachWord] = {float(kk): vv for (kk, vv) in intervals.items()}
     else:
-        words = loadWords(dictPath, txtFunc=uppercase)
+        words = loadWords(dictPath, txtFilter=TXT_FILTERS[txtFilterName])
         word_2_lengthIntervals = calcWordsLengthIntervals(words, fontName, waterFallAxisName,
                                                           axisSteps, fixedAxes)
         with open(lengthIntervalsPath, mode='w', encoding='utf-8') as wordsJson:
@@ -155,7 +164,7 @@ pointSize = 120
 leading = 120
 axisSteps = 5
 waterFallAxisName = 'wght'
-fixedAxes = {'wdth': 300, 'slnt': 6}
+fixedAxes = {'wdth': 1.2, 'slnt': 6}
 
 # --- Instructions --- #
 if __name__ == '__main__':

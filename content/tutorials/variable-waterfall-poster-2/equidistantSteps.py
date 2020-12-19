@@ -3,7 +3,10 @@
 
 # -- Modules -- #
 import drawBot as dB
-from noordzij_collage import background, GRAY
+from cover import background
+
+# -- Constants -- #
+WHITE = 1, 1, 1
 
 # -- Functions -- #
 def lerp(aa, bb, factor):
@@ -92,7 +95,7 @@ yAxis = 'wdth'
 if __name__ == '__main__':
 
     dB.newPage(7200, 3600)
-    background()
+    background(WHITE)
 
     # width steps
     dB.translate(800, 390)
@@ -144,7 +147,7 @@ if __name__ == '__main__':
     # dot on the right
     wgtValue = 2.75
     xx = toFactor(xAxis, wgtValue) * (horStep * (grid-1))
-    dB.fill(*GRAY)
+    dB.fill(*WHITE)
     thisRad = ovalRad*1.25
     dB.oval(xx-thisRad, yy-thisRad, thisRad*2, thisRad*2)
 
@@ -155,7 +158,7 @@ if __name__ == '__main__':
     dB.restore()
     wdtValue = .69
     yy = toFactor(yAxis, wdtValue) * (verStep * (grid-1))
-    dB.fill(*GRAY)
+    dB.fill(*WHITE)
     dB.oval(lftXX-thisRad, yy-thisRad, thisRad*2, thisRad*2)
 
     captionText()
