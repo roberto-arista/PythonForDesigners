@@ -204,3 +204,5 @@ image:
 diagram: 
 #### text-block ####
 content: Great! We have laid out all the basics for our variable waterfall poster. Over the next article, we will expand the functionalities of this program to take full advantage of the variable font technology.
+---
+abstract: Part one: typeset tight-spaced posters analyzing the width of words from a list with `textSize()` from Drawbot

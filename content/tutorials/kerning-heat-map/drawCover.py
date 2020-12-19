@@ -18,8 +18,8 @@ if __name__ == '__main__':
 
     translate(CELL_SIZE*2, CELL_SIZE*2)
     kerningHeatMap(flat, ascii_uppercase, isFirstVertical=True)
-    
+
     translate((len(ascii_lowercase)+4)*CELL_SIZE, 0)
     kerningHeatMap(flat, ascii_lowercase, isFirstVertical=True)
-    
+
     saveImage('visual-abstract.pdf')

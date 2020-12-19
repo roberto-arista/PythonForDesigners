@@ -55,7 +55,7 @@ def generateCover(horElems, verElems, scalingFactor, inputPath, outputPath, marg
 
 
 # --- Variables --- #
-fontName = 'ObviouslyVariable-None'
+fontName = 'Skia'
 inputPath = 'coverPosters.pdf'
 
 scalingFactor = .75

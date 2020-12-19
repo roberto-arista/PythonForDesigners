@@ -8,8 +8,6 @@ from pathlib import Path
 # --- Constants --- #
 DICT_FOLDER = Path('dictionaries')
 
-# --- Objects & Methods --- #
-
 # --- Variables --- #
 fontName = 'Skia'
 language = 'italian'
@@ -31,4 +29,5 @@ if __name__ == '__main__':
         words = loadWords(dictPath)
         length_2_words = calcWordsLength(words, fontName)
         with open(length_2_wordsPath, mode='w', encoding='utf-8') as jsonFile:
-            json.dump(length_2_words, jsonFile, indent=4)
+            json.dump({kk: list(vv) for (kk, vv) in length_2_words.items()},
+                      jsonFile, indent=4)

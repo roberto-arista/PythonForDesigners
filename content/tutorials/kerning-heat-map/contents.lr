@@ -2,7 +2,7 @@ title: Kerning Heat Map
 ---
 visual_abstract: visual-abstract-kerning.png
 ---
-abstract: Heat maps are a classic in data visualization. Let's combine them with kerning data from a UFO file.
+abstract: Heat maps are a classic in data visualization. Let's combine them with kerning data from a UFO file
 ---
 hasTocNumber: yes
 ---
@@ -18,16 +18,15 @@ A heat map is a typical visualization of data organized in a matrix. The matrix 
 Kerning was visualized with heat maps first in RoboFOG, in the mid-'90s. [Erik van Blokland](http://www.letterror.com/), one of the developers of the application, wrote a script that allowed users to create heat maps out of the kerning data stored in the font. Through some form of interaction with the grid, it was possible to access and check kerning corrections. Kerning can be a tedious task, so any tool helping to manage the process is welcome. The RoboFOG development ended in 1997, and when [Tal Leming](https://www.typesupply.com/about) created [MetricsMachine](https://extensionstore.robofont.com/extensions/metricsMachine/), he ported the visualization into the new application. Nowadays MetricsMachine is a plugin for [Robofont](https://robofont.com/).
 
 The kerning heat map is still a valid tool to provide an overview of the kerning state into a font. Being able to materialize and give form to *immaterial* content is essential to observe, question your work and take decisions. During the design process, you are often called to make decisions with incomplete information. Every visualization tool that gives you insights can help you move forward with your task. So, how can we make one of these with Drawbot? Let's start!
-
 #### image ####
 name: multiplicationMatrix.png
 ----
 class: large_image
 #### text-block ####
-content: The content of our grid will be informed by two sequences of glyph names. The combinations of the names will form a pair used to query the kerning data. The behavior is not too different from a multiplication table.
+content:
 
+The content of our grid will be informed by two sequences of glyph names. The combinations of the names will form a pair used to query the kerning data. The behavior is not too different from a multiplication table.
 First of all, we need to access a UFO font with Python. This is possible through the [fontParts](https://fontparts.robotools.dev) API, the successor of RoboFab. FontParts is shipped along with the Drawbot application, so you need to install it by yourself only if you are running your code from the terminal. Opening a UFO font is as easy as this example
-
 #### code-example ####
 snippet: open.py
 ----
@@ -36,15 +35,12 @@ image:
 diagram: 
 #### text-block ####
 content: The `myFont` identifier points to the `RFont` object. Using the dot notation we can access what it is inside: attributes (sub-objects) and methods. Here you can see the model diagram of an `RFont` (redrawn from original in fontParts docs)
-
 #### image ####
 name: fontPartsObjects.png
 ----
 class: large_image
-
 #### text-block ####
 content: In the previous snippet, we opened a .ufo file, we accessed the info object – and the familyName and styleName attributes – and the `kerning` object. A `kerning` object behaves more or less as a regular Python dictionary. It has extra methods and functionalities. You can find the details in the fontParts section. Just to give you an idea of how a `kerning` object resembles a dictionary, here's an example
-
 #### code-example ####
 snippet: dummyKerning.py
 ----
@@ -60,7 +56,7 @@ image:
 ----
 diagram: 
 #### text-block ####
-content: it more convenient to do this 
+content: it more convenient to do this
 #### code-example ####
 snippet: grouped.py
 ----
@@ -69,7 +65,6 @@ image:
 diagram: 
 #### text-block ####
 content: It is an example of the [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) principle applied to the font data structure. And remember, the best way to iterate over all the key-value pairs contained in a dictionary, is to use the `.items()` method, in this way
-
 #### code-example ####
 snippet: items.py
 ----
@@ -78,10 +73,8 @@ image:
 diagram: 
 #### text-block ####
 content: [DISCLAIMER: a few weeks after the publication of this tutorial I discovered that the fontParts API provides a method for retrieving the flat kerning from an opened font, so if you don't want to reinvent the wheel, you can you use [this](/chapters/cookbook/flatKerning.py) snippet from the cookbook and jump a bit forward in the tutorial, but bear in mind that it is a regular dictionary, not a defauldict. Thanks to [Ben Kiel](https://twitter.com/benkiel/status/1266575925531066368) for the suggestion]
-
 #### text-block ####
 content: So, we can finally access and iterate over the kerning dictionary of Source Serif Pro. In the following snippet, commented into the loop, you will find the four possible options we could encouter: group vs group, group vs glyph, glyph vs group, glyph vs glyph.
-
 #### code-example ####
 snippet: iterateOverKerning.py
 ----
@@ -89,10 +82,10 @@ image:
 ----
 diagram: 
 #### text-block ####
-content: Only the last option is immediatly accessible with a pair of glyph names, which means that we have to flatten the groups on the fly and create an extended kerning dictionary.
+content:
 
+Only the last option is immediatly accessible with a pair of glyph names, which means that we have to flatten the groups on the fly and create an extended kerning dictionary.
 In order to serve scripts with different reading directions than Latin, groups don't use (anymore) left or right in their names to assess their position in the pair, but first and second. Groups can be accessed through the `groups` object in this way
-
 #### code-example ####
 snippet: groupAccess.py
 ----
@@ -101,7 +94,6 @@ image:
 diagram: 
 #### text-block ####
 content: Similarly to the `kerning` object, the group object has also a dictionary-like data structure. Its values store tuples with the glyph names forming the group. Here's an example of how the expanding process could be implemented
-
 #### code-example ####
 snippet: flatGroup.py
 ----
@@ -110,7 +102,6 @@ image:
 diagram: 
 #### text-block ####
 content: If we apply the same process to Source Serif Pro, we have to consider the four different combinations the interpreter can encounter during the loop. We can avoid exceptions using some conditional constructs. Maybe there are cleverer ways to shorten this code, but I like my code to be as explicit and straightforward as possible, otherwise I will feel dumb myself while reading it. Remember the [Zen of Python](https://www.python.org/dev/peps/pep-0020/), and check the impressive number of new pairs created during the process!
-
 #### code-example ####
 snippet: flatKerning.py
 ----
@@ -119,7 +110,6 @@ image:
 diagram: 
 #### text-block ####
 content: To make the code more modular (and the snippets shorter from now on), I grouped this instructions into a function and moved it into a module named `flatKerning.py`. We are now ready to focus on the matrix visualization. The best way to accomplish a grid-like visual structure is by using nested iteration. We are going to build the glyph name pairs through two nested for-loops iterating over a string with uppercase characters. In this peculiar case, characters and glyph names coincide. Otherwise you can use a list with a sequence of glyph names. Maybe the code itself will explain it better
-
 #### code-example ####
 snippet: lettersMatrix.py
 ----
@@ -128,7 +118,6 @@ image:
 diagram: 
 #### text-block ####
 content: You are probably asking yourself «what's that enumerate thing over there?». The answer is simple: it is a very pythonic way to count cycles in a loop while browsing a sequence. Here is an example
-
 #### code-example ####
 snippet: enumerate.py
 ----
@@ -137,7 +126,6 @@ image:
 diagram: 
 #### text-block ####
 content: We use the indices to position the rectangles over the canvas, while the glyph names become the argument of the `text()` function. I arbitrarily placed the `glyphY` as second letter after the `glyphX`. It could be an assumption of the script, but it is a limitation easy to address with a [shortcut conditional expression](https://www.python.org/dev/peps/pep-0308/) (programmers refer to it also as *ternary operator*). It is an if-else one-liner, here is compared to a standard conditional construct
-
 #### code-example ####
 snippet: ternary.py
 ----
@@ -146,7 +134,6 @@ image:
 diagram: 
 #### text-block ####
 content: which can be applied to our case in the following way
-
 #### code-example ####
 snippet: lettersMatrixTernary.py
 ----
@@ -155,7 +142,6 @@ image:
 diagram: 
 #### text-block ####
 content: To appreciate the difference among the two options, we can display them one near the other (captions are added by hand)
-
 #### image ####
 name: lettersMatrixFunc.png
 ----
@@ -166,30 +152,24 @@ snippet: lettersMatrixFunc.py
 image: 
 ----
 diagram: 
-
 #### text-block ####
 content: Great, so now we can draw our glyph names in a grid-like visual structure and we can access the kerning data from the ufo font. Let's try to do it
-
 #### code-example ####
 snippet: keyError.py
 ----
 image: 
 ----
 diagram: 
-
 #### text-block ####
 content: This code does not work, it raises an exception. The console should print a message similar to this
-
 #### code-example ####
 snippet: keyErrorTraceback.txt
 ----
 image: 
 ----
 diagram: 
-
 #### text-block ####
 content: The reason is simple: not every possible pair has a correction stored in the kerning dictionary. Most of the possible permutations of glyphs from a font work just fine with regular spacing. Kerning addresses exceptions which cannot be solved with metrics adjustments. We have to acknowledge this possibility, how so? I see two options at this point: we can check for the pair inclusion in the kerning dictionary with a conditional construct, or we can use an extension of the regular Python dictionary named `defaultdict` (from the `collections` module). *Defaultdicts* allow to set a default value to return when a key is not present into the dictionary, like this
-
 #### code-example ####
 snippet: defaultdict.py
 ----
@@ -198,7 +178,6 @@ image:
 diagram: 
 #### text-block ####
 content: This option reflects our situation properly: if a pair is not stored in the kerning dictionary, it means that it does not need any correction. An updated version of our `flatKerning` function would look like this
-
 #### code-example ####
 snippet: flatKerningDefault.py
 ----
@@ -213,22 +192,19 @@ snippet: discreteKerningHeatMap.py
 image: discreteHeatMap.png
 ----
 diagram: 
-
 #### text-block ####
-content: This image gives you already a lot of information. Basically any combination of the word AVATAR is corrected in Source Serif Pro Regular. But, data is not *grained* into the image. A big correction as AV has the same visual weight as a much smaller correction as AR. How can we address this? An option could be to have the cell color reflect the size of the value which is representing using some form of interpolation.
+content:
 
+This image gives you already a lot of information. Basically any combination of the word AVATAR is corrected in Source Serif Pro Regular. But, data is not *grained* into the image. A big correction as AV has the same visual weight as a much smaller correction as AR. How can we address this? An option could be to have the cell color reflect the size of the value which is representing using some form of interpolation.
 To interpolate we need extremes. One extreme is easy to find, it is 0 for both negative and positive corrections. We have to collect the other extreme from the kerning dictionary. But, we can't just look for the highest (or lowest) value in the dictionary, we should also be sure to filter our search to pair of interest for our visualization. Here is a demo of how this could be implemented (using dummy data)
-
 #### code-example ####
 snippet: findExtremes.py
 ----
 image: 
 ----
 diagram: 
-
 #### text-block ####
 content: Here is how the code works. We simulate a nested for loop into the list comprehension using a `product()` function from the `itertools` module. Only corrections of pairs with both glyph names into the `glyphNames` string are kept, the others are discarded. As you can see, -120 it is not present into the corrections list. The list is then sorted and only the first and the last item are assigned to `minCorr` and `maxCorr`. Though a shortcut conditional the number with highest absolute value is assigned to the `reference` identifier. Then it could be used as interpolation extreme (with a minus sign added for negative values). Let's interpolate! Here we operate a very straightforward linear RGB interpolation between `WHITE` and `RED` / `GREEN`.
-
 #### image ####
 name: interpolateHeatMap.png
 ----
@@ -241,7 +217,6 @@ image:
 diagram: 
 #### text-block ####
 content: If you have read the [previous tutorial](/tutorials/hsl-color-wheel/), you should know something about the `colorsys`module. Then, you could experiment with the HLS color mode to depict the values from the kerning dictionary. At this point, we only need to add some captions and to adjust the typography to ease the reading of the chart.
-
 #### image ####
 name: kerningHeatMap.png
 ----
@@ -253,8 +228,9 @@ image:
 ----
 diagram: 
 #### text-block ####
-content: If you want to generate a bunch of these matrices at once, you can easily import the `kerningHeatMap()` function into a brand new script and iterate it over a folder of .ufo files. That's the great thing about making your code modular, you can easily use it in different ways. The following script assumes this folder structure:
-- `flatKerningDefault.py`
+content:
+
+If you want to generate a bunch of these matrices at once, you can easily import the `kerningHeatMap()` function into a brand new script and iterate it over a folder of .ufo files. That's the great thing about making your code modular, you can easily use it in different ways. The following script assumes this folder structure:- `flatKerningDefault.py`
 - `kerningHeatMap.py`
 - `multipleHeatMaps.py`
 - output folder
@@ -265,7 +241,6 @@ content: If you want to generate a bunch of these matrices at once, you can easi
  + fontRegular.ufo
  + fontItalic.ufo
  + [...]
-
 #### code-example ####
 snippet: multipleOutputs.py
 ----
