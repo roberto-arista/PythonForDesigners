@@ -9,10 +9,6 @@
 from tools import lerp
 import drawBot as dB
 
-# --- Constants --- #
-
-# --- Objects & Methods --- #
-
 # --- Variables --- #
 fontName = 'Skia'
 bodySize = 100

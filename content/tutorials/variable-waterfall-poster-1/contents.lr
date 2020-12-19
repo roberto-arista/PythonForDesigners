@@ -11,7 +11,7 @@ visual_abstract: visual-abstract.png
 body:
 
 #### text-block ####
-content: The aim of this two-part tutorial is to guide you through the writing of a program able to typeset a "waterfall" poster using random words from a predefined list. A "waterfall" is a common configuration in specimens, usually presenting various weights of a family or sizes of a font. Here we will try to create a program slightly more generic, able to present instances from any kind of variable font axes, not just weight. The user decides what to show: width, slant, optical size, you named it. It all depends on the font you choose to typeset with. The first part of the tutorial takes care of the basic structure working with the neutral form of a variable font, the second part will make the poster "variable". The font in question is Skia, originally a GX font by Matthew Carter – now available in otVar format –, preinstalled on any Apple computer. Skia has width and weight axes. [Try it yourself](/tutorials/variable-font-waterfall-poster-1/skia.py).
+content: The aim of this two-part tutorial is to guide you through the writing of a program able to typeset a "waterfall" poster using random words from a predefined list. A "waterfall" is a common configuration in specimens, usually presenting various weights of a family or sizes of a font. Here we will try to create a program slightly more generic, able to present instances from any kind of variable font axes, not just weight. The user decides what to show: width, slant, optical size, you named it. It all depends on the font you choose to typeset with. The first part of the tutorial takes care of the basic structure working with the neutral form of a variable font, the second part will make the poster "variable". The font in question is Skia, originally a GX font by Matthew Carter – now available in otVar format –, preinstalled on any Apple computer. Skia has width and weight axes. <a download='skia.py' href="/tutorials/variable-font-waterfall-poster-1/skia.py">Try it yourself</a>.
 #### image ####
 name: skia.png
 ----
@@ -49,21 +49,21 @@ content: The first bit of code we will need is a function to load these words in
 #### code-example ####
 snippet: loadWords_v1.py
 ----
-image: 
+image:
 ----
-diagram: 
+diagram:
 #### text-block ####
 content: The `with` context ensures that the `.txt` file will be automatically closed as soon as the interpreter leaves the code block. In addition, you have probably noticed that we are not using a list comprehension to pack the words into a collection, we are using instead a set comprehension. Why not using a list? A list would work too, but I have a rule of thumb for choosing between lists and sets: if you need unique elements and you don't need elements to stay in a specific order, use a set. You are stating your intentions more clearly –good for semantics– and you'd probably gain a lot of speed –good for performance–. `rstrip()`is necessary to clean the `'\n'` characters at the end of each line.
 #### text-block ####
 content:
 
-Now it's time to filter the credits. Considered that the length of the credits is not constant across these files, we should use the five asterisks `*****` as a flag. We can loop through all the file lines and switch a boolean value to `True` as soon as we encounter the asterisks and start to collect the words into a set.  
+Now it's time to filter the credits. Considered that the length of the credits is not constant across these files, we should use the five asterisks `*****` as a flag. We can loop through all the file lines and switch a boolean value to `True` as soon as we encounter the asterisks and start to collect the words into a set.
 #### code-example ####
 snippet: loadWords_v2.py
 ----
-image: 
+image:
 ----
-diagram: 
+diagram:
 #### text-block ####
 content: The `rstrip()` string method is now invoked from a generator comprehension expression, directly as iterable of the for loop. Avoid using lists if you need to access the data just once, that could sensibly slow down the program if the list is large enough. Generator expressions instead yield one element at a time, without loading the entire collection in memory. Note that we activate the asterisks switch at the end of the loop body, to filter the asterisks out of the set.
 #### text-block ####
@@ -71,17 +71,17 @@ content: At this point, we can easily add a `minChars` filter to skim word too s
 #### code-example ####
 snippet: loadWords_v3.py
 ----
-image: 
+image:
 ----
-diagram: 
+diagram:
 #### text-block ####
 content: To get a tight-packed poster, we should consider the opportunity of transforming each string to uppercase. But I don't think is a good idea to bury the conversion inside the `loadWords()` function, we should be able to address this behaviour from the function interface. Python functions are first-class object as any class, `int()`, `bool()`, so we can pass a conversion function directly in the `loadWords()` function interface as argument. We just need to wrap the string `.upper()` method into a `uppercase(txt)` function.
 #### code-example ####
 snippet: loadWords_v4.py
 ----
-image: 
+image:
 ----
-diagram: 
+diagram:
 #### text-block ####
 content: Once we have loaded the words in memory, we need to evaluate the length they develop with the font we want to proof. That's another bit of logic, so we should wrap this code into another function, `calcWordsLength()`. The function interface needs a collection of strings – they don't necessarily need to be words – and a postscript font name of a font installed on the computer.
 #### text-block ####
@@ -89,31 +89,31 @@ content: We are going to use the `font()` and `textSize()` methods from the Draw
 #### text-block ####
 content:
 
-Text length is directly proportional to point size, which means that we don't need to calculate the length of each word at different point sizes, we only need to do it for `pointSize = 1`, then we can scale the measure as we need it. 
+Text length is directly proportional to point size, which means that we don't need to calculate the length of each word at different point sizes, we only need to do it for `pointSize = 1`, then we can scale the measure as we need it.
 #### code-example ####
 snippet: pointSize_vs_wordLength.py
 ----
-image: 
+image:
 ----
-diagram: 
+diagram:
 #### text-block ####
 content: Bottom line, the `calcWordsLength()` function loops through the words set, collect the length of each word typeset with a given font at `pointSize = 1`. The words are then grouped per length, using a very convenient `defaultdict(list)`
 #### code-example ####
 snippet: calcWordsLength_noRound.py
 ----
-image: 
+image:
 ----
-diagram: 
+diagram:
 #### text-block ####
 content:
 
-Standard Python's floating points are way too detailed for the scale we are working on. This results in very small groups, according to the calculations in the previous script, we have an average of ~2.5 words per group. This means that we will likely obtain the same word more than once in the same poster, definitely not optimal. The risk is to have very little variability in exchange for a detail we don't really need. To avoid this we should make our calculation a bit less precise, using the `round()` built-in function. 
+Standard Python's floating points are way too detailed for the scale we are working on. This results in very small groups, according to the calculations in the previous script, we have an average of ~2.5 words per group. This means that we will likely obtain the same word more than once in the same poster, definitely not optimal. The risk is to have very little variability in exchange for a detail we don't really need. To avoid this we should make our calculation a bit less precise, using the `round()` built-in function.
 #### code-example ####
 snippet: calcWordsLength.py
 ----
-image: 
+image:
 ----
-diagram: 
+diagram:
 #### text-block ####
 content: So, now it's time for visual proof, let's write the `drawPoster()` function. How? We can use matrix transformations to move the reference point of each line in the poster; each line will be occupied by a word coming from the group with the smallest difference from the poster net width (we can't expect to find a group of words with the EXACT same measure we need). This bit of logic could be wrapped into a `findNearestWord()` function. (Never used a `lambda` function? This [how-to sorting](https://docs.python.org/3/howto/sorting.html) could be an interesting read).
 #### text-block ####
@@ -121,17 +121,17 @@ content: The `findNearestGroupOfWords()` function will need access to the `lengt
 #### code-example ####
 snippet: findNearestGroupOfWords.py
 ----
-image: 
+image:
 ----
-diagram: 
+diagram:
 #### text-block ####
 content: `findNearestGroupOfWords()` creates a copy – not a reference – of the words contained into `length_2_words`. This copy is created through a `list()` constructor (so, not really a copy). With one move we become able to address the order of the collection – moving from `set()` to `list()` and we are also sure that we are not going to mess with the source. The list is shuffled each time the function is invoked and the words are picked with a `list.pop()` method. If the amount of words is inferior to the number of lines we need, `findNearestGroupOfWords()` is invoked again protecting us from an `IndexError`. Let's extend this code to include some typesetting
 #### code-example ####
 snippet: drawPoster_noCache.py
 ----
-image: 
+image:
 ----
-diagram: 
+diagram:
 #### text-block ####
 content: Here follow three iterations of the previous code (background color and composition made with another script)
 #### image ####
@@ -147,9 +147,9 @@ content: So, our program should perform the calculation only if a cache file is 
 #### code-example ####
 snippet: json_cache.py
 ----
-image: 
+image:
 ----
-diagram: 
+diagram:
 #### text-block ####
 content:
 
@@ -178,9 +178,9 @@ Very similar to a Python dictionary, right? Consider that JSON cannot store keys
 #### code-example ####
 snippet: json_cache_conversion.py
 ----
-image: 
+image:
 ----
-diagram: 
+diagram:
 #### text-block ####
 content:
 
@@ -199,9 +199,9 @@ content: The entire script now looks like this
 #### code-example ####
 snippet: drawPoster.py
 ----
-image: 
+image:
 ----
-diagram: 
+diagram:
 #### text-block ####
 content: Great! We have laid out all the basics for our variable waterfall poster. Over the next article, we will expand the functionalities of this program to take full advantage of the variable font technology.
 ---
