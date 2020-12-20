@@ -85,4 +85,4 @@ solutions:
 ##### linkToAttachment #####
 name: protractor.py
 ----
-assignment: Draw a protractor. Do you remember that plastic thingy used to measure angles in technical drawings made with paper and pencil? No clue? Ok, google it. Extra: why don't you show an arc measuring one radian?
+assignment: Draw a protractor. Do you remember that plastic thingy used to measure angles in technical drawings made with paper and pencil? No clue? Ok, google it. Measurements in degrees and fractions of `π`. Extra: why don't you show an arc measuring one radian?
