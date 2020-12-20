@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
-# coding: utf-8
 
 # --- Modules --- #
 import drawBot as dB
 from pathlib import Path
 
 from loadWords_v4 import loadWords
-from calcWordsLength import calcWordsLength
+from calcWordsWidth import calcWordsWidth
 from findNearestGroupOfWords import findNearestGroupOfWords
 
 # --- Constants --- #
@@ -30,7 +29,7 @@ def drawPoster(fontName='Skia', dictName='italian.txt',
     dictPath = DICT_FOLDER / dictName
 
     words = loadWords(dictPath)
-    length_2_words = calcWordsLength(words, fontName)
+    width_2_words = calcWordsWidth(words, fontName)
 
     netWdt = dB.width()-MARGIN*2
     netHgt = dB.height()-MARGIN*2
@@ -42,11 +41,11 @@ def drawPoster(fontName='Skia', dictName='italian.txt',
     typeQualities(fontName, pointSize)
     lines = netHgt // leading
     dB.translate(MARGIN, MARGIN+netHgt-leading)
-    nearestWords = findNearestGroupOfWords(length_2_words,
+    nearestWords = findNearestGroupOfWords(width_2_words,
                                            netWdt, pointSize)
     for ii in range(lines):
         if len(nearestWords) > 0:
-            nearestWords = findNearestGroupOfWords(length_2_words,
+            nearestWords = findNearestGroupOfWords(width_2_words,
                                                    netWdt, pointSize)
         chosenWord = nearestWords.pop()
         dB.text(chosenWord, (0, 0))

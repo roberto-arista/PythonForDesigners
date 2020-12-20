@@ -7,7 +7,7 @@
 
 # --- Modules --- #
 import drawBot as dB
-from varWaterfallPoster import drawWaterFallPoster, pointSize, leading
+from varWaterfallPoster import drawWaterfallPoster, pointSize, leading
 
 # --- Constants --- #
 WHITE = 1, 1, 1
@@ -19,14 +19,14 @@ def background(clr):
     dB.rect(0, 0, dB.width(), dB.height())
 
 def generateSourcePosters(fontName, imagePath, language, axisSteps,
-                          waterFallAxisName, fixedAxes, iterations=1):
+                          waterfallAxisName, fixedAxes, iterations=1):
     dictName = f'{language}.txt'
 
     dB.newDrawing()
     for ii in range(iterations):
         dB.newPage('A3')
-        drawWaterFallPoster(fontName, dictName, pointSize, leading,
-                            axisSteps, waterFallAxisName, fixedAxes)
+        drawWaterfallPoster(fontName, dictName, pointSize, leading,
+                            axisSteps, waterfallAxisName, fixedAxes)
     dB.saveImage(imagePath)
     dB.endDrawing()
 
@@ -72,7 +72,7 @@ if __name__ == '__main__':
                           imagePath='coverPosters.pdf',
                           language='italian',
                           axisSteps=7,
-                          waterFallAxisName='wght',
+                          waterfallAxisName='wght',
                           fixedAxes={'wdth': 1.5},
                           iterations=28)
     generateCover(horElems=8,
@@ -86,7 +86,7 @@ if __name__ == '__main__':
                           imagePath='backCover.pdf',
                           language='english',
                           axisSteps=7,
-                          waterFallAxisName='wght',
+                          waterfallAxisName='wght',
                           fixedAxes={'wdth': 480, 'slnt': 11},
                           iterations=28)
     generateCover(horElems=6,

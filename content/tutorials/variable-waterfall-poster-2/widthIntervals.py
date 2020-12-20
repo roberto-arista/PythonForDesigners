@@ -1,7 +1,7 @@
 from collections import defaultdict
 import drawBot as dB
 
-def typeQualities(fontName, bodySize):
+def typeAttributes(fontName, bodySize):
     dB.fill(0)
     dB.stroke(None)
     dB.font(fontName, bodySize)
@@ -32,7 +32,7 @@ def loadWords(filePath, minChars=5, txtFilter=identity):
 
 def calcWordsIntervals(words, fontName, axisName, axisSteps, fixedAxes={}):
     """the result of this function will be cached"""
-    typeQualities(fontName, 1)
+    typeAttributes(fontName, 1)
     varFontAxes = dB.listFontVariations()
     word_2_intervals = defaultdict(dict)
     for eachStep in range(axisSteps):

@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# coding: utf-8
 
 def loadWords(filePath, minChars=5):
     include = False

@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# coding: utf-8
 
 def loadWords(filePath):
     with open(filePath, mode='r', encoding='utf-8') as txtFile:

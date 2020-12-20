@@ -19,7 +19,7 @@ name: fromLeftToRight.png
 ----
 class: large_image
 #### text-block ####
-content: Right, so what is a variable font? That's a reasonable question. It is an OpenType format released in 20XX. This new format allows the distribution of a *dynamic* font, where glyphs can be manipulated according to arbitrary variables organized over axes. These axes can reflect common typographic variables like weight, width, slant, optical size (as in the original Multiple Master fonts), or more peculiar ones like nib form and contrast. The Noordzij Cube, a visual synthesis of a model invented by Gerrit Noorzij, has deeply influenced the development of the format.
+content: Right, so what is a variable font? That's a reasonable question. It is a font conforming to the OpenType format 1.8 ([released in 2016](https://medium.com/variable-fonts/https-medium-com-tiro-introducing-opentype-variable-fonts-12ba6cd2369)). This new format allows the distribution of a *dynamic* font, where glyphs can be manipulated according to arbitrary variables organized over axes. These axes can reflect common typographic variables like weight, width, slant, optical size (as in the original Multiple Master fonts), or more peculiar ones like nib form and contrast. The Noordzij Cube, a visual synthesis of a model invented by Gerrit Noorzij, has deeply influenced the development of the format.
 #### image ####
 name: noordzij_cube.png
 ----
@@ -63,13 +63,13 @@ name: postersWithValues.png
 ----
 class: large_image
 #### text-block ####
-content: Every time we change the instance parameters – so in the case of Skia width and weight values – we should expect a different word length, meaning that we have to recalculate the length of the entire word list to find the right word for the line. That's not feasible, this would make our program too damn slow. How do we achieve the same result without so much calculation? What information can we store to maximize the usefulness of our JSON cache files? Trying to solve this problem, I have come up with a trick that should work well with the degree of resolution needed for our posters. It might not return the most accurate calculation, but you will see that it works quite well with this application. The general idea is to record in our cache a few arbitrary steps – somewhere between 5 and 10 – over the waterfall axis, and then interpolate the desired value from these steps while drawing the poster.
+content: Every time we change the instance parameters – so in the case of Skia width and weight values – we should expect a different word width, meaning that we have to recalculate the width of the entire word list to find the right word for the line. That's not feasible, this would make our program too damn slow. How do we achieve the same result without so much calculation? What information can we store to maximize the usefulness of our JSON cache files? Trying to solve this problem, I have come up with a trick that should work well with the degree of resolution needed for our posters. It might not return the most accurate calculation, but you will see that it works quite well with this application. The general idea is to record in our cache a few arbitrary steps – somewhere between 5 and 10 – over the waterfall axis, and then interpolate the desired value from these steps while drawing the poster.
 #### image ####
 name: equidistantSteps_extraVal.png
 ----
 class: large_image
 #### text-block ####
-content: If we observe the example on the left, we can approximate the desired value by detecting the interval around it (0.62 and 0.76), retrieve the location of the desired value within the interval, and then use linear interpolation to calculate the word width we need. So, considered that we cannot know what we will need to typeset the poster, we store a bunch of measures, and then we use these measures to *predict* the value we need. These sorts of methods – as [Kriging](https://desktop.arcgis.com/en/arcmap/10.3/tools/3d-analyst-toolbox/how-kriging-works.htm) – are often used in statistics when measurement can be fairly expansive.
+content: If we observe the example on the left, we can approximate the desired value by detecting the interval around it (0.62 and 0.76), retrieve the location of the desired value within the interval, and then use linear interpolation to calculate the word width we need. So, considered that we cannot know what we will need to typeset the poster, we store a bunch of measurements, and then we use these measures to *predict* the value we need. These sorts of methods – as [Kriging](https://desktop.arcgis.com/en/arcmap/10.3/tools/3d-analyst-toolbox/how-kriging-works.htm) – are often used in statistics when measurement can be fairly expensive.
 #### text-block ####
 content:
 
@@ -97,9 +97,9 @@ This changes the structure of our cache, we will not store groups of words, but 
         "3.1998999999999995": 3.1875
     },
 ```
-This means that we will group the words each time we approach the drawing of a different poster line, which looks like a lot of calculation but starting from cached measures you won't even notice. To generate this structure we need to invoke `textSize()` a number of times equal to the number of words stored in our words list while setting the variable font to the correct state. Let's make a variant of our original `calcWordsLength()` and call it `calcWordsIntervals()`
+This means that we will group the words each time we approach the drawing of a different poster line, which looks like a lot of calculation but starting from cached measures you won't even notice. To generate this structure we need to invoke `textSize()` a number of times equal to the number of words stored in our words list while setting the variable font to the correct state. Let's make a variant of our original `calcWordsWidth()` and call it `calcWordsIntervals()`
 #### code-example ####
-snippet: lengthIntervals.py
+snippet: widthIntervals.py
 ----
 image: 
 ----
@@ -137,7 +137,7 @@ content:
 
 (Worried about what's the asterisk doing with `getFactor()`'s and `lerp()`'s arguments? Check [this](https://treyhunner.com/2018/03/tuple-unpacking-improves-python-code-readability/#An_alternative_to_slicing) out!)
 
-The result of these operations will be then stored in groups of words organized by length, as in the first section of this tutorial. Differing from what was done in the previous version, we won't cache this data. Mixed all together, the code will look like this
+The result of these operations will be then stored in groups of words organized by width, as in the first section of this tutorial. Differing from what was done in the previous version, we won't cache this data. Mixed all together, the code will look like this
 #### code-example ####
 snippet: intervalsCalculation.py
 ----
@@ -145,7 +145,7 @@ image:
 ----
 diagram: 
 #### text-block ####
-content: Look's promising, right? But, at this point, we need some visual proof. Let's implement this code in the main poster function. We'll need to extend the function interface with a few extra arguments: `axisSteps`, `waterFallAxisName`, and `fixedAxes`. Then we need to adapt the caching section with `calcWordsIntervals()` and the drawing section with `calcWordsLengthFromIntervals()`.
+content: Look's promising, right? But, at this point, we need some visual proof. Let's implement this code in the main poster function. We'll need to extend the function interface with a few extra arguments: `axisSteps`, `waterfallAxisName`, and `fixedAxes`. Then we need to adapt the caching section with `calcWordsIntervals()` and the drawing section with `calcWordsWidthFromIntervals()`.
 #### code-example ####
 snippet: varWaterfallPoster.py
 ----
@@ -153,15 +153,10 @@ image:
 ----
 diagram: 
 #### text-block ####
-content: That's very easy (and quick) to typeset a few variations of the poster (as you can see on the cover). And you can always switch language or typeface if you aren't' satisfied.
+content: That makes it very easy to typeset a few variations of the poster (as you can see on the cover). And you can always switch language or typeface if you aren't satisfied.
 #### image ####
 name: back-cover.png
 ----
 class: large_image
 #### text-block ####
 content: Thanks to [Ben Kiel](https://benkiel.com) and [Paolo Mazzetti](https://twitter.com/folengo) for reviewing the code in the early stage of the process. The outlines used for the Noordzij Cube were made with Ikarus by Petr van Blokland, who traced the original drawings by Gerrit Noordzij. They were a huge inspiration for design spaces and variable font technology.
-#### text-block ####
-content:
-
-External Resources:
-+ [Introducing OpenType Variable Fonts](https://medium.com/variable-fonts/https-medium-com-tiro-introducing-opentype-variable-fonts-12ba6cd2369)

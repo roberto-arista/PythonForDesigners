@@ -25,9 +25,9 @@ content: We can assume that values belonging to the linear dimensions fluctuate 
 #### code-example ####
 snippet: hueRange.py
 ----
-image: 
+image:
 ----
-diagram: 
+diagram:
 #### text-block ####
 content: Consider also that the two linear dimensions – saturation and luminosity – can be swapped in the HSL 3D model, so our program should be able to acknowledge it. The following cylinders are both valid representations of the HSL color model.
 #### image ####
@@ -45,49 +45,49 @@ content: Let’s start to assemble some code. First of all, we need to convert t
 #### code-example ####
 snippet: hls_func.py
 ----
-image: 
+image:
 ----
-diagram: 
+diagram:
 #### text-block ####
 content: `hls_to_rgb()` return a tuple with three floating points that we can use directly into the Drawbot fill function. This operation can be achived in two ways, we can pick up each single element using the accessing syntax for sequences
 #### code-example ####
 snippet: tuple_access.py
 ----
-image: 
+image:
 ----
-diagram: 
+diagram:
 #### text-block ####
 content: or we can use the [iterable unpacking](https://www.python.org/dev/peps/pep-3132/)
 #### code-example ####
 snippet: iterable_unpacking.py
 ----
-image: 
+image:
 ----
-diagram: 
+diagram:
 #### text-block ####
 content: Now that we know how to pair `hls_to_rgb()` with the Drawbot drawing functions, let’s try to traverse separately the three different dimensions of the HSL color model. The angular dimension – hue – can be showed through a ring of ovals filled with different hues
 #### code-example ####
 snippet: hue_traverse.py
 ----
-image: 
+image:
 ----
-diagram: 
+diagram:
 #### text-block ####
 content: The linear dimensions – saturation and luminosity – can be presented using a series of stripes. Notice the conditional construct inside the for loop, it is already possible for the user to switch between saturation and luminosity.
 #### code-example ####
 snippet: linear_traverse.py
 ----
-image: 
+image:
 ----
-diagram: 
+diagram:
 #### text-block ####
 content: We could also show them at once, using a matrix visual structure
 #### code-example ####
 snippet: sat+lum.py
 ----
-image: 
+image:
 ----
-diagram: 
+diagram:
 #### text-block ####
 content: If we line up the three outputs of the previous script using the 0°, 120° and 240° hue angle, we will get three saturation/luminosity tables for the RGB channels:  red, green and blue.
 #### image ####
@@ -103,9 +103,9 @@ content: How can we mix the linear dimensions with the angular dimension? A radi
 #### code-example ####
 snippet: radial.py
 ----
-image: 
+image:
 ----
-diagram: 
+diagram:
 #### image ####
 name: detail.png
 ----
@@ -127,17 +127,17 @@ class: large_image
 #### code-example ####
 snippet: donut.py
 ----
-image: 
+image:
 ----
-diagram: 
+diagram:
 #### text-block ####
 content: At this point we only miss the captions. They should be positioned into the outer for loop, after each slice with the same has been placed on the canvas. Considered the need for a matrix transformation – in order to rotate the text –, it is essential to encapsulate this part of the code into a `savedState()` context
 #### code-example ####
 snippet: multi-ring-with-captions.py
 ----
-image: 
+image:
 ----
-diagram: 
+diagram:
 #### text-block ####
 content: Notice also the way I organized the styles of the different elements, the arcs and the captions. I wrote two separate functions where I grouped the properties functions (`font()`, `fill()`, `stroke()`, `strokeWidth()`) and I defined some default values into the function interface. In this way you can pour some logic without prohibiting a different application.
 #### text-block ####
@@ -147,16 +147,16 @@ content: Furthermore, I like to write – and often run – my scripts from outs
 #### code-example ####
 snippet: HSLdonut.py
 ----
-image: 
+image:
 ----
-diagram: 
+diagram:
 #### text-block ####
 content: Are you curious about how I made the colored cylinders illustrations? I imported the `hslDonut()` function from another module and called it multiple times with the following script:
 #### code-example ####
 snippet: axonometry.py
 ----
-image: 
+image:
 ----
-diagram: 
+diagram:
 ---
 hasTocNumber: yes

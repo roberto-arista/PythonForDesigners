@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# coding: utf-8
 
 # ------------- #
 # Article Cover #
@@ -7,7 +6,7 @@
 
 # --- Modules --- #
 import drawBot as dB
-from waterFallPoster import drawWaterFallPoster, pointSize, leading
+from waterfallPoster import drawWaterfallPoster, pointSize, leading
 
 # --- Constants --- #
 WHITE = 1, 1, 1
@@ -24,7 +23,7 @@ def generateSourcePosters(fontName, imagePath, language, iterations=1):
     dB.newDrawing()
     for ii in range(iterations):
         dB.newPage('A3')
-        drawWaterFallPoster(fontName, dictName, pointSize, leading)
+        drawWaterfallPoster(fontName, dictName, pointSize, leading)
     dB.saveImage(imagePath)
     dB.endDrawing()
 

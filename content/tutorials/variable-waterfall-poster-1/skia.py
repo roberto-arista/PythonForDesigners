@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# coding: utf-8
 
 # -------------------------- #
 # Display Skia Variable Font #

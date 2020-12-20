@@ -25,12 +25,12 @@ REBUILD = False
 DICT_LOCATION = Path('../variable-waterfall-poster-1/dictionaries')
 
 # --- Objects & Methods --- #
-def lineQualities(thickness=1):
+def lineAttributes(thickness=1):
     dB.stroke(0)
     dB.strokeWidth(thickness)
     dB.fill(None)
 
-def typeQualities(fontName, pointSize):
+def typeAttributes(fontName, pointSize):
     dB.fill(0)
     dB.stroke(None)
     dB.font(fontName, pointSize)
@@ -80,11 +80,11 @@ def loadWords(filePath, minChars=5, txtFilter=identity):
 
     return words
 
-def calcWordsLengthIntervals(words, fontName, axisName, axisSteps, fixedAxes={}):
+def calcWordsWidthIntervals(words, fontName, axisName, axisSteps, fixedAxes={}):
     """the result of this function will be cached"""
-    typeQualities(fontName, 1)
+    typeAttributes(fontName, 1)
     varFontAxes = dB.listFontVariations()
-    word_2_lengthIntervals = defaultdict(dict)
+    word_2_widthIntervals = defaultdict(dict)
     for eachStep in range(axisSteps):
         factor = eachStep / (axisSteps-1)
         axisValue = lerp(varFontAxes[axisName]['minValue'],
@@ -94,64 +94,64 @@ def calcWordsLengthIntervals(words, fontName, axisName, axisSteps, fixedAxes={})
         dB.fontVariations(**fontParams)
         for eachWord in words:
             txtWdt, txtHgt = dB.textSize(eachWord)
-            word_2_lengthIntervals[eachWord][axisValue] = txtWdt
-    return word_2_lengthIntervals
+            word_2_widthIntervals[eachWord][axisValue] = txtWdt
+    return word_2_widthIntervals
 
-def calcWordsLengthFromIntervals(word_2_lengthIntervals, waterFallAxisValue):
+def calcWordsWidthFromIntervals(word_2_widthIntervals, waterfallAxisValue):
     """the result of this function is used on the fly"""
-    length_2_words = defaultdict(list)
-    for eachWord, lengthIntervals in word_2_lengthIntervals.items():
-        btm, top = findInterval(lengthIntervals.keys(), waterFallAxisValue)
-        factor = getFactor(btm, top, waterFallAxisValue)
-        wordLen = lerp(lengthIntervals[btm], lengthIntervals[top], factor)
-        length_2_words[round(wordLen, PRECISION)].append(eachWord)
-    return length_2_words
+    width_2_words = defaultdict(list)
+    for eachWord, widthIntervals in word_2_widthIntervals.items():
+        btm, top = findInterval(widthIntervals.keys(), waterfallAxisValue)
+        factor = getFactor(btm, top, waterfallAxisValue)
+        wordLen = lerp(widthIntervals[btm], widthIntervals[top], factor)
+        width_2_words[round(wordLen, PRECISION)].append(eachWord)
+    return width_2_words
 
-def findNearestWord(length_2_words, wdt, pointSize):
-    smallestDiff = min(length_2_words.keys(), key=lambda x: abs(x-wdt/pointSize))
-    return choice(length_2_words[smallestDiff])
+def findNearestWord(width_2_words, wdt, pointSize):
+    smallestDiff = min(width_2_words.keys(), key=lambda x: abs(x-wdt/pointSize))
+    return choice(width_2_words[smallestDiff])
 
-def drawWaterFallPoster(fontName='Skia', dictName='italian.txt', pointSize=120, leading=120,
-                        axisSteps=5, waterFallAxisName='wght', fixedAxes={'wdth': 1.2}):
+def drawWaterfallPoster(fontName='Skia', dictName='italian.txt', pointSize=120, leading=120,
+                        axisSteps=5, waterfallAxisName='wght', fixedAxes={'wdth': 1.2}):
     dictPath = DICT_LOCATION / dictName
     txtFilterName = 'uppercase'
 
-    # words length calc is influenced by: dictName, fontName, axisSteps, waterFallAxis, fixedAxes, txtFilter
+    # words width calc is influenced by: dictName, fontName, axisSteps, waterfallAxis, fixedAxes, txtFilter
     fixedAxesRepr = "-".join([f'{kk}{vv}' for (kk, vv) in fixedAxes.items()])
-    lengthIntervalsPath = DICT_LOCATION / f'lang={dictPath.stem}_font={fontName}_steps={axisSteps}_waterFallAxis={waterFallAxisName}_fixedAxes={fixedAxesRepr}_filter={txtFilterName}.json'
+    widthIntervalsPath = DICT_LOCATION / f'lang={dictPath.stem}_font={fontName}_steps={axisSteps}_waterfallAxis={waterfallAxisName}_fixedAxes={fixedAxesRepr}_filter={txtFilterName}.json'
 
-    if lengthIntervalsPath.exists() and REBUILD is False:
-        with open(lengthIntervalsPath, mode='r', encoding='utf-8') as wordsJson:
-            word_2_lengthIntervals = defaultdict(dict)
+    if widthIntervalsPath.exists() and REBUILD is False:
+        with open(widthIntervalsPath, mode='r', encoding='utf-8') as wordsJson:
+            word_2_widthIntervals = defaultdict(dict)
             for eachWord, intervals in json.load(wordsJson).items():
-                word_2_lengthIntervals[eachWord] = {float(kk): vv for (kk, vv) in intervals.items()}
+                word_2_widthIntervals[eachWord] = {float(kk): vv for (kk, vv) in intervals.items()}
     else:
         words = loadWords(dictPath, txtFilter=TXT_FILTERS[txtFilterName])
-        word_2_lengthIntervals = calcWordsLengthIntervals(words, fontName, waterFallAxisName,
+        word_2_widthIntervals = calcWordsWidthIntervals(words, fontName, waterfallAxisName,
                                                           axisSteps, fixedAxes)
-        with open(lengthIntervalsPath, mode='w', encoding='utf-8') as wordsJson:
-            json.dump(word_2_lengthIntervals, wordsJson, indent=4)
+        with open(widthIntervalsPath, mode='w', encoding='utf-8') as wordsJson:
+            json.dump(word_2_widthIntervals, wordsJson, indent=4)
 
     netWdt = dB.width()-MARGIN*2
     netHgt = dB.height()-MARGIN*2
 
     if DRAFT_MODE is True:
-        lineQualities()
+        lineAttributes()
         dB.rect(MARGIN, MARGIN, netWdt, netHgt)
 
-    typeQualities(fontName, pointSize)
+    typeAttributes(fontName, pointSize)
     varFontAxes = dB.listFontVariations()
     lines = netHgt // leading
     dB.translate(MARGIN, MARGIN+netHgt-leading)
     for ii in range(lines):
         factor = ii / (lines-1)
-        waterFallAxisValue = lerp(varFontAxes[waterFallAxisName]['minValue'],
-                                  varFontAxes[waterFallAxisName]['maxValue'], factor)
-        length_2_words = calcWordsLengthFromIntervals(word_2_lengthIntervals, waterFallAxisValue)
-        aWord = findNearestWord(length_2_words, netWdt, pointSize)
+        waterfallAxisValue = lerp(varFontAxes[waterfallAxisName]['minValue'],
+                                  varFontAxes[waterfallAxisName]['maxValue'], factor)
+        width_2_words = calcWordsWidthFromIntervals(word_2_widthIntervals, waterfallAxisValue)
+        aWord = findNearestWord(width_2_words, netWdt, pointSize)
 
         fontParams = dict(fixedAxes)
-        fontParams[waterFallAxisName] = waterFallAxisValue
+        fontParams[waterfallAxisName] = waterfallAxisValue
         dB.fontVariations(**fontParams)
         dB.text(aWord, (0, 0))
         dB.translate(0, -leading)
@@ -163,15 +163,15 @@ dictName = 'italian.txt'
 pointSize = 120
 leading = 120
 axisSteps = 5
-waterFallAxisName = 'wght'
-fixedAxes = {'wdth': 1.2, 'slnt': 6}
+waterfallAxisName = 'wght'
+fixedAxes = {'wdth': 1.2}
 
 # --- Instructions --- #
 if __name__ == '__main__':
     dB.newDrawing()
     for ii in range(3):
         dB.newPage('A3')
-        drawWaterFallPoster(fontName, dictName, pointSize, leading, axisSteps,
-                            waterFallAxisName, fixedAxes)
+        drawWaterfallPoster(fontName, dictName, pointSize, leading, axisSteps,
+                            waterfallAxisName, fixedAxes)
     dB.saveImage('poster.pdf')
     dB.endDrawing()

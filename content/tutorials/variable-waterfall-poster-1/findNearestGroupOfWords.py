@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# coding: utf-8
 
 # --- Modules --- #
 from random import shuffle
@@ -9,10 +8,10 @@ from pathlib import Path
 DICT_FOLDER = Path('dictionaries')
 
 # --- Objects & Methods --- #
-def findNearestGroupOfWords(length_2_words, netWdt, pointSize):
-    smallestDiff = min(length_2_words.keys(),
-                       key=lambda length: abs(length-netWdt/pointSize))
-    nearestWords = list(length_2_words[smallestDiff])
+def findNearestGroupOfWords(width_2_words, netWdt, pointSize):
+    smallestDiff = min(width_2_words.keys(),
+                       key=lambda width: abs(width-netWdt/pointSize))
+    nearestWords = list(width_2_words[smallestDiff])
     shuffle(nearestWords)
     return nearestWords
 
@@ -27,12 +26,12 @@ pointSize = 68
 # --- Instructions --- #
 if __name__ == '__main__':
     from loadWords_v4 import loadWords
-    from calcWordsLength import calcWordsLength
+    from calcWordsWidth import calcWordsWidth
 
     words = loadWords(DICT_FOLDER / f'{language}.txt')
-    length_2_words = calcWordsLength(words, fontName)
+    width_2_words = calcWordsWidth(words, fontName)
 
-    nearestWords = findNearestGroupOfWords(length_2_words,
+    nearestWords = findNearestGroupOfWords(width_2_words,
                                            netWdt,
                                            pointSize)
     print(f'available words: {len(nearestWords)}')
@@ -40,7 +39,7 @@ if __name__ == '__main__':
 
     for indexLine in range(16):
         if len(nearestWords) == 0:
-            nearestWords = findNearestGroupOfWords(length_2_words,
+            nearestWords = findNearestGroupOfWords(width_2_words,
                                                    netWdt,
                                                    pointSize)
         chosenWord = nearestWords.pop()

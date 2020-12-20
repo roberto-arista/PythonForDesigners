@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# coding: utf-8
 
 # --- Modules --- #
 import json
@@ -18,22 +17,22 @@ language = 'italian'
 # --- Instructions --- #
 if __name__ == '__main__':
     from loadWords_v4 import loadWords
-    from calcWordsLength import calcWordsLength
+    from calcWordsWidth import calcWordsWidth
 
     for language in ['italian', 'english']:
         dictPath = DICT_FOLDER / f'{language}.txt'
 
         before = time()
         words = loadWords(dictPath)
-        length_2_words = calcWordsLength(words, fontName)
+        width_2_words = calcWordsWidth(words, fontName)
         after = time()
         print(f'calc {language}: {after-before:.3f}s')
 
         before = time()
-        length_2_wordsPath = DICT_FOLDER / f'lang={dictPath.stem}_font={fontName}.json'
+        width_2_wordsPath = DICT_FOLDER / f'lang={dictPath.stem}_font={fontName}.json'
         dictPath = DICT_FOLDER / f'{language}.txt'
-        with open(length_2_wordsPath, mode='r', encoding='utf-8') as jsonFile:
-            length_2_words = {float(kk): set(vv) for (kk, vv) in json.load(jsonFile).items()}
+        with open(width_2_wordsPath, mode='r', encoding='utf-8') as jsonFile:
+            width_2_words = {float(kk): set(vv) for (kk, vv) in json.load(jsonFile).items()}
         after = time()
         print(f'loaded {language}: {after-before:.3f}s')
 

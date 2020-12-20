@@ -2,7 +2,7 @@ import drawBot as dB
 import itertools
 from collections import defaultdict
 
-def typeQualities(fontName, pointSize):
+def typeAttributes(fontName, pointSize):
     dB.fill(0)
     dB.stroke(None)
     dB.font(fontName, pointSize)
@@ -26,11 +26,11 @@ def findInterval(sequence, value):
             return thisValue, nextValue
     raise ValueError('no interval found')
 
-def calcWordsLengthIntervals(words, fontName, axisName, axisSteps, fixedAxes={}):
+def calcWordsWidthIntervals(words, fontName, axisName, axisSteps, fixedAxes={}):
     """the result of this function will be cached"""
-    typeQualities(fontName, 1)
+    typeAttributes(fontName, 1)
     varFontAxes = dB.listFontVariations()
-    word_2_lengthIntervals = defaultdict(dict)
+    word_2_widthIntervals = defaultdict(dict)
     for eachStep in range(axisSteps):
         factor = eachStep / (axisSteps-1)
         axisValue = lerp(varFontAxes[axisName]['minValue'],
@@ -40,14 +40,14 @@ def calcWordsLengthIntervals(words, fontName, axisName, axisSteps, fixedAxes={})
         dB.fontVariations(**fontParams)
         for eachWord in words:
             txtWdt, txtHgt = dB.textSize(eachWord)
-            word_2_lengthIntervals[eachWord][axisValue] = txtWdt
-    return word_2_lengthIntervals
+            word_2_widthIntervals[eachWord][axisValue] = txtWdt
+    return word_2_widthIntervals
 
 
 if __name__ == '__main__':
     from varWaterfallPoster import loadWords
     words = loadWords('../variable-waterfall-poster-1/dictionaries/italian.txt')
-    word_2_intervals = calcWordsLengthIntervals(words,
+    word_2_intervals = calcWordsWidthIntervals(words,
                                                 fontName='Skia',
                                                 axisName='wght',
                                                 axisSteps=5,
