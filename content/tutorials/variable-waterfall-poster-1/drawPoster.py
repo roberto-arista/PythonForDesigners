@@ -76,7 +76,8 @@ def drawPoster(fontName='Skia', dictName='italian.txt',
         words = loadWords(dictPath)
         width_2_words = calcWordsWidth(words, fontName)
         with open(width_2_wordsPath, mode='w', encoding='utf-8') as jsonFile:
-            json.dump(width_2_words, jsonFile, indent=4)
+            json.dump({kk: list(vv) for (kk, vv) in width_2_words.items()},
+                      jsonFile, indent=4)
 
     netWdt = dB.width()-MARGIN*2
     netHgt = dB.height()-MARGIN*2
