@@ -19,7 +19,7 @@ name: fromLeftToRight.png
 ----
 class: large_image
 #### text-block ####
-content: Right, so what is a variable font? That's a reasonable question. It is a font conforming to the OpenType format 1.8 ([released in 2016](https://medium.com/variable-fonts/https-medium-com-tiro-introducing-opentype-variable-fonts-12ba6cd2369)). This new format allows the distribution of a *dynamic* font, where glyphs can be manipulated according to arbitrary variables organized over axes. These axes can reflect common typographic variables like weight, width, slant, optical size (as in the original Multiple Master fonts), or more peculiar ones like nib form and contrast. The Noordzij Cube, a visual synthesis of a model invented by Gerrit Noorzij, has deeply influenced the development of the format.
+content: Right, so what is a variable font? That is a reasonable question. It is a font conforming to the OpenType format 1.8 ([released in 2016](https://medium.com/variable-fonts/https-medium-com-tiro-introducing-opentype-variable-fonts-12ba6cd2369)). This new format allows the distribution of a *dynamic* font, where glyphs can be manipulated according to arbitrary variables organized over axes. These axes can reflect common typographic variables like weight, width, slant, optical size (as in the original Multiple Master fonts), or more peculiar ones like nib form and contrast. The Noordzij Cube, a visual synthesis of a model invented by Gerrit Noorzij, has deeply influenced the development of the format.
 #### image ####
 name: noordzij_cube.png
 ----
