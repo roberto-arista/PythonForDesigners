@@ -86,3 +86,21 @@ solutions:
 name: protractor.py
 ----
 assignment: Draw a protractor. Do you remember that plastic thingy used to measure angles in technical drawings made with paper and pencil? No clue? Ok, google it. Measurements in degrees and fractions of `π`. Extra: why don't you show an arc measuring one radian?
+#### exercise ####
+image: fontMatrix.png
+----
+solutions:
+
+##### linkToAttachment #####
+name: fontMatrix.py
+----
+assignment: Draw a matrix of glyphs from a UFO file. Spread the glyphs evenly over the canvas and show metrics – horizontal and vertical –, baseline, glyph name, and Unicode in hexadecimal form. You might want to check the cookbook for some help. Here’s a [PDF](fontMatrix.pdf) example
+#### exercise ####
+image: showBeziers.png
+----
+solutions:
+
+##### linkToAttachment #####
+name: showBeziers.py
+----
+assignment: Choose a font you like. You can pick an [open-source UFO file](https://github.com/djrrb/Bungee/tree/master/sources/1-drawing), use your drawings, or ask a type designer friend for some unreleased cool stuff. You can access the font data using [fontParts](https://fontparts.robotools.dev/en/stable/), a Python module shipped along with the drawBot application. Once you managed to access the font data, draw a glyph on the canvas showing the underlying Béziers structure as if you were looking at the glyph in a font editor application. Subclassing a [BasePen](https://github.com/fonttools/fonttools/blob/master/Lib/fontTools/pens/basePen.py) from [fontTools](https://fonttools.readthedocs.io/en/latest/) – another Python module shipped along with the drawBot application – could make the solution easier to achieve. The cookbook could help a little bit. If you have never met a *Pen* until know, you might want to check this [presentation](https://github.com/jenskutilek/TypoLabs2016/blob/master/If%20you%20don't%20have%20a%20pen.pdf)
