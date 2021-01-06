@@ -68,9 +68,13 @@
 
 {% macro renderRasterImage(imageName, imageObj, imageClass) %}
   <img alt='{{ imageName }}'
-       src='{{ imageObj.thumbnail(width=20)|url }}'
+       src='{{ imageObj.thumbnail(width=40)|url }}'
        data-sizes="auto"
-       data-src='{{ imageObj|url }}'
+       data-srcset="{{ imageObj.thumbnail(width=600)|url }} 600w,
+                    {{ imageObj.thumbnail(width=900)|url }} 900w,
+                    {{ imageObj.thumbnail(width=1200)|url }} 1200w,
+                    {{ imageObj.thumbnail(width=1500)|url }} 1500w,
+                    {{ imageObj|url }}"
        class="lazyload {{ imageClass | replace('_', '-') }}"/>
 {% endmacro %}
 
