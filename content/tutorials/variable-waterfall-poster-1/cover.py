@@ -64,5 +64,5 @@ verElems = 3
 
 # --- Instructions --- #
 if __name__ == '__main__':
-    generateSourcePosters(fontName, inputPath, language='english', iterations=28)
+    generateSourcePosters(fontName, inputPath, language='italian', iterations=28)
     generateCover(horElems, verElems, scalingFactor, inputPath, outputPath='visual-abstract.png')

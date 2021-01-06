@@ -1,4 +1,4 @@
-abstract: Part two: get variable font technology to work and typeset a different instance of each line of the poster
+abstract: Part two: get variable font technology to work and typeset a different instance for each line of the poster
 ---
 hasTocNumber: yes
 ---
@@ -159,4 +159,4 @@ name: back-cover.png
 ----
 class: large_image
 #### text-block ####
-content: Thanks to [Ben Kiel](https://benkiel.com) and [Paolo Mazzetti](https://twitter.com/folengo) for reviewing the code in the early stage of the process. The outlines used for the Noordzij Cube were made with Ikarus by Petr van Blokland, who traced the original drawings by Gerrit Noordzij. They were a huge inspiration for design spaces and variable font technology.
+content: Thanks to [Ben Kiel](https://benkiel.com) and [Paolo Mazzetti](https://twitter.com/folengo) for reviewing the code in the early stage of the process. Thanks to Rob Stenson and Alessia Mazzarella for spotting a few mistakes. The outlines used for the Noordzij Cube were made with Ikarus by Petr van Blokland, who traced the original drawings by Gerrit Noordzij. The Noordzij Cube was a huge inspiration for design spaces and variable font technology.
