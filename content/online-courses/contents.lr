@@ -6,6 +6,22 @@ body:
 
 #### text-block ####
 content:
+<h2 style='font-size: 1.3rem'>Active Courses</h2>
+
+### Python for Designers Online, 6th ed.
+*Wednesday, 16:00 – 19:00 Italy time, 8 classes*
+
+**€400**
+
+* February: 24th
+* March: 3rd, 10th, 17th, 24th, 31st
+* April: 7th, 14th
+
+
+<form action="https://forms.gle/NVVF5K6UrJxnRPB7A" method="get" target="_blank">
+    <button type="submit" class="button">Subscribe</button>
+</form>
+
 ## Overview
 
 Since 2019, I have de­cided to of­fer *Python for Designers* on­line courses which are based on this man­ual. This type of so­lu­tion eases many lo­gis­ti­cal prob­lems and al­lows me to reach a broader au­di­ence. The courses also pro­vide fi­nan­cial help for additional project developments.
@@ -31,24 +47,7 @@ The en­roll­ment costs €400 in­clud­ing taxes. Each course has a min­i­m
 
 To enroll check the open courses and click on the “sub­scribe” but­ton to complete the (google) form. Shortly af­ter I will send you an in­voice with details for the payment. You’ll be able to pay with Credit Cards (through Stripe) or Bank Transfer. Don't worry, I will not share your data with anyone.
 
-# Active Courses
-
-### Python for Designers Online, 6th ed.
-*Wednesday, 16:00 – 19:00 Italy time, 8 classes*
-
-**€400**
-
-* February: 24th
-* March: 3rd, 10th, 17th, 24th, 31st
-* April: 7th, 14th
-
-
-<form action="https://forms.gle/NVVF5K6UrJxnRPB7A" method="get" target="_blank">
-    <button type="submit" class="button">Subscribe</button>
-</form>
-
 If you can't attend any course listed here, <a class='grayscale' href="mailto:&#x68;&#x65;&#x6C;&#x6C;&#x6F;&#x40;&#x72;&#x6F;&#x62;&#x65;&#x72;&#x74;&#x6F;&#x61;&#x72;&#x69;&#x73;&#x74;&#x61;&#x2E;&#x69;&#x74;">get in touch</a> and let me know which time would suit your needs. I'll try to arrange something!
-
 ---
 visual_abstract: abstract.svg
 ---
