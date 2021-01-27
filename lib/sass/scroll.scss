@@ -1,0 +1,29 @@
+@import "variables";
+@import "fonts";
+@import "style";
+
+#course-banner {
+  background-color: $pink;
+  padding: .25rem;
+  text-align: center;
+}
+
+#course-banner .basic-container {
+  @include bigger-than('md') {
+  width: 100%;
+  }
+}
+
+#course-banner span {
+  display: inline-block;
+  font-family: 'Arnold Regular', monospace;
+  font-variant-caps: small-caps;
+  font-size: .65rem;
+  line-height: .8rem;
+  color: $white;
+}
+
+#course-banner span a {
+  color: $white;
+  border-bottom: 1px solid $white;
+}

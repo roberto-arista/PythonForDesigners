@@ -1,0 +1,399 @@
+@font-face {
+  font-family: "Laica Regular";
+  src: url("/static/fonts/LaicaB-Regular.woff2") format("woff2"), url("/static/fonts/LaicaB-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Laica Italic";
+  src: url("/static/fonts/LaicaB-Italic.woff2") format("woff2"), url("/static/fonts/LaicaB-Italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Laica Bold";
+  src: url("/static/fonts/LaicaB-Bold.woff2") format("woff2"), url("/static/fonts/LaicaB-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Arnold Regular";
+  src: url("/static/fonts/Arnold_v0.3-Regular.woff2") format("woff2"), url("/static/fonts/Arnold_v0.3-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Arnold Italic";
+  src: url("/static/fonts/Arnold_v0.3-Italic.woff2") format("woff2"), url("/static/fonts/Arnold_v0.3-Italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gig Bold";
+  src: url("/static/fonts/GigV0.4-Bold.woff2") format("woff2"), url("/static/fonts/GigV0.4-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Laica Regular";
+  src: url("/static/fonts/LaicaB-Regular.woff2") format("woff2"), url("/static/fonts/LaicaB-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Laica Italic";
+  src: url("/static/fonts/LaicaB-Italic.woff2") format("woff2"), url("/static/fonts/LaicaB-Italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Laica Bold";
+  src: url("/static/fonts/LaicaB-Bold.woff2") format("woff2"), url("/static/fonts/LaicaB-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Arnold Regular";
+  src: url("/static/fonts/Arnold_v0.3-Regular.woff2") format("woff2"), url("/static/fonts/Arnold_v0.3-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Arnold Italic";
+  src: url("/static/fonts/Arnold_v0.3-Italic.woff2") format("woff2"), url("/static/fonts/Arnold_v0.3-Italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gig Bold";
+  src: url("/static/fonts/GigV0.4-Bold.woff2") format("woff2"), url("/static/fonts/GigV0.4-Bold.woff") format("woff");
+}
+
+/*
+// xs
+property: value;
+
+  @include bigger-than('sm') {
+    property: value;
+  }
+  @include bigger-than('md') {
+    property: value;
+  }
+  @include bigger-than('lg') {
+    property: value;
+  }
+*/
+/* line 20, lib/sass/style.scss */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* line 24, lib/sass/style.scss */
+html {
+  height: 100%;
+  font-size: calc(23px + (26 - 23) * ((100vw - 320px) / (600 - 320)));
+}
+
+@media (max-width: 320px) {
+  /* line 24, lib/sass/style.scss */
+  html {
+    font-size: 23px;
+  }
+}
+
+@media (min-width: 600px) {
+  /* line 24, lib/sass/style.scss */
+  html {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 600px) {
+  /* line 24, lib/sass/style.scss */
+  html {
+    font-size: calc(23px + (26 - 23) * ((100vw - 601px) / (900 - 601)));
+  }
+}
+
+@media (min-width: 600px) and (max-width: 601px) {
+  /* line 24, lib/sass/style.scss */
+  html {
+    font-size: 23px;
+  }
+}
+
+@media (min-width: 600px) and (min-width: 900px) {
+  /* line 24, lib/sass/style.scss */
+  html {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 900px) {
+  /* line 24, lib/sass/style.scss */
+  html {
+    font-size: calc(26px + (28 - 26) * ((100vw - 901px) / (1200 - 901)));
+  }
+}
+
+@media (min-width: 900px) and (max-width: 901px) {
+  /* line 24, lib/sass/style.scss */
+  html {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 900px) and (min-width: 1200px) {
+  /* line 24, lib/sass/style.scss */
+  html {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* line 24, lib/sass/style.scss */
+  html {
+    font-size: calc(28px + (32 - 28) * ((100vw - 1201px) / (1500 - 1201)));
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1201px) {
+  /* line 24, lib/sass/style.scss */
+  html {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1200px) and (min-width: 1500px) {
+  /* line 24, lib/sass/style.scss */
+  html {
+    font-size: 32px;
+  }
+}
+
+/* line 58, lib/sass/style.scss */
+body {
+  font-size: .8rem;
+  line-height: 1rem;
+  font-family: "Laica Regular", Georgia, serif;
+  -webkit-font-kerning: normal;
+          font-kerning: normal;
+  color: #222;
+  background: #FFF;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 75, lib/sass/style.scss */
+.basic-container {
+  margin: 0 auto;
+  width: calc(290px + (550 - 290) * ((100vw - 320px) / (600 - 320)));
+}
+
+@media (max-width: 320px) {
+  /* line 75, lib/sass/style.scss */
+  .basic-container {
+    width: 290px;
+  }
+}
+
+@media (min-width: 600px) {
+  /* line 75, lib/sass/style.scss */
+  .basic-container {
+    width: 550px;
+  }
+}
+
+@media (min-width: 600px) {
+  /* line 75, lib/sass/style.scss */
+  .basic-container {
+    width: calc(550px + (700 - 550) * ((100vw - 601px) / (900 - 601)));
+  }
+}
+
+@media (min-width: 600px) and (max-width: 601px) {
+  /* line 75, lib/sass/style.scss */
+  .basic-container {
+    width: 550px;
+  }
+}
+
+@media (min-width: 600px) and (min-width: 900px) {
+  /* line 75, lib/sass/style.scss */
+  .basic-container {
+    width: 700px;
+  }
+}
+
+@media (min-width: 900px) {
+  /* line 75, lib/sass/style.scss */
+  .basic-container {
+    width: calc(700px + (850 - 700) * ((100vw - 901px) / (1200 - 901)));
+  }
+}
+
+@media (min-width: 900px) and (max-width: 901px) {
+  /* line 75, lib/sass/style.scss */
+  .basic-container {
+    width: 700px;
+  }
+}
+
+@media (min-width: 900px) and (min-width: 1200px) {
+  /* line 75, lib/sass/style.scss */
+  .basic-container {
+    width: 850px;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* line 75, lib/sass/style.scss */
+  .basic-container {
+    width: calc(850px + (1024 - 850) * ((100vw - 1201px) / (1500 - 1201)));
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1201px) {
+  /* line 75, lib/sass/style.scss */
+  .basic-container {
+    width: 850px;
+  }
+}
+
+@media (min-width: 1200px) and (min-width: 1500px) {
+  /* line 75, lib/sass/style.scss */
+  .basic-container {
+    width: 1024px;
+  }
+}
+
+/* line 109, lib/sass/style.scss */
+.no-border {
+  border: none;
+}
+
+@media (max-width: 1200px) {
+  /* line 113, lib/sass/style.scss */
+  .lg-only {
+    display: none;
+  }
+}
+
+/* line 120, lib/sass/style.scss */
+strong {
+  font-family: "Laica Bold", Georgia, serif;
+}
+
+/* line 124, lib/sass/style.scss */
+em {
+  font-family: "Laica Italic", Georgia, serif;
+}
+
+/* line 128, lib/sass/style.scss */
+h1 {
+  font-size: 1.8rem;
+  line-height: 2rem;
+  font-family: "Gig Bold", Georgia, serif;
+  padding: .5rem 0;
+  color: #F36;
+}
+
+/* line 136, lib/sass/style.scss */
+h2 {
+  font-family: "Gig Bold", Georgia, serif;
+  color: #F36;
+  margin-top: 1em;
+  font-size: 1.25em;
+  line-height: 1.5em;
+}
+
+/* line 145, lib/sass/style.scss */
+h2 > a, h2 > a:active, h2 > a:hover, h2 > a:visited, h2 > a:visited:hover {
+  font-family: "Gig Bold", Georgia, serif;
+}
+
+/* line 149, lib/sass/style.scss */
+p {
+  font-family: "Laica Regular", Georgia, serif;
+}
+
+/* line 153, lib/sass/style.scss */
+ul > li {
+  text-indent: -1.2rem;
+  padding-left: 1.2rem;
+}
+
+/* line 158, lib/sass/style.scss */
+ul > li:before {
+  content: '\2014  ';
+}
+
+/* line 162, lib/sass/style.scss */
+a {
+  color: #F36;
+  text-decoration: none;
+}
+
+/* line 167, lib/sass/style.scss */
+a:hover {
+  text-decoration: none;
+  border-bottom: 1px solid #F36;
+}
+
+/* line 172, lib/sass/style.scss */
+a:visited {
+  color: #F36;
+}
+
+/* line 176, lib/sass/style.scss */
+a:visited:hover {
+  color: #F36;
+  border-bottom: 1px solid #F36;
+}
+
+/* line 182, lib/sass/style.scss */
+::-moz-selection {
+  background: #FFEDED;
+  /* WebKit/Blink Browsers */
+}
+::selection {
+  background: #FFEDED;
+  /* WebKit/Blink Browsers */
+}
+
+/* line 185, lib/sass/style.scss */
+::-moz-selection {
+  background: #FFEDED;
+  /* Gecko Browsers */
+}
+
+/* line 189, lib/sass/style.scss */
+figcaption {
+  font-family: "Arnold Regular", Monaco, monospace;
+  color: #1858A8;
+  font-size: .55rem;
+  line-height: .65rem;
+  text-transform: lowercase;
+  font-variant-caps: small-caps;
+  margin-bottom: 1rem;
+}
+
+/* line 5, lib/sass/scroll.scss */
+#course-banner {
+  background-color: #F36;
+  padding: .25rem;
+  text-align: center;
+}
+
+@media (min-width: 900px) {
+  /* line 11, lib/sass/scroll.scss */
+  #course-banner .basic-container {
+    width: 100%;
+  }
+}
+
+/* line 17, lib/sass/scroll.scss */
+#course-banner span {
+  display: inline-block;
+  font-family: 'Arnold Regular', monospace;
+  font-variant-caps: small-caps;
+  font-size: .65rem;
+  line-height: .8rem;
+  color: #FFF;
+}
+
+/* line 26, lib/sass/scroll.scss */
+#course-banner span a {
+  color: #FFF;
+  border-bottom: 1px solid #FFF;
+}
