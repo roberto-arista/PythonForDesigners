@@ -2,7 +2,7 @@ newPage(200, 200)
 factor = .5
 blackOnWhite = False
 
-if blackOnWhite is True:
+if blackOnWhite:
     backgroundColor = 1
     circleColor = 0
 else:

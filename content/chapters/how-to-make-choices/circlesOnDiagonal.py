@@ -7,7 +7,7 @@ radius = 32
 stroke(0)
 strokeWidth(4)
 
-if firstLightThenDark is True:
+if firstLightThenDark:
     factorStep = 1 / (circles+1) 
     factor = factorStep
 else:

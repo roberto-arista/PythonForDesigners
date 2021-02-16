@@ -1,2 +1,2 @@
-if isDark is True:
+if isDark:
     turnLight()
