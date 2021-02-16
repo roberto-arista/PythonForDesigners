@@ -29,9 +29,9 @@ def generateSourcePosters(fontName, imagePath, language, axisSteps,
     dB.saveImage(imagePath)
     dB.endDrawing()
 
-def generateCover(horElems, verElems, scalingFactor, inputPath, outputPath, margin=250):
+def assembleImages(horElems, verElems, scalingFactor, inputPath, outputPath, margin=250, _format=(7200, 3600)):
     dB.newDrawing()
-    dB.newPage(7200, 3600)
+    dB.newPage(*_format)
     background(GRAY)
 
     horStep = (dB.width() - margin*2) / horElems
@@ -74,31 +74,31 @@ if __name__ == '__main__':
                           waterfallAxisName='wght',
                           fixedAxes={'wdth': 1.5},
                           iterations=28)
-    generateCover(horElems=8,
-                  verElems=3,
-                  scalingFactor=.75,
-                  inputPath='coverPosters.pdf',
-                  outputPath='visual-abstract.png')
+    assembleImages(horElems=8,
+                   verElems=3,
+                   scalingFactor=.75,
+                   inputPath='coverPosters.pdf',
+                   outputPath='visual-abstract.png')
 
     # back cover
     generateSourcePosters(fontName='ObviouslyVariable-None',
                           imagePath='backCover.pdf',
-                          language='english',
+                          language='italian',
                           axisSteps=7,
                           waterfallAxisName='wght',
                           fixedAxes={'wdth': 480, 'slnt': 11},
                           iterations=28)
-    generateCover(horElems=6,
-                  verElems=2,
-                  scalingFactor=1.15,
-                  inputPath='backCover.pdf',
-                  outputPath='back-cover.png')
+    assembleImages(horElems=6,
+                   verElems=2,
+                   scalingFactor=1.15,
+                   inputPath='backCover.pdf',
+                   outputPath='back-cover.png')
 
     combinePDF(inputs=['../variable-waterfall-poster-1/coverPosters.pdf',
                        'coverPosters.pdf'],
                outputPath='leftToRight.pdf')
-    generateCover(horElems=2,
-                  verElems=1,
-                  scalingFactor=2.5,
-                  inputPath='leftToRight.pdf',
-                  outputPath='fromLeftToRight.png')
+    assembleImages(horElems=2,
+                   verElems=1,
+                   scalingFactor=2.5,
+                   inputPath='leftToRight.pdf',
+                   outputPath='fromLeftToRight.png')
