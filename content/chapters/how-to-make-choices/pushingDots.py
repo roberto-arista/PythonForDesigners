@@ -8,7 +8,7 @@ switch = False
 distance = .5
 
 # Instructions
-if switch is True:
+if switch:
     direction = 1
 else:
     direction = -1
