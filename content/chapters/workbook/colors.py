@@ -45,7 +45,7 @@ def typeQualities(isBold=False):
     fill(*BLACK)
     stroke(None)
     openTypeFeatures(tnum=True)
-    if isBold is False:
+    if not isBold:
         font('.SFNS-Regular', 9)
     else:
         font('.SFNS-Bold', 9)

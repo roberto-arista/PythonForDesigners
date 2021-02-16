@@ -3,7 +3,7 @@ switch = True
 
 newPage(100, 100)
 
-if switch is False:
+if not switch:
     background = 0
     figure = 1
 else:

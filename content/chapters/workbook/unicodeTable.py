@@ -19,7 +19,7 @@ GRAY = .6, .6, .6
 # Functions
 def typeQualities(isBold=False):
     openTypeFeatures(tnum=True)
-    if isBold is False:
+    if not isBold:
         font('.SFNS-Regular', 10)
     else:
         font('.SFNS-Bold', 10)
