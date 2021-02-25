@@ -8,25 +8,15 @@ body:
 content:
 <h2 style='font-size: 1.3rem'>Active Courses</h2>
 
-### Python for Designers Online, 6th ed.
-*Wednesday, 16:00 – 19:00 Italy time, 8 classes*
-
-**€400**
-
-* February: 24th
-* March: 3rd, 10th, 17th, 24th, 31st
-* April: 7th, 14th
-
-
-<form action="https://forms.gle/NVVF5K6UrJxnRPB7A" method="get" target="_blank">
-    <button type="submit" class="button">Subscribe</button>
-</form>
+Unfortunately, there are not active courses at the moment. If you are interested, drop me a <a class='grayscale' href="mailto:&#x68;&#x65;&#x6C;&#x6C;&#x6F;&#x40;&#x72;&#x6F;&#x62;&#x65;&#x72;&#x74;&#x6F;&#x61;&#x72;&#x69;&#x73;&#x74;&#x61;&#x2E;&#x69;&#x74;">line</a>. I will contact you as soon as a new course is released.
 
 ## Overview
 
 Since 2019, I have de­cided to of­fer *Python for Designers* on­line courses which are based on this man­ual. This type of so­lu­tion eases many lo­gis­ti­cal prob­lems and al­lows me to reach a broader au­di­ence. The courses also pro­vide fi­nan­cial help for additional project developments.
 
-The *Python for Designers* on­line course is struc­tured in eight classes of three hours each. Dur­ing each ses­sion, I will ex­plain the con­cepts, toss some code around and perform practice ex­er­cises. The course will guide you through the con­tents of the man­ual (and more) fo­cus­ing on strat­egy and prob­lem-solv­ing skills . You will have two hours be­tween each class for completing as­sign­ments. Re­sources and so­lu­tions will be shared via Slack work­space.
+The *Python for Designers* on­line course is struc­tured in eight classes of three hours each. Dur­ing each ses­sion, I will ex­plain the con­cepts, toss some code around and perform practice ex­er­cises. The course will guide you through the con­tents of the man­ual (and more) fo­cus­ing on strat­egy and prob­lem-solv­ing skills . You will need two hours be­tween each class for completing as­sign­ments.
+
+Re­sources and so­lu­tions will be shared via Slack work­space. You will need an Apple computer (Drawbot only runs on MacOS) and a decent internet connection (classes are served via Zoom).
 
 Needless to say, a 24 hours course like this is not a Computer Science degree. It is just a way to break the ice, you will need time and regular practice to master programming.
 
