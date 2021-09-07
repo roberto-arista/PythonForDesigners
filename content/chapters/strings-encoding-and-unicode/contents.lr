@@ -30,7 +30,7 @@ name: writing.svg
 class: large-image
 ----
 #### section-title ####
-content: Gutenberg and Movable Type
+content: The Invention of Movable Type
 ----
 class: default
 ----
@@ -40,13 +40,15 @@ name: vectorVSpixel.svg
 class: small-image
 ----
 #### text-block ####
-content: Think about this: if you ask yourself what actually Gutenberg invented, you will not easily find an “object” to imagine. Presses, paper, ink, metal stamps, the Latin alphabet, books: they were already there. Can we name more precisely his invention? Of course: Gutenberg made the continuous surface of Writing *discrete*, which means consisting of separated elements.
+content: Movable type technology made its first appearances in Asia around 1000 AD, hundreds of years before Europe. Around 1450, Johannes Gutenberg, a goldsmith based in Mainz, introduced the metal movable-type printing presses in Europe starting the Printing Revolution.
 
-We could state that making something discrete is defining an atom or a set of rules which will reduce substantially the possibilities allowed by the system: from the widest infinite set of options to a narrower infinite set of options. It means setting one or more thresholds which will define unambiguously which information will be discarded or not. Take for example the scale plans in architecture: the 1 to *something* value defines the threshold in representation which sets the amount of information and detail conveyed by the image.
+Think about it: if you ask yourself what actually movable type's pioneers invented, you will not easily find an “object” to imagine. Presses, paper, ink, metal stamps, writing, books: they were already there. Can we name more precisely their invention? Of course: they made the continuous surface of Writing *discrete*, which means consisting of separated elements.
 
-How could a loss of detail and options be a good thing? Well, the idea is to discard what we don’t need to achieve a certain goal, in order to make our process more efficient. Less options means quicker transformations, less data to transfer, quicker testing and so on.
+We could state that making something discrete is defining an atom or a set of rules which will reduce substantially the possibilities allowed by the system: from the widest infinite set of options to a narrower infinite set of options. It means setting one or more thresholds that will define unambiguously which information will be discarded or not. Take for example the scale plans in architecture: the 1 to *something* value defines the threshold in representation which sets the amount of information and detail conveyed by the image.
 
-In different words, Gutenberg reduced the inexhaustible possibilities of Writing to speed up the arrangement and reproduction of lines of text. The loss in composition freedom was substantial, but the gain in speed and ease of production was huge.
+How could a loss of detail and options be a good thing? Well, the idea is to discard what we don’t need to achieve a certain goal, in order to make our process more efficient. Fewer options mean quicker transformations, fewer data to transfer, quicker testing, and so on.
+
+In different words, movable type reduces the inexhaustible possibilities of Writing to speed up the arrangement and reproduction of lines of text. The loss in composition freedom was substantial, but the gain in speed and ease of production was huge.
 ----
 #### image ####
 name: medievalVGutenberg.svg
@@ -59,9 +61,9 @@ name: illustrationVStypography.svg
 class: small-image
 ----
 #### text-block ####
-content: In the case of  Gutenberg, this reduction meant that he had to identify and select the most occurring components of Writing – in his context the letters of the Latin alphabet – and make them fit into a box according to a number of restrictions. These restrictions were supposed to make these boxes interchangeable. Everything else outside this selection of elements started to be treated as illustration, carved in wooden blocks and kept separate from “text”.
+content: If we focus on Europe, where languages are mostly written using the Latin alphabet, the reduction meant that Gutenberg had to identify and select the most occurring components of Writing – in his context the letters of the Latin alphabet – and make them fit into a box according to a number of restrictions. These restrictions were supposed to make these boxes interchangeable. Everything else outside this selection of elements started to be treated as an illustration, carved in wooden blocks and kept separate from “text”.
 
-Ok, but… the letters were already separate things before Gutenberg’s invention, right? A is A, B is B and so on. That’s true, but when one writes, say, by hand the surface is not sliced, it is continuous. If we compare Writing to Music, this is probably easier to understand. Typography, as any visual arrangement, consists in as much white as black. It’s not black on white, it’s black and white. It’s as much ink as paper. As much active pixels as inactive ones. As much fill as void. Now, transpose this to Music. What would be a note without the absence of sound surrounding it? The absence of sound contributes to the construction of the meaning as well as the presence of sound. What would be a typographic composition without the white surrounding the black? Just some messy spots of ink.
+Ok, but… the letters were already separate things before movable type, right? A is A, B is B, and so on. That’s true, but when one writes, say, by hand, the surface is not sliced, it is continuous. If we compare Writing to Music, this is probably easier to understand. Typography, like any visual arrangement, consists of as much white as black. It’s not black on white, it’s black AND white. It’s as much ink as paper. As many active pixels as inactive ones. As much fill as void. Now, transpose this to Music. What would be a note without the absence of sound surrounding it? The absence of sound contributes to the construction of the meaning as well as the presence of sound. What would be a typographic composition without the white surrounding the black? Just some messy spots of ink.
 ----
 #### image ####
 name: hello.svg
@@ -69,7 +71,7 @@ name: hello.svg
 class: large-image
 ----
 #### text-block ####
-content: What Gutenberg did was to break the continuum of Writing into rectangles of regular height. Because of production constraints, Gutenberg also wanted to have the graphism (the black shape) entirely contained into a box. The easiest and more logic way to do so was to cut between each black shape. This means that if the graphism is untouched, the void (white) needs to be sliced in different pieces and distributed across the boxes.
+content: Movable type allows to break the continuum of Writing into rectangles of regular height. Because of production constraints, the graphism (the black shape) needs to be entirely contained into a box. The easiest and more logic way to do so was to cut between each black shape. This means that if the graphism is untouched, the void (white) needs to be sliced in different pieces and distributed across the boxes.
 ----
 #### image ####
 name: space-glyph.svg
