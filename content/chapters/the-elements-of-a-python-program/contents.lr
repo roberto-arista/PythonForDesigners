@@ -31,7 +31,7 @@ class: small-image
 #### text-block ####
 content: Python is an *interpreted* language. It means that the instructions contained in a script are read line by line and immediately executed. The program devoted to the interpretation and execution of commands is the Python Interpreter. This interpreter can be used interactively (just open terminal, write <code>'python'</code> and hit enter) or be called to read a text file with .py extension. 
 
-On the contrary, languages as C++ or Java are *compiled*, meaning that the source code is first transformed into object code and only then is executed. The advantage of this process is that the translation from high-level to low-level code is done only once; therefore the object code execution will probably be faster. This is how the applications installed on your machine generally work. Their source code is stored on the developer’s computer, and only the object code is then distributed to the users, who sometimes buy it. 
+On the contrary, languages such as C++ or Java are *compiled*, meaning that the source code is first transformed into object code and only then is executed. The advantage of this process is that the translation from high-level to low-level code is done only once; therefore the object code execution will probably be faster. This is how the applications installed on your machine generally work. Their source code is stored on the developer’s computer, and only the object code is then distributed to the users, who sometimes buy it. 
 ----
 #### image ####
 name: interpreted_vs_compiled.svg
