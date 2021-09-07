@@ -83,7 +83,7 @@ class: large-image
 content: Boolean data types are used to manipulate logical values and the only two possible instances they can refer to are <code>True</code> and <code>False</code>. These are literal, not strings! In fact, they are part of the reserved keywords list. Python provides a built-in function to create boolean value starting from non boolean ones, it is <code>bool()</code>.
 
 A number is converted to <code>False</code> if it’s equal to zero, <code>True</code> if it’s different from zero.
-Sequences or other containers are translated to <code>False</code> if empty, to <code>True</code> if they have objects inside. Boolean type is mostly used to describe a condition: is it black? is it a digit? did I reach the door? do I have still space on the page? and so on. This condition is then used in combination with control structures as <code>if</code> or <code>while</code>.
+Sequences or other containers are translated to <code>False</code> if empty, to <code>True</code> if they have objects inside. Boolean type is mostly used to describe a condition: is it black? is it a digit? did I reach the door? do I still have space on the page? and so on. This condition is then used in combination with control structures as <code>if</code> or <code>while</code>.
 ----
 #### section-title ####
 content: Numbers (Integers and Floating-point)
