@@ -10,10 +10,10 @@
     "gulp-jshint": "^2.1.0",
     "gulp-optimize-js": "^1.1.0",
     "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.1.0",
+    "gulp-sass": "^5.1.0",
     "gulp-terser": "^2.0.0",
     "jshint-stylish": "^2.2.1",
     "lazypipe": "^1.0.2",
-    "node-sass": "^5.0.0"
+    "sass": "^1.83.0"
   }
 }
