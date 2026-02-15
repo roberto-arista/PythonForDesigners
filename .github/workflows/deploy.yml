@@ -22,6 +22,9 @@ jobs:
 
       - run: uv sync
 
+      - name: Decrypt fonts
+        run: openssl enc -aes-256-cbc -pbkdf2 -d -in assets/static/fonts.tar.gz.enc -pass pass:'${{ secrets.FONTS_PASSPHRASE }}' | tar xzf - -C assets/static
+
       - run: uv run lektor build --output-path build
 
       - uses: cloudflare/wrangler-action@v3
