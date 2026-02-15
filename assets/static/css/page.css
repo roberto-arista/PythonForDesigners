@@ -1,86 +1,67 @@
-/* line 4, lib/sass/page.scss */
 #page > div {
   margin-top: 2rem;
 }
-
 @media (min-width: 600px) {
-  /* line 4, lib/sass/page.scss */
   #page > div {
     margin-top: 2rem;
   }
 }
-
 @media (min-width: 900px) {
-  /* line 4, lib/sass/page.scss */
   #page > div {
     margin-top: 2rem;
   }
 }
-
 @media (min-width: 1200px) {
-  /* line 4, lib/sass/page.scss */
   #page > div {
     margin-top: 2rem;
   }
 }
 
-/* line 21, lib/sass/page.scss */
 .large-image {
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
   width: 100%;
 }
 
-/* line 26, lib/sass/page.scss */
 #page p, #page ul, #page form {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 @media (min-width: 1200px) {
-  /* line 31, lib/sass/page.scss */
   #page h1 {
     padding-left: 4rem;
   }
-  /* line 32, lib/sass/page.scss */
   #page h2 {
     padding-left: 4rem;
   }
-  /* line 33, lib/sass/page.scss */
   #page h3 {
     padding-left: 4rem;
   }
-  /* line 34, lib/sass/page.scss */
   #page p {
     padding-left: 4rem;
   }
-  /* line 35, lib/sass/page.scss */
   #page ul {
     padding-left: 4rem;
   }
-  /* line 36, lib/sass/page.scss */
   #page form {
     padding-left: 4rem;
   }
-  /* line 37, lib/sass/page.scss */
   #page figcaption {
     padding-left: 4rem;
   }
 }
-
-/* line 42, lib/sass/page.scss */
 #page h3 {
   font-size: 1rem;
   line-height: 1.25rem;
   font-family: "Laica Bold", Georgia, serif;
 }
 
-/* line 49, lib/sass/page.scss */
 .button {
-  font-size: .5rem;
-  line-height: .5rem;
+  font-size: 0.5rem;
+  line-height: 0.5rem;
   font-family: "Arnold Regular", Monaco, monospace;
   border: none;
   text-transform: uppercase;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   color: #FFF;
   background-color: #1858A8;
   -webkit-box-sizing: border-box;
@@ -95,7 +76,6 @@
   margin-bottom: 1rem;
 }
 
-/* line 70, lib/sass/page.scss */
 .button:hover {
   background-color: #F36;
   color: #FFF;
@@ -103,7 +83,6 @@
 }
 
 @media (max-width: 900px) {
-  /* line 76, lib/sass/page.scss */
   .button {
     width: 100%;
     margin: 0;
