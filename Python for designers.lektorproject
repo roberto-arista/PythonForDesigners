@@ -3,10 +3,6 @@ name = Python for designers
 url_style = absolute
 url = http://www.pythonfordesigners.com/
 
-[packages]
-lektor-jinja-content = 0.4.2
-lektor-gulp = 0.3.2
-
 [servers.dev]
 name = dev
 enabled = yes

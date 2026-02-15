@@ -1,0 +1,10 @@
+[project]
+name = "python-for-designers"
+version = "1.0.0"
+description = "Python for Designers - an educational website about Python and DrawBot"
+requires-python = ">=3.10"
+dependencies = [
+    "lektor>=3.3,<4",
+    "lektor-jinja-content>=0.4.2",
+    "lektor-gulp>=0.3.2",
+]

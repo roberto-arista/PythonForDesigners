@@ -2,51 +2,41 @@
   font-family: "Laica Regular";
   src: url("/static/fonts/LaicaB-Regular.woff2") format("woff2"), url("/static/fonts/LaicaB-Regular.woff") format("woff");
 }
-
 @font-face {
   font-family: "Laica Italic";
   src: url("/static/fonts/LaicaB-Italic.woff2") format("woff2"), url("/static/fonts/LaicaB-Italic.woff") format("woff");
 }
-
 @font-face {
   font-family: "Laica Bold";
   src: url("/static/fonts/LaicaB-Bold.woff2") format("woff2"), url("/static/fonts/LaicaB-Bold.woff") format("woff");
 }
-
 @font-face {
   font-family: "Arnold Regular";
   src: url("/static/fonts/Arnold_v0.3-Regular.woff2") format("woff2"), url("/static/fonts/Arnold_v0.3-Regular.woff") format("woff");
 }
-
 @font-face {
   font-family: "Arnold Italic";
   src: url("/static/fonts/Arnold_v0.3-Italic.woff2") format("woff2"), url("/static/fonts/Arnold_v0.3-Italic.woff") format("woff");
 }
-
 @font-face {
   font-family: "Gig Bold";
   src: url("/static/fonts/GigV0.4-Bold.woff2") format("woff2"), url("/static/fonts/GigV0.4-Bold.woff") format("woff");
 }
-
-/* line 5, lib/sass/toc-bar.scss */
 aside {
   width: 11rem;
   margin-top: 2rem;
-  padding: .5rem;
-  line-height: .75rem;
-  font-size: .6rem;
+  padding: 0.5rem;
+  line-height: 0.75rem;
+  font-size: 0.6rem;
 }
-
 @media (max-width: 1200px) {
-  /* line 5, lib/sass/toc-bar.scss */
   aside {
     display: none;
   }
 }
 
-/* line 20, lib/sass/toc-bar.scss */
 #toc-bar li {
-  padding-top: .25rem;
+  padding-top: 0.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -57,28 +47,22 @@ aside {
           justify-content: flex-start;
 }
 
-/* line 28, lib/sass/toc-bar.scss */
 .toc-bar-key {
   width: 1.5rem;
   text-align: right;
 }
 
-/* line 33, lib/sass/toc-bar.scss */
 .toc-bar-title {
   width: 7.75rem;
 }
 
-/* line 37, lib/sass/toc-bar.scss */
 .toc-bar-active:before {
-  content: '*';
+  content: "*";
 }
 
-/* line 41, lib/sass/toc-bar.scss */
 #topButton {
-  outline: none;
-  /* Remove outline */
-  display: none;
-  /* Hidden by default */
+  outline: none; /* Remove outline */
+  display: none; /* Hidden by default */
   position: fixed;
   bottom: 1rem;
   right: 1rem;
@@ -86,12 +70,11 @@ aside {
   background-color: #FFF;
   border: 1px solid #F36;
   color: #F36;
-  padding: .2rem .4rem;
+  padding: 0.2rem 0.4rem;
   border-radius: 2rem;
   font-size: 1rem;
 }
 
-/* line 61, lib/sass/toc-bar.scss */
 #topButton:hover {
   color: #FFF;
   background-color: #F36;

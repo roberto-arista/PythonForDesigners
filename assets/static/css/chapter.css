@@ -3,32 +3,26 @@
   font-family: "Laica Regular";
   src: url("/static/fonts/LaicaB-Regular.woff2") format("woff2"), url("/static/fonts/LaicaB-Regular.woff") format("woff");
 }
-
 @font-face {
   font-family: "Laica Italic";
   src: url("/static/fonts/LaicaB-Italic.woff2") format("woff2"), url("/static/fonts/LaicaB-Italic.woff") format("woff");
 }
-
 @font-face {
   font-family: "Laica Bold";
   src: url("/static/fonts/LaicaB-Bold.woff2") format("woff2"), url("/static/fonts/LaicaB-Bold.woff") format("woff");
 }
-
 @font-face {
   font-family: "Arnold Regular";
   src: url("/static/fonts/Arnold_v0.3-Regular.woff2") format("woff2"), url("/static/fonts/Arnold_v0.3-Regular.woff") format("woff");
 }
-
 @font-face {
   font-family: "Arnold Italic";
   src: url("/static/fonts/Arnold_v0.3-Italic.woff2") format("woff2"), url("/static/fonts/Arnold_v0.3-Italic.woff") format("woff");
 }
-
 @font-face {
   font-family: "Gig Bold";
   src: url("/static/fonts/GigV0.4-Bold.woff2") format("woff2"), url("/static/fonts/GigV0.4-Bold.woff") format("woff");
 }
-
 /*
 // xs
 property: value;
@@ -43,98 +37,73 @@ property: value;
     property: value;
   }
 */
-/* line 20, lib/sass/style.scss */
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-/* line 24, lib/sass/style.scss */
 html {
   height: 100%;
-  font-size: calc(23px + (26 - 23) * ((100vw - 320px) / (600 - 320)));
+  font-size: calc(23px + (26 - 23) * (100vw - 320px) / (600 - 320));
 }
-
 @media (max-width: 320px) {
-  /* line 24, lib/sass/style.scss */
   html {
     font-size: 23px;
   }
 }
-
 @media (min-width: 600px) {
-  /* line 24, lib/sass/style.scss */
   html {
     font-size: 26px;
   }
 }
-
 @media (min-width: 600px) {
-  /* line 24, lib/sass/style.scss */
   html {
-    font-size: calc(23px + (26 - 23) * ((100vw - 601px) / (900 - 601)));
+    font-size: calc(23px + (26 - 23) * (100vw - 601px) / (900 - 601));
   }
 }
-
 @media (min-width: 600px) and (max-width: 601px) {
-  /* line 24, lib/sass/style.scss */
   html {
     font-size: 23px;
   }
 }
-
 @media (min-width: 600px) and (min-width: 900px) {
-  /* line 24, lib/sass/style.scss */
   html {
     font-size: 26px;
   }
 }
-
 @media (min-width: 900px) {
-  /* line 24, lib/sass/style.scss */
   html {
-    font-size: calc(26px + (28 - 26) * ((100vw - 901px) / (1200 - 901)));
+    font-size: calc(26px + (28 - 26) * (100vw - 901px) / (1200 - 901));
   }
 }
-
 @media (min-width: 900px) and (max-width: 901px) {
-  /* line 24, lib/sass/style.scss */
   html {
     font-size: 26px;
   }
 }
-
 @media (min-width: 900px) and (min-width: 1200px) {
-  /* line 24, lib/sass/style.scss */
   html {
     font-size: 28px;
   }
 }
-
 @media (min-width: 1200px) {
-  /* line 24, lib/sass/style.scss */
   html {
-    font-size: calc(28px + (32 - 28) * ((100vw - 1201px) / (1500 - 1201)));
+    font-size: calc(28px + (32 - 28) * (100vw - 1201px) / (1500 - 1201));
   }
 }
-
 @media (min-width: 1200px) and (max-width: 1201px) {
-  /* line 24, lib/sass/style.scss */
   html {
     font-size: 28px;
   }
 }
-
 @media (min-width: 1200px) and (min-width: 1500px) {
-  /* line 24, lib/sass/style.scss */
   html {
     font-size: 32px;
   }
 }
 
-/* line 58, lib/sass/style.scss */
 body {
-  font-size: .8rem;
+  font-size: 0.8rem;
   line-height: 1rem;
   font-family: "Laica Regular", Georgia, serif;
   -webkit-font-kerning: normal;
@@ -145,121 +114,92 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 75, lib/sass/style.scss */
 .basic-container, article {
   margin: 0 auto;
-  width: calc(290px + (550 - 290) * ((100vw - 320px) / (600 - 320)));
+  width: calc(290px + (550 - 290) * (100vw - 320px) / (600 - 320));
 }
-
 @media (max-width: 320px) {
-  /* line 75, lib/sass/style.scss */
   .basic-container, article {
     width: 290px;
   }
 }
-
 @media (min-width: 600px) {
-  /* line 75, lib/sass/style.scss */
   .basic-container, article {
     width: 550px;
   }
 }
-
 @media (min-width: 600px) {
-  /* line 75, lib/sass/style.scss */
   .basic-container, article {
-    width: calc(550px + (700 - 550) * ((100vw - 601px) / (900 - 601)));
+    width: calc(550px + (700 - 550) * (100vw - 601px) / (900 - 601));
   }
 }
-
 @media (min-width: 600px) and (max-width: 601px) {
-  /* line 75, lib/sass/style.scss */
   .basic-container, article {
     width: 550px;
   }
 }
-
 @media (min-width: 600px) and (min-width: 900px) {
-  /* line 75, lib/sass/style.scss */
   .basic-container, article {
     width: 700px;
   }
 }
-
 @media (min-width: 900px) {
-  /* line 75, lib/sass/style.scss */
   .basic-container, article {
-    width: calc(700px + (850 - 700) * ((100vw - 901px) / (1200 - 901)));
+    width: calc(700px + (850 - 700) * (100vw - 901px) / (1200 - 901));
   }
 }
-
 @media (min-width: 900px) and (max-width: 901px) {
-  /* line 75, lib/sass/style.scss */
   .basic-container, article {
     width: 700px;
   }
 }
-
 @media (min-width: 900px) and (min-width: 1200px) {
-  /* line 75, lib/sass/style.scss */
   .basic-container, article {
     width: 850px;
   }
 }
-
 @media (min-width: 1200px) {
-  /* line 75, lib/sass/style.scss */
   .basic-container, article {
-    width: calc(850px + (1024 - 850) * ((100vw - 1201px) / (1500 - 1201)));
+    width: calc(850px + (1024 - 850) * (100vw - 1201px) / (1500 - 1201));
   }
 }
-
 @media (min-width: 1200px) and (max-width: 1201px) {
-  /* line 75, lib/sass/style.scss */
   .basic-container, article {
     width: 850px;
   }
 }
-
 @media (min-width: 1200px) and (min-width: 1500px) {
-  /* line 75, lib/sass/style.scss */
   .basic-container, article {
     width: 1024px;
   }
 }
 
-/* line 109, lib/sass/style.scss */
 .no-border {
   border: none;
 }
 
 @media (max-width: 1200px) {
-  /* line 113, lib/sass/style.scss */
   .lg-only {
     display: none;
   }
 }
 
-/* line 120, lib/sass/style.scss */
 strong {
   font-family: "Laica Bold", Georgia, serif;
 }
 
-/* line 124, lib/sass/style.scss */
 em, th {
   font-family: "Laica Italic", Georgia, serif;
 }
 
-/* line 128, lib/sass/style.scss */
 h1 {
   font-size: 1.8rem;
   line-height: 2rem;
   font-family: "Gig Bold", Georgia, serif;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
   color: #F36;
 }
 
-/* line 136, lib/sass/style.scss */
 h2 {
   font-family: "Gig Bold", Georgia, serif;
   color: #F36;
@@ -268,78 +208,64 @@ h2 {
   line-height: 1.5em;
 }
 
-/* line 145, lib/sass/style.scss */
 h2 > a, h2 > a:active, h2 > a:hover, h2 > a:visited, h2 > a:visited:hover {
   font-family: "Gig Bold", Georgia, serif;
 }
 
-/* line 149, lib/sass/style.scss */
 p {
   font-family: "Laica Regular", Georgia, serif;
 }
 
-/* line 153, lib/sass/style.scss */
 ul > li {
   text-indent: -1.2rem;
   padding-left: 1.2rem;
 }
 
-/* line 158, lib/sass/style.scss */
 ul > li:before {
-  content: '\2014  ';
+  content: "— ";
 }
 
-/* line 162, lib/sass/style.scss */
 a {
   color: #F36;
   text-decoration: none;
 }
 
-/* line 167, lib/sass/style.scss */
 a:hover {
   text-decoration: none;
   border-bottom: 1px solid #F36;
 }
 
-/* line 172, lib/sass/style.scss */
 a:visited {
   color: #F36;
 }
 
-/* line 176, lib/sass/style.scss */
 a:visited:hover {
   color: #F36;
   border-bottom: 1px solid #F36;
 }
 
-/* line 182, lib/sass/style.scss */
 ::-moz-selection {
-  background: #FFEDED;
-  /* WebKit/Blink Browsers */
+  background: #FFEDED; /* WebKit/Blink Browsers */
 }
+
 ::selection {
-  background: #FFEDED;
-  /* WebKit/Blink Browsers */
+  background: #FFEDED; /* WebKit/Blink Browsers */
 }
 
-/* line 185, lib/sass/style.scss */
 ::-moz-selection {
-  background: #FFEDED;
-  /* Gecko Browsers */
+  background: #FFEDED; /* Gecko Browsers */
 }
 
-/* line 189, lib/sass/style.scss */
 figcaption {
   font-family: "Arnold Regular", Monaco, monospace;
   color: #1858A8;
-  font-size: .55rem;
-  line-height: .65rem;
+  font-size: 0.55rem;
+  line-height: 0.65rem;
   text-transform: lowercase;
   font-variant-caps: small-caps;
   margin-bottom: 1rem;
 }
 
-/* line 5, lib/sass/chapter.scss */
 #chapter {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -351,27 +277,20 @@ figcaption {
           justify-content: flex-start;
 }
 
-/* line 11, lib/sass/chapter.scss */
 article {
   padding-top: 2rem;
 }
-
 @media (min-width: 600px) {
-  /* line 11, lib/sass/chapter.scss */
   article {
     padding-top: 2rem;
   }
 }
-
 @media (min-width: 900px) {
-  /* line 11, lib/sass/chapter.scss */
   article {
     padding-top: 2rem;
   }
 }
-
 @media (min-width: 1200px) {
-  /* line 11, lib/sass/chapter.scss */
   article {
     padding-top: 2rem;
     padding-left: 2rem;
@@ -379,97 +298,76 @@ article {
   }
 }
 
-/* line 34, lib/sass/chapter.scss */
 article p, article ul {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
-/* line 38, lib/sass/chapter.scss */
 article ul {
   padding-top: 0;
 }
 
 @media (min-width: 1200px) {
-  /* line 43, lib/sass/chapter.scss */
   article h1 {
     padding-left: 4rem;
   }
-  /* line 44, lib/sass/chapter.scss */
   article h2 {
     padding-left: 4rem;
   }
-  /* line 45, lib/sass/chapter.scss */
   article p {
     padding-left: 4rem;
   }
-  /* line 46, lib/sass/chapter.scss */
   article ul {
     padding-left: 4rem;
   }
-  /* line 47, lib/sass/chapter.scss */
   article figcaption {
     padding-left: 4rem;
   }
-  /* line 48, lib/sass/chapter.scss */
   article table {
     margin-left: 4rem;
     width: calc(100% - 4rem);
   }
 }
-
-/* line 51, lib/sass/chapter.scss */
 li > ul {
   padding-left: 1rem;
 }
 
-/* line 53, lib/sass/chapter.scss */
 .large-image {
   width: 100%;
 }
 
-/* line 57, lib/sass/chapter.scss */
 .large-image, .diagram {
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
 }
 
-/* line 61, lib/sass/chapter.scss */
 .diagram {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
-
 @media (min-width: 1200px) {
-  /* line 61, lib/sass/chapter.scss */
   .diagram {
     width: 60%;
   }
 }
 
-/* line 68, lib/sass/chapter.scss */
 .small-image {
   float: right;
   clear: right;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
   width: 33%;
   height: 33%;
 }
-
 @media (min-width: 900px) {
-  /* line 68, lib/sass/chapter.scss */
   .small-image {
     width: 25%;
     height: 25%;
   }
 }
 
-/* line 83, lib/sass/chapter.scss */
 .example {
-  padding: .5rem 0 1rem 0;
+  padding: 0.5rem 0 1rem 0;
 }
-
 @media (min-width: 1200px) {
-  /* line 83, lib/sass/chapter.scss */
   .example {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -482,33 +380,26 @@ li > ul {
   }
 }
 
-/* line 93, lib/sass/chapter.scss */
-.example-code {
-  margin-left: 1rem;
-}
-
 @media (min-width: 1200px) {
-  /* line 93, lib/sass/chapter.scss */
   .example-code {
     width: 73%;
   }
 }
+.example-code {
+  margin-left: 1rem;
+}
 
-/* line 100, lib/sass/chapter.scss */
 .example-code-noimage {
   margin-left: 1rem;
 }
 
-/* line 104, lib/sass/chapter.scss */
 .example-image {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
-
 @media (min-width: 1200px) {
-  /* line 104, lib/sass/chapter.scss */
   .example-image {
     width: 25%;
     height: 25%;
@@ -516,32 +407,26 @@ li > ul {
   }
 }
 
-/* line 115, lib/sass/chapter.scss */
 img.example-image, img.ex-image {
   -webkit-box-shadow: 0 0.25rem 0.5rem #777;
           box-shadow: 0 0.25rem 0.5rem #777;
 }
 
-/* line 119, lib/sass/chapter.scss */
 h2.cookbook {
   margin-bottom: 0rem;
   margin-top: 1.25rem;
   font-size: 1.25rem;
 }
 
-/* line 125, lib/sass/chapter.scss */
 h2.workbook {
   color: #1858A8;
-  margin-bottom: .25rem;
+  margin-bottom: 0.25rem;
 }
 
-/* line 130, lib/sass/chapter.scss */
 .exercise {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
-
 @media (min-width: 1200px) {
-  /* line 130, lib/sass/chapter.scss */
   .exercise {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -555,7 +440,6 @@ h2.workbook {
 }
 
 @media (min-width: 1200px) {
-  /* line 140, lib/sass/chapter.scss */
   .ex-text {
     width: 73%;
     margin-bottom: 0;
@@ -563,85 +447,71 @@ h2.workbook {
 }
 
 @media (min-width: 1200px) {
-  /* line 147, lib/sass/chapter.scss */
   .ex-text-noimage {
     margin-bottom: 0;
   }
 }
 
-/* line 153, lib/sass/chapter.scss */
 .ex-number, .recipe-title {
   background-color: #1858A8;
   margin-bottom: 0;
 }
 
-/* line 157, lib/sass/chapter.scss */
 .ex-number {
-  padding: .38rem 1rem .01rem 1rem;
+  padding: 0.38rem 1rem 0.01rem 1rem;
 }
 
-/* line 158, lib/sass/chapter.scss */
 .recipe-title {
-  padding: .38rem 1rem .01rem .75rem;
+  padding: 0.38rem 1rem 0.01rem 0.75rem;
 }
 
-/* line 162, lib/sass/chapter.scss */
 .recipe-title p, .ex-number p {
   font-family: "Arnold Regular";
-  font-size: .7rem;
-  line-height: .7rem;
+  font-size: 0.7rem;
+  line-height: 0.7rem;
   color: #FFF;
   font-variant-caps: small-caps;
   text-transform: lowercase;
 }
 
-/* line 171, lib/sass/chapter.scss */
 .recipe-title p {
   padding-left: 0px;
 }
 
-/* line 175, lib/sass/chapter.scss */
 .recipe-code a:link {
   color: #FFF;
 }
 
-/* line 179, lib/sass/chapter.scss */
 .recipe {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 
-/* line 185, lib/sass/chapter.scss */
 .recipe-without-image, .recipe-with-image  {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
 }
 
-/* line 186, lib/sass/chapter.scss */
 .recipe-with-image {
   width: 100%;
 }
-
 @media (min-width: 1200px) {
-  /* line 186, lib/sass/chapter.scss */
   .recipe-with-image {
     width: 73%;
   }
 }
 
-/* line 190, lib/sass/chapter.scss */
 .recipe-without-image {
   width: 100%;
 }
 
-/* line 192, lib/sass/chapter.scss */
 .recipe-image {
-  margin-left: .5rem;
+  margin-left: 0.5rem;
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
@@ -650,94 +520,77 @@ h2.workbook {
   -webkit-box-shadow: 0 0.25rem 0.5rem #777;
           box-shadow: 0 0.25rem 0.5rem #777;
 }
-
 @media (min-width: 900px) {
-  /* line 192, lib/sass/chapter.scss */
   .recipe-image {
     width: 25%;
     height: 25%;
   }
 }
 
-/* line 207, lib/sass/chapter.scss */
 a.recipe-download {
   color: #FFF;
 }
 
-/* line 208, lib/sass/chapter.scss */
 a:hover.recipe-download {
   color: #FFF;
   border-bottom: 1px solid #FFF;
 }
 
-/* line 212, lib/sass/chapter.scss */
 a:visited.recipe-download {
   color: #FFF;
 }
 
-/* line 213, lib/sass/chapter.scss */
 a:visited:hover.recipe-download {
   color: #FFF;
   border-bottom: 1px solid #FFF;
 }
 
-/* line 218, lib/sass/chapter.scss */
 pre.recipe-code {
   width: 100%;
   border-top: none;
   margin-bottom: 1rem;
 }
 
-/* line 224, lib/sass/chapter.scss */
 .ex-assignment {
-  padding: .25rem 1rem .5rem 1rem;
+  padding: 0.25rem 1rem 0.5rem 1rem;
   background-color: #E2F4FF;
 }
 
-/* line 229, lib/sass/chapter.scss */
 .ex-assignment p, .ex-assignment ul, .ex-number p {
   padding-left: 0;
 }
 
-/* line 233, lib/sass/chapter.scss */
 .ex-solution {
   font-family: "Arnold Regular";
-  font-size: .7rem;
-  line-height: .7rem;
+  font-size: 0.7rem;
+  line-height: 0.7rem;
   color: #1858A8;
   font-variant-caps: small-caps;
   text-transform: lowercase;
   text-decoration: none;
 }
 
-/* line 243, lib/sass/chapter.scss */
 .ex-solution a {
   color: #1858A8;
 }
 
-/* line 244, lib/sass/chapter.scss */
 .ex-solution a:hover {
   color: #1858A8;
   border-bottom: 1px solid #1858A8;
 }
 
-/* line 245, lib/sass/chapter.scss */
 .ex-solution a:active {
   color: #1858A8;
 }
 
-/* line 246, lib/sass/chapter.scss */
 .ex-solution a:visited {
   color: #1858A8;
 }
 
-/* line 248, lib/sass/chapter.scss */
 .ex-image {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
-
 @media (min-width: 1200px) {
-  /* line 248, lib/sass/chapter.scss */
   .ex-image {
     width: 25%;
     height: 25%;
@@ -745,9 +598,8 @@ pre.recipe-code {
   }
 }
 
-/* line 258, lib/sass/chapter.scss */
 .snippet-download-wrapper {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -758,44 +610,38 @@ pre.recipe-code {
           justify-content: flex-end;
 }
 
-/* line 265, lib/sass/chapter.scss */
 .snippet-download {
   width: 1.8rem;
   text-align: center;
   background-color: #1858A8;
   margin-bottom: 0;
-  padding: .1rem 0 .1rem 0;
+  padding: 0.1rem 0 0.1rem 0;
   font-family: "Arnold Regular";
-  font-size: .65rem;
-  line-height: .7rem;
+  font-size: 0.65rem;
+  line-height: 0.7rem;
   color: #FFF;
   font-variant-caps: small-caps;
   text-transform: lowercase;
 }
 
-/* line 280, lib/sass/chapter.scss */
 .snippet-download a {
   color: #FFF;
 }
 
-/* line 281, lib/sass/chapter.scss */
 .snippet-download a:hover {
   color: #FFF;
   border-bottom: 1px solid #FFF;
 }
 
-/* line 285, lib/sass/chapter.scss */
 .snippet-download a:visited {
   color: #FFF;
 }
 
-/* line 286, lib/sass/chapter.scss */
 .snippet-download a:visited:hover {
   color: #FFF;
   border-bottom: 1px solid #FFF;
 }
 
-/* line 291, lib/sass/chapter.scss */
 #pagination {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -808,7 +654,6 @@ pre.recipe-code {
   margin-top: 1rem;
 }
 
-/* line 299, lib/sass/chapter.scss */
 #prevButton, #nextButton {
   font-family: "Arnold Regular", Monaco, monospace;
   text-align: center;
@@ -816,31 +661,27 @@ pre.recipe-code {
 }
 
 @media (min-width: 1200px) {
-  /* line 305, lib/sass/chapter.scss */
   p#prevButton, p#nextButton {
     padding-left: 0;
   }
 }
 
-/* line 309, lib/sass/chapter.scss */
 table {
   border-collapse: collapse;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
   display: table;
   width: 100%;
 }
 
-/* line 317, lib/sass/chapter.scss */
 th {
   text-align: left;
   border-bottom: solid 1px #F36;
   border-top: solid 3px #F36;
-  padding: .25em;
+  padding: 0.25em;
 }
 
-/* line 326, lib/sass/chapter.scss */
 td {
   text-align: left;
   border-bottom: solid 1px #F36;
-  padding: .25em;
+  padding: 0.25em;
 }

@@ -1,6 +1,9 @@
 *.glif
 node_modules/
 
+# uv
+.venv/
+
 # font files
 assets/static/fonts
 content/tutorials/variable-waterfall-poster-1/dictionaries/*.json
