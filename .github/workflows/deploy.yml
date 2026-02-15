@@ -23,9 +23,7 @@ jobs:
       - run: uv sync
 
       - name: Decrypt fonts
-        env:
-          FONTS_PASSPHRASE: ${{ secrets.FONTS_PASSPHRASE }}
-        run: openssl enc -aes-256-cbc -pbkdf2 -d -in assets/static/fonts.tar.gz.enc -pass env:FONTS_PASSPHRASE | tar xzf - -C assets/static
+        run: unzip -P '${{ secrets.FONTS_PASSPHRASE }}' assets/static/fonts.zip -d assets/static
 
       - run: uv run lektor build --output-path build
 
