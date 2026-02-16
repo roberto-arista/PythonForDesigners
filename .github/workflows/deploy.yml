@@ -17,9 +17,14 @@ jobs:
         with:
           lfs: true
 
+      - run: sudo apt-get update && sudo apt-get install -y imagemagick
+
       - uses: astral-sh/setup-uv@v5
 
       - run: uv sync
+
+      - name: Decrypt fonts
+        run: unzip -P '${{ secrets.FONTS_PASSPHRASE }}' assets/static/fonts.zip -d assets/static
 
       - run: uv run lektor build --output-path build
 
