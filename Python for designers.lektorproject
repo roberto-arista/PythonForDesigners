@@ -2,15 +2,3 @@
 name = Python for designers
 url_style = absolute
 url = http://www.pythonfordesigners.com/
-
-[servers.dev]
-name = dev
-enabled = yes
-default = yes
-target = rsync://robari1@richard-stockton.dreamhost.com/home/robari1/dev.pythonfordesigners.com
-
-[servers.production]
-name = production
-enabled = yes
-default = no
-target = rsync://robari1@richard-stockton.dreamhost.com/home/robari1/pythonfordesigners.com
